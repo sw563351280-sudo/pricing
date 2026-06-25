@@ -16,9 +16,11 @@ const https = require("https");
 const BASE_PRICE_PER_1K = 0.002;
 const TIMEOUT_MS = 30_000;
 
-function httpGet(url) {
+function httpGet(url, insecure) {
+  const opts = { timeout: TIMEOUT_MS };
+  if (insecure) opts.rejectUnauthorized = false;
   return new Promise((resolve, reject) => {
-    const req = https.get(url, { timeout: TIMEOUT_MS }, (res) => {
+    const req = https.get(url, opts, (res) => {
       if (res.statusCode !== 200) {
         req.destroy();
         return reject(new Error(`HTTP ${res.statusCode} (expected 200)`));
@@ -88,7 +90,7 @@ function buildVendorMap(vendors) {
  */
 function createFetcher(cfg) {
   return async function fetch() {
-    const raw = await httpGet(cfg.api_url + "/api/pricing");
+    const raw = await httpGet(cfg.api_url + "/api/pricing", cfg.insecure);
 
     if (raw.success !== true) throw new Error("API returned success ≠ true");
     if (!Array.isArray(raw.data)) throw new Error('Missing "data" array');
