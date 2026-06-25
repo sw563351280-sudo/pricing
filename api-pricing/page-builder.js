@@ -42,15 +42,6 @@ parts.push(`<!DOCTYPE html>
   header .title { font-size:18px; font-weight:700; }
   header .meta { color: var(--dim); font-size:12px; }
 
-  /* tabs */
-  .tab-bar { display:flex; gap:0; background: var(--surface); border-bottom:1px solid var(--border); padding:0 24px; }
-  .tab-btn { padding:10px 20px; border:none; background:none; color: var(--dim); font-size:14px; cursor:pointer; border-bottom:2px solid transparent; transition: all .15s; }
-  .tab-btn:hover { color: var(--text); }
-  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
-
-  .tab-content { display:none; }
-  .tab-content.active { display:block; }
-
   /* controls */
   .controls { display:flex; gap:10px; flex-wrap:wrap; padding:14px 24px; align-items:center; }
   .controls input, .controls select { background: var(--bg); color: var(--text); border:1px solid var(--border); padding:6px 12px; border-radius:6px; font-size:13px; }
@@ -75,27 +66,14 @@ parts.push(`<!DOCTYPE html>
   .price-output { color: var(--green); font-weight:600; }
   .price-cache { color: var(--dim); }
   .price-req { color: var(--orange); font-weight:600; }
-  .model-link { color: var(--accent); font-weight:600; cursor:pointer; }
-  .model-link:hover { text-decoration:underline; }
+  .model-link { color: var(--accent); font-weight:600; }
   .vendor-text { color: var(--dim); font-size:12px; }
-
-  /* compare table */
-  .cmp-table { margin:0 24px; overflow-x:auto; }
-  .cmp-table td, .cmp-table th { white-space:nowrap; }
-  .cmp-best { color: var(--green); font-weight:700; }
 
   .count-bar { color: var(--dim); font-size:12px; padding:8px 24px; }
   .footer { color: var(--dim); font-size:12px; padding:20px 24px; text-align:center; }
   .no-result { text-align:center; padding:40px; color: var(--dim); }
 
-  /* suggestion dropdown */
-  .suggest-wrap { position:relative; flex:1; min-width:250px; }
-  .suggest-list { position:absolute; top:100%; left:0; right:0; background:var(--surface); border:1px solid var(--border); border-top:none; border-radius:0 0 6px 6px; max-height:200px; overflow-y:auto; z-index:20; display:none; }
-  .suggest-list .item { padding:8px 12px; cursor:pointer; font-size:13px; border-bottom:1px solid var(--border); }
-  .suggest-list .item:hover { background: rgba(88,166,255,0.08); }
-  .suggest-list .item .src { color:var(--dim); font-size:11px; margin-left:6px; }
-
-  /* group cards in browse view */
+  /* group cards */
   .group-cards { display:flex; flex-wrap:wrap; gap:6px; margin-top:4px; }
   .gcard { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:6px 10px; font-size:11px; line-height:1.4; }
   .gcard .gn { font-weight:600; color:var(--text); }
@@ -106,13 +84,10 @@ parts.push(`<!DOCTYPE html>
     header { padding:10px 12px; }
     header .title { font-size:16px; }
     header .meta { font-size:11px; display:none; }
-    .tab-bar { padding:0 8px; overflow-x:auto; }
-    .tab-btn { padding:8px 14px; font-size:13px; white-space:nowrap; }
     .controls { padding:10px 8px; gap:6px; }
     .controls input, .controls select { font-size:12px; padding:5px 8px; }
     .controls input { min-width:140px; }
     .controls select { min-width:100px; }
-    .suggest-wrap { min-width:180px; }
     table { font-size:11px; }
     thead th { padding:6px 8px; font-size:10px; }
     td { padding:6px 8px; }
@@ -122,12 +97,10 @@ parts.push(`<!DOCTYPE html>
     .detail-card { padding:8px; }
     .count-bar { font-size:11px; padding:6px 12px; }
     .footer { font-size:11px; padding:12px; }
-    .cmp-table { margin:0 8px; }
     .source-tag { font-size:9px; }
     .badge { font-size:10px; padding:1px 6px; }
   }
   @media (max-width: 480px) {
-    .tab-btn { padding:6px 10px; font-size:12px; }
     table { font-size:10px; }
     thead th { padding:4px 6px; font-size:9px; }
     td { padding:4px 6px; }
@@ -147,37 +120,13 @@ parts.push(`<!DOCTYPE html>
 
 parts.push(`<header>
   <div>
-    <div class="title">API 中转站模型定价对比</div>
+    <div class="title">API 中转站模型定价</div>
     <div class="meta">数据源: ${data.sources.map((s) => s.display_name).join(", ")} · 共 ${data.models.length} 个模型条目 · 更新时间: ${esc(data.generated_at)}</div>
   </div>
-</header>
+</header>`);
 
-<div class="tab-bar">
-  <button class="tab-btn active" onclick="switchTab('compare')">📊 价格对比</button>
-  <button class="tab-btn" onclick="switchTab('browse')">📋 全部模型</button>
-</div>`);
 
-// ═══════════════════════════════════════════════════════════
-// Tab 1: Compare View
-// ═══════════════════════════════════════════════════════════
-
-parts.push(`<div id="tab-compare" class="tab-content active">
-<div class="controls">
-  <div class="suggest-wrap">
-    <input type="text" id="cmpSearch" placeholder="输入模型名搜索对比…" oninput="cmpSuggest()" onfocus="cmpSuggest()" autocomplete="off">
-    <div class="suggest-list" id="cmpSuggestList"></div>
-  </div>
-</div>
-<div class="count-bar" id="cmpBar"></div>
-<div class="cmp-table"><table id="cmpTable"></table></div>
-<div class="no-result" id="cmpNoResult" style="display:none">输入模型名开始对比，或从下拉建议中选择</div>
-</div>`);
-
-// ═══════════════════════════════════════════════════════════
-// Tab 2: Browse View
-// ═══════════════════════════════════════════════════════════
-
-parts.push(`<div id="tab-browse" class="tab-content">
+parts.push(`<div id="tab-browse">
 <div class="controls">
   <input type="text" id="browseSearch" placeholder="搜索模型名…" oninput="browseRender()">
   <select id="browseSource" onchange="browseRender()"><option value="">全部数据源</option></select>
@@ -213,140 +162,6 @@ var D = ${dataJSON};
 // ── Utilities ──
 function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function fm(n) { if (n == null) return "—"; return n < 0.01 ? n.toFixed(4) : n.toFixed(2); }
-
-// ── Tab switching ──
-function switchTab(name) {
-  document.querySelectorAll(".tab-btn").forEach(function(b) { b.classList.toggle("active", b.textContent.indexOf(name) >= 0 || (name==="compare" && b.textContent.indexOf("对比")>=0) || (name==="browse" && b.textContent.indexOf("全部")>=0)); });
-  // simpler: just use the buttons' onclick
-  var btns = document.querySelectorAll(".tab-btn");
-  btns[0].classList.toggle("active", name === "compare");
-  btns[1].classList.toggle("active", name === "browse");
-  document.getElementById("tab-compare").classList.toggle("active", name === "compare");
-  document.getElementById("tab-browse").classList.toggle("active", name === "browse");
-}
-
-// ═══════════════════════════════════════════════════════════
-// COMPARE TAB
-// ═══════════════════════════════════════════════════════════
-
-// Build autocomplete index: normalized_name → all entries
-var cmpIndex = {};
-D.models.forEach(function(m) {
-  var n = m.normalized_name;
-  if (!cmpIndex[n]) cmpIndex[n] = [];
-  cmpIndex[n].push(m);
-});
-
-function cmpSuggest() {
-  var q = document.getElementById("cmpSearch").value.toLowerCase().trim();
-  var list = document.getElementById("cmpSuggestList");
-  if (q.length < 1) { list.style.display = "none"; return; }
-
-  var matches = Object.keys(cmpIndex).filter(function(k) { return k.indexOf(q) !== -1; }).slice(0, 15);
-  if (!matches.length) { list.style.display = "none"; return; }
-
-  list.innerHTML = matches.map(function(k) {
-    var sources = [...new Set(cmpIndex[k].map(function(m) { return m.display_name; }))];
-    return '<div class="item" onclick="cmpSelect(' + JSON.stringify(k) + ')">' + esc(k) + '<span class="src">(' + sources.join(", ") + ')</span></div>';
-  }).join("");
-  list.style.display = "block";
-}
-
-function cmpSelect(normName) {
-  document.getElementById("cmpSearch").value = normName;
-  document.getElementById("cmpSuggestList").style.display = "none";
-  cmpRender(normName);
-}
-
-// Hide suggestions when clicking outside
-document.addEventListener("click", function(e) {
-  if (!e.target.closest(".suggest-wrap")) document.getElementById("cmpSuggestList").style.display = "none";
-});
-
-function cmpRender(normName) {
-  var entries = cmpIndex[normName] || [];
-  var bar = document.getElementById("cmpBar");
-  var table = document.getElementById("cmpTable");
-  var noRes = document.getElementById("cmpNoResult");
-
-  if (!normName || !entries.length) {
-    bar.textContent = "";
-    table.innerHTML = "";
-    noRes.style.display = "block";
-    return;
-  }
-  noRes.style.display = "none";
-  bar.textContent = entries.length + " 个条目 (来自 " + [...new Set(entries.map(function(e) { return e.display_name; }))].join(", ") + ")";
-
-  // Collect all groups across all entries, find min prices
-  var allRows = []; // { source, display_name, group_name, g }
-  entries.forEach(function(e) {
-    e.groups.forEach(function(g) {
-      allRows.push({ source: e.source, display_name: e.display_name, group_name: g.name, g: g, quota_type: e.quota_type });
-    });
-  });
-
-  if (entries[0].quota_type === "token") {
-    var minInput = Infinity, minOutput = Infinity, minCache = Infinity;
-    allRows.forEach(function(r) {
-      if (r.g.input_per_1m != null && r.g.input_per_1m < minInput) minInput = r.g.input_per_1m;
-      if (r.g.output_per_1m != null && r.g.output_per_1m < minOutput) minOutput = r.g.output_per_1m;
-      if (r.g.cache_per_1m != null && r.g.cache_per_1m < minCache) minCache = r.g.cache_per_1m;
-    });
-
-    table.innerHTML = '<thead><tr>' +
-      '<th>数据源</th><th>分组</th>' +
-      '<th>输入 $/1M</th><th>输出 $/1M</th><th>缓存 $/1M</th>' +
-      (allRows.some(function(r) { return r.g.cache_write_per_1m != null; }) ? '<th>缓存写入 $/1M</th>' : '') +
-      '</tr></thead><tbody>' +
-      allRows.map(function(r) {
-        var cls = function(v, best) { return v != null && v === best ? "cmp-best" : ""; };
-        return '<tr>' +
-          '<td><span class="source-tag">' + esc(r.display_name) + '</span></td>' +
-          '<td><strong>' + esc(r.group_name) + '</strong></td>' +
-          '<td class="' + cls(r.g.input_per_1m, minInput) + '">$' + fm(r.g.input_per_1m) + '</td>' +
-          '<td class="' + cls(r.g.output_per_1m, minOutput) + '">$' + fm(r.g.output_per_1m) + '</td>' +
-          '<td class="' + cls(r.g.cache_per_1m, minCache) + '">$' + fm(r.g.cache_per_1m) + '</td>' +
-          (allRows.some(function(rr) { return rr.g.cache_write_per_1m != null; }) ? '<td>$' + fm(r.g.cache_write_per_1m) + '</td>' : '') +
-          '</tr>';
-      }).join("") + '</tbody>';
-  } else {
-    // per-request: just show price_per_request
-    var minReq = Infinity;
-    allRows.forEach(function(r) {
-      if (r.g.price_per_request != null && r.g.price_per_request < minReq) minReq = r.g.price_per_request;
-    });
-
-    table.innerHTML = '<thead><tr><th>数据源</th><th>分组</th><th>价格 $/次</th></tr></thead><tbody>' +
-      allRows.map(function(r) {
-        var cls = r.g.price_per_request != null && r.g.price_per_request === minReq ? "cmp-best" : "";
-        return '<tr>' +
-          '<td><span class="source-tag">' + esc(r.display_name) + '</span></td>' +
-          '<td><strong>' + esc(r.group_name) + '</strong></td>' +
-          '<td class="' + cls + '">$' + fm(r.g.price_per_request) + '</td>' +
-          '</tr>';
-      }).join("") + '</tbody>';
-  }
-}
-
-// Also render on Enter key
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("cmpSearch").addEventListener("keydown", function(e) {
-    if (e.key === "Enter") {
-      var q = this.value.toLowerCase().trim();
-      if (cmpIndex[q]) cmpSelect(q);
-      else {
-        // pick first match
-        var keys = Object.keys(cmpIndex).filter(function(k) { return k.indexOf(q) !== -1; });
-        if (keys.length) cmpSelect(keys[0]);
-      }
-    }
-  });
-});
-
-// ═══════════════════════════════════════════════════════════
-// BROWSE TAB
-// ═══════════════════════════════════════════════════════════
 
 var browseSortKey = "name";
 var browseSortAsc = true;
@@ -429,17 +244,6 @@ function browseRender() {
       '</tr>';
   }).join("");
 }
-
-// Click delegation: clicking model name jumps to compare view
-document.getElementById("browseTbody").addEventListener("click", function(e) {
-  var link = e.target.closest(".model-link");
-  if (!link) return;
-  var name = link.getAttribute("data-cmp");
-  if (!name) return;
-  switchTab("compare");
-  document.getElementById("cmpSearch").value = name;
-  cmpRender(name);
-});
 
 // Initial render
 browseRender();

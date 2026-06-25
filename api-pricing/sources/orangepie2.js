@@ -1,5 +1,5 @@
 /**
- * orangepie2.js — 橘子派 API 中转站
+ * orangepie2.js — 橙子派 API 中转站
  * 定价单位: 橘子 (1 橘子 = ¥0.13699 ≈ $0.01889)
  * 基础单价: 1.0 橘子/1K tokens
  */
@@ -45,14 +45,14 @@ async function fetch() {
               } else {
                 groups.push({
                   name: gName, label: uG[gName] || null,
-                  price_per_request: round(m.model_price * gr * JUZI_TO_RMB),
+                  price_per_request: round(m.model_price * gr * 100 * JUZI_TO_RMB),
                 });
               }
             }
             return { name: m.model_name, vendor: vMap[m.vendor_id] || "Unknown", quota_type: isToken ? "token" : "per_request", groups, supported_endpoints: m.supported_endpoint_types || [] };
           });
 
-          resolve({ source: "orangepie.org", display_name: "橘子派", base_currency: "USD", _missing_group_ratios: [...missing].sort(), models });
+          resolve({ source: "orangepie.org", display_name: "橙子派", base_currency: "USD", _missing_group_ratios: [...missing].sort(), models });
         } catch (e) { reject(e); }
       });
     }).on("timeout", () => reject(new Error("timeout"))).on("error", e => reject(e));
