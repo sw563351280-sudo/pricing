@@ -2,7 +2,7 @@
  * page-builder.js — 从 merged.json 生成多源对比 HTML 页面
  *
  * 用法: node page-builder.js
- * 输出: ../index.html (仓库根目录，GitHub Pages 自动 serve)
+ * 输出: ../index.html (GitHub Pages 自动 serve)
  */
 
 const fs = require("fs");
@@ -316,9 +316,9 @@ var browseSortAsc = true;
 
 (function() {
   // Fill select dropdowns
-  var srcs = [...new Set(D.models.map(function(m) { return m.source; }))].sort();
+  var srcMap = {}; D.models.forEach(function(m) { srcMap[m.source] = m.display_name; });
   var sSel = document.getElementById("browseSource");
-  srcs.forEach(function(v) { var o = document.createElement("option"); o.value = v; o.textContent = v; sSel.appendChild(o); });
+  Object.keys(srcMap).sort().forEach(function(k) { var o = document.createElement("option"); o.value = k; o.textContent = srcMap[k]; sSel.appendChild(o); });
 
   var vends = [...new Set(D.models.map(function(m) { return m.vendor; }))].sort();
   var vSel = document.getElementById("browseVendor");
@@ -416,3 +416,4 @@ browseRender();
 
 fs.writeFileSync(OUTPUT_PATH, parts.join("\n"), "utf-8");
 console.log("✔ 已生成 " + OUTPUT_PATH + " (" + (fs.statSync(OUTPUT_PATH).size / 1024).toFixed(1) + " KB)");
+console.log("  双击即可用浏览器打开，或运行: start " + OUTPUT_PATH);
