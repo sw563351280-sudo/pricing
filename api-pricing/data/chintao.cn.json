@@ -75,10 +75,179 @@
   },
   "models": [
     {
-      "name": "claude-opus-4-7-xhigh",
+      "name": "gpt-5.4-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-default",
+          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
+          "input_per_1m": 0.375,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "input_per_1m": 0.525,
+          "output_per_1m": 3.15,
+          "cache_per_1m": 0.0525,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 0.375,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "price_per_request": 0.287
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "price_per_request": 0.205
+        },
+        {
+          "name": "image-default",
+          "label": "【尝鲜价格】倍率1.0 VIP折后x0.85 支持 gpt-image-2",
+          "price_per_request": 0.41
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro-thinking-*",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-update",
+          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
+          "input_per_1m": 1.75,
+          "output_per_1m": 14,
+          "cache_per_1m": 0.35,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
+        {
+          "name": "cc-max",
+          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
+          "input_per_1m": 3.9,
+          "output_per_1m": 19.5,
+          "cache_per_1m": 0.39,
+          "cache_write_per_1m": 4.8
+        },
+        {
+          "name": "cc-max-secret",
+          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
+          "input_per_1m": 1.95,
+          "output_per_1m": 9.75,
+          "cache_per_1m": 0.195,
+          "cache_write_per_1m": 2.4
+        },
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 2.275,
+          "output_per_1m": 11.375,
+          "cache_per_1m": 0.2275,
+          "cache_write_per_1m": 2.8
+        },
+        {
+          "name": "claude-secret",
+          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
+          "input_per_1m": 1.04,
+          "output_per_1m": 5.2,
+          "cache_per_1m": 0.104,
+          "cache_write_per_1m": 1.28
+        },
+        {
+          "name": "testcc",
+          "label": "管理员测试用",
+          "input_per_1m": 13,
+          "output_per_1m": 65,
+          "cache_per_1m": 1.3,
+          "cache_write_per_1m": 16
+        },
+        {
+          "name": "cc-max-svip",
+          "label": "原味  【可外接】仅VIP使用x4.5 最高支持Opus-4.8",
+          "input_per_1m": 1298.7,
+          "output_per_1m": 6493.5,
+          "cache_per_1m": 129.87,
+          "cache_write_per_1m": 1598.4
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 1298.7,
+          "output_per_1m": 6493.5,
+          "cache_per_1m": 129.87,
+          "cache_write_per_1m": 1598.4
+        },
+        {
+          "name": "claude-default",
+          "label": "kiro逆向 x0.6 opus4.6为映射",
+          "input_per_1m": 0.78,
+          "output_per_1m": 3.9,
+          "cache_per_1m": 0.078,
+          "cache_write_per_1m": 0.96
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 0.65,
+          "output_per_1m": 3.25,
+          "cache_per_1m": 0.065,
+          "cache_write_per_1m": 0.8
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6-max",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 3.75
+        },
         {
           "name": "cc-max",
           "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
@@ -110,61 +279,7 @@
           "output_per_1m": 29970,
           "cache_per_1m": 999,
           "cache_write_per_1m": 7492.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7-high",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-max",
-          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 22.5
         },
-        {
-          "name": "cc-max-secret",
-          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 13.125
-        },
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 5994,
-          "output_per_1m": 29970,
-          "cache_per_1m": 999,
-          "cache_write_per_1m": 7492.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6-low",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
         {
           "name": "claude-awsq",
           "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
@@ -172,6 +287,162 @@
           "output_per_1m": 24,
           "cache_per_1m": 0.8,
           "cache_write_per_1m": 6
+        },
+        {
+          "name": "claude-default",
+          "label": "kiro逆向 x0.6 opus4.6为映射",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 4.5
+        },
+        {
+          "name": "claude-secret",
+          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
+          "input_per_1m": 4.8,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": 6
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7-low",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-max",
+          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 22.5
+        },
+        {
+          "name": "cc-max-secret",
+          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 11.25
+        },
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 5994,
+          "output_per_1m": 29970,
+          "cache_per_1m": 999,
+          "cache_write_per_1m": 7492.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7-medium",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 5994,
+          "output_per_1m": 29970,
+          "cache_per_1m": 999,
+          "cache_write_per_1m": 7492.5
+        },
+        {
+          "name": "cc-max",
+          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 22.5
+        },
+        {
+          "name": "cc-max-secret",
+          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 11.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-max-secret",
+          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 11.25
+        },
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 5994,
+          "output_per_1m": 29970,
+          "cache_per_1m": 999,
+          "cache_write_per_1m": 7492.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5-20251101-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude-awsq",
+          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
         }
       ],
       "supported_endpoints": [
@@ -214,17 +485,52 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
+      "name": "gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-default",
+          "label": "【暂不可使用】gemini-默认渠道 倍率x0.7 VIP折后x0.6",
+          "input_per_1m": 0.49,
+          "output_per_1m": 1.96,
+          "cache_per_1m": 0,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-update",
+          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
+          "input_per_1m": 0.98,
+          "output_per_1m": 3.92,
+          "cache_per_1m": 0,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 13.125
+          "name": "claude-secret",
+          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
+          "input_per_1m": 4.8,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": 6
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 3.75
         },
         {
           "name": "cc-max",
@@ -241,96 +547,42 @@
           "output_per_1m": 45,
           "cache_per_1m": 1.5,
           "cache_write_per_1m": 11.25
+        },
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 5994,
+          "output_per_1m": 29970,
+          "cache_per_1m": 999,
+          "cache_write_per_1m": 7492.5
+        },
+        {
+          "name": "claude-awsq",
+          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
+          "input_per_1m": 4.8,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": 6
+        },
+        {
+          "name": "claude-default",
+          "label": "kiro逆向 x0.6 opus4.6为映射",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 4.5
         }
       ],
       "supported_endpoints": [
         "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.3-codex-spark",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 1.75,
-          "output_per_1m": 14,
-          "cache_per_1m": 0.175,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-default",
-          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 1.75,
-          "output_per_1m": 14,
-          "cache_per_1m": 0.175,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 2.45,
-          "output_per_1m": 19.6,
-          "cache_per_1m": 0.245,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5-openai-compact",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-default",
-          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 3.5,
-          "output_per_1m": 21,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-2026-03-05",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 0.525,
-          "output_per_1m": 3.15,
-          "cache_per_1m": 0.0525,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
         "openai"
       ]
     },
@@ -410,89 +662,33 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-6",
+      "name": "claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "claude-secret",
-          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.36,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 2.25,
-          "output_per_1m": 11.25,
-          "cache_per_1m": 0.225,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "testcc",
-          "label": "管理员测试用",
-          "input_per_1m": 45,
-          "output_per_1m": 225,
-          "cache_per_1m": 4.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-max",
-          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
-          "input_per_1m": 13.5,
-          "output_per_1m": 67.5,
-          "cache_per_1m": 1.35,
-          "cache_write_per_1m": null
+          "name": "cc-max-secret",
+          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 11.25
         },
         {
           "name": "cc-max-secret-o",
           "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 7.875,
-          "output_per_1m": 39.375,
-          "cache_per_1m": 0.7875,
-          "cache_write_per_1m": null
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 13.125
         },
         {
-          "name": "cc-max-secret",
-          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
-          "input_per_1m": 6.75,
-          "output_per_1m": 33.75,
-          "cache_per_1m": 0.675,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-max-svip",
-          "label": "原味  【可外接】仅VIP使用x4.5 最高支持Opus-4.8",
-          "input_per_1m": 4495.5,
-          "output_per_1m": 22477.5,
-          "cache_per_1m": 449.55,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 4495.5,
-          "output_per_1m": 22477.5,
-          "cache_per_1m": 449.55,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "claude-awsq",
-          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.36,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "claude-default",
-          "label": "kiro逆向 x0.6 opus4.6为映射",
-          "input_per_1m": 2.7,
-          "output_per_1m": 13.5,
-          "cache_per_1m": 0.27,
-          "cache_write_per_1m": null
+          "name": "cc-max",
+          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 22.5
         }
       ],
       "supported_endpoints": [
@@ -516,246 +712,6 @@
       ],
       "supported_endpoints": [
         "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-default",
-          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 37.5,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 52.5,
-          "output_per_1m": 315,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 37.5,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-default",
-          "label": "【暂不可使用】gemini-默认渠道 倍率x0.7 VIP折后x0.6",
-          "input_per_1m": 0.49,
-          "output_per_1m": 1.96,
-          "cache_per_1m": 0,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-update",
-          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
-          "input_per_1m": 0.98,
-          "output_per_1m": 3.92,
-          "cache_per_1m": 0,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-update",
-          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
-          "input_per_1m": 2.52,
-          "output_per_1m": 15.12,
-          "cache_per_1m": 0.504,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6-max",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-secret",
-          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
-          "input_per_1m": 4.8,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": 6
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 3.75
-        },
-        {
-          "name": "cc-max",
-          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 22.5
-        },
-        {
-          "name": "cc-max-secret",
-          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 13.125
-        },
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 5994,
-          "output_per_1m": 29970,
-          "cache_per_1m": 999,
-          "cache_write_per_1m": 7492.5
-        },
-        {
-          "name": "claude-awsq",
-          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
-          "input_per_1m": 4.8,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": 6
-        },
-        {
-          "name": "claude-default",
-          "label": "kiro逆向 x0.6 opus4.6为映射",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-5-20250929",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 3896.1,
-          "output_per_1m": 19480.5,
-          "cache_per_1m": 389.61,
-          "cache_write_per_1m": 3896.1
-        },
-        {
-          "name": "claude-awsq",
-          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
-          "input_per_1m": 3.12,
-          "output_per_1m": 15.6,
-          "cache_per_1m": 0.312,
-          "cache_write_per_1m": 3.12
-        },
-        {
-          "name": "claude-default",
-          "label": "kiro逆向 x0.6 opus4.6为映射",
-          "input_per_1m": 2.34,
-          "output_per_1m": 11.7,
-          "cache_per_1m": 0.234,
-          "cache_write_per_1m": 2.34
-        },
-        {
-          "name": "claude-secret",
-          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
-          "input_per_1m": 3.12,
-          "output_per_1m": 15.6,
-          "cache_per_1m": 0.312,
-          "cache_write_per_1m": 3.12
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 1.95,
-          "output_per_1m": 9.75,
-          "cache_per_1m": 0.195,
-          "cache_write_per_1m": 1.95
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-mini",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-default",
-          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 0.375,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.0375,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 0.525,
-          "output_per_1m": 3.15,
-          "cache_per_1m": 0.0525,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 0.375,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.0375,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
         "openai"
       ]
     },
@@ -799,6 +755,14 @@
       "quota_type": "token",
       "groups": [
         {
+          "name": "codex-default",
+          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
+        },
+        {
           "name": "codex-update",
           "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
           "input_per_1m": 3.5,
@@ -813,14 +777,6 @@
           "output_per_1m": 15,
           "cache_per_1m": 0.25,
           "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-default",
-          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -828,195 +784,10 @@
       ]
     },
     {
-      "name": "gpt-5.5-xhigh-openai-compact",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-default",
-          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 3.5,
-          "output_per_1m": 21,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "price_per_request": 0.287
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "price_per_request": 0.205
-        },
-        {
-          "name": "image-default",
-          "label": "【尝鲜价格】倍率1.0 VIP折后x0.85 支持 gpt-image-2",
-          "price_per_request": 0.41
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-default",
-          "label": "【暂不可使用】gemini-默认渠道 倍率x0.7 VIP折后x0.6",
-          "input_per_1m": 0.21,
-          "output_per_1m": 1.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-update",
-          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
-          "input_per_1m": 0.42,
-          "output_per_1m": 3.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4-5-20251001",
+      "name": "claude-opus-4-7-high",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "testcc",
-          "label": "管理员测试用",
-          "input_per_1m": 13,
-          "output_per_1m": 65,
-          "cache_per_1m": 1.3,
-          "cache_write_per_1m": 16
-        },
-        {
-          "name": "cc-max",
-          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
-          "input_per_1m": 3.9,
-          "output_per_1m": 19.5,
-          "cache_per_1m": 0.39,
-          "cache_write_per_1m": 4.8
-        },
-        {
-          "name": "cc-max-secret",
-          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
-          "input_per_1m": 1.95,
-          "output_per_1m": 9.75,
-          "cache_per_1m": 0.195,
-          "cache_write_per_1m": 2.4
-        },
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 2.275,
-          "output_per_1m": 11.375,
-          "cache_per_1m": 0.2275,
-          "cache_write_per_1m": 2.8
-        },
-        {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 0.65,
-          "output_per_1m": 3.25,
-          "cache_per_1m": 0.065,
-          "cache_write_per_1m": 0.8
-        },
-        {
-          "name": "cc-max-svip",
-          "label": "原味  【可外接】仅VIP使用x4.5 最高支持Opus-4.8",
-          "input_per_1m": 1298.7,
-          "output_per_1m": 6493.5,
-          "cache_per_1m": 129.87,
-          "cache_write_per_1m": 1598.4
-        },
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 1298.7,
-          "output_per_1m": 6493.5,
-          "cache_per_1m": 129.87,
-          "cache_write_per_1m": 1598.4
-        },
-        {
-          "name": "claude-default",
-          "label": "kiro逆向 x0.6 opus4.6为映射",
-          "input_per_1m": 0.78,
-          "output_per_1m": 3.9,
-          "cache_per_1m": 0.078,
-          "cache_write_per_1m": 0.96
-        },
-        {
-          "name": "claude-secret",
-          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
-          "input_per_1m": 1.04,
-          "output_per_1m": 5.2,
-          "cache_per_1m": 0.104,
-          "cache_write_per_1m": 1.28
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-secret",
-          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
-          "input_per_1m": 4.8,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": 6
-        },
-        {
-          "name": "testcc",
-          "label": "管理员测试用",
-          "input_per_1m": 60,
-          "output_per_1m": 300,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 75
-        },
         {
           "name": "cc-max",
           "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
@@ -1042,14 +813,6 @@
           "cache_write_per_1m": 13.125
         },
         {
-          "name": "cc-max-svip",
-          "label": "原味  【可外接】仅VIP使用x4.5 最高支持Opus-4.8",
-          "input_per_1m": 5994,
-          "output_per_1m": 29970,
-          "cache_per_1m": 999,
-          "cache_write_per_1m": 7492.5
-        },
-        {
           "name": "cc-max-vip",
           "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
           "input_per_1m": 5994,
@@ -1064,17 +827,49 @@
       ]
     },
     {
-      "name": "claude-opus-4-5-20251101-thinking",
+      "name": "claude-sonnet-4-5-20250929",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
+          "name": "claude-default",
+          "label": "kiro逆向 x0.6 opus4.6为映射",
+          "input_per_1m": 2.34,
+          "output_per_1m": 11.7,
+          "cache_per_1m": 0.234,
+          "cache_write_per_1m": 2.34
+        },
+        {
+          "name": "claude-secret",
+          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
+          "input_per_1m": 3.12,
+          "output_per_1m": 15.6,
+          "cache_per_1m": 0.312,
+          "cache_write_per_1m": 3.12
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 1.95,
+          "output_per_1m": 9.75,
+          "cache_per_1m": 0.195,
+          "cache_write_per_1m": 1.95
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 3896.1,
+          "output_per_1m": 19480.5,
+          "cache_per_1m": 389.61,
+          "cache_write_per_1m": 3896.1
+        },
+        {
           "name": "claude-awsq",
           "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
-          "input_per_1m": 4,
-          "output_per_1m": 20,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 5
+          "input_per_1m": 3.12,
+          "output_per_1m": 15.6,
+          "cache_per_1m": 0.312,
+          "cache_write_per_1m": 3.12
         }
       ],
       "supported_endpoints": [
@@ -1083,37 +878,55 @@
       ]
     },
     {
-      "name": "claude-haiku-4-5",
+      "name": "claude-sonnet-4-5-20250929-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "claude-default",
-          "label": "kiro逆向 x0.6 opus4.6为映射",
-          "input_per_1m": 0.78,
-          "output_per_1m": 3.9,
-          "cache_per_1m": 0.078,
+          "name": "claude-awsq",
+          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
+          "input_per_1m": 3.12,
+          "output_per_1m": 15.6,
+          "cache_per_1m": 0.24,
+          "cache_write_per_1m": 3
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-default",
+          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
+          "input_per_1m": 1.75,
+          "output_per_1m": 14,
+          "cache_per_1m": 0.175,
           "cache_write_per_1m": null
         },
         {
-          "name": "claude-secret",
-          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
-          "input_per_1m": 1.04,
-          "output_per_1m": 5.2,
-          "cache_per_1m": 0.104,
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "input_per_1m": 2.45,
+          "output_per_1m": 19.6,
+          "cache_per_1m": 0.245,
           "cache_write_per_1m": null
         },
         {
           "name": "default",
           "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 0.65,
-          "output_per_1m": 3.25,
-          "cache_per_1m": 0.065,
+          "input_per_1m": 1.75,
+          "output_per_1m": 14,
+          "cache_per_1m": 0.175,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -1145,7 +958,7 @@
       ]
     },
     {
-      "name": "gemini-2.5-pro-nothinking",
+      "name": "gemini-2.5-pro-thinking",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -1164,25 +977,33 @@
       ]
     },
     {
-      "name": "claude-opus-4-6",
+      "name": "claude-opus-4-7-max",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "claude-awsq",
-          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
-          "input_per_1m": 4.8,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": 6
+          "name": "cc-max-secret",
+          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 11.25
         },
         {
-          "name": "claude-default",
-          "label": "kiro逆向 x0.6 opus4.6为映射",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 4.5
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 5994,
+          "output_per_1m": 29970,
+          "cache_per_1m": 999,
+          "cache_write_per_1m": 7492.5
         },
         {
           "name": "claude-secret",
@@ -1193,13 +1014,24 @@
           "cache_write_per_1m": 6
         },
         {
-          "name": "default",
-          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 3.75
-        },
+          "name": "cc-max",
+          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 22.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7-xhigh",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
         {
           "name": "cc-max",
           "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
@@ -1239,90 +1071,37 @@
       ]
     },
     {
-      "name": "claude-opus-4-7-thinking",
+      "name": "claude-haiku-4-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "cc-max-secret",
-          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 13.125
-        },
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 5994,
-          "output_per_1m": 29970,
-          "cache_per_1m": 999,
-          "cache_write_per_1m": 7492.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-5-20250929-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-awsq",
-          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
-          "input_per_1m": 3.12,
-          "output_per_1m": 15.6,
-          "cache_per_1m": 0.24,
-          "cache_write_per_1m": 3
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-high",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-update",
-          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 52.5,
-          "output_per_1m": 315,
-          "cache_per_1m": null,
+          "name": "claude-secret",
+          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
+          "input_per_1m": 1.04,
+          "output_per_1m": 5.2,
+          "cache_per_1m": 0.104,
           "cache_write_per_1m": null
         },
         {
           "name": "default",
           "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 37.5,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
+          "input_per_1m": 0.65,
+          "output_per_1m": 3.25,
+          "cache_per_1m": 0.065,
           "cache_write_per_1m": null
         },
         {
-          "name": "codex-default",
-          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 37.5,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
+          "name": "claude-default",
+          "label": "kiro逆向 x0.6 opus4.6为映射",
+          "input_per_1m": 0.78,
+          "output_per_1m": 3.9,
+          "cache_per_1m": 0.078,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
@@ -1361,128 +1140,31 @@
       ]
     },
     {
-      "name": "gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-default",
-          "label": "【暂不可使用】gemini-默认渠道 倍率x0.7 VIP折后x0.6",
-          "input_per_1m": 1.4,
-          "output_per_1m": 5.6,
-          "cache_per_1m": 0.28,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-update",
-          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
-          "input_per_1m": 2.8,
-          "output_per_1m": 11.2,
-          "cache_per_1m": 0.56,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro-thinking",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-update",
-          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
-          "input_per_1m": 1.75,
-          "output_per_1m": 14,
-          "cache_per_1m": 0.35,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7-max",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-max",
-          "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 22.5
-        },
-        {
-          "name": "cc-max-secret",
-          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 13.125
-        },
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 5994,
-          "output_per_1m": 29970,
-          "cache_per_1m": 999,
-          "cache_write_per_1m": 7492.5
-        },
-        {
-          "name": "claude-secret",
-          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
-          "input_per_1m": 4.8,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": 6
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-xhigh",
+      "name": "gpt-5.5-xhigh-openai-compact",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "codex-update",
           "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
-          "input_per_1m": 52.5,
-          "output_per_1m": 315,
+          "input_per_1m": 3.5,
+          "output_per_1m": 21,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         },
         {
           "name": "default",
           "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
-          "input_per_1m": 37.5,
-          "output_per_1m": 225,
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         },
         {
           "name": "codex-default",
           "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
-          "input_per_1m": 37.5,
-          "output_per_1m": 225,
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -1492,7 +1174,34 @@
       ]
     },
     {
-      "name": "gemini-2.5-pro-thinking-*",
+      "name": "gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-default",
+          "label": "【暂不可使用】gemini-默认渠道 倍率x0.7 VIP折后x0.6",
+          "input_per_1m": 0.21,
+          "output_per_1m": 1.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-update",
+          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
+          "input_per_1m": 0.42,
+          "output_per_1m": 3.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro-nothinking",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -1515,30 +1224,6 @@
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 8.75,
-          "output_per_1m": 43.75,
-          "cache_per_1m": 0.875,
-          "cache_write_per_1m": 10.9375
-        },
-        {
-          "name": "cc-max-vip",
-          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 4995,
-          "output_per_1m": 24975,
-          "cache_per_1m": 499.5,
-          "cache_write_per_1m": 6243.75
-        },
-        {
-          "name": "claude-awsq",
-          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
-          "input_per_1m": 4,
-          "output_per_1m": 20,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 5
-        },
         {
           "name": "claude-default",
           "label": "kiro逆向 x0.6 opus4.6为映射",
@@ -1578,6 +1263,30 @@
           "output_per_1m": 37.5,
           "cache_per_1m": 0.75,
           "cache_write_per_1m": 9.375
+        },
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 8.75,
+          "output_per_1m": 43.75,
+          "cache_per_1m": 0.875,
+          "cache_write_per_1m": 10.9375
+        },
+        {
+          "name": "cc-max-vip",
+          "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
+          "input_per_1m": 4995,
+          "output_per_1m": 24975,
+          "cache_per_1m": 499.5,
+          "cache_write_per_1m": 6243.75
+        },
+        {
+          "name": "claude-awsq",
+          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
         }
       ],
       "supported_endpoints": [
@@ -1586,10 +1295,116 @@
       ]
     },
     {
-      "name": "claude-opus-4-7-low",
+      "name": "claude-opus-4-6-low",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
+        {
+          "name": "claude-awsq",
+          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
+          "input_per_1m": 4.8,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": 6
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-high",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-default",
+          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
+          "input_per_1m": 37.5,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "input_per_1m": 52.5,
+          "output_per_1m": 315,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 37.5,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-2026-03-05",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "input_per_1m": 0.525,
+          "output_per_1m": 3.15,
+          "cache_per_1m": 0.0525,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-update",
+          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
+          "input_per_1m": 2.52,
+          "output_per_1m": 15.12,
+          "cache_per_1m": 0.504,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "cc-max-svip",
+          "label": "原味  【可外接】仅VIP使用x4.5 最高支持Opus-4.8",
+          "input_per_1m": 5994,
+          "output_per_1m": 29970,
+          "cache_per_1m": 999,
+          "cache_write_per_1m": 7492.5
+        },
         {
           "name": "cc-max-vip",
           "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
@@ -1597,6 +1412,22 @@
           "output_per_1m": 29970,
           "cache_per_1m": 999,
           "cache_write_per_1m": 7492.5
+        },
+        {
+          "name": "claude-secret",
+          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
+          "input_per_1m": 4.8,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": 6
+        },
+        {
+          "name": "testcc",
+          "label": "管理员测试用",
+          "input_per_1m": 60,
+          "output_per_1m": 300,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 75
         },
         {
           "name": "cc-max",
@@ -1613,14 +1444,6 @@
           "output_per_1m": 45,
           "cache_per_1m": 1.5,
           "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 13.125
         }
       ],
       "supported_endpoints": [
@@ -1629,48 +1452,225 @@
       ]
     },
     {
-      "name": "claude-opus-4-7-medium",
+      "name": "claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
+          "name": "claude-default",
+          "label": "kiro逆向 x0.6 opus4.6为映射",
+          "input_per_1m": 2.7,
+          "output_per_1m": 13.5,
+          "cache_per_1m": 0.27,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "testcc",
+          "label": "管理员测试用",
+          "input_per_1m": 45,
+          "output_per_1m": 225,
+          "cache_per_1m": 4.5,
+          "cache_write_per_1m": null
+        },
+        {
           "name": "cc-max",
           "label": "官方200刀【限定CC】 x3.0倍率， 最高支持opus-4.8 VIP折后x2.55使用",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 22.5
-        },
-        {
-          "name": "cc-max-secret",
-          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc-max-secret-o",
-          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 13.125
+          "input_per_1m": 13.5,
+          "output_per_1m": 67.5,
+          "cache_per_1m": 1.35,
+          "cache_write_per_1m": null
         },
         {
           "name": "cc-max-vip",
           "label": "官方200刀高并发 【可外接】最高支持opus-4.8 仅VIP使用x3.1 ",
-          "input_per_1m": 5994,
-          "output_per_1m": 29970,
-          "cache_per_1m": 999,
-          "cache_write_per_1m": 7492.5
+          "input_per_1m": 4495.5,
+          "output_per_1m": 22477.5,
+          "cache_per_1m": 449.55,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "claude-awsq",
+          "label": "aws-q逆向 x0.8 最高支持opus4.6，VIP折后 x0.68",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.36,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "claude-secret",
+          "label": "aws-q x0.8 最高支持opus4.7，VIP折后 x0.68",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.36,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-max-secret",
+          "label": "神秘满血【限定CC】 最高支持opus-4.8 周末特惠 x1.25 平时 x1.5",
+          "input_per_1m": 6.75,
+          "output_per_1m": 33.75,
+          "cache_per_1m": 0.675,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-max-secret-o",
+          "label": "神秘满血【可外接】 最高支持opus-4.8 周末特惠 x1.5 平时 x1.75",
+          "input_per_1m": 7.875,
+          "output_per_1m": 39.375,
+          "cache_per_1m": 0.7875,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-max-svip",
+          "label": "原味  【可外接】仅VIP使用x4.5 最高支持Opus-4.8",
+          "input_per_1m": 4495.5,
+          "output_per_1m": 22477.5,
+          "cache_per_1m": 449.55,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
         "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 37.5,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-default",
+          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
+          "input_per_1m": 37.5,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "input_per_1m": 52.5,
+          "output_per_1m": 315,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-xhigh",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-default",
+          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
+          "input_per_1m": 37.5,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "input_per_1m": 52.5,
+          "output_per_1m": 315,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 37.5,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-default",
+          "label": "【暂不可使用】codex-Plus/Team渠道 倍率 x0.5 VIP折后x0.42",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-update",
+          "label": "codex-Pro渠道 倍率 x0.7  VIP折后x0.6",
+          "input_per_1m": 3.5,
+          "output_per_1m": 21,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "普通用户默认渠道 兼容codex和claude，稳定性略差",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-default",
+          "label": "【暂不可使用】gemini-默认渠道 倍率x0.7 VIP折后x0.6",
+          "input_per_1m": 1.4,
+          "output_per_1m": 5.6,
+          "cache_per_1m": 0.28,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-update",
+          "label": "gemini-升级渠道 倍率x1.4 VIP折后x1.2",
+          "input_per_1m": 2.8,
+          "output_per_1m": 11.2,
+          "cache_per_1m": 0.56,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     }
   ],
-  "fetched_at": "2026-06-25T14:28:10.737Z"
+  "fetched_at": "2026-06-25T15:50:35.691Z"
 }
