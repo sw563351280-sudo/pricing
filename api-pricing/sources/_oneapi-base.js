@@ -12,6 +12,7 @@
  */
 
 const https = require("https");
+const http = require("http");
 
 const BASE_PRICE_PER_1K = 0.002;
 const TIMEOUT_MS = 30_000;
@@ -19,8 +20,9 @@ const TIMEOUT_MS = 30_000;
 function httpGet(url, insecure) {
   const opts = { timeout: TIMEOUT_MS };
   if (insecure) opts.rejectUnauthorized = false;
+  const mod = url.startsWith("http://") ? http : https;
   return new Promise((resolve, reject) => {
-    const req = https.get(url, opts, (res) => {
+    const req = mod.get(url, opts, (res) => {
       if (res.statusCode !== 200) {
         req.destroy();
         return reject(new Error(`HTTP ${res.statusCode} (expected 200)`));
