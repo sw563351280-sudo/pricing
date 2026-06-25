@@ -1,0 +1,3048 @@
+{
+  "source": "treeapi.cc",
+  "display_name": "TreeAPI",
+  "base_currency": "USD",
+  "models": [
+    {
+      "name": "claude-opus-4-8[1m]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        },
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o-2024-11-20",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 3.75,
+          "output_per_1m": 15,
+          "cache_per_1m": 1.875,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-codex",
+          "label": "号池GPT，可三方调用，可codex跑，缓存很不错",
+          "price_per_request": 41.25
+        },
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "price_per_request": 112.5
+        },
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "price_per_request": 375
+        },
+        {
+          "name": "特价codex",
+          "label": "codex-特价号池，混池",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "price_per_request": 112.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro-c]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Kiro按次",
+          "label": "如题，kiro渠道太多了，干脆放新分组",
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[CC满血]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次Claude满血",
+          "label": "max按次",
+          "price_per_request": 0.65
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview-think-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次Gemini",
+          "label": "智商正常，按次计费",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 3.75,
+          "output_per_1m": 30,
+          "cache_per_1m": 1.875,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 12.5,
+          "output_per_1m": 100,
+          "cache_per_1m": 6.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[官]claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-reasoner",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "deepseek专属",
+          "label": "站长的官key-直出，福利",
+          "input_per_1m": 0.5,
+          "output_per_1m": 0.75,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4.1",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 10,
+          "output_per_1m": 40,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 3,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-pro",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 150,
+          "output_per_1m": 900,
+          "cache_per_1m": 15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-vertex",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次vertex-Gemini",
+          "label": "谷歌的官KEY-Gemini按次",
+          "price_per_request": 0.091
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "veo-3.1-generate-preview",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-thinking-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "按次-gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "AZ-Claude",
+          "label": "微软官KEY，不限制任何使用和客户端，上下文100万",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 21.875
+        },
+        {
+          "name": "Claude-vertex",
+          "label": "Vertex分组，质量很好，可外接，来源于海外公司的余量，长期稳定供应,禁止18禁",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "Claude官渠-便宜",
+          "label": "可以外接的优质Claude渠道，非纯MAX号池",
+          "input_per_1m": 6.25,
+          "output_per_1m": 31.25,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": 7.8125
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6[1m]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview-search-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "按次[官]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.45
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-image-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "谷歌稳定绘图",
+          "label": "含香蕉和gpt生图模型和文本润色的国模",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "veo-3.0-generate-001",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro-c]claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Kiro按次",
+          "label": "如题，kiro渠道太多了，干脆放新分组",
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[AWS]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.65
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-codex",
+          "label": "号池GPT，可三方调用，可codex跑，缓存很不错",
+          "price_per_request": 41.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 1.875,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.1875,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 6.25,
+          "output_per_1m": 50,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-search-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "MiniMax-M3",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "price_per_request": 45
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[CC满血]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次Claude满血",
+          "label": "max按次",
+          "price_per_request": 0.65
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-vertex",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次vertex-Gemini",
+          "label": "谷歌的官KEY-Gemini按次",
+          "price_per_request": 0.1235
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[官]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini稳定渠道",
+          "label": "官转和官逆混合渠道",
+          "input_per_1m": 0.4,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.8,
+          "cache_per_1m": 0.1125,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Y-claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Kiro按次",
+          "label": "如题，kiro渠道太多了，干脆放新分组",
+          "price_per_request": 0.055
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-5-20250929",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "直连官key",
+          "label": "Anthropic直连官key，高等级用户专属（限时开放给所有付费用户）",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 18.75
+        },
+        {
+          "name": "Claude-vertex",
+          "label": "Vertex分组，质量很好，可外接，来源于海外公司的余量，长期稳定供应,禁止18禁",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        },
+        {
+          "name": "Claude官渠-便宜",
+          "label": "可以外接的优质Claude渠道，非纯MAX号池",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "coding-clod",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "小寒",
+          "label": "由小寒之父打造，底层模型由御三家（Claude、Gemini、GPT）组成，经过微调后出厂",
+          "input_per_1m": 2.25,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini稳定渠道",
+          "label": "官转和官逆混合渠道",
+          "input_per_1m": 1.2,
+          "output_per_1m": 7.2,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "o1",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 75,
+          "output_per_1m": 300,
+          "cache_per_1m": 37.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "claude-jupiter-v1-p",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "直连官key",
+          "label": "Anthropic直连官key，高等级用户专属（限时开放给所有付费用户）",
+          "input_per_1m": 25,
+          "output_per_1m": 125,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力按次]Claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.23
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠-便宜",
+          "label": "可以外接的优质Claude渠道，非纯MAX号池",
+          "input_per_1m": 6.25,
+          "output_per_1m": 31.25,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": 7.8125
+        },
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        },
+        {
+          "name": "WF-Claude",
+          "label": "WF渠道按量分组，外接有缓存，就是缓存有点怪",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "AZ-Claude",
+          "label": "微软官KEY，不限制任何使用和客户端，上下文100万",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 21.875
+        },
+        {
+          "name": "Claude-Supper",
+          "label": "反重力按量，满血渠道，但是外接没缓存",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "Claude-vertex",
+          "label": "Vertex分组，质量很好，可外接，来源于海外公司的余量，长期稳定供应,禁止18禁",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "直连官key",
+          "label": "Anthropic直连官key，高等级用户专属（限时开放给所有付费用户）",
+          "input_per_1m": 25,
+          "output_per_1m": 125,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        },
+        {
+          "name": "高可用AWS-Claude",
+          "label": "AWS高稳定，不稳定干我",
+          "input_per_1m": 20,
+          "output_per_1m": 100,
+          "cache_per_1m": 2,
+          "cache_write_per_1m": 25
+        },
+        {
+          "name": "Claude官渠",
+          "label": "纯血MAX官渠，支持三方调用的官渠，仅在CC内有缓存",
+          "input_per_1m": 11,
+          "output_per_1m": 55,
+          "cache_per_1m": 1.1,
+          "cache_write_per_1m": 13.75
+        },
+        {
+          "name": "kiro-1H",
+          "label": "kiro按量，一小时缓存，随时死，试试看",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "Claude_官api",
+          "label": "aws/vertex/anthropic pbc官方渠道，智商满血",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[官]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[官]claude-sonnet-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini稳定渠道",
+          "label": "官转和官逆混合渠道",
+          "input_per_1m": 0.24,
+          "output_per_1m": 1.9992,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.2-pro",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 105,
+          "output_per_1m": 840,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力按次]Claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.23
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "input_per_1m": 4.8,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4-1-fast-non-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok专属渠道",
+          "label": "gork的一些逆向等",
+          "input_per_1m": 0.8,
+          "output_per_1m": 8,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "按次[官]claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.45
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "kimi-k2.6",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "input_per_1m": 3.9,
+          "output_per_1m": 16.2,
+          "cache_per_1m": 0.66,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-image-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "谷歌稳定绘图",
+          "label": "含香蕉和gpt生图模型和文本润色的国模",
+          "price_per_request": 0.28
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini稳定渠道",
+          "label": "官转和官逆混合渠道",
+          "input_per_1m": 1.6,
+          "output_per_1m": 9.6,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "chatgpt-4o-latest",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 7.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "thinking-clod",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "小寒",
+          "label": "由小寒之父打造，底层模型由御三家（Claude、Gemini、GPT）组成，经过微调后出厂",
+          "input_per_1m": 4.5,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k2.7-code",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "input_per_1m": 3.9,
+          "output_per_1m": 16.2,
+          "cache_per_1m": 0.78,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-image",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "谷歌稳定绘图",
+          "label": "含香蕉和gpt生图模型和文本润色的国模",
+          "price_per_request": 0.28
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "kiro-1H",
+          "label": "kiro按量，一小时缓存，随时死，试试看",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        },
+        {
+          "name": "WF-Claude",
+          "label": "WF渠道按量分组，外接有缓存，就是缓存有点怪",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        },
+        {
+          "name": "高可用AWS-Claude",
+          "label": "AWS高稳定，不稳定干我",
+          "input_per_1m": 12,
+          "output_per_1m": 60,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": 15
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 1.8,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.18,
+          "cache_write_per_1m": 2.25
+        },
+        {
+          "name": "Claude_官api",
+          "label": "aws/vertex/anthropic pbc官方渠道，智商满血",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        },
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 2.4,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.24,
+          "cache_write_per_1m": 3
+        },
+        {
+          "name": "Claude官渠",
+          "label": "纯血MAX官渠，支持三方调用的官渠，仅在CC内有缓存",
+          "input_per_1m": 6.6,
+          "output_per_1m": 33,
+          "cache_per_1m": 0.66,
+          "cache_write_per_1m": 8.25
+        },
+        {
+          "name": "Claude-vertex",
+          "label": "Vertex分组，质量很好，可外接，来源于海外公司的余量，长期稳定供应,禁止18禁",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 2.55,
+          "output_per_1m": 12.75,
+          "cache_per_1m": 0.255,
+          "cache_write_per_1m": 3.1875
+        },
+        {
+          "name": "AZ-Claude",
+          "label": "微软官KEY，不限制任何使用和客户端，上下文100万",
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.05,
+          "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "Claude-Supper",
+          "label": "反重力按量，满血渠道，但是外接没缓存",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        },
+        {
+          "name": "Claude官渠-便宜",
+          "label": "可以外接的优质Claude渠道，非纯MAX号池",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        },
+        {
+          "name": "直连官key",
+          "label": "Anthropic直连官key，高等级用户专属（限时开放给所有付费用户）",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 18.75
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "veo-3.1-fast-generate-preview",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude_官api",
+          "label": "aws/vertex/anthropic pbc官方渠道，智商满血",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "Claude官渠",
+          "label": "纯血MAX官渠，支持三方调用的官渠，仅在CC内有缓存",
+          "input_per_1m": 11,
+          "output_per_1m": 55,
+          "cache_per_1m": 1.1,
+          "cache_write_per_1m": 13.75
+        },
+        {
+          "name": "Claude官渠-便宜",
+          "label": "可以外接的优质Claude渠道，非纯MAX号池",
+          "input_per_1m": 6.25,
+          "output_per_1m": 31.25,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": 7.8125
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        },
+        {
+          "name": "WF-Claude",
+          "label": "WF渠道按量分组，外接有缓存，就是缓存有点怪",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "AZ-Claude",
+          "label": "微软官KEY，不限制任何使用和客户端，上下文100万",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 21.875
+        },
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "Claude-vertex",
+          "label": "Vertex分组，质量很好，可外接，来源于海外公司的余量，长期稳定供应,禁止18禁",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "高可用AWS-Claude",
+          "label": "AWS高稳定，不稳定干我",
+          "input_per_1m": 20,
+          "output_per_1m": 100,
+          "cache_per_1m": 2,
+          "cache_write_per_1m": 25
+        },
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "kiro-1H",
+          "label": "kiro按量，一小时缓存，随时死，试试看",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "直连官key",
+          "label": "Anthropic直连官key，高等级用户专属（限时开放给所有付费用户）",
+          "input_per_1m": 25,
+          "output_per_1m": 125,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[官]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "deepseek专属",
+          "label": "站长的官key-直出，福利",
+          "input_per_1m": 3,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.025,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "input_per_1m": 7.2,
+          "output_per_1m": 14.4,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.3",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok专属渠道",
+          "label": "gork的一些逆向等",
+          "input_per_1m": 5,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "S-claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次Gemini",
+          "label": "智商正常，按次计费",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-3",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok专属渠道",
+          "label": "gork的一些逆向等",
+          "input_per_1m": 8,
+          "output_per_1m": 16,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5-pro",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 150,
+          "output_per_1m": 900,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "按次-gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite-preview-vertex",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次vertex-Gemini",
+          "label": "谷歌的官KEY-Gemini按次",
+          "price_per_request": 0.1235
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠",
+          "label": "纯血MAX官渠，支持三方调用的官渠，仅在CC内有缓存",
+          "input_per_1m": 2.2,
+          "output_per_1m": 11,
+          "cache_per_1m": 0.22,
+          "cache_write_per_1m": 2.75
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-codex",
+          "label": "号池GPT，可三方调用，可codex跑，缓存很不错",
+          "price_per_request": 41.25
+        },
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "price_per_request": 375
+        },
+        {
+          "name": "特价codex",
+          "label": "codex-特价号池，混池",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "input_per_1m": 4,
+          "output_per_1m": 24,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini稳定渠道",
+          "label": "官转和官逆混合渠道",
+          "input_per_1m": 1.6,
+          "output_per_1m": 9.6,
+          "cache_per_1m": 1.6,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "S-claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash-vertex",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次vertex-Gemini",
+          "label": "谷歌的官KEY-Gemini按次",
+          "price_per_request": 0.091
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "grok-4-1-fast-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok专属渠道",
+          "label": "gork的一些逆向等",
+          "input_per_1m": 0.8,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro-c]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Kiro按次",
+          "label": "如题，kiro渠道太多了，干脆放新分组",
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "S-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-fast",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "特价Claude",
+          "label": "kiro特价渠道Claude，自行使用吧",
+          "price_per_request": 0.016
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-image",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "谷歌稳定绘图",
+          "label": "含香蕉和gpt生图模型和文本润色的国模",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "[官]claude-opus-4-5-20251101-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-chat",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "deepseek专属",
+          "label": "站长的官key-直出，福利",
+          "input_per_1m": 0.5,
+          "output_per_1m": 0.75,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "input_per_1m": 2.5,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini稳定渠道",
+          "label": "官转和官逆混合渠道",
+          "input_per_1m": 1,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-3-mini",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok专属渠道",
+          "label": "gork的一些逆向等",
+          "input_per_1m": 1.2,
+          "output_per_1m": 2,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "S-claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "veo-3.0-fast-generate-001",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview-thinking-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "直连官按次-claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "vendor": "讯飞",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-codex",
+          "label": "号池GPT，可三方调用，可codex跑，缓存很不错",
+          "price_per_request": 41.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7[1m]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4.1-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 0.6,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o-2024-05-13",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 7.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[AWS]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.65
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro-search-cli",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "按次[官]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.45
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-vertex",
+          "label": "Vertex分组，质量很好，可外接，来源于海外公司的余量，长期稳定供应,禁止18禁",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "Claude_官api",
+          "label": "aws/vertex/anthropic pbc官方渠道，智商满血",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "直连官key",
+          "label": "Anthropic直连官key，高等级用户专属（限时开放给所有付费用户）",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "kiro-1H",
+          "label": "kiro按量，一小时缓存，随时死，试试看",
+          "input_per_1m": 0.5,
+          "output_per_1m": 2.5,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": 0.625
+        },
+        {
+          "name": "WF-Claude",
+          "label": "WF渠道按量分组，外接有缓存，就是缓存有点怪",
+          "input_per_1m": 0.75,
+          "output_per_1m": 3.75,
+          "cache_per_1m": 0.075,
+          "cache_write_per_1m": 0.9375
+        },
+        {
+          "name": "高可用AWS-Claude",
+          "label": "AWS高稳定，不稳定干我",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "Claude-Supper",
+          "label": "反重力按量，满血渠道，但是外接没缓存",
+          "input_per_1m": 0.75,
+          "output_per_1m": 3.75,
+          "cache_per_1m": 0.075,
+          "cache_write_per_1m": 0.9375
+        },
+        {
+          "name": "Claude官渠",
+          "label": "纯血MAX官渠，支持三方调用的官渠，仅在CC内有缓存",
+          "input_per_1m": 2.2,
+          "output_per_1m": 11,
+          "cache_per_1m": 0.22,
+          "cache_write_per_1m": 2.75
+        },
+        {
+          "name": "Claude官渠-便宜",
+          "label": "可以外接的优质Claude渠道，非纯MAX号池",
+          "input_per_1m": 1.25,
+          "output_per_1m": 6.25,
+          "cache_per_1m": 0.125,
+          "cache_write_per_1m": 1.5625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro-c]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Kiro按次",
+          "label": "如题，kiro渠道太多了，干脆放新分组",
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Y-claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Kiro按次",
+          "label": "如题，kiro渠道太多了，干脆放新分组",
+          "price_per_request": 0.055
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-high-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "按次[官]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.45
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "直连官按次-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 8
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "glm-5.1",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "price_per_request": 45
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[官]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[官]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5-nano",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 0.15,
+          "output_per_1m": 1.2,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-0309-non-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok专属渠道",
+          "label": "gork的一些逆向等",
+          "input_per_1m": 5,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Y-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Kiro按次",
+          "label": "如题，kiro渠道太多了，干脆放新分组",
+          "price_per_request": 0.055
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5-codex",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 6.25,
+          "output_per_1m": 50,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "MiniMax-M2.7",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "input_per_1m": 1.26,
+          "output_per_1m": 5.04,
+          "cache_per_1m": 0.252,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-codex",
+          "label": "号池GPT，可三方调用，可codex跑，缓存很不错",
+          "price_per_request": 41.25
+        },
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "price_per_request": 112.5
+        },
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "price_per_request": 375
+        },
+        {
+          "name": "特价codex",
+          "label": "codex-特价号池，混池",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-codex",
+          "label": "号池GPT，可三方调用，可codex跑，缓存很不错",
+          "price_per_request": 41.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[CC满血]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次Claude满血",
+          "label": "max按次",
+          "price_per_request": 0.65
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[CC满血]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次Claude满血",
+          "label": "max按次",
+          "price_per_request": 0.4
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "谷歌稳定绘图",
+          "label": "含香蕉和gpt生图模型和文本润色的国模",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-low-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "claude-jupiter",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude_官api",
+          "label": "aws/vertex/anthropic pbc官方渠道，智商满血",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6[1m]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 2.4,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.24,
+          "cache_write_per_1m": 3
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 1.8,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.18,
+          "cache_write_per_1m": 2.25
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 2.55,
+          "output_per_1m": 12.75,
+          "cache_per_1m": 0.255,
+          "cache_write_per_1m": 3.1875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "按次[官]claude-opus-4-5-20251101-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.45
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro-vertex",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次vertex-Gemini",
+          "label": "谷歌的官KEY-Gemini按次",
+          "price_per_request": 0.091
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5-20251124",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.1",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 6.25,
+          "output_per_1m": 50,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 1.875,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.1875,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-0309-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok专属渠道",
+          "label": "gork的一些逆向等",
+          "input_per_1m": 5,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.7-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "input_per_1m": 7.2,
+          "output_per_1m": 21.6,
+          "cache_per_1m": 1.44,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "sex-clod",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "小寒",
+          "label": "由小寒之父打造，底层模型由御三家（Claude、Gemini、GPT）组成，经过微调后出厂",
+          "input_per_1m": 4.5,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "deepseek专属",
+          "label": "站长的官key-直出，福利",
+          "input_per_1m": 1,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.02,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "国产模型",
+          "label": "自部署开源国产模型",
+          "input_per_1m": 2.4,
+          "output_per_1m": 4.8,
+          "cache_per_1m": 0.048,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini高可用分组",
+          "label": "谷歌官方纯key",
+          "input_per_1m": 0.6,
+          "output_per_1m": 4.998,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4.1-2025-04-14",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 3,
+          "output_per_1m": 12,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5-2025-08-07",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 1.875,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.1875,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "S-claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "用户分组",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-hyper",
+          "label": "Claude-hyper，神秘渠道，输出64K，智商还行",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "Claude官渠",
+          "label": "纯血MAX官渠，支持三方调用的官渠，仅在CC内有缓存",
+          "input_per_1m": 11,
+          "output_per_1m": 55,
+          "cache_per_1m": 1.1,
+          "cache_write_per_1m": 13.75
+        },
+        {
+          "name": "Claude平价渠道-备用",
+          "label": "Claude平价的备用分组，稳定性可以的",
+          "input_per_1m": 4.25,
+          "output_per_1m": 21.25,
+          "cache_per_1m": 0.425,
+          "cache_write_per_1m": 5.3125
+        },
+        {
+          "name": "WF-Claude",
+          "label": "WF渠道按量分组，外接有缓存，就是缓存有点怪",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "AZ-Claude",
+          "label": "微软官KEY，不限制任何使用和客户端，上下文100万",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 21.875
+        },
+        {
+          "name": "Claude_官api",
+          "label": "aws/vertex/anthropic pbc官方渠道，智商满血",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "Claude-vertex",
+          "label": "Vertex分组，质量很好，可外接，来源于海外公司的余量，长期稳定供应,禁止18禁",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "Claude官渠-便宜",
+          "label": "可以外接的优质Claude渠道，非纯MAX号池",
+          "input_per_1m": 6.25,
+          "output_per_1m": 31.25,
+          "cache_per_1m": 0.625,
+          "cache_write_per_1m": 7.8125
+        },
+        {
+          "name": "Claude官渠对话分组",
+          "label": "智商满血，对话专用，禁止CC写代码",
+          "input_per_1m": 3.75,
+          "output_per_1m": 18.75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 4.6875
+        },
+        {
+          "name": "Claude平价渠道",
+          "label": "多渠道逆向，智商比对话专用高，有缓存，很省钱",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "kiro-1H",
+          "label": "kiro按量，一小时缓存，随时死，试试看",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "高可用AWS-Claude",
+          "label": "AWS高稳定，不稳定干我",
+          "input_per_1m": 20,
+          "output_per_1m": 100,
+          "cache_per_1m": 2,
+          "cache_write_per_1m": 25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini稳定渠道",
+          "label": "官转和官逆混合渠道",
+          "input_per_1m": 1.0672,
+          "output_per_1m": 8.893333,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4.1-mini-2025-04-14",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "input_per_1m": 2,
+          "output_per_1m": 8,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "OpenAI官",
+          "label": "官KEY的OPENAI-GPT相关模型",
+          "price_per_request": 375
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o-2024-08-06",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt-官渠",
+          "label": "官方渠道的chat-gpt，模型随缘更新",
+          "input_per_1m": 3.75,
+          "output_per_1m": 15,
+          "cache_per_1m": 1.875,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    }
+  ],
+  "fetched_at": "2026-06-25T16:12:00.379Z"
+}
