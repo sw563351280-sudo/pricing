@@ -7,7 +7,7 @@ const { createFetcher } = require("./_oneapi-base");
 // Override: base is 1.0 橘子/1K, not 0.002 USD/1K
 
 const https = require("https");
-const BASE_PER_1K = 1.0; // 橘子
+const BASE_PER_1K = 0.2; // 橘子 (1.625 × 0.2 × 1000 = 325)
 const JUZI_TO_RMB = 0.13699; // 1 橘子 = ¥0.13699
 const TIMEOUT_MS = 30_000;
 
