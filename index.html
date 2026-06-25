@@ -74,6 +74,43 @@
   .gcard { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:6px 10px; font-size:11px; line-height:1.4; }
   .gcard .gn { font-weight:600; color:var(--text); }
   tr:hover td { background: rgba(88,166,255,0.03); }
+
+  /* ── 手机端适配 ── */
+  @media (max-width: 768px) {
+    header { padding:10px 12px; }
+    header .title { font-size:16px; }
+    header .meta { font-size:11px; display:none; }
+    .tab-bar { padding:0 8px; overflow-x:auto; }
+    .tab-btn { padding:8px 14px; font-size:13px; white-space:nowrap; }
+    .controls { padding:10px 8px; gap:6px; }
+    .controls input, .controls select { font-size:12px; padding:5px 8px; }
+    .controls input { min-width:140px; }
+    .controls select { min-width:100px; }
+    .suggest-wrap { min-width:180px; }
+    table { font-size:11px; }
+    thead th { padding:6px 8px; font-size:10px; }
+    td { padding:6px 8px; }
+    .group-cards { gap:4px; }
+    .gcard { padding:4px 6px; font-size:10px; }
+    .detail-grid { grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); gap:6px; }
+    .detail-card { padding:8px; }
+    .count-bar { font-size:11px; padding:6px 12px; }
+    .footer { font-size:11px; padding:12px; }
+    .cmp-table { margin:0 8px; }
+    .source-tag { font-size:9px; }
+    .badge { font-size:10px; padding:1px 6px; }
+  }
+  @media (max-width: 480px) {
+    .tab-btn { padding:6px 10px; font-size:12px; }
+    table { font-size:10px; }
+    thead th { padding:4px 6px; font-size:9px; }
+    td { padding:4px 6px; }
+    .detail-grid { grid-template-columns:1fr; }
+    .gcard { font-size:9px; }
+    .controls { flex-direction:column; }
+    .controls input, .controls select { width:100%; }
+    .suggest-wrap { width:100%; }
+  }
 </style>
 </head>
 <body>
