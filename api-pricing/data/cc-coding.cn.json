@@ -7,33 +7,26 @@
     "default": {
       "ratio": 1,
       "label": "默认分组"
+    },
+    "vip": {
+      "ratio": 1,
+      "label": "官号"
     }
   },
   "models": [
     {
-      "name": "gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.25,
-          "output_per_1m": 10,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-8",
+      "name": "claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
         {
           "name": "default",
           "label": "默认分组",
@@ -41,44 +34,6 @@
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
           "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.14,
-          "output_per_1m": 0.7,
-          "cache_per_1m": 0.014,
-          "cache_write_per_1m": 0.175
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 3,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -105,6 +60,25 @@
       ]
     },
     {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
       "name": "claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -116,10 +90,128 @@
           "output_per_1m": 15,
           "cache_per_1m": 0.3,
           "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
         "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.7,
+          "cache_per_1m": 0.014,
+          "cache_write_per_1m": 0.175
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.7,
+          "cache_per_1m": 0.014,
+          "cache_write_per_1m": 0.175
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.02,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.25,
+          "output_per_1m": 10,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -153,21 +245,10 @@
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
           "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-5-20251101",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
+        },
         {
-          "name": "default",
-          "label": "默认分组",
+          "name": "vip",
+          "label": "官号",
           "input_per_1m": 5,
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
@@ -176,44 +257,6 @@
       ],
       "supported_endpoints": [
         "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1,
-          "output_per_1m": 5,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
         "openai"
       ]
     },
@@ -237,6 +280,33 @@
       ]
     },
     {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
       "name": "claude-opus-4-7",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -248,21 +318,10 @@
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
           "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
+        },
         {
-          "name": "default",
-          "label": "默认分组",
+          "name": "vip",
+          "label": "官号",
           "input_per_1m": 5,
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
@@ -275,16 +334,16 @@
       ]
     },
     {
-      "name": "deepseek-v4-flash",
+      "name": "deepseek-v4-pro",
       "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 1,
-          "output_per_1m": 2,
-          "cache_per_1m": 0.02,
+          "input_per_1m": 3,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.025,
           "cache_write_per_1m": null
         }
       ],
@@ -294,23 +353,32 @@
       ]
     },
     {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
+      "name": "claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     }
   ],
-  "fetched_at": "2026-06-26T20:46:15.801Z"
+  "fetched_at": "2026-06-27T20:07:29.722Z"
 }
