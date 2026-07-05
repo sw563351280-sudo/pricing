@@ -11,88 +11,16 @@
   },
   "models": [
     {
-      "name": "z-ai/glm-5.2",
-      "vendor": "GLM",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.4,
-          "output_per_1m": 4.4,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-fable-5",
-      "vendor": "Claude",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "baseten/kimi-k2.7-code",
+      "name": "deepinfra/kimi-k2.7-code",
       "vendor": "Kimi",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.95,
-          "output_per_1m": 4,
-          "cache_per_1m": 0.16,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "baseten/nemotron-3-ultra-550b-a55b",
-      "vendor": "Nemotron",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.6,
-          "output_per_1m": 2.4,
-          "cache_per_1m": 0.12,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "fireworks/minimax-m3",
-      "vendor": "Minimax",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.2,
-          "cache_per_1m": 0.06,
+          "input_per_1m": 0.74,
+          "output_per_1m": 3.5,
+          "cache_per_1m": 0.15,
           "cache_write_per_1m": null
         }
       ],
@@ -137,16 +65,16 @@
       ]
     },
     {
-      "name": "deepinfra/nemotron-3-ultra-550b-a55b",
-      "vendor": "Nemotron",
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.5,
-          "output_per_1m": 2.5,
-          "cache_per_1m": 0.15,
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -155,16 +83,158 @@
       ]
     },
     {
-      "name": "minimax/minimax-m3",
-      "vendor": "Minimax",
+      "name": "Nvidia-nemotron-3-ultra",
+      "vendor": "Nemotron",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.001
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "moonshotai/kimi-k2.7-code",
+      "vendor": "Kimi",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.2,
-          "cache_per_1m": 0.06,
+          "input_per_1m": 0.95,
+          "output_per_1m": 4,
+          "cache_per_1m": 0.19,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "togetherai/nemotron-3-ultra-550b-a55b",
+      "vendor": "Nemotron",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek/deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.28,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen/qwen3.7-max",
+      "vendor": "Qwen",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-flash-lite-latest",
+      "vendor": "Gemini",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.25,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 0.025,
+          "cache_write_per_1m": 0.08333
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "z-ai/glm-5.2",
+      "vendor": "GLM",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.4,
+          "output_per_1m": 4.4,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "fireworks/glm-5.2",
+      "vendor": "GLM",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.4,
+          "output_per_1m": 4.4,
+          "cache_per_1m": 0.26,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.075,
           "cache_write_per_1m": null
         }
       ],
@@ -191,34 +261,16 @@
       ]
     },
     {
-      "name": "claude-sonnet-5",
-      "vendor": "Claude",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2,
-          "output_per_1m": 10,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "baseten/glm-5.2",
+      "name": "wafer/glm-5.2",
       "vendor": "GLM",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.3,
+          "input_per_1m": 3,
+          "output_per_1m": 10.25,
+          "cache_per_1m": 0.5,
           "cache_write_per_1m": null
         }
       ],
@@ -227,15 +279,15 @@
       ]
     },
     {
-      "name": "deepinfra/kimi-k2.7-code",
-      "vendor": "Kimi",
+      "name": "deepinfra/nemotron-3-ultra-550b-a55b",
+      "vendor": "Nemotron",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.74,
-          "output_per_1m": 3.5,
+          "input_per_1m": 0.5,
+          "output_per_1m": 2.5,
           "cache_per_1m": 0.15,
           "cache_write_per_1m": null
         }
@@ -245,20 +297,252 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-6",
+      "name": "blackbox/nemotron-3-ultra-550b-a55b",
+      "vendor": "Nemotron",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.37,
+          "output_per_1m": 1.08,
+          "cache_per_1m": 0.14,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "fireworks/minimax-m3",
+      "vendor": "Minimax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.2,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
       "vendor": "Claude",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 75,
+          "output_per_1m": 450,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-nano",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.2,
+          "output_per_1m": 1.25,
+          "cache_per_1m": 0.02,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.28,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "fireworks/kimi-k2.7-code",
+      "vendor": "Kimi",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.95,
+          "output_per_1m": 4,
+          "cache_per_1m": 0.19,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "baseten/nemotron-3-ultra-550b-a55b",
+      "vendor": "Nemotron",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.6,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "xiaomi/mimo-v2.5-pro",
+      "vendor": "MiMo",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "stepfun/step-3.7-flash",
+      "vendor": "Stepfun",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.2,
+          "output_per_1m": 1.15,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-fable-5",
+      "vendor": "Claude",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8-fast",
+      "vendor": "Claude",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Nvidia-kimi-k2.6",
+      "vendor": "Kimi",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.001
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite",
+      "vendor": "Gemini",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.25,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 0.025,
+          "cache_write_per_1m": 0.08333
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -299,112 +583,6 @@
       ]
     },
     {
-      "name": "Nvidia-kimi-k2.6",
-      "vendor": "Kimi",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.001
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-flash-lite-latest",
-      "vendor": "Gemini",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.25,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": 0.08333
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-mini",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-nano",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.2,
-          "output_per_1m": 1.25,
-          "cache_per_1m": 0.02,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen/qwen3.7-max",
-      "vendor": "Qwen",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.14,
-          "output_per_1m": 0.28,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "Nvidia-step-3.7-flash",
       "vendor": "Stepfun",
       "quota_type": "per_request",
@@ -420,31 +598,16 @@
       ]
     },
     {
-      "name": "Nvidia-nemotron-3-ultra",
-      "vendor": "Nemotron",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.001
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "fireworks/glm-5.2",
+      "name": "baseten/glm-5.2",
       "vendor": "GLM",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 1.4,
-          "output_per_1m": 4.4,
-          "cache_per_1m": 0.26,
+          "input_per_1m": 1.5,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.3,
           "cache_write_per_1m": null
         }
       ],
@@ -453,16 +616,34 @@
       ]
     },
     {
-      "name": "blackbox/nemotron-3-ultra-550b-a55b",
-      "vendor": "Nemotron",
+      "name": "baseten/kimi-k2.7-code",
+      "vendor": "Kimi",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.37,
-          "output_per_1m": 1.08,
-          "cache_per_1m": 0.14,
+          "input_per_1m": 0.95,
+          "output_per_1m": 4,
+          "cache_per_1m": 0.16,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "minimax/minimax-m3",
+      "vendor": "Minimax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.2,
+          "cache_per_1m": 0.06,
           "cache_write_per_1m": null
         }
       ],
@@ -525,16 +706,16 @@
       ]
     },
     {
-      "name": "wafer/glm-5.2",
-      "vendor": "GLM",
+      "name": "claude-sonnet-4-6",
+      "vendor": "Claude",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
           "input_per_1m": 3,
-          "output_per_1m": 10.25,
-          "cache_per_1m": 0.5,
+          "output_per_1m": 15,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -543,35 +724,14 @@
       ]
     },
     {
-      "name": "togetherai/nemotron-3-ultra-550b-a55b",
-      "vendor": "Nemotron",
-      "quota_type": "token",
+      "name": "Nvidia-gpt-oss-120b",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "stepfun/step-3.7-flash",
-      "vendor": "Stepfun",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.2,
-          "output_per_1m": 1.15,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
+          "price_per_request": 0.001
         }
       ],
       "supported_endpoints": [
@@ -597,42 +757,6 @@
       ]
     },
     {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 75,
-          "output_per_1m": 450,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "gemini-3.1-pro-preview",
       "vendor": "Gemini",
       "quota_type": "token",
@@ -644,114 +768,6 @@
           "output_per_1m": 300,
           "cache_per_1m": null,
           "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek/deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.14,
-          "output_per_1m": 0.28,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "moonshotai/kimi-k2.7-code",
-      "vendor": "Kimi",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.95,
-          "output_per_1m": 4,
-          "cache_per_1m": 0.19,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "fireworks/kimi-k2.7-code",
-      "vendor": "Kimi",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.95,
-          "output_per_1m": 4,
-          "cache_per_1m": 0.19,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "xiaomi/mimo-v2.5-pro",
-      "vendor": "MiMo",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 75,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Claude",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-8-fast",
-      "vendor": "Claude",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
         }
       ],
       "supported_endpoints": [
@@ -777,39 +793,23 @@
       ]
     },
     {
-      "name": "Nvidia-gpt-oss-120b",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.001
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite",
-      "vendor": "Gemini",
+      "name": "claude-sonnet-5",
+      "vendor": "Claude",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.25,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": 0.08333
+          "input_per_1m": 2,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "gemini",
         "openai"
       ]
     }
   ],
-  "fetched_at": "2026-07-04T20:08:34.552Z"
+  "fetched_at": "2026-07-05T20:13:41.549Z"
 }
