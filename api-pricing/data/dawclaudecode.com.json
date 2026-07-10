@@ -45,7 +45,7 @@
       "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接"
     },
     "codex": {
-      "ratio": 0.35,
+      "ratio": 0.4,
       "label": "codex【优先codex pro，兜底codex team】【開放三方調度】"
     },
     "codex-b": {
@@ -61,7 +61,7 @@
       "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】"
     },
     "default": {
-      "ratio": 1.65,
+      "ratio": 1.7,
       "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】"
     },
     "gemini": {
@@ -79,17 +79,416 @@
   },
   "models": [
     {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-stu",
+          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【纯codex pro】【開放三方調度】",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "test",
+          "label": "測試專用分組！！請勿勾選！！",
+          "input_per_1m": 50,
+          "output_per_1m": 300,
+          "cache_per_1m": 5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 2,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 10,
+          "output_per_1m": 60,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "test",
+          "label": "測試專用分組！！請勿勾選！！",
+          "input_per_1m": 17.5,
+          "output_per_1m": 140,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 3.5,
+          "output_per_1m": 28,
+          "cache_per_1m": 0.35,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【纯codex pro】【開放三方調度】",
+          "input_per_1m": 0.875,
+          "output_per_1m": 7,
+          "cache_per_1m": 0.0875,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        },
+        {
+          "name": "cc-白宫严选",
+          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
+          "input_per_1m": 80,
+          "output_per_1m": 400,
+          "cache_per_1m": 8,
+          "cache_write_per_1m": 100
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 8.5,
+          "output_per_1m": 42.5,
+          "cache_per_1m": 0.85,
+          "cache_write_per_1m": 10.625
+        },
+        {
+          "name": "cc-max",
+          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
+          "input_per_1m": 30,
+          "output_per_1m": 150,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 37.5
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "cc-tehui-fabel",
+          "label": "cc【GitHub Coplit】【支持Fabel 5】",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 8.5,
+          "output_per_1m": 42.5,
+          "cache_per_1m": 0.85,
+          "cache_write_per_1m": 10.625
+        },
+        {
+          "name": "cc-aws",
+          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
+          "input_per_1m": 42.5,
+          "output_per_1m": 212.5,
+          "cache_per_1m": 4.25,
+          "cache_write_per_1m": 53.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-customtools",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "gemini【Gemini Ultra】【開放三方調度】",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-1.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "test",
+          "label": "測試專用分組！！請勿勾選！！",
+          "input_per_1m": 50,
+          "output_per_1m": 320,
+          "cache_per_1m": 12.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "test",
+          "label": "測試專用分組！！請勿勾選！！",
+          "input_per_1m": 50,
+          "output_per_1m": 300,
+          "cache_per_1m": 12.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 10,
+          "output_per_1m": 60,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 2,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2.5
+        },
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 10,
+          "output_per_1m": 60,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        },
+        {
+          "name": "codex-stu",
+          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【纯codex pro】【開放三方調度】",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "gemini【Gemini Ultra】【開放三方調度】",
+          "input_per_1m": 0.75,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-白宫严选",
+          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
+          "input_per_1m": 48,
+          "output_per_1m": 240,
+          "cache_per_1m": 4.8,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-aws",
+          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
+          "input_per_1m": 25.5,
+          "output_per_1m": 127.5,
+          "cache_per_1m": 2.55,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 5.4,
+          "output_per_1m": 27,
+          "cache_per_1m": 0.54,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 1.8,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.18,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-max",
+          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 1.8,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
+          "input_per_1m": 1.35,
+          "output_per_1m": 6.75,
+          "cache_per_1m": 0.135,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-fabel",
+          "label": "cc【GitHub Coplit】【支持Fabel 5】",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 5.1,
+          "output_per_1m": 25.5,
+          "cache_per_1m": 0.51,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 5.1,
+          "output_per_1m": 25.5,
+          "cache_per_1m": 0.51,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2-4k",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gpt-Image-fast",
+          "label": "gpt官生图分组",
+          "price_per_request": 0.22
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "claude-haiku-4-5-20251001",
       "vendor": "Helicone",
       "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 1.65,
-          "output_per_1m": 8.25,
-          "cache_per_1m": 0.165,
-          "cache_write_per_1m": 2.0625
+          "name": "cc-max",
+          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
+        },
+        {
+          "name": "cc-aws",
+          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
+          "input_per_1m": 8.5,
+          "output_per_1m": 42.5,
+          "cache_per_1m": 0.85,
+          "cache_write_per_1m": 10.625
         },
         {
           "name": "cc-tehui-fabel",
@@ -98,30 +497,6 @@
           "output_per_1m": 5,
           "cache_per_1m": 0.1,
           "cache_write_per_1m": 1.25
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 1.7,
-          "output_per_1m": 8.5,
-          "cache_per_1m": 0.17,
-          "cache_write_per_1m": 2.125
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": 0.75
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 1.8,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.18,
-          "cache_write_per_1m": 2.25
         },
         {
           "name": "cc-tehui",
@@ -140,20 +515,36 @@
           "cache_write_per_1m": 20
         },
         {
-          "name": "cc-max",
-          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": 0.75
         },
         {
-          "name": "cc-aws",
-          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
-          "input_per_1m": 8.5,
-          "output_per_1m": 42.5,
-          "cache_per_1m": 0.85,
-          "cache_write_per_1m": 10.625
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 1.7,
+          "output_per_1m": 8.5,
+          "cache_per_1m": 0.17,
+          "cache_write_per_1m": 2.125
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 1.7,
+          "output_per_1m": 8.5,
+          "cache_per_1m": 0.17,
+          "cache_write_per_1m": 2.125
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 1.8,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.18,
+          "cache_write_per_1m": 2.25
         }
       ],
       "supported_endpoints": [
@@ -162,32 +553,445 @@
       ]
     },
     {
-      "name": "gpt-5.3-codex-spark",
+      "name": "claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 17,
+          "output_per_1m": 85,
+          "cache_per_1m": 1.7,
+          "cache_write_per_1m": 21.25
+        },
+        {
+          "name": "cc-max",
+          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
+          "input_per_1m": 60,
+          "output_per_1m": 300,
+          "cache_per_1m": 6,
+          "cache_write_per_1m": 75
+        },
+        {
+          "name": "cc-aws",
+          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
+          "input_per_1m": 85,
+          "output_per_1m": 425,
+          "cache_per_1m": 8.5,
+          "cache_write_per_1m": 106.25
+        },
+        {
+          "name": "cc-tehui-fabel",
+          "label": "cc【GitHub Coplit】【支持Fabel 5】",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        },
+        {
+          "name": "cc-白宫严选",
+          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
+          "input_per_1m": 160,
+          "output_per_1m": 800,
+          "cache_per_1m": 16,
+          "cache_write_per_1m": 200
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 1.8,
+          "cache_write_per_1m": 22.5
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 17,
+          "output_per_1m": 85,
+          "cache_per_1m": 1.7,
+          "cache_write_per_1m": 21.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 8.5,
+          "output_per_1m": 42.5,
+          "cache_per_1m": 0.85,
+          "cache_write_per_1m": 10.625
+        },
+        {
+          "name": "cc-白宫严选",
+          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
+          "input_per_1m": 80,
+          "output_per_1m": 400,
+          "cache_per_1m": 8,
+          "cache_write_per_1m": 100
+        },
+        {
+          "name": "cc-max",
+          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
+          "input_per_1m": 30,
+          "output_per_1m": 150,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 37.5
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "cc-tehui-fabel",
+          "label": "cc【GitHub Coplit】【支持Fabel 5】",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 8.5,
+          "output_per_1m": 42.5,
+          "cache_per_1m": 0.85,
+          "cache_write_per_1m": 10.625
+        },
+        {
+          "name": "cc-aws",
+          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
+          "input_per_1m": 42.5,
+          "output_per_1m": 212.5,
+          "cache_per_1m": 4.25,
+          "cache_write_per_1m": 53.125
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-tehui-fabel",
+          "label": "cc【GitHub Coplit】【支持Fabel 5】",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        },
+        {
+          "name": "cc-白宫严选",
+          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
+          "input_per_1m": 80,
+          "output_per_1m": 400,
+          "cache_per_1m": 8,
+          "cache_write_per_1m": 100
+        },
+        {
+          "name": "cc-max",
+          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
+          "input_per_1m": 30,
+          "output_per_1m": 150,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 37.5
+        },
+        {
+          "name": "cc-aws",
+          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
+          "input_per_1m": 42.5,
+          "output_per_1m": 212.5,
+          "cache_per_1m": 4.25,
+          "cache_write_per_1m": 53.125
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 8.5,
+          "output_per_1m": 42.5,
+          "cache_per_1m": 0.85,
+          "cache_write_per_1m": 10.625
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 8.5,
+          "output_per_1m": 42.5,
+          "cache_per_1m": 0.85,
+          "cache_write_per_1m": 10.625
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 3.5,
-          "output_per_1m": 28,
-          "cache_per_1m": 0.35,
+          "name": "codex-stu",
+          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.075,
           "cache_write_per_1m": null
         },
         {
           "name": "codex-b",
           "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 0.875,
-          "output_per_1m": 7,
-          "cache_per_1m": 0.0875,
+          "input_per_1m": 1.25,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.125,
           "cache_write_per_1m": null
         },
         {
           "name": "test",
           "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 17.5,
-          "output_per_1m": 140,
-          "cache_per_1m": 1.75,
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 5,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
+          "input_per_1m": 1.35,
+          "output_per_1m": 6.75,
+          "cache_per_1m": 0.135,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 5.1,
+          "output_per_1m": 25.5,
+          "cache_per_1m": 0.51,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-白宫严选",
+          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
+          "input_per_1m": 48,
+          "output_per_1m": 240,
+          "cache_per_1m": 4.8,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-max",
+          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 1.8,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-aws",
+          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
+          "input_per_1m": 25.5,
+          "output_per_1m": 127.5,
+          "cache_per_1m": 2.55,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 1.8,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.18,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-fabel",
+          "label": "cc【GitHub Coplit】【支持Fabel 5】",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 5.1,
+          "output_per_1m": 25.5,
+          "cache_per_1m": 0.51,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 5.4,
+          "output_per_1m": 27,
+          "cache_per_1m": 0.54,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-1",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "test",
+          "label": "測試專用分組！！請勿勾選！！",
+          "input_per_1m": 50,
+          "output_per_1m": 400,
+          "cache_per_1m": 12.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "gemini【Gemini Ultra】【開放三方調度】",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-stu",
+          "label": "gemini【Gemini獨家通路混合線】【開放三方調度】",
+          "input_per_1m": 2,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-stu",
+          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.075,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【纯codex pro】【開放三方調度】",
+          "input_per_1m": 1.25,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.125,
           "cache_write_per_1m": null
         }
       ],
@@ -215,15 +1019,98 @@
       ]
     },
     {
-      "name": "gemini-3.1-flash-image-preview",
+      "name": "gemini-2.5-flash-image-office",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Nano Banana",
+          "label": "大香蕉生图系列",
+          "price_per_request": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-medium",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 7,
+          "output_per_1m": 98,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2-1k",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gpt-Image-fast",
+          "label": "gpt官生图分组",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-high",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 7,
+          "output_per_1m": 98,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-image-preview-office",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Nano Banana",
+          "label": "大香蕉生图系列",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-image-preview",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "Nano Banana",
           "label": "大香蕉生图系列",
-          "input_per_1m": 0.5,
-          "output_per_1m": 60,
+          "input_per_1m": 2,
+          "output_per_1m": 12,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -234,48 +1121,48 @@
       ]
     },
     {
-      "name": "gpt-5.4",
+      "name": "gpt-5.4-mini",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
+          "name": "codex-b",
+          "label": "codex【纯codex pro】【開放三方調度】",
+          "input_per_1m": 0.375,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        },
+        {
           "name": "test",
           "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 2.5,
+          "input_per_1m": 7.5,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.75,
           "cache_write_per_1m": null
         },
         {
           "name": "codex",
           "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 0.875,
-          "output_per_1m": 5.25,
-          "cache_per_1m": 0.0875,
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.8,
+          "cache_per_1m": 0.03,
           "cache_write_per_1m": null
         },
         {
           "name": "codex-office",
           "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 5,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.5,
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.15,
           "cache_write_per_1m": null
         },
         {
           "name": "codex-stu",
           "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.075,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 1.25,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.125,
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.35,
+          "cache_per_1m": 0.0225,
           "cache_write_per_1m": null
         }
       ],
@@ -285,269 +1172,10 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
-      "vendor": "Anthropic",
+      "name": "gpt-5.2",
+      "vendor": "OpenCode Zen",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 8.5,
-          "output_per_1m": 42.5,
-          "cache_per_1m": 0.85,
-          "cache_write_per_1m": 10.625
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 8.25,
-          "output_per_1m": 41.25,
-          "cache_per_1m": 0.825,
-          "cache_write_per_1m": 10.3125
-        },
-        {
-          "name": "cc-白宫严选",
-          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
-          "input_per_1m": 80,
-          "output_per_1m": 400,
-          "cache_per_1m": 8,
-          "cache_write_per_1m": 100
-        },
-        {
-          "name": "cc-max",
-          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
-          "input_per_1m": 30,
-          "output_per_1m": 150,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 37.5
-        },
-        {
-          "name": "cc-aws",
-          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
-          "input_per_1m": 42.5,
-          "output_per_1m": 212.5,
-          "cache_per_1m": 4.25,
-          "cache_write_per_1m": 53.125
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc-tehui-fabel",
-          "label": "cc【GitHub Coplit】【支持Fabel 5】",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
-          "input_per_1m": 2.25,
-          "output_per_1m": 11.25,
-          "cache_per_1m": 0.225,
-          "cache_write_per_1m": 2.8125
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5-pro",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 60,
-          "output_per_1m": 360,
-          "cache_per_1m": 60,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-白宫严选",
-          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
-          "input_per_1m": 160,
-          "output_per_1m": 800,
-          "cache_per_1m": 16,
-          "cache_write_per_1m": 200
-        },
-        {
-          "name": "cc-max",
-          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
-          "input_per_1m": 60,
-          "output_per_1m": 300,
-          "cache_per_1m": 6,
-          "cache_write_per_1m": 75
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 1.8,
-          "cache_write_per_1m": 22.5
-        },
-        {
-          "name": "cc-tehui-fabel",
-          "label": "cc【GitHub Coplit】【支持Fabel 5】",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 17,
-          "output_per_1m": 85,
-          "cache_per_1m": 1.7,
-          "cache_write_per_1m": 21.25
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 16.5,
-          "output_per_1m": 82.5,
-          "cache_per_1m": 1.65,
-          "cache_write_per_1m": 20.625
-        },
-        {
-          "name": "cc-aws",
-          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
-          "input_per_1m": 85,
-          "output_per_1m": 425,
-          "cache_per_1m": 8.5,
-          "cache_write_per_1m": 106.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 4.95,
-          "output_per_1m": 24.75,
-          "cache_per_1m": 0.495,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-max",
-          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 1.8,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 5.4,
-          "output_per_1m": 27,
-          "cache_per_1m": 0.54,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
-          "input_per_1m": 1.35,
-          "output_per_1m": 6.75,
-          "cache_per_1m": 0.135,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-fabel",
-          "label": "cc【GitHub Coplit】【支持Fabel 5】",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-aws",
-          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
-          "input_per_1m": 25.5,
-          "output_per_1m": 127.5,
-          "cache_per_1m": 2.55,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 5.1,
-          "output_per_1m": 25.5,
-          "cache_per_1m": 0.51,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-白宫严选",
-          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
-          "input_per_1m": 48,
-          "output_per_1m": 240,
-          "cache_per_1m": 4.8,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 1.8,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.18,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.3-codex",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 3.5,
-          "output_per_1m": 28,
-          "cache_per_1m": 0.35,
-          "cache_write_per_1m": null
-        },
         {
           "name": "test",
           "label": "測試專用分組！！請勿勾選！！",
@@ -562,135 +1190,21 @@
       ]
     },
     {
-      "name": "codex-auto-review",
-      "vendor": "Unknown",
+      "name": "gemini-2.5-flash",
+      "vendor": "SAP AI Core",
       "quota_type": "token",
       "groups": [
         {
-          "name": "test",
-          "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 5,
-          "cache_write_per_1m": 5
-        },
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 0.875,
-          "output_per_1m": 5.25,
-          "cache_per_1m": 0.175,
-          "cache_write_per_1m": 0.175
-        },
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 5,
-          "output_per_1m": 30,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 1
-        },
-        {
-          "name": "codex-stu",
-          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 0.15
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 1.25,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 0.25
+          "name": "gemini",
+          "label": "gemini【Gemini Ultra】【開放三方調度】",
+          "input_per_1m": 0.45,
+          "output_per_1m": 3.75,
+          "cache_per_1m": 0.1125,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-白宫严选",
-          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
-          "input_per_1m": 80,
-          "output_per_1m": 400,
-          "cache_per_1m": 8,
-          "cache_write_per_1m": 100
-        },
-        {
-          "name": "cc-aws",
-          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
-          "input_per_1m": 42.5,
-          "output_per_1m": 212.5,
-          "cache_per_1m": 4.25,
-          "cache_write_per_1m": 53.125
-        },
-        {
-          "name": "cc-tehui-fabel",
-          "label": "cc【GitHub Coplit】【支持Fabel 5】",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
-          "input_per_1m": 2.25,
-          "output_per_1m": 11.25,
-          "cache_per_1m": 0.225,
-          "cache_write_per_1m": 2.8125
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 8.25,
-          "output_per_1m": 41.25,
-          "cache_per_1m": 0.825,
-          "cache_write_per_1m": 10.3125
-        },
-        {
-          "name": "cc-max",
-          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
-          "input_per_1m": 30,
-          "output_per_1m": 150,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 37.5
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 8.5,
-          "output_per_1m": 42.5,
-          "cache_per_1m": 0.85,
-          "cache_write_per_1m": 10.625
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
+        "gemini",
         "openai"
       ]
     },
@@ -722,15 +1236,31 @@
       ]
     },
     {
-      "name": "gemini-3-pro-image-preview",
+      "name": "gemini-3-pro-image-preview-office",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Nano Banana",
+          "label": "大香蕉生图系列",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-image-preview",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "Nano Banana",
           "label": "大香蕉生图系列",
-          "input_per_1m": 2,
-          "output_per_1m": 12,
+          "input_per_1m": 0.5,
+          "output_per_1m": 60,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -741,32 +1271,134 @@
       ]
     },
     {
-      "name": "gpt-5.5",
+      "name": "gpt-5.6-luna",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 0.4,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": 0.5
+        },
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 2,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2.5
+        },
+        {
+          "name": "codex-stu",
+          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.8,
+          "cache_per_1m": 0.03,
+          "cache_write_per_1m": 0.375
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【纯codex pro】【開放三方調度】",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": 0.625
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "test",
           "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 50,
-          "output_per_1m": 300,
-          "cache_per_1m": 5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 1.75,
-          "output_per_1m": 10.5,
-          "cache_per_1m": 0.175,
+          "input_per_1m": 17.5,
+          "output_per_1m": 140,
+          "cache_per_1m": 1.75,
           "cache_write_per_1m": null
         },
         {
           "name": "codex-office",
           "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 10,
-          "output_per_1m": 60,
+          "input_per_1m": 3.5,
+          "output_per_1m": 28,
+          "cache_per_1m": 0.35,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "codex-auto-review",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "test",
+          "label": "測試專用分組！！請勿勾選！！",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 5,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 0.2
+        },
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 5,
+          "output_per_1m": 30,
           "cache_per_1m": 1,
+          "cache_write_per_1m": 1
+        },
+        {
+          "name": "codex-stu",
+          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 0.15
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【纯codex pro】【開放三方調度】",
+          "input_per_1m": 1.25,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 0.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 2,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.2,
           "cache_write_per_1m": null
         },
         {
@@ -787,64 +1419,21 @@
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 10,
-          "output_per_1m": 60,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "test",
-          "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 50,
-          "output_per_1m": 300,
-          "cache_per_1m": 12.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
         "openai"
       ]
     },
     {
       "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
+      "vendor": "Unknown",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 0.875,
-          "output_per_1m": 5.25,
-          "cache_per_1m": 0.0875,
-          "cache_write_per_1m": 1.1375
-        },
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 5,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.5
-        },
         {
           "name": "codex-stu",
           "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
           "input_per_1m": 0.75,
           "output_per_1m": 4.5,
           "cache_per_1m": 0.075,
-          "cache_write_per_1m": 0.975
+          "cache_write_per_1m": 0.9375
         },
         {
           "name": "codex-b",
@@ -852,54 +1441,23 @@
           "input_per_1m": 1.25,
           "output_per_1m": 7.5,
           "cache_per_1m": 0.125,
-          "cache_write_per_1m": 1.625
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash-image-office",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
+          "cache_write_per_1m": 1.5625
+        },
         {
-          "name": "Nano Banana",
-          "label": "大香蕉生图系列",
-          "price_per_request": 0.3
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-pro-image-preview-office",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
+          "name": "codex",
+          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": 1.25
+        },
         {
-          "name": "Nano Banana",
-          "label": "大香蕉生图系列",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2-4k",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gpt-Image-fast",
-          "label": "gpt官生图分组",
-          "price_per_request": 0.22
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 5,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
         }
       ],
       "supported_endpoints": [
@@ -907,7 +1465,7 @@
       ]
     },
     {
-      "name": "gpt-5.3-codex-high",
+      "name": "gpt-5.3-codex-low",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
@@ -917,6 +1475,24 @@
           "input_per_1m": 7,
           "output_per_1m": 98,
           "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5-pro",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-office",
+          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
+          "input_per_1m": 60,
+          "output_per_1m": 360,
+          "cache_per_1m": 60,
           "cache_write_per_1m": null
         }
       ],
@@ -940,89 +1516,6 @@
       ],
       "supported_endpoints": [
         "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-白宫严选",
-          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
-          "input_per_1m": 80,
-          "output_per_1m": 400,
-          "cache_per_1m": 8,
-          "cache_write_per_1m": 100
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        },
-        {
-          "name": "cc-tehui-fabel",
-          "label": "cc【GitHub Coplit】【支持Fabel 5】",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
-          "input_per_1m": 2.25,
-          "output_per_1m": 11.25,
-          "cache_per_1m": 0.225,
-          "cache_write_per_1m": 2.8125
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 8.5,
-          "output_per_1m": 42.5,
-          "cache_per_1m": 0.85,
-          "cache_write_per_1m": 10.625
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 8.25,
-          "output_per_1m": 41.25,
-          "cache_per_1m": 0.825,
-          "cache_write_per_1m": 10.3125
-        },
-        {
-          "name": "cc-max",
-          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
-          "input_per_1m": 30,
-          "output_per_1m": 150,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 37.5
-        },
-        {
-          "name": "cc-aws",
-          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
-          "input_per_1m": 42.5,
-          "output_per_1m": 212.5,
-          "cache_per_1m": 4.25,
-          "cache_write_per_1m": 53.125
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -1054,100 +1547,6 @@
       ]
     },
     {
-      "name": "gpt-5.3-codex-low",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 7,
-          "output_per_1m": 98,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash",
-      "vendor": "SAP AI Core",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "gemini【Gemini Ultra】【開放三方調度】",
-          "input_per_1m": 0.45,
-          "output_per_1m": 3.75,
-          "cache_per_1m": 0.1125,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-luna",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 0.35,
-          "output_per_1m": 2.1,
-          "cache_per_1m": 0.035,
-          "cache_write_per_1m": 0.455
-        },
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 2,
-          "output_per_1m": 12,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 2.6
-        },
-        {
-          "name": "codex-stu",
-          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.8,
-          "cache_per_1m": 0.03,
-          "cache_write_per_1m": 0.39
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": 0.65
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2-1k",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gpt-Image-fast",
-          "label": "gpt官生图分组",
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "gpt-5.3-codex-xhigh",
       "vendor": "OpenAI",
       "quota_type": "token",
@@ -1164,406 +1563,7 @@
       "supported_endpoints": [
         "openai"
       ]
-    },
-    {
-      "name": "gpt-image-1",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "test",
-          "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 50,
-          "output_per_1m": 400,
-          "cache_per_1m": 12.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5-openai-compact",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-b",
-          "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 1.75,
-          "output_per_1m": 10.5,
-          "cache_per_1m": 0.175,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-stu",
-          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
-          "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 1.75,
-          "output_per_1m": 10.5,
-          "cache_per_1m": 0.175,
-          "cache_write_per_1m": 2.275
-        },
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 10,
-          "output_per_1m": 60,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 13
-        },
-        {
-          "name": "codex-stu",
-          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
-          "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.95
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "gemini【Gemini Ultra】【開放三方調度】",
-          "input_per_1m": 0.75,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.0375,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-stu",
-          "label": "gemini【Gemini獨家通路混合線】【開放三方調度】",
-          "input_per_1m": 2,
-          "output_per_1m": 12,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini",
-          "label": "gemini【Gemini Ultra】【開放三方調度】",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-openai-compact",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 0.875,
-          "output_per_1m": 5.25,
-          "cache_per_1m": 0.0875,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-stu",
-          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.075,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 1.25,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.125,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview-customtools",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "gemini【Gemini Ultra】【開放三方調度】",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-max",
-          "label": "cc【ClaudeMax 20x、Claude Api Key（原價金鑰）】【開放三方調度】",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 1.8,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-aws",
-          "label": "cc【AWS-Bedrock-純淨穩定線】【開放三方調度】",
-          "input_per_1m": 25.5,
-          "output_per_1m": 127.5,
-          "cache_per_1m": 2.55,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【精調支援1m字元】【開放三方調度】",
-          "input_per_1m": 1.35,
-          "output_per_1m": 6.75,
-          "cache_per_1m": 0.135,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 4.95,
-          "output_per_1m": 24.75,
-          "cache_per_1m": 0.495,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 5.4,
-          "output_per_1m": 27,
-          "cache_per_1m": 0.54,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 1.8,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.18,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-fabel",
-          "label": "cc【GitHub Coplit】【支持Fabel 5】",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 5.1,
-          "output_per_1m": 25.5,
-          "cache_per_1m": 0.51,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-白宫严选",
-          "label": "白宫严选CC，极速Opus4.7与4.8，土豪专用，可以外接",
-          "input_per_1m": 48,
-          "output_per_1m": 240,
-          "cache_per_1m": 4.8,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.2",
-      "vendor": "OpenCode Zen",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "test",
-          "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 17.5,
-          "output_per_1m": 140,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-image-preview-office",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Nano Banana",
-          "label": "大香蕉生图系列",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.3-codex-medium",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 7,
-          "output_per_1m": 98,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-1.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "test",
-          "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 50,
-          "output_per_1m": 320,
-          "cache_per_1m": 12.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-mini",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-b",
-          "label": "codex【纯codex pro】【開放三方調度】",
-          "input_per_1m": 0.375,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.0375,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "test",
-          "label": "測試專用分組！！請勿勾選！！",
-          "input_per_1m": 7.5,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "codex【优先codex pro，兜底codex team】【開放三方調度】",
-          "input_per_1m": 0.2625,
-          "output_per_1m": 1.575,
-          "cache_per_1m": 0.02625,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-office",
-          "label": "codex【codex pro獨享（一人一號）】【圖文生成】【開放三方調度】",
-          "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-stu",
-          "label": "codex【codex team（70%）、codex pro（30%）】【開放三方調度】",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.35,
-          "cache_per_1m": 0.0225,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
     }
   ],
-  "fetched_at": "2026-07-09T20:46:49.899Z"
+  "fetched_at": "2026-07-10T20:21:53.431Z"
 }
