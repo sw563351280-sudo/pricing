@@ -23,7 +23,26 @@
   },
   "models": [
     {
-      "name": "gpt-5.5-openai-compact",
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 4.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": 4.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "codex-auto-review",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
@@ -49,85 +68,28 @@
       ]
     },
     {
-      "name": "gpt-5.6-terra",
+      "name": "gpt-5.3-codex-spark",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "ChatGPT-Pro",
           "label": null,
-          "input_per_1m": 2,
-          "output_per_1m": 16,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 2
+          "input_per_1m": 1.4,
+          "output_per_1m": 11.2,
+          "cache_per_1m": 0.14,
+          "cache_write_per_1m": null
         },
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 2,
-          "output_per_1m": 16,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 2
+          "input_per_1m": 1.4,
+          "output_per_1m": 11.2,
+          "cache_per_1m": 0.14,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-5-20251101",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 7.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-5-20251101-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -137,46 +99,20 @@
       "quota_type": "token",
       "groups": [
         {
-          "name": "ChatGPT-Pro",
-          "label": null,
-          "input_per_1m": 2,
-          "output_per_1m": 12,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 2
-        },
-        {
           "name": "default",
           "label": "默认分组",
           "input_per_1m": 2,
           "output_per_1m": 12,
           "cache_per_1m": 0.2,
           "cache_write_per_1m": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
+        },
         {
           "name": "ChatGPT-Pro",
           "label": null,
-          "input_per_1m": 4,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 4
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 4,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 4
+          "input_per_1m": 2,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2
         }
       ],
       "supported_endpoints": [
@@ -229,36 +165,17 @@
       ]
     },
     {
-      "name": "claude-opus-4-8-thinking",
+      "name": "claude-sonnet-4-20250514",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "claude高缓存",
           "label": "claude分组，高缓存",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 4.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": 0.45,
-          "cache_write_per_1m": 4.5
+          "input_per_1m": 4.05,
+          "output_per_1m": 20.25,
+          "cache_per_1m": 0.405,
+          "cache_write_per_1m": 5.0625
         }
       ],
       "supported_endpoints": [
@@ -282,6 +199,24 @@
       ],
       "supported_endpoints": [
         "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": 2
+        }
+      ],
+      "supported_endpoints": [
         "openai"
       ]
     },
@@ -338,32 +273,6 @@
       ]
     },
     {
-      "name": "gpt-5.3-codex-spark",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro",
-          "label": null,
-          "input_per_1m": 1.4,
-          "output_per_1m": 11.2,
-          "cache_per_1m": 0.14,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.4,
-          "output_per_1m": 11.2,
-          "cache_per_1m": 0.14,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "gpt-5.4-openai-compact",
       "vendor": "OpenAI",
       "quota_type": "token",
@@ -379,6 +288,115 @@
         {
           "name": "ChatGPT-Pro",
           "label": null,
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5-20251101-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro",
+          "label": null,
+          "input_per_1m": 4,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 4
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 4,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro",
+          "label": null,
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
           "input_per_1m": 0.6,
           "output_per_1m": 3.6,
           "cache_per_1m": 0.06,
@@ -409,6 +427,127 @@
           "output_per_1m": 6.4,
           "cache_per_1m": 0.08,
           "cache_write_per_1m": 0.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 7.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 4.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": 4.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 4.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": 4.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro",
+          "label": null,
+          "input_per_1m": 2,
+          "output_per_1m": 16,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2,
+          "output_per_1m": 16,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2
         }
       ],
       "supported_endpoints": [
@@ -452,146 +591,7 @@
         "anthropic",
         "openai"
       ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 4.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": 0.45,
-          "cache_write_per_1m": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "codex-auto-review",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro",
-          "label": null,
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-5-20250929-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 4.488,
-          "output_per_1m": 22.44,
-          "cache_per_1m": 0.4488,
-          "cache_write_per_1m": 5.61
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 4.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": 0.45,
-          "cache_write_per_1m": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
     }
   ],
-  "fetched_at": "2026-07-14T20:11:01.515Z"
+  "fetched_at": "2026-07-15T20:08:33.595Z"
 }
