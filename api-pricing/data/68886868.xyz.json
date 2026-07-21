@@ -40,9 +40,9 @@
       "ratio": 0.02,
       "label": "grok"
     },
-    "kiro-pro (没有缓存)": {
+    "kiro-pro (��有缓存)": {
       "ratio": 0.155,
-      "label": "Kiro-pro分组 (没有缓存)"
+      "label": null
     },
     "反重力 (没有缓存)": {
       "ratio": 0.5,
@@ -71,17 +71,30 @@
   },
   "models": [
     {
-      "name": "[三方5][量] deepseek-v4-pro [不补]",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
+      "name": "[Kiro次] claude-opus-4-8-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.1305,
-          "output_per_1m": 0.261,
-          "cache_per_1m": 0.01305,
-          "cache_write_per_1m": null
+          "price_per_request": 0.048
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[不稳定渠道] gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.007
         }
       ],
       "supported_endpoints": [
@@ -89,44 +102,17 @@
       ]
     },
     {
-      "name": "[按量3] deepseek-r1",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.54,
-          "output_per_1m": 2.16,
-          "cache_per_1m": 0.14,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
+      "name": "[Kiro] claude-opus-4-8 [不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "kiro-pro (没有缓存)",
-          "label": "Kiro-pro分组 (没有缓存)",
+          "name": "default",
+          "label": "默认分组",
           "input_per_1m": 0.775,
           "output_per_1m": 3.875,
           "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.96875
-        },
-        {
-          "name": "cc-max",
-          "label": "cc max",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
+          "cache_write_per_1m": 0.969
         }
       ],
       "supported_endpoints": [
@@ -135,16 +121,51 @@
       ]
     },
     {
-      "name": "grok-4.5",
-      "vendor": "xAI",
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "grok",
-          "label": "grok",
-          "input_per_1m": 0.04,
-          "output_per_1m": 0.12,
-          "cache_per_1m": 0.01,
+          "name": "antigravity-3",
+          "label": "antigravity group 3  反重力3分组 (有缓存)",
+          "input_per_1m": 0.87,
+          "output_per_1m": 4.35,
+          "cache_per_1m": 0.087,
+          "cache_write_per_1m": 1.0875
+        },
+        {
+          "name": "cc-max",
+          "label": "cc max",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.36,
+          "cache_write_per_1m": 4.5
+        },
+        {
+          "name": "反重力 (没有缓存)",
+          "label": "反重力 Claude",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro零缓] claude-opus-4-7-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.5,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -154,7 +175,23 @@
       ]
     },
     {
-      "name": "[反重力3][次][假流] claude-sonnet-4-6-thinking [不补]",
+      "name": "[Kiro次] claude-opus-4-7 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.048
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力3次] claude-sonnet-4-6 [不补]",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -170,32 +207,17 @@
       ]
     },
     {
-      "name": "gpt-5.3-codex-spark",
-      "vendor": "OpenAI",
+      "name": "qwen3.6-plus",
+      "vendor": "阿里巴巴",
       "quota_type": "token",
       "groups": [
         {
-          "name": "codex-pro",
-          "label": "codex pro",
-          "input_per_1m": 0.35,
-          "output_per_1m": 2.8,
-          "cache_per_1m": 0.035,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws][次] claude-opus-4-8-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.7
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.6,
+          "cache_per_1m": 0.02,
+          "cache_write_per_1m": 0.126
         }
       ],
       "supported_endpoints": [
@@ -204,70 +226,157 @@
       ]
     },
     {
-      "name": "gemini-2.5-flash-image",
-      "vendor": "Google",
+      "name": "[三方1][次][Vertex] claude-opus-4-8 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] mimo-v2.5-pro",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.43,
+          "output_per_1m": 0.87,
+          "cache_per_1m": 0.043,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] kimi-k2.7-code",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.4,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro零缓] claude-opus-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方4][量] deepseek-v4-pro [不补]",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.08,
+          "output_per_1m": 2.16,
+          "cache_per_1m": 0.108,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "flux-2-max",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图1",
           "label": "生成图片模型1",
           "price_per_request": 0.02
-        },
-        {
-          "name": "生图2",
-          "label": "生成图片模型2",
-          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "image-generation",
         "openai"
       ]
     },
     {
-      "name": "claude-haiku-4-5-20251001",
+      "name": "[aws]kimi-k2-thinking",
+      "vendor": "Moonshot",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k2.5",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.12,
+          "output_per_1m": 0.6,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方4][量][反重力]claude-sonnet-4-6-thinking[不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "kiro-pro (没有缓存)",
-          "label": "Kiro-pro分组 (没有缓存)",
-          "input_per_1m": 0.155,
-          "output_per_1m": 0.775,
-          "cache_per_1m": 0.0155,
-          "cache_write_per_1m": 0.19375
-        },
-        {
-          "name": "反重力 (没有缓存)",
-          "label": "反重力 Claude",
-          "input_per_1m": 0.5,
-          "output_per_1m": 2.5,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": 0.625
-        },
-        {
-          "name": "antigravity-3",
-          "label": "antigravity group 3  反重力3分组 (有缓存)",
-          "input_per_1m": 0.29,
-          "output_per_1m": 1.45,
-          "cache_per_1m": 0.029,
-          "cache_write_per_1m": 0.3625
-        },
-        {
-          "name": "cc-max",
-          "label": "cc max",
-          "input_per_1m": 1.2,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.12,
-          "cache_write_per_1m": 1.5
-        },
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.2,
-          "output_per_1m": 1,
-          "cache_per_1m": 0.02,
-          "cache_write_per_1m": 0.25
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
         }
       ],
       "supported_endpoints": [
@@ -295,17 +404,17 @@
       ]
     },
     {
-      "name": "glm-5.2",
-      "vendor": "智谱",
+      "name": "[ClaudeCode] claude-sonnet-4-6[不补]",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.28,
-          "output_per_1m": 0.88,
-          "cache_per_1m": 0.052,
-          "cache_write_per_1m": null
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.36,
+          "cache_write_per_1m": 4.5
         }
       ],
       "supported_endpoints": [
@@ -314,17 +423,32 @@
       ]
     },
     {
-      "name": "[按量3] glm-5-turbo",
-      "vendor": "智谱",
-      "quota_type": "token",
+      "name": "[三方10] deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
+          "price_per_request": 0.002
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-max",
+          "label": "cc max",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
         }
       ],
       "supported_endpoints": [
@@ -333,21 +457,62 @@
       ]
     },
     {
-      "name": "[按量3] mimo-v2.5-pro",
-      "vendor": "Unknown",
+      "name": "[Kiro次] claude-sonnet-5 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.032
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-plus",
+          "label": "codex-plus分组",
+          "input_per_1m": 0.25,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 0.025,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-pro",
+          "label": "codex pro",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[codex] gpt-5.4  [不补]",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.43,
-          "output_per_1m": 0.87,
-          "cache_per_1m": 0.043,
+          "input_per_1m": 0.35,
+          "output_per_1m": 2.1,
+          "cache_per_1m": 0.035,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -363,6 +528,481 @@
         }
       ],
       "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] deepseek-v3",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.4235,
+          "output_per_1m": 0.4235,
+          "cache_per_1m": 0.042,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-cli",
+          "label": "gemini cli",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "反重力-gemini (没有缓存)",
+          "label": "反重力 gemini",
+          "input_per_1m": 0.585,
+          "output_per_1m": 3.51,
+          "cache_per_1m": 0.0585,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "antigravity-3",
+          "label": "antigravity group 3  反重力3分组 (有缓存)",
+          "input_per_1m": 0.435,
+          "output_per_1m": 2.61,
+          "cache_per_1m": 0.0435,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-cli",
+          "label": "gemini cli",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.7,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-plus",
+          "label": "codex-plus分组",
+          "input_per_1m": 0.25,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 0.025,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-pro",
+          "label": "codex pro",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-plus-cc",
+          "label": "codex-2-cc",
+          "input_per_1m": 0.25,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 0.025,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力量3] claude-opus-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.45,
+          "output_per_1m": 7.25,
+          "cache_per_1m": 0.145,
+          "cache_write_per_1m": 1.813
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方1][次][Vertex] claude-opus-4-7 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-sonnet-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 75,
+          "output_per_1m": 375,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-image",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "生图2",
+          "label": "生成图片模型2",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-max",
+          "label": "cc max",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力3][量][假流] claude-sonnet-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.87,
+          "output_per_1m": 4.35,
+          "cache_per_1m": 0.087,
+          "cache_write_per_1m": 1.0875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-opus-4-7 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.775,
+          "output_per_1m": 3.875,
+          "cache_per_1m": 0.0775,
+          "cache_write_per_1m": 0.969
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli][假流] gemini-3-flash-preview [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.002
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力3][次][假流] claude-sonnet-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.24
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.05,
+          "output_per_1m": 0.4,
+          "cache_per_1m": 0.006,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-plus",
+          "label": "codex-plus分组",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-pro",
+          "label": "codex pro",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-plus-cc",
+          "label": "codex-2-cc",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "codex-auto-review",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-plus",
+          "label": "codex-plus分组",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-pro",
+          "label": "codex pro",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "arrow-1.1",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力量] claude-sonnet-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "antigravity-3",
+          "label": "antigravity group 3  反重力3分组 (有缓存)",
+          "input_per_1m": 0.29,
+          "output_per_1m": 1.45,
+          "cache_per_1m": 0.029,
+          "cache_write_per_1m": 0.3625
+        },
+        {
+          "name": "cc-max",
+          "label": "cc max",
+          "input_per_1m": 1.2,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": 1.5
+        },
+        {
+          "name": "反重力 (没有缓存)",
+          "label": "反重力 Claude",
+          "input_per_1m": 0.5,
+          "output_per_1m": 2.5,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": 0.625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[ds2] deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.435,
+          "output_per_1m": 0.87,
+          "cache_per_1m": 0.004,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方4][量][反重力]claude-opus-4-6-thinking[不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-cli",
+          "label": "gemini cli",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.45,
+          "cache_per_1m": 0.0075,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -402,54 +1042,16 @@
       ]
     },
     {
-      "name": "[Kiro] claude-opus-4-5-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.969
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.6-plus",
-      "vendor": "阿里巴巴",
+      "name": "deepseek-r1",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
           "name": "按量3",
           "label": "按量3 分组",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.6,
-          "cache_per_1m": 0.02,
-          "cache_write_per_1m": 0.126
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5v-turbo",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.24,
-          "output_per_1m": 0.8,
-          "cache_per_1m": 0.048,
+          "input_per_1m": 0.27,
+          "output_per_1m": 1.08,
+          "cache_per_1m": 0.07,
           "cache_write_per_1m": null
         }
       ],
@@ -459,16 +1061,34 @@
       ]
     },
     {
-      "name": "mimo-v2.5-pro",
+      "name": "rerank-v4-pro",
       "vendor": "Unknown",
       "quota_type": "token",
       "groups": [
         {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.086,
-          "output_per_1m": 0.174,
-          "cache_per_1m": 0.0086,
+          "name": "embedding/rerank",
+          "label": "embedding/ rerank",
+          "input_per_1m": 0.5,
+          "output_per_1m": 0.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] mimo-v2.5",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.28,
+          "cache_per_1m": 0.014,
           "cache_write_per_1m": null
         }
       ],
@@ -478,33 +1098,35 @@
       ]
     },
     {
-      "name": "[aws][次] claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量6] deepseek-v4-pro [不补]",
+      "name": "[按量3] deepseek-v3.1",
       "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.8,
-          "output_per_1m": 1.6,
-          "cache_per_1m": 0.08,
+          "input_per_1m": 0.25,
+          "output_per_1m": 0.75,
+          "cache_per_1m": 0.025,
           "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-max",
+          "label": "cc max",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.36,
+          "cache_write_per_1m": 4.5
         }
       ],
       "supported_endpoints": [
@@ -513,29 +1135,49 @@
       ]
     },
     {
-      "name": "[gcli][假流] gemini-2.5-pro [不补]",
+      "name": "[三方1][次] gemini-3.1-pro-preview [不补]",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.04
+          "price_per_request": 0.08
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "[三方10] mimo-v2.5",
+      "name": "[反重力量] claude-sonnet-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "test-model",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.002
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -543,66 +1185,16 @@
       ]
     },
     {
-      "name": "[Kiro次] claude-sonnet-5 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.032
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]kimi-k2-thinking",
-      "vendor": "Moonshot",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] kimi-k3",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5-mini",
+      "name": "[codex] gpt-5.4-mini  [不补]",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.05,
-          "output_per_1m": 0.4,
-          "cache_per_1m": 0.006,
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.105,
+          "output_per_1m": 0.63,
+          "cache_per_1m": 0.0105,
           "cache_write_per_1m": null
         }
       ],
@@ -611,37 +1203,7 @@
       ]
     },
     {
-      "name": "[gcli] gemini-2.5-pro [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli] gemini-3.1-flash-lite-search [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.002
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli] gemini-3.5-flash-search [不补]",
+      "name": "[gcli] gemini-3.5-flash-high [不补]",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -656,52 +1218,32 @@
       ]
     },
     {
-      "name": "glm-4.7",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.45,
-          "output_per_1m": 0.55,
-          "cache_per_1m": 0.45,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量6] claude-sonnet-4.6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5475,
-          "output_per_1m": 12.7375,
-          "cache_per_1m": 0.25475,
-          "cache_write_per_1m": 3.184375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3][次] kimi-k3",
-      "vendor": "Moonshot",
+      "name": "[aws]minimax-m2",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.055
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] gemini-2.5-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.02,
+          "output_per_1m": 0.08,
+          "cache_per_1m": 0.002,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -725,842 +1267,23 @@
       ]
     },
     {
-      "name": "[三方10] deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.002
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro次] claude-opus-4-6-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.048
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方4][次] deepseek-v4-flash [不补]",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.017
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "fugu-ultra",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 1,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[不稳定渠道] gemini-3.1-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.007
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5-openai-compact",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-plus",
-          "label": "codex-plus分组",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-pro",
-          "label": "codex pro",
-          "input_per_1m": 1,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli][假流] gemini-3-flash-preview [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.002
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ClaudeCode] claude-opus-4-6[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]glm-4.7-flash",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力量] claude-opus-4-6-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力3][量][假流] claude-sonnet-4-6-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.87,
-          "output_per_1m": 4.35,
-          "cache_per_1m": 0.087,
-          "cache_write_per_1m": 1.0875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[codex] gpt-5.5  [不补]",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.7,
-          "output_per_1m": 4.2,
-          "cache_per_1m": 0.07,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量6] claude-opus-4.8 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 4.245,
-          "output_per_1m": 21.225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[codex] gpt-5.6-sol  [不补]",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ClaudeCode] claude-sonnet-5[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.36,
-          "cache_write_per_1m": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方4][量][反重力]claude-sonnet-4-6-thinking[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws][次] claude-sonnet-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.3
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方1][次][Vertex] claude-opus-4-8 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.4
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力3次] claude-sonnet-4-6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.24
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]minimax-m2.1",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5-turbo",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.24,
-          "output_per_1m": 0.8,
-          "cache_per_1m": 0.048,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-r1",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.27,
-          "output_per_1m": 1.08,
-          "cache_per_1m": 0.07,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量6] claude-sonnet-4.5 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5475,
-          "output_per_1m": 12.7375,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-plus-cc",
-          "label": "codex-2-cc",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-plus",
-          "label": "codex-plus分组",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-pro",
-          "label": "codex pro",
-          "input_per_1m": 1,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[ClaudeCode] claude-sonnet-4-6[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.36,
-          "cache_write_per_1m": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方4][量] deepseek-v4-pro [不补]",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.08,
-          "output_per_1m": 2.16,
-          "cache_per_1m": 0.108,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "recraft-v4.1",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方2][次] claude-sonnet-4-6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.18
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash-lite",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.02,
-          "output_per_1m": 0.08,
-          "cache_per_1m": 0.002,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[codex] gpt-5.6-luna  [不补]",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k2.7-code",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.148,
-          "output_per_1m": 0.7,
-          "cache_per_1m": 0.03,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.06,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.006,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "antigravity-3",
-          "label": "antigravity group 3  反重力3分组 (有缓存)",
-          "input_per_1m": 1.45,
-          "output_per_1m": 7.25,
-          "cache_per_1m": 0.145,
-          "cache_write_per_1m": 1.8125
-        },
-        {
-          "name": "cc-max",
-          "label": "cc max",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        },
-        {
-          "name": "kiro-pro (没有缓存)",
-          "label": "Kiro-pro分组 (没有缓存)",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.96875
-        },
-        {
-          "name": "反重力 (没有缓存)",
-          "label": "反重力 Claude",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[codex] gpt-5.4-mini  [不补]",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.105,
-          "output_per_1m": 0.63,
-          "cache_per_1m": 0.0105,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro次] claude-opus-4-7-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.048
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "arrow-1.1",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力3][次][假流] claude-opus-4-6-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.35
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方4][量][反重力]claude-opus-4-6[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方4][量][反重力]claude-opus-4-6-thinking[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws][次] claude-opus-4-7-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.7
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli][假流] gemini-3.1-pro-preview [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "codex-auto-review",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-plus",
-          "label": "codex-plus分组",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-pro",
-          "label": "codex pro",
-          "input_per_1m": 1,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "seedream-5.0-lite",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws] grok-4.3",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "[aws]glm-5",
       "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws]kimi-k2.5",
+      "vendor": "Moonshot",
       "quota_type": "per_request",
       "groups": [
         {
@@ -1593,18 +1316,68 @@
       ]
     },
     {
-      "name": "[aws][次] claude-fable-5-thinking",
+      "name": "[反重力3][次][假流] claude-opus-4-6-thinking [不补]",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 1.4
+          "price_per_request": 0.35
         }
       ],
       "supported_endpoints": [
         "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[grok] grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5-turbo",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.24,
+          "output_per_1m": 0.8,
+          "cache_per_1m": 0.048,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli] gemini-3.1-flash-lite [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.002
+        }
+      ],
+      "supported_endpoints": [
         "openai"
       ]
     },
@@ -1644,35 +1417,17 @@
       ]
     },
     {
-      "name": "[���量3] kimi-k2.7-code",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.4,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ClaudeCode] claude-fable-5[不补]",
+      "name": "[ClaudeCode] claude-opus-4-7[不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 12,
-          "output_per_1m": 60,
-          "cache_per_1m": 1.2,
-          "cache_write_per_1m": 15
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
         }
       ],
       "supported_endpoints": [
@@ -1681,51 +1436,30 @@
       ]
     },
     {
-      "name": "[Kiro] claude-opus-4-8-thinking [不补]",
+      "name": "[Kiro次] claude-opus-4-8 [不补]",
       "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.969
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力量3] gemini-3-flash [不补]",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.145,
-          "output_per_1m": 0.145,
-          "cache_per_1m": 0.0145,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]kimi-k2.5",
-      "vendor": "Moonshot",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.008
+          "price_per_request": 0.048
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -1733,16 +1467,36 @@
       ]
     },
     {
-      "name": "[codex] gpt-5.4  [不补]",
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "生图 gpt (4k)",
+          "label": "1K~4k",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[codex] gpt-5.6-terra  [不补]",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.35,
-          "output_per_1m": 2.1,
-          "cache_per_1m": 0.035,
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
           "cache_write_per_1m": null
         }
       ],
@@ -1751,17 +1505,29 @@
       ]
     },
     {
-      "name": "[按量6] claude-opus-4.6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
+      "name": "[gcli] gemini-2.5-pro-search [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 4.245,
-          "output_per_1m": 21.225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3][次] glm-5.2-fast",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.065
         }
       ],
       "supported_endpoints": [
@@ -1770,7 +1536,45 @@
       ]
     },
     {
-      "name": "[Kiro] claude-opus-4-8 [不补]",
+      "name": "[反重力量3] claude-sonnet-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.87,
+          "output_per_1m": 4.35,
+          "cache_per_1m": 0.087,
+          "cache_write_per_1m": 1.087
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力量] claude-opus-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-opus-4-6 [不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -1789,25 +1593,94 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
-      "vendor": "Anthropic",
+      "name": "gemini-2.5-flash-image",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图2",
+          "label": "生成图片模型2",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] deepseek-v3.1-terminus",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
-          "name": "cc-max",
-          "label": "cc max",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.1485,
+          "output_per_1m": 0.55,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5-openai-compact",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-plus",
+          "label": "codex-plus分组",
+          "input_per_1m": 0.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
         },
         {
-          "name": "kiro-pro (没有缓存)",
-          "label": "Kiro-pro分组 (没有缓存)",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.96875
+          "name": "codex-pro",
+          "label": "codex pro",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws] grok-4.3",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro次] claude-opus-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.048
         }
       ],
       "supported_endpoints": [
@@ -1816,16 +1689,16 @@
       ]
     },
     {
-      "name": "[Kiro次] claude-sonnet-4 [不补]",
-      "vendor": "Anthropic",
+      "name": "glm-5v-turbo",
+      "vendor": "智谱",
       "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 75,
-          "output_per_1m": 375,
-          "cache_per_1m": null,
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.24,
+          "output_per_1m": 0.8,
+          "cache_per_1m": 0.048,
           "cache_write_per_1m": null
         }
       ],
@@ -1835,32 +1708,16 @@
       ]
     },
     {
-      "name": "[aws][次] claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.4
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量6] claude-opus-4.5 [不补]",
-      "vendor": "Anthropic",
+      "name": "glm-5.2-fast",
+      "vendor": "智谱",
       "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 4.245,
-          "output_per_1m": 21.225,
-          "cache_per_1m": null,
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.56,
+          "output_per_1m": 1.76,
+          "cache_per_1m": 0.112,
           "cache_write_per_1m": null
         }
       ],
@@ -1889,6 +1746,24 @@
       ]
     },
     {
+      "name": "gpt-4o",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 15,
+          "output_per_1m": 60,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "claude-fable-5",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -1908,14 +1783,17 @@
       ]
     },
     {
-      "name": "[Kiro次] claude-sonnet-4.6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "name": "grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.032
+          "name": "grok",
+          "label": "grok",
+          "input_per_1m": 0.04,
+          "output_per_1m": 0.12,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1924,14 +1802,33 @@
       ]
     },
     {
-      "name": "[不稳定渠道] gemini-3.5-flash",
-      "vendor": "Google",
+      "name": "kimi-k3",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "seedream-5.0-lite",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.007
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -1939,8 +1836,67 @@
       ]
     },
     {
-      "name": "[反重力量] gemini-3-flash [不补]",
+      "name": "gemini-3-flash",
       "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "antigravity-3",
+          "label": "antigravity group 3  反重力3分组 (有缓存)",
+          "input_per_1m": 0.145,
+          "output_per_1m": 0.87,
+          "cache_per_1m": 0.0145,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] kimi-k3",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-image",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图2",
+          "label": "生成图片模型2",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] gpt-4o",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
@@ -1953,37 +1909,37 @@
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "[codex] gpt-5.6-terra  [不补]",
-      "vendor": "OpenAI",
+      "name": "[ClaudeCode] claude-opus-4-6[不补]",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "[aws][次] claude-opus-4-5-thinking",
+      "name": "[Kiro次] claude-opus-4-5 [不补]",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.7
+          "price_per_request": 0.048
         }
       ],
       "supported_endpoints": [
@@ -1992,68 +1948,116 @@
       ]
     },
     {
-      "name": "gemini-2.5-flash",
-      "vendor": "Google",
+      "name": "[三方4][次] deepseek-v4-flash [不补]",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.017
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "seedream-5.0-pro",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方2][次] claude-opus-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.26
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方4][量][反重力]claude-sonnet-4-6[不补]",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-plus",
+          "label": "codex-plus分组",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.45,
+          "cache_per_1m": 0.0075,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-pro",
+          "label": "codex pro",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        },
+        {
           "name": "按量3",
           "label": "按量3 分组",
-          "input_per_1m": 0.06,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.006,
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex-plus-cc",
+          "label": "codex-2-cc",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.45,
+          "cache_per_1m": 0.0075,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "anthropic",
-        "openai"
+        "openai",
+        "anthropic"
       ]
     },
     {
-      "name": "gemini-3-pro-image",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "生图2",
-          "label": "生成图片模型2",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite-image",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "生图2",
-          "label": "生成图片模型2",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-sol",
+      "name": "gpt-5.5",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
@@ -2088,14 +2092,50 @@
       ]
     },
     {
-      "name": "[三方1][次][Vertex] claude-opus-4-7 [不补]",
-      "vendor": "Anthropic",
+      "name": "[三方1][次] gemini-3.5-flash [不补]",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.4
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力量3] gemini-3-flash [不补]",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.145,
+          "output_per_1m": 0.145,
+          "cache_per_1m": 0.0145,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力量] claude-opus-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
         }
       ],
       "supported_endpoints": [
@@ -2104,16 +2144,31 @@
       ]
     },
     {
-      "name": "[kiro零缓] claude-opus-4-5 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
+      "name": "[不稳定渠道] gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.5,
-          "cache_per_1m": null,
+          "price_per_request": 0.007
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-4.7",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.45,
+          "output_per_1m": 0.55,
+          "cache_per_1m": 0.45,
           "cache_write_per_1m": null
         }
       ],
@@ -2123,14 +2178,134 @@
       ]
     },
     {
-      "name": "seedream-4.5",
+      "name": "glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.28,
+          "output_per_1m": 0.88,
+          "cache_per_1m": 0.052,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[ClaudeCode] claude-fable-5[不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 12,
+          "output_per_1m": 60,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": 15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli] gemini-3-flash-preview-search [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.002
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "recraft-v4.1-utility",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图1",
           "label": "生成图片模型1",
-          "price_per_request": 0.03
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws]minimax-m2.1",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[codex] gpt-5.5  [不补]",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.7,
+          "output_per_1m": 4.2,
+          "cache_per_1m": 0.07,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.006,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli] gemini-2.5-pro [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.04
         }
       ],
       "supported_endpoints": [
@@ -2157,37 +2332,35 @@
       ]
     },
     {
-      "name": "[三方2][次] claude-opus-4-6-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.26
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro] claude-opus-4-7 [不补]",
-      "vendor": "Anthropic",
+      "name": "[codex] gpt-5.6-luna  [不补]",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.969
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli] gemini-3-flash-preview-high [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.002
+        }
+      ],
+      "supported_endpoints": [
         "openai"
       ]
     },
@@ -2208,334 +2381,15 @@
       ]
     },
     {
-      "name": "[aws][次] claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.7
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k3",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[官转1] minimax-m2.5",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[官转1] glm-5",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[ds2] deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.435,
-          "output_per_1m": 0.87,
-          "cache_per_1m": 0.004,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-cli",
-          "label": "gemini cli",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.45,
-          "cache_per_1m": 0.0075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli][假流] gemini-3.5-flash [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.006
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro] claude-opus-4-6-thinking [不补]",
+      "name": "[Kiro次] claude-sonnet-4 [不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.969
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "flux-2-max",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai"
-      ]
-    },
-    {
-      "name": "[grok] grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[官转1] claude-sonnet-4",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-embedding-2",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "embedding/rerank",
-          "label": "embedding/ rerank",
-          "input_per_1m": 0.04,
-          "output_per_1m": 0.16,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] mimo-v2.5",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.14,
-          "output_per_1m": 0.28,
-          "cache_per_1m": 0.014,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.2",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.35,
-          "output_per_1m": 2.1,
-          "cache_per_1m": 0.035,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli] gemini-3.1-flash-lite [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.002
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "kiro-pro (没有缓存)",
-          "label": "Kiro-pro分组 (没有缓存)",
-          "input_per_1m": 0.465,
-          "output_per_1m": 2.325,
-          "cache_per_1m": 0.0465,
-          "cache_write_per_1m": 0.58125
-        },
-        {
-          "name": "cc-max",
-          "label": "cc max",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.36,
-          "cache_write_per_1m": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro] claude-opus-4-7-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.969
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方1][次][Vertex] claude-opus-4-6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.4
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[kiro零缓] claude-opus-4-8-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.5,
+          "input_per_1m": 75,
+          "output_per_1m": 375,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -2546,114 +2400,7 @@
       ]
     },
     {
-      "name": "seedream-5.0-pro",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力量] claude-sonnet-4-6-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-plus-cc",
-          "label": "codex-2-cc",
-          "input_per_1m": 0.25,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-plus",
-          "label": "codex-plus分组",
-          "input_per_1m": 0.25,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-pro",
-          "label": "codex pro",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[ClaudeCode] claude-opus-4-7[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro] claude-opus-4-6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.969
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[不稳定渠道] gemini-2.5-pro",
+      "name": "[不稳定渠道] gemini-3.1-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -2664,611 +2411,6 @@
         }
       ],
       "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-1-mini",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力量] gemini-3.1-pro-preview [不补]",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.8,
-          "output_per_1m": 4.8,
-          "cache_per_1m": 0.08,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]deepseek-v3.1",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]minimax-m2",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] deepseek-v3.1",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.25,
-          "output_per_1m": 0.75,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ClaudeCode] claude-opus-4-8[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro] claude-opus-4-5 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.969
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "recraft-v4.1-utility",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws][次] claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.7
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k2.5",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.12,
-          "output_per_1m": 0.6,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[官转1] qwen3-coder-next",
-      "vendor": "阿里巴巴",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.004
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量6] claude-sonnet-5 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5475,
-          "output_per_1m": 2.5475,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli] gemini-2.5-pro-search [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] deepseek-v3",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.4235,
-          "output_per_1m": 0.4235,
-          "cache_per_1m": 0.042,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws][次] claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.7
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.2-fast",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.56,
-          "output_per_1m": 1.76,
-          "cache_per_1m": 0.112,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "rerank-v4-pro",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "embedding/rerank",
-          "label": "embedding/ rerank",
-          "input_per_1m": 0.5,
-          "output_per_1m": 0.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] gemini-2.5-flash-lite",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.02,
-          "output_per_1m": 0.08,
-          "cache_per_1m": 0.002,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "test-model",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[kiro零缓] claude-opus-4-7-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-openai-compact",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-plus",
-          "label": "codex-plus分组",
-          "input_per_1m": 0.25,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-pro",
-          "label": "codex pro",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方1][次] gemini-3.1-pro-preview [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]deepseek-v3.2",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]minimax-m2.5",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[官转1] deepseek-3.2",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli] gemini-3-flash-preview-search [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.002
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] deepseek-v3.1-terminus",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.1485,
-          "output_per_1m": 0.55,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3] kimi-k2.5",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.275,
-          "output_per_1m": 1.54,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro次] claude-opus-4-8-thinking [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.048
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力量] claude-opus-4-6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[三方4][量][反重力]claude-sonnet-4-6[不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3][次] glm-5.2-fast",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.065
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-cli",
-          "label": "gemini cli",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro次] claude-opus-4-7 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.048
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[Kiro次] claude-opus-4-8 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.048
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -3292,6 +2434,115 @@
       ]
     },
     {
+      "name": "[gcli] gemini-3.1-pro-preview-search [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方1][次] claude-opus-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.38
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] deepseek-r1",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.54,
+          "output_per_1m": 2.16,
+          "cache_per_1m": 0.14,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[gcli] gemini-3.5-flash-search [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.006
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "seedream-4.5",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws]minimax-m2.5",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli][假流] gemini-2.5-pro [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "[按量3] glm-5.2",
       "vendor": "智谱",
       "quota_type": "token",
@@ -3311,244 +2562,6 @@
       ]
     },
     {
-      "name": "[按量6] gemini-3.1-pro-preview [不补]",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.698,
-          "output_per_1m": 10.189,
-          "cache_per_1m": 0.1698,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[gcli] gemini-3.1-pro-preview-search [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力量3] claude-opus-4-6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.45,
-          "output_per_1m": 7.25,
-          "cache_per_1m": 0.145,
-          "cache_write_per_1m": 1.813
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力量] claude-sonnet-4-6 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "mimo-v2.5",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.028,
-          "output_per_1m": 0.056,
-          "cache_per_1m": 0.0028,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量3][次] grok-build-0.1",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-mini",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-pro",
-          "label": "codex pro",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "按量3",
-          "label": "按量3 分组",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-plus-cc",
-          "label": "codex-2-cc",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.45,
-          "cache_per_1m": 0.0075,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex-plus",
-          "label": "codex-plus分组",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.45,
-          "cache_per_1m": 0.0075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[Kiro] claude-sonnet-5 [不补]",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.465,
-          "output_per_1m": 2.325,
-          "cache_per_1m": 0.0465,
-          "cache_write_per_1m": 0.58125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "kiro-pro (没有缓存)",
-          "label": "Kiro-pro分组 (没有缓存)",
-          "input_per_1m": 0.775,
-          "output_per_1m": 3.875,
-          "cache_per_1m": 0.0775,
-          "cache_write_per_1m": 0.96875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[官转1] claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.015
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws][次] claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[ds2] deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.14,
-          "output_per_1m": 0.28,
-          "cache_per_1m": 0.003,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
       "name": "[按量3][次] glm-5.2",
       "vendor": "智谱",
       "quota_type": "per_request",
@@ -3557,6 +2570,41 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 0.035
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "反重力 (没有缓存)",
+          "label": "反重力 Claude",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "antigravity-3",
+          "label": "antigravity group 3  反重力3分组 (有缓存)",
+          "input_per_1m": 1.45,
+          "output_per_1m": 7.25,
+          "cache_per_1m": 0.145,
+          "cache_write_per_1m": 1.8125
+        },
+        {
+          "name": "cc-max",
+          "label": "cc max",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
         }
       ],
       "supported_endpoints": [
@@ -3583,33 +2631,36 @@
       ]
     },
     {
-      "name": "[gcli] gemini-3-flash-preview-high [不补]",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.002
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力3次] claude-opus-4-6[不补]",
+      "name": "[ClaudeCode] claude-sonnet-5[不补]",
       "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.35
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.36,
+          "cache_write_per_1m": 4.5
         }
       ],
       "supported_endpoints": [
         "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws]glm-4.7-flash",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
         "openai"
       ]
     },
@@ -3629,14 +2680,17 @@
       ]
     },
     {
-      "name": "[aws][次] claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "name": "kimi-k2.7-code",
+      "vendor": "Moonshot",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.3
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.148,
+          "output_per_1m": 0.7,
+          "cache_per_1m": 0.03,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -3645,19 +2699,64 @@
       ]
     },
     {
-      "name": "gpt-image-2",
+      "name": "[Kiro] claude-opus-4-6-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.775,
+          "output_per_1m": 3.875,
+          "cache_per_1m": 0.0775,
+          "cache_write_per_1m": 0.969
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli] gemini-3.1-flash-lite-search [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.002
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-1-mini",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图1",
           "label": "生成图片模型1",
-          "price_per_request": 0.02
-        },
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai"
+      ]
+    },
+    {
+      "name": "recraft-v4.1",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
         {
-          "name": "生图 gpt (4k)",
-          "label": "1K~4k",
-          "price_per_request": 0.04
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -3665,69 +2764,32 @@
       ]
     },
     {
-      "name": "gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-cli",
-          "label": "gemini cli",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.7,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "反重力-gemini (没有缓存)",
-          "label": "反重力 gemini",
-          "input_per_1m": 0.585,
-          "output_per_1m": 3.51,
-          "cache_per_1m": 0.0585,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "antigravity-3",
-          "label": "antigravity group 3  反重力3分组 (有缓存)",
-          "input_per_1m": 0.435,
-          "output_per_1m": 2.61,
-          "cache_per_1m": 0.0435,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[Kiro次] claude-opus-4-5 [不补]",
-      "vendor": "Anthropic",
+      "name": "[aws]deepseek-v3.2",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.048
+          "price_per_request": 0.008
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "[Kiro] claude-sonnet-5-thinking [不补]",
+      "name": "[三方4][量][反重力]claude-opus-4-6[不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.465,
-          "output_per_1m": 2.325,
-          "cache_per_1m": 0.0465,
-          "cache_write_per_1m": 0.581
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
         }
       ],
       "supported_endpoints": [
@@ -3736,114 +2798,116 @@
       ]
     },
     {
-      "name": "[反重力量3] gemini-3.1-pro-preview [不补]",
-      "vendor": "Google",
+      "name": "[Kiro] claude-opus-4-8-thinking [不补]",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.6,
-          "output_per_1m": 1.5,
+          "input_per_1m": 0.775,
+          "output_per_1m": 3.875,
+          "cache_per_1m": 0.0775,
+          "cache_write_per_1m": 0.969
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite-image",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图2",
+          "label": "生成图片模型2",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "生图1",
+          "label": "生成图片模型1",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.2",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.35,
+          "output_per_1m": 2.1,
+          "cache_per_1m": 0.035,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "fugu-ultra",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] glm-5-turbo",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1,
           "cache_per_1m": 0.06,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws][次] claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.7
-        }
-      ],
-      "supported_endpoints": [
         "anthropic",
         "openai"
       ]
     },
     {
-      "name": "[aws][次] claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.7
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量6] claude-opus-4.7 [不补]",
-      "vendor": "Anthropic",
+      "name": "[codex] gpt-5.6-sol  [不补]",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 4.245,
-          "output_per_1m": 21.225,
-          "cache_per_1m": 0.4245,
-          "cache_write_per_1m": 5.3
+          "input_per_1m": 5,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "antigravity-3",
-          "label": "antigravity group 3  反重力3分组 (有缓存)",
-          "input_per_1m": 0.87,
-          "output_per_1m": 4.35,
-          "cache_per_1m": 0.087,
-          "cache_write_per_1m": 1.0875
-        },
-        {
-          "name": "kiro-pro (没有缓存)",
-          "label": "Kiro-pro分组 (没有缓存)",
-          "input_per_1m": 0.465,
-          "output_per_1m": 2.325,
-          "cache_per_1m": 0.0465,
-          "cache_write_per_1m": 0.58125
-        },
-        {
-          "name": "cc-max",
-          "label": "cc max",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.36,
-          "cache_write_per_1m": 4.5
-        },
-        {
-          "name": "反重力 (没有缓存)",
-          "label": "反重力 Claude",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -3884,7 +2948,25 @@
       ]
     },
     {
-      "name": "[gcli] gemini-3.5-flash-high [不补]",
+      "name": "[三方5][量] deepseek-v4-pro [不补]",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.1305,
+          "output_per_1m": 0.261,
+          "cache_per_1m": 0.01305,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli][假流] gemini-3.5-flash [不补]",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -3899,14 +2981,14 @@
       ]
     },
     {
-      "name": "[三方1][次] gemini-3.5-flash [不补]",
-      "vendor": "Google",
+      "name": "[三方10] mimo-v2.5",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.04
+          "price_per_request": 0.002
         }
       ],
       "supported_endpoints": [
@@ -3914,7 +2996,167 @@
       ]
     },
     {
-      "name": "[kiro零缓] claude-opus-4-6-thinking [不补]",
+      "name": "[反重力3次] claude-opus-4-6[不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.35
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "mimo-v2.5",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.028,
+          "output_per_1m": 0.056,
+          "cache_per_1m": 0.0028,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.02,
+          "output_per_1m": 0.08,
+          "cache_per_1m": 0.002,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方1][次][Vertex] claude-opus-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-opus-4-5-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.775,
+          "output_per_1m": 3.875,
+          "cache_per_1m": 0.0775,
+          "cache_write_per_1m": 0.969
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-sonnet-5 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.465,
+          "output_per_1m": 2.325,
+          "cache_per_1m": 0.0465,
+          "cache_write_per_1m": 0.58125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-sonnet-5-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.465,
+          "output_per_1m": 2.325,
+          "cache_per_1m": 0.0465,
+          "cache_write_per_1m": 0.581
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-sonnet-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 75,
+          "output_per_1m": 375,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws]deepseek-v3.1",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro零缓] claude-opus-4-8-thinking [不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -3933,17 +3175,149 @@
       ]
     },
     {
-      "name": "[反重力量3] claude-sonnet-4-6 [不补]",
+      "name": "[kiro零缓] claude-sonnet-4-6 [不补]",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.87,
-          "output_per_1m": 4.35,
-          "cache_per_1m": 0.087,
-          "cache_write_per_1m": 1.087
+          "input_per_1m": 0.2,
+          "output_per_1m": 1,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro次] claude-sonnet-4.6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.032
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro次] claude-opus-4-7-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.048
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力量3] gemini-3.1-pro-preview [不补]",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.6,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[三方2][次] claude-sonnet-4-6 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] kimi-k2.5",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.275,
+          "output_per_1m": 1.54,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ClaudeCode] claude-opus-4-8[不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro零缓] claude-opus-4-5 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -3967,16 +3341,16 @@
       ]
     },
     {
-      "name": "gemini-3-flash",
-      "vendor": "Google",
+      "name": "[ds2] deepseek-v4-flash",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
-          "name": "antigravity-3",
-          "label": "antigravity group 3  反重力3分组 (有缓存)",
-          "input_per_1m": 0.145,
-          "output_per_1m": 0.87,
-          "cache_per_1m": 0.0145,
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.28,
+          "cache_per_1m": 0.003,
           "cache_write_per_1m": null
         }
       ],
@@ -3986,26 +3360,198 @@
       ]
     },
     {
-      "name": "gemini-3.1-flash-image",
+      "name": "gemini-embedding-2",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "embedding/rerank",
+          "label": "embedding/ rerank",
+          "input_per_1m": 0.04,
+          "output_per_1m": 0.16,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3][次] kimi-k3",
+      "vendor": "Moonshot",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.055
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3] gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.006,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-pro",
+          "label": "codex pro",
+          "input_per_1m": 0.35,
+          "output_per_1m": 2.8,
+          "cache_per_1m": 0.035,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-opus-4-7-thinking [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.775,
+          "output_per_1m": 3.875,
+          "cache_per_1m": 0.0775,
+          "cache_write_per_1m": 0.969
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[Kiro] claude-opus-4-5 [不补]",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.775,
+          "output_per_1m": 3.875,
+          "cache_per_1m": 0.0775,
+          "cache_write_per_1m": 0.969
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[不稳定渠道] gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "生图1",
-          "label": "生成图片模型1",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "生图2",
-          "label": "生成图片模型2",
-          "price_per_request": 0.02
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.007
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "mimo-v2.5-pro",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按量3",
+          "label": "按量3 分组",
+          "input_per_1m": 0.086,
+          "output_per_1m": 0.174,
+          "cache_per_1m": 0.0086,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[gcli][假流] gemini-3.1-pro-preview [不补]",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力量] gemini-3.1-pro-preview [不补]",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.8,
+          "output_per_1m": 4.8,
+          "cache_per_1m": 0.08,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量3][次] grok-build-0.1",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     }
   ],
-  "fetched_at": "2026-07-20T20:19:23.674Z"
+  "fetched_at": "2026-07-21T20:18:11.664Z"
 }
