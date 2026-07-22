@@ -35,13 +35,13 @@
   },
   "models": [
     {
-      "name": "[0.04]喵/glm-5.1",
-      "vendor": "智谱",
+      "name": "[0.04]c杨/gemini-2.5-pro",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "claude按量",
-          "label": "小克[按量]",
+          "name": "gemini",
+          "label": "哈基米[按次]",
           "price_per_request": 0.04
         },
         {
@@ -51,23 +51,24 @@
         }
       ],
       "supported_endpoints": [
-        "openai"
+        "openai",
+        "gemini"
       ]
     },
     {
-      "name": "[0.01]自营逆向/gemini-3.1-flash-image",
-      "vendor": "Google",
+      "name": "[0.15]平/claude-opus-4-6",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.01
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.15
         },
         {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.01
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.15
         }
       ],
       "supported_endpoints": [
@@ -75,36 +76,16 @@
       ]
     },
     {
-      "name": "[0.03]c米/gemini-3.1-pro-preview-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[君离-按量]k/claude-sonnet-4-6",
+      "name": "[玊]a按量/claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "claude按量",
           "label": "小克[按量]",
-          "input_per_1m": 0.7,
-          "output_per_1m": 0.6,
-          "cache_per_1m": 0.8,
+          "input_per_1m": 1.3,
+          "output_per_1m": 7.5,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -113,14 +94,34 @@
       ]
     },
     {
-      "name": "[公益]gemini-2.5-pro",
+      "name": "[0.03]c米/gemini-3.1-pro-preview-thinking",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "Free",
-          "label": "福利模型[免费时间13:30-15:30]",
-          "price_per_request": 0
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.06]奇/glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.06
         }
       ],
       "supported_endpoints": [
@@ -146,111 +147,7 @@
       ]
     },
     {
-      "name": "[君离-按量]a/claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude按量",
-          "label": "小克[按量]",
-          "input_per_1m": 1.5,
-          "output_per_1m": 10,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.35
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[玊]a按量/claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude按量",
-          "label": "小克[按量]",
-          "input_per_1m": 2,
-          "output_per_1m": 14,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 1.2,
-          "output_per_1m": 8.64,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]平/gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.06]奇/glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.3]不明鹿/claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.3
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]自带cot/gemini-2.5-pro-thinking-512",
+      "name": "[哆啦-按量]gemini-2.5-pro-thinking",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -268,17 +165,19 @@
       ]
     },
     {
-      "name": "[哆啦-按量]自带cot/gemini-3.1-pro-preview-thinking-128",
+      "name": "[0.01]c叶/gemini-3-flash-preview-search",
       "vendor": "Google",
-      "quota_type": "token",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 1.2,
-          "output_per_1m": 8.64,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.01
         }
       ],
       "supported_endpoints": [
@@ -286,7 +185,7 @@
       ]
     },
     {
-      "name": "[0.03]c哆/gemini-2.5-pro-thinking",
+      "name": "[0.03]c玊/gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -306,7 +205,7 @@
       ]
     },
     {
-      "name": "[0.08]a玊/claude-sonnet-4-6",
+      "name": "[0.08]k米/claude-opus-4-7",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -326,19 +225,19 @@
       ]
     },
     {
-      "name": "[0.3]不明鹿/claude-opus-4-5-thinking",
+      "name": "[0.15]s平/claude-opus-4-7",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "claude",
           "label": "小克[按次]",
-          "price_per_request": 0.3
+          "price_per_request": 0.15
         },
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.3
+          "price_per_request": 0.15
         }
       ],
       "supported_endpoints": [
@@ -346,17 +245,171 @@
       ]
     },
     {
-      "name": "[君离-按量]k/claude-opus-4-5-20251101",
+      "name": "[哆啦-按量]gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cli按量",
+          "label": "cli哈基米[按量]",
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c米/gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.04]b新/gemini-3.1-pro-preview-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.04
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.08]k奇/claude-opus-4.7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[君离-按量]a/claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "claude按量",
           "label": "小克[按量]",
-          "input_per_1m": 1.351,
-          "output_per_1m": 9.134,
-          "cache_per_1m": 0.131,
-          "cache_write_per_1m": 1.738
+          "input_per_1m": 1.5,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.35
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c米/gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]奇/glm-5.1",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.04]c杨/gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.04
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "[0.06]s米/gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.06
         }
       ],
       "supported_endpoints": [
@@ -379,102 +432,7 @@
       ]
     },
     {
-      "name": "[0.02]自营伪流/gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c米/gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.12]平/gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.12
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.025]a玊/gemini-3.5-flash-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.025
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.02]a玊/agemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c米/gemini-2.5-pro-search",
+      "name": "[0.03]c哆/gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -514,19 +472,193 @@
       ]
     },
     {
-      "name": "[0.1]k米/claude-opus-4-8",
+      "name": "[0.05]s米/gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.05
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.08]平/gpt-5.6-luna",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.12]平/gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.12
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.3]不明鹿/claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.3
+        },
+        {
           "name": "claude",
           "label": "小克[按次]",
-          "price_per_request": 0.1
+          "price_per_request": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[哆啦-按量]gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cli按量",
+          "label": "cli哈基米[按量]",
+          "input_per_1m": 0.18,
+          "output_per_1m": 0.27,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.01]平/gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c哆/gemini-3.1-pro-preview-thinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
         },
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.1
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]平/gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[哆啦-按量]gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cli按量",
+          "label": "cli哈基米[按量]",
+          "input_per_1m": 0.3,
+          "output_per_1m": 0.54,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[哆啦-按量]gemini-3.1-pro-preview-thinking",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cli按量",
+          "label": "cli哈基米[按量]",
+          "input_per_1m": 1.2,
+          "output_per_1m": 8.64,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.008]自营伪流/gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.008
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.008
         }
       ],
       "supported_endpoints": [
@@ -554,19 +686,19 @@
       ]
     },
     {
-      "name": "[0.06]v米/gemini-3.1-pro-preview",
+      "name": "[0.03]c米/gemini-3.1-pro-preview-search",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.06
+          "price_per_request": 0.03
         },
         {
           "name": "gemini",
           "label": "哈基米[按次]",
-          "price_per_request": 0.06
+          "price_per_request": 0.03
         }
       ],
       "supported_endpoints": [
@@ -574,14 +706,14 @@
       ]
     },
     {
-      "name": "[0.08]米/gpt-image-2",
-      "vendor": "OpenAI",
+      "name": "[0.05]米/glm-5.2",
+      "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.08
+          "price_per_request": 0.05
         }
       ],
       "supported_endpoints": [
@@ -627,19 +759,14 @@
       ]
     },
     {
-      "name": "[0.01]自营逆向/gemini-3.6-flash",
+      "name": "[公益]gemini-3-flash-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.01
+          "name": "Free",
+          "label": "福利模型[免费时间13:30-15:30]",
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -647,352 +774,19 @@
       ]
     },
     {
-      "name": "[0.02]a叶/gemini-3.1-pro-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c玊/gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c米/gemini-3-pro-preview-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.08]k奇/claude-opus-4.7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.08
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.01]自营逆向/gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c玊/gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]平/gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.025]a玊/gemini-3.1-pro-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.025
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c哆/gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]奇/glm-5.1",
+      "name": "[0.08]喵/glm-5.2",
       "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.04]u新/gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
+          "price_per_request": 0.08
         },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.04]米/glm-5.1",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.3]不明鹿/claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.3
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[君离-按量]k/claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
         {
           "name": "claude按量",
           "label": "小克[按量]",
-          "input_per_1m": 0.268,
-          "output_per_1m": 2.21,
-          "cache_per_1m": 0.27,
-          "cache_write_per_1m": 0.299
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c哆/gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-420-thinking",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.012
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.005]自营伪流/gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.005
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.005
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c米/gemini-3.1-pro-preview-thinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5-Free",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
+          "price_per_request": 0.08
         }
       ],
       "supported_endpoints": [
@@ -1020,169 +814,7 @@
       ]
     },
     {
-      "name": "[哆啦-按量]自带cot/gemini-2.5-pro-thinking-128",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.02]平/gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.2]a玊/claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.2
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[玊]a按量/claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude按量",
-          "label": "小克[按量]",
-          "input_per_1m": 1.3,
-          "output_per_1m": 7.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 0.18,
-          "output_per_1m": 0.27,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]b新/gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c米/gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.08]平/gpt-5.6-luna",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.02]a叶/gemini-3.1-pro-low",
+      "name": "[0.02]a玊/gemini-3.6-flash-high",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1202,13 +834,39 @@
       ]
     },
     {
-      "name": "[0.03]米/gpt-5.5",
-      "vendor": "OpenAI",
+      "name": "[0.03]a扬/gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "[0.03]c哆/gemini-2.5-pro-thinking",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
           "price_per_request": 0.03
         }
       ],
@@ -1217,7 +875,7 @@
       ]
     },
     {
-      "name": "[0.04]c杨/gemini-2.5-pro",
+      "name": "[0.04]c杨/gemini-3-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1238,37 +896,17 @@
       ]
     },
     {
-      "name": "[0.15]平/claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.15
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.15
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[君离-按量]k/claude-sonnet-4-5-20250929",
+      "name": "[君离-按量]k/claude-opus-4-5-20251101",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "claude按量",
           "label": "小克[按量]",
-          "input_per_1m": 0.894,
-          "output_per_1m": 6.94,
-          "cache_per_1m": 0.753,
-          "cache_write_per_1m": 0.956
+          "input_per_1m": 1.351,
+          "output_per_1m": 9.134,
+          "cache_per_1m": 0.131,
+          "cache_write_per_1m": 1.738
         }
       ],
       "supported_endpoints": [
@@ -1276,8 +914,28 @@
       ]
     },
     {
-      "name": "[公益]gemini-3-flash-preview",
+      "name": "[0.03]c米自带cot/gemini-3.1-pro-preview-thinking-512",
       "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-fable-5",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
@@ -1291,118 +949,19 @@
       ]
     },
     {
-      "name": "[君离-按量]k/claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude按量",
-          "label": "小克[按量]",
-          "input_per_1m": 1.123,
-          "output_per_1m": 10.124,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.02]自营伪流/gemini-3.5-flash",
+      "name": "[0.005]自营伪流/gemini-2.5-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.02
+          "price_per_request": 0.005
         },
         {
           "name": "gemini",
           "label": "哈基米[按次]",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.04]b新/gemini-3.1-pro-preview-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.04]c杨/gemini-2.5-pro-maxthinking-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "[0.06]c米/gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.06
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.15]s平/claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.15
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.15
+          "price_per_request": 0.005
         }
       ],
       "supported_endpoints": [
@@ -1428,105 +987,7 @@
       ]
     },
     {
-      "name": "[哆啦-按量]gemini-3-pro-preview-thinking",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 1.2,
-          "output_per_1m": 8.64,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.005]自营逆向/gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.005
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.005
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c哆/gemini-3.1-pro-preview-thinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.02]自营逆向/gemini-3-pro-image",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c米自带cot/gemini-3-pro-preview-thinking-512",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.08]k米/claude-opus-4-7",
+      "name": "[0.08]a玊/claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -1546,19 +1007,117 @@
       ]
     },
     {
-      "name": "[0.01]c叶/gemini-3-flash-preview-search",
-      "vendor": "Google",
+      "name": "[0.3]不明鹿/claude-opus-4-5",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.01
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.3
         },
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[哆啦-按量]gemini-3-pro-preview-thinking",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cli按量",
+          "label": "cli哈基米[按量]",
+          "input_per_1m": 1.2,
+          "output_per_1m": 8.64,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.01]a玊/gemini-3-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
           "price_per_request": 0.01
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.05]喵/deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude按量",
+          "label": "小克[按量]",
+          "price_per_request": 0.05
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.06]c米/gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.008]自营逆向/gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.008
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.008
         }
       ],
       "supported_endpoints": [
@@ -1606,19 +1165,40 @@
       ]
     },
     {
-      "name": "[0.06]c米/gemini-2.5-pro",
+      "name": "[0.04]c杨/gemini-2.5-pro-maxthinking-search",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.04
+        },
+        {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.06
-        },
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "[0.02]a叶/gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
         {
           "name": "gemini",
           "label": "哈基米[按次]",
-          "price_per_request": 0.06
+          "price_per_request": 0.02
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -1626,19 +1206,69 @@
       ]
     },
     {
-      "name": "[0.08]v新/gemini-3.1-pro-preview",
+      "name": "[0.02]自营逆向/gemini-3-pro-image",
       "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.025]a玊/gemini-3.1-pro-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.025
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]米/gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.08]平/gpt-image-2",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
           "price_per_request": 0.08
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.08
         }
       ],
       "supported_endpoints": [
@@ -1646,19 +1276,14 @@
       ]
     },
     {
-      "name": "[0.01]自营逆向/gemini-2.5-pro",
+      "name": "[公益]gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.01
+          "name": "Free",
+          "label": "福利模型[免费时间13:30-15:30]",
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -1666,19 +1291,79 @@
       ]
     },
     {
-      "name": "[0.01]自营逆向/gemini-3.1-pro-preview",
+      "name": "[0.2]a玊/claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.2
+        },
+        {
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.02]a玊/gemini-3.6-flash-medium",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.01
+          "price_per_request": 0.02
         },
         {
           "name": "gemini",
           "label": "哈基米[按次]",
-          "price_per_request": 0.01
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.02]自营伪流/gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c玊/gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
         }
       ],
       "supported_endpoints": [
@@ -1706,10 +1391,15 @@
       ]
     },
     {
-      "name": "[0.08]平/gpt-image-2",
-      "vendor": "OpenAI",
+      "name": "[0.08]k奇/claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
+        {
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.08
+        },
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
@@ -1721,17 +1411,17 @@
       ]
     },
     {
-      "name": "[哆啦-按量]gemini-2.5-pro-thinking",
-      "vendor": "Google",
+      "name": "[君离-按量]k/claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "name": "claude按量",
+          "label": "小克[按量]",
+          "input_per_1m": 0.268,
+          "output_per_1m": 2.21,
+          "cache_per_1m": 0.27,
+          "cache_write_per_1m": 0.299
         }
       ],
       "supported_endpoints": [
@@ -1739,13 +1429,18 @@
       ]
     },
     {
-      "name": "[0.02]哆/grok-4.5",
-      "vendor": "xAI",
+      "name": "[0.02]a玊/agemini-3.1-pro-low",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
           "price_per_request": 0.02
         }
       ],
@@ -1754,19 +1449,19 @@
       ]
     },
     {
-      "name": "[0.03]c哆/gemini-3-pro-preview-thinking",
+      "name": "[0.02]自营伪流/gemini-3.5-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
+          "price_per_request": 0.02
         },
         {
           "name": "gemini",
           "label": "哈基米[按次]",
-          "price_per_request": 0.03
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -1795,37 +1490,34 @@
       ]
     },
     {
-      "name": "[0.08]k米/claude-opus-4-6",
-      "vendor": "Anthropic",
+      "name": "[0.04]平/gpt-5.6-luna",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.08
-        },
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.1]k米/claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
         {
           "name": "claude",
           "label": "小克[按次]",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
+          "price_per_request": 0.1
+        },
         {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 1.2,
-          "output_per_1m": 8.64,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.1
         }
       ],
       "supported_endpoints": [
@@ -1833,7 +1525,7 @@
       ]
     },
     {
-      "name": "[0.03]a扬/gemini-3.5-flash",
+      "name": "[0.03]c哆/gemini-3-pro-preview-thinking",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1849,22 +1541,58 @@
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "gemini"
+        "openai"
       ]
     },
     {
-      "name": "[哆啦-按量]gemini-3-flash-preview",
+      "name": "[0.03]c米自带cot/gemini-3.1-pro-preview-thinking-128",
       "vendor": "Google",
-      "quota_type": "token",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 0.3,
-          "output_per_1m": 0.54,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.02]a玊/gemini-3.6-flash-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[公益]gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "福利模型[免费时间13:30-15:30]",
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -1892,171 +1620,14 @@
       ]
     },
     {
-      "name": "[0.03]c哆/gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.04]c杨/gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "[0.15]平/claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.15
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.15
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[君离-按量]a/claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude按量",
-          "label": "小克[按量]",
-          "input_per_1m": 3.12,
-          "output_per_1m": 21.125,
-          "cache_per_1m": 0.325,
-          "cache_write_per_1m": 2.931
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.03]c米自带cot/gemini-3-pro-preview-thinking-128",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.05]s米/gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.05
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.05
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.08]k奇/claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "小克[按次]",
-          "price_per_request": 0.08
-        },
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]自带cot/gemini-3-pro-preview-thinking-128",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 1.2,
-          "output_per_1m": 8.64,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.04]平/gpt-5.6-luna",
+      "name": "[0.03]平/gpt-5.4",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
+          "price_per_request": 0.03
         }
       ],
       "supported_endpoints": [
@@ -2064,7 +1635,7 @@
       ]
     },
     {
-      "name": "[0.06]s米/gemini-3-pro-preview",
+      "name": "[0.06]v米/gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -2104,6 +1675,197 @@
       ]
     },
     {
+      "name": "[0.15]平/claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.15
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[君离-按量]a/claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude按量",
+          "label": "小克[按量]",
+          "input_per_1m": 3.12,
+          "output_per_1m": 21.125,
+          "cache_per_1m": 0.325,
+          "cache_write_per_1m": 2.931
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c米/gemini-2.5-pro-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.02]a叶/gemini-3.1-pro-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.04]u新/gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.04
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.08]k米/claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[君离-按量]k/claude-sonnet-4-5-20250929",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude按量",
+          "label": "小克[按量]",
+          "input_per_1m": 0.894,
+          "output_per_1m": 6.94,
+          "cache_per_1m": 0.753,
+          "cache_write_per_1m": 0.956
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.01]自营逆向/gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]b新/gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-3",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "[0.08]k奇/claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "per_request",
@@ -2124,19 +1886,19 @@
       ]
     },
     {
-      "name": "[0.08]喵/glm-5.2",
-      "vendor": "智谱",
+      "name": "[0.005]自营逆向/gemini-2.5-flash",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "claude按量",
-          "label": "小克[按量]",
-          "price_per_request": 0.08
-        },
-        {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.08
+          "price_per_request": 0.005
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.005
         }
       ],
       "supported_endpoints": [
@@ -2144,7 +1906,7 @@
       ]
     },
     {
-      "name": "[0.01]a玊/gemini-3-flash",
+      "name": "[0.01]自营逆向/gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -2179,7 +1941,27 @@
       ]
     },
     {
-      "name": "[哆啦-按量]gemini-3.1-pro-preview-thinking",
+      "name": "[0.06]c米/gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[哆啦-按量]gemini-3-pro-preview",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -2197,19 +1979,19 @@
       ]
     },
     {
-      "name": "[0.008]自营伪流/gemini-3-flash-preview",
+      "name": "[0.01]自营逆向/gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.008
+          "price_per_request": 0.01
         },
         {
           "name": "gemini",
           "label": "哈基米[按次]",
-          "price_per_request": 0.008
+          "price_per_request": 0.01
         }
       ],
       "supported_endpoints": [
@@ -2217,19 +1999,19 @@
       ]
     },
     {
-      "name": "[0.008]自营逆向/gemini-3-flash-preview",
+      "name": "[0.01]自营逆向/gemini-3.1-flash-image",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.008
+          "price_per_request": 0.01
         },
         {
           "name": "gemini",
           "label": "哈基米[按次]",
-          "price_per_request": 0.008
+          "price_per_request": 0.01
         }
       ],
       "supported_endpoints": [
@@ -2237,34 +2019,14 @@
       ]
     },
     {
-      "name": "[0.03]c米自带cot/gemini-3.1-pro-preview-thinking-128",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.05]米/glm-5.2",
+      "name": "[0.04]米/glm-5.1",
       "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.05
+          "price_per_request": 0.04
         }
       ],
       "supported_endpoints": [
@@ -2272,14 +2034,273 @@
       ]
     },
     {
-      "name": "grok-420-agents",
+      "name": "[0.08]v新/gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "福利模型[免费时间13:30-15:30]",
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.01]自营逆向/gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[哆啦-按量]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cli按量",
+          "label": "cli哈基米[按量]",
+          "input_per_1m": 1.2,
+          "output_per_1m": 8.64,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c哆/gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c米自带cot/gemini-3-pro-preview-thinking-512",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.04]米/grok-4.2",
       "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.012
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[君离-按量]k/claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude按量",
+          "label": "小克[按量]",
+          "input_per_1m": 1.123,
+          "output_per_1m": 10.124,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[君离-按量]k/claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude按量",
+          "label": "小克[按量]",
+          "input_per_1m": 0.7,
+          "output_per_1m": 0.6,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.02]平/gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c哆/gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.025]a玊/gemini-3.5-flash-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.025
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c米/gemini-3-pro-preview-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.03]c米自带cot/gemini-3-pro-preview-thinking-128",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "gemini",
+          "label": "哈基米[按次]",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[0.08]米/gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "二藤宏嵩分组[所有按次模型]",
+          "price_per_request": 0.08
         }
       ],
       "supported_endpoints": [
@@ -2307,70 +2328,19 @@
       ]
     },
     {
-      "name": "[0.05]喵/deepseek-v4-pro",
-      "vendor": "DeepSeek",
+      "name": "[0.3]不明鹿/claude-opus-4-5-thinking",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.05
+          "name": "claude",
+          "label": "小克[按次]",
+          "price_per_request": 0.3
         },
         {
-          "name": "claude按量",
-          "label": "小克[按量]",
-          "price_per_request": 0.05
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]自带cot/gemini-3-pro-preview-thinking-512",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 1.2,
-          "output_per_1m": 8.64,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[哆啦-按量]自带cot/gemini-3.1-pro-preview-thinking-512",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cli按量",
-          "label": "cli哈基米[按量]",
-          "input_per_1m": 1.2,
-          "output_per_1m": 8.64,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.01]平/gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.01
+          "price_per_request": 0.3
         }
       ],
       "supported_endpoints": [
@@ -2378,85 +2348,14 @@
       ]
     },
     {
-      "name": "[0.03]c米自带cot/gemini-3.1-pro-preview-thinking-512",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[公益]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "福利模型[免费时间13:30-15:30]",
-          "price_per_request": 0
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[0.04]c杨/gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "gemini",
-          "label": "哈基米[按次]",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "[0.04]米/grok-4.2",
+      "name": "[0.02]哆/grok-4.5",
       "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-3",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "二藤宏嵩分组[所有按次模型]",
-          "price_per_request": 0.01
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -2464,5 +2363,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-07-21T20:18:33.083Z"
+  "fetched_at": "2026-07-22T20:10:59.664Z"
 }
