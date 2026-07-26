@@ -8,229 +8,34 @@
       "ratio": 0.2,
       "label": "AWS渠道2折，满血支持高缓存"
     },
+    "cc": {
+      "ratio": 1,
+      "label": null
+    },
     "default": {
       "ratio": 1,
       "label": "默认分组"
+    },
+    "好梦": {
+      "ratio": 0.9,
+      "label": null
     }
   },
   "models": [
     {
-      "name": "mq-anti-0.25-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 200,
-          "output_per_1m": 1000,
-          "cache_per_1m": 20,
-          "cache_write_per_1m": 250
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1000,
-          "output_per_1m": 5000,
-          "cache_per_1m": 100,
-          "cache_write_per_1m": 1250
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4.5-20250929",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 60,
-          "output_per_1m": 300,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 75
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 300,
-          "output_per_1m": 1500,
-          "cache_per_1m": 50,
-          "cache_write_per_1m": 375
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 40,
-          "output_per_1m": 200,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": 50
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 200,
-          "output_per_1m": 1000,
-          "cache_per_1m": 20,
-          "cache_write_per_1m": 250
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "自营-0.035-gemini-3.1-pro-preview-search",
+      "name": "cli-0.018-gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 3.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4.7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.62
         },
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 500,
-          "output_per_1m": 2500,
-          "cache_per_1m": 50,
-          "cache_write_per_1m": 625
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "anti-量-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 400,
-          "output_per_1m": 2000,
-          "cache_per_1m": 40,
-          "cache_write_per_1m": 500
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ais-0.04-gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4.5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 20,
-          "output_per_1m": 100,
-          "cache_per_1m": 2,
-          "cache_write_per_1m": 25
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
+          "price_per_request": 1.8
         }
       ],
       "supported_endpoints": [
@@ -264,14 +69,14 @@
       ]
     },
     {
-      "name": "自营-0.035gemini-3.1-pro-preview-c",
-      "vendor": "Google",
+      "name": "m-claude-opus-4-8",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 3.5
+          "name": "cc",
+          "label": null,
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -279,13 +84,18 @@
       ]
     },
     {
-      "name": "cli-0.018-gemini-3.1-pro-preview-search",
-      "vendor": "Google",
+      "name": "特价kiro-0.02-claude-opus-5-thinking",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
           "price_per_request": 1.8
         }
       ],
@@ -294,7 +104,7 @@
       ]
     },
     {
-      "name": "ais-0.04-gemini-3.5-flash",
+      "name": "ais-0.04-gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -302,110 +112,11 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "p-0.012-gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "mq-anti-0.25-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4.5-20251101",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
         },
         {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 500,
-          "output_per_1m": 2500,
-          "cache_per_1m": 50,
-          "cache_write_per_1m": 625
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "anti-量-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 400,
-          "output_per_1m": 2000,
-          "cache_per_1m": 40,
-          "cache_write_per_1m": 500
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "vertex-0.04-gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "z-0.009-deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.9
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.6
         }
       ],
       "supported_endpoints": [
@@ -421,6 +132,11 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 8.8
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 7.92
         }
       ],
       "supported_endpoints": [
@@ -428,14 +144,65 @@
       ]
     },
     {
-      "name": "特价kiro-0.02-claude-opus-4-7-thinking",
-      "vendor": "Anthropic",
+      "name": "ais-0.04-gemini-3.6-flash",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 2
+          "price_per_request": 4
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "p-0.012-gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.08
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 1.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 200,
+          "output_per_1m": 1000,
+          "cache_per_1m": 20,
+          "cache_write_per_1m": 250
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1000,
+          "output_per_1m": 5000,
+          "cache_per_1m": 100,
+          "cache_write_per_1m": 1250
         }
       ],
       "supported_endpoints": [
@@ -451,96 +218,11 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "cli-0.018-gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
+        },
         {
-          "name": "default",
-          "label": "默认分组",
+          "name": "好梦",
+          "label": null,
           "price_per_request": 1.8
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "cli-0.018-gemini-3.1-pro-preview-thinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.8
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "p-0.012-gemini-3.1-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "cli-0.018-gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.8
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "p-0.012-gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "mmq-anti-0.18-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 18
         }
       ],
       "supported_endpoints": [
@@ -556,6 +238,310 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 18
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 16.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 40,
+          "output_per_1m": 200,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": 50
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 200,
+          "output_per_1m": 1000,
+          "cache_per_1m": 20,
+          "cache_write_per_1m": 250
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4.5-20250929",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 60,
+          "output_per_1m": 300,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 75
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 300,
+          "output_per_1m": 1500,
+          "cache_per_1m": 50,
+          "cache_write_per_1m": 375
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价kiro-0.02-claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "vertex-0.04-gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "自营-0.035-gemini-3.1-pro-preview-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3.5
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "自营-0.035gemini-3.1-pro-preview-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.15
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mmq-anti-0.18-claude-opus-4-6-thinking-流式抗截断-anti",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 18
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 16.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 500,
+          "output_per_1m": 2500,
+          "cache_per_1m": 50,
+          "cache_write_per_1m": 625
+        },
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "m-claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "cc",
+          "label": null,
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "z-0.006-deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.6
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 0.54
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价kiro-0.02-claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ais-0.04-gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ais-0.04-gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-haiku-4.5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        },
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 20,
+          "output_per_1m": 100,
+          "cache_per_1m": 2,
+          "cache_write_per_1m": 25
         }
       ],
       "supported_endpoints": [
@@ -589,25 +575,34 @@
       ]
     },
     {
-      "name": "claude-opus-4.1-20250805",
+      "name": "m-claude-sonnet-4-6",
       "vendor": "Anthropic",
-      "quota_type": "token",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 300,
-          "output_per_1m": 1500,
-          "cache_per_1m": 30,
-          "cache_write_per_1m": 375
+          "name": "cc",
+          "label": null,
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "cli-0.018-gemini-3.1-pro-preview-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.62
         },
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 1500,
-          "output_per_1m": 7500,
-          "cache_per_1m": 150,
-          "cache_write_per_1m": 1875
+          "price_per_request": 1.8
         }
       ],
       "supported_endpoints": [
@@ -615,100 +610,19 @@
       ]
     },
     {
-      "name": "claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 500,
-          "output_per_1m": 2500,
-          "cache_per_1m": 50,
-          "cache_write_per_1m": 625
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-4.8-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ais-0.04-gemini-3.1-pro-preview",
+      "name": "cli-0.018-gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "AWS混-0.6-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
+          "price_per_request": 1.8
+        },
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 60
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.62
         }
       ],
       "supported_endpoints": [
@@ -716,14 +630,59 @@
       ]
     },
     {
-      "name": "官混-0.06-gemini-3.1-pro-preview",
+      "name": "cli-0.018-gemini-3.1-pro-preview-thinking",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 6
+          "price_per_request": 1.8
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.62
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "p-0.012-gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.08
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 1.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mq-anti-0.25-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 22.5
         }
       ],
       "supported_endpoints": [
@@ -739,137 +698,11 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 18
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-20250514",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS渠道2折，满血支持高缓存",
-          "input_per_1m": 60,
-          "output_per_1m": 300,
-          "cache_per_1m": 6,
-          "cache_write_per_1m": 75
         },
         {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 300,
-          "output_per_1m": 1500,
-          "cache_per_1m": 30,
-          "cache_write_per_1m": 375
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-4-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价kiro-0.02-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "cli-0.018-gemini-2.5-pro-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.8
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ais-0.04-gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "官混-0.6-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 60
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "mmq-anti-0.18-claude-opus-4-6-thinking-流式抗截断-anti",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 18
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 16.2
         }
       ],
       "supported_endpoints": [
@@ -911,6 +744,11 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 4
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.6
         }
       ],
       "supported_endpoints": [
@@ -918,14 +756,131 @@
       ]
     },
     {
-      "name": "vertex-0.04-gemini-3.6-flash",
+      "name": "特价kiro-0.02-claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "AWS混-0.6-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 60
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 54
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4.1-20250805",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 300,
+          "output_per_1m": 1500,
+          "cache_per_1m": 30,
+          "cache_write_per_1m": 375
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1500,
+          "output_per_1m": 7500,
+          "cache_per_1m": 150,
+          "cache_write_per_1m": 1875
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "anti-量-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 400,
+          "output_per_1m": 2000,
+          "cache_per_1m": 40,
+          "cache_write_per_1m": 500
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "input_per_1m": 360,
+          "output_per_1m": 1800,
+          "cache_per_1m": 36,
+          "cache_write_per_1m": 450
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价kiro-0.02-claude-opus-4.8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "官混-0.06-gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 4
+          "price_per_request": 6
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 5.4
         }
       ],
       "supported_endpoints": [
@@ -933,14 +888,221 @@
       ]
     },
     {
-      "name": "z-0.006-deepseek-v4-flash",
+      "name": "mq-anti-0.25-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 22.5
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4.5-20251101",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 500,
+          "output_per_1m": 2500,
+          "cache_per_1m": 50,
+          "cache_write_per_1m": 625
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "anti-量-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "input_per_1m": 360,
+          "output_per_1m": 1800,
+          "cache_per_1m": 36,
+          "cache_write_per_1m": 450
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 400,
+          "output_per_1m": 2000,
+          "cache_per_1m": 40,
+          "cache_write_per_1m": 500
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "m-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "cc",
+          "label": null,
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "z-0.009-deepseek-v4-pro",
       "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.6
+          "price_per_request": 0.9
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 0.81
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价kiro-0.02-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "官混-0.6-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 60
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 54
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "m-claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "cc",
+          "label": null,
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "p-0.012-gemini-3.1-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 1.2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.08
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价kiro-0.02-claude-opus-4-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价kiro-0.02-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
         }
       ],
       "supported_endpoints": [
@@ -956,6 +1118,173 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 6
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 5.4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mmq-anti-0.18-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 18
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 16.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "m-claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "cc",
+          "label": null,
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "vertex-0.04-gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 3.6
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价kiro-0.02-claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "cli-0.018-gemini-2.5-pro-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 1.8
+        },
+        {
+          "name": "好梦",
+          "label": null,
+          "price_per_request": 1.62
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4.7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 500,
+          "output_per_1m": 2500,
+          "cache_per_1m": 50,
+          "cache_write_per_1m": 625
+        },
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-20250514",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS渠道2折，满血支持高缓存",
+          "input_per_1m": 60,
+          "output_per_1m": 300,
+          "cache_per_1m": 6,
+          "cache_write_per_1m": 75
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 300,
+          "output_per_1m": 1500,
+          "cache_per_1m": 30,
+          "cache_write_per_1m": 375
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "m-claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "cc",
+          "label": null,
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -963,5 +1292,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-07-25T20:10:01.952Z"
+  "fetched_at": "2026-07-26T20:08:28.816Z"
 }
