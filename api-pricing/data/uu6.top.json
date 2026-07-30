@@ -27,115 +27,7 @@
   },
   "models": [
     {
-      "name": "claude-opus-4-5-20251101",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.1
-        },
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-8-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.125
-        },
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.125
-        },
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
+      "name": "claude-sonnet-4-5-20250929-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -145,7 +37,7 @@
           "input_per_1m": 0.06,
           "output_per_1m": 0.3,
           "cache_per_1m": 0.006,
-          "cache_write_per_1m": 0.06
+          "cache_write_per_1m": 0.075
         },
         {
           "name": "claude高缓存",
@@ -153,7 +45,7 @@
           "input_per_1m": 3,
           "output_per_1m": 15,
           "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3
+          "cache_write_per_1m": 3.75
         }
       ],
       "supported_endpoints": [
@@ -189,76 +81,16 @@
       ]
     },
     {
-      "name": "gpt-5.6-luna",
-      "vendor": "OpenAI",
+      "name": "grok-4.5",
+      "vendor": "xAI",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "default",
-          "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
-          "input_per_1m": 0.8,
-          "output_per_1m": 6.4,
-          "cache_per_1m": 0.08,
-          "cache_write_per_1m": 0.8
-        },
-        {
-          "name": "ChatGPT-Pro",
-          "label": null,
-          "input_per_1m": 0.8,
-          "output_per_1m": 6.4,
-          "cache_per_1m": 0.08,
-          "cache_write_per_1m": 0.8
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro",
-          "label": null,
-          "input_per_1m": 4,
-          "output_per_1m": 32,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 4
-        },
-        {
-          "name": "default",
-          "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
-          "input_per_1m": 4,
-          "output_per_1m": 32,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro",
-          "label": null,
-          "input_per_1m": 2,
-          "output_per_1m": 16,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 2
-        },
         {
           "name": "default",
           "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
           "input_per_1m": 2,
-          "output_per_1m": 16,
-          "cache_per_1m": 0.2,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.8,
           "cache_write_per_1m": 2
         }
       ],
@@ -294,7 +126,59 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
+      "name": "codex-auto-review",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro",
+          "label": null,
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro",
+          "label": null,
+          "input_per_1m": 4,
+          "output_per_1m": 32,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 4
+        },
+        {
+          "name": "default",
+          "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
+          "input_per_1m": 4,
+          "output_per_1m": 32,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5-20251101-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -321,18 +205,10 @@
       ]
     },
     {
-      "name": "claude-opus-5",
+      "name": "claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.125
-        },
         {
           "name": "claude高缓存",
           "label": "claude分组，高缓存",
@@ -340,6 +216,68 @@
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
           "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-5-20250929",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.3,
+          "cache_per_1m": 0.006,
+          "cache_write_per_1m": 0.06
+        },
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.3,
+          "cache_per_1m": 0.006,
+          "cache_write_per_1m": 0.06
+        },
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
         }
       ],
       "supported_endpoints": [
@@ -375,60 +313,6 @@
       ]
     },
     {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.125
-        },
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.125
-        },
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
       "name": "claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -448,6 +332,60 @@
           "output_per_1m": 15,
           "cache_per_1m": 0.3,
           "cache_write_per_1m": 3
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.125
+        },
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.125
+        },
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
         }
       ],
       "supported_endpoints": [
@@ -508,7 +446,60 @@
       ]
     },
     {
-      "name": "claude-opus-4-5-20251101-thinking",
+      "name": "gpt-5.6-luna",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro",
+          "label": null,
+          "input_per_1m": 0.8,
+          "output_per_1m": 6.4,
+          "cache_per_1m": 0.08,
+          "cache_write_per_1m": 0.8
+        },
+        {
+          "name": "default",
+          "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
+          "input_per_1m": 0.8,
+          "output_per_1m": 6.4,
+          "cache_per_1m": 0.08,
+          "cache_write_per_1m": 0.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -535,70 +526,24 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-5-20250929",
-      "vendor": "Anthropic",
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.06,
-          "output_per_1m": 0.3,
-          "cache_per_1m": 0.006,
-          "cache_write_per_1m": 0.06
+          "name": "ChatGPT-Pro",
+          "label": null,
+          "input_per_1m": 2,
+          "output_per_1m": 16,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2
         },
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-5-20250929-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-0.02元/次",
-          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
-          "input_per_1m": 0.06,
-          "output_per_1m": 0.3,
-          "cache_per_1m": 0.006,
-          "cache_write_per_1m": 0.075
-        },
-        {
-          "name": "claude高缓存",
-          "label": "claude分组，高缓存",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
         {
           "name": "default",
           "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
           "input_per_1m": 2,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.8,
+          "output_per_1m": 16,
+          "cache_per_1m": 0.2,
           "cache_write_per_1m": 2
         }
       ],
@@ -607,31 +552,86 @@
       ]
     },
     {
-      "name": "codex-auto-review",
-      "vendor": "OpenAI",
+      "name": "claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "ChatGPT-Pro",
-          "label": null,
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.1
         },
         {
-          "name": "default",
-          "label": "这个是旧分组，建议使用ChatGPT-Pro和Claude别的分组",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 5
         }
       ],
       "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.125
+        },
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-0.02元/次",
+          "label": "每次请求收2分钱（充值0.15 * 分组倍率 0.133 = 0.02元）",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.125
+        },
+        {
+          "name": "claude高缓存",
+          "label": "claude分组，高缓存",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     }
   ],
-  "fetched_at": "2026-07-29T20:12:41.489Z"
+  "fetched_at": "2026-07-30T20:14:16.492Z"
 }
