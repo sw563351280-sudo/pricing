@@ -15,25 +15,6 @@
   },
   "models": [
     {
-      "name": "gemini-3.7-flash",
-      "vendor": "Gemini",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.75,
-          "output_per_1m": 3.75,
-          "cache_per_1m": 0.075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
       "name": "fireworks/minimax-m3",
       "vendor": "Minimax",
       "quota_type": "token",
@@ -52,20 +33,21 @@
       ]
     },
     {
-      "name": "claude-sonnet-5",
-      "vendor": "Claude",
+      "name": "gemini-3.5-flash-lite",
+      "vendor": "Gemini",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 2,
-          "output_per_1m": 10,
-          "cache_per_1m": 0.2,
+          "input_per_1m": 0.3,
+          "output_per_1m": 2.5,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -88,16 +70,67 @@
       ]
     },
     {
-      "name": "glm-5.2",
-      "vendor": "GLM",
+      "name": "claude-opus-4-8",
+      "vendor": "Claude",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "兜底",
+          "label": "兜底上游",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "nvidia/gpt-oss-120b",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.001
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "xiaomi/mimo-v2.5-pro",
+      "vendor": "MiMo",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 1.4,
-          "output_per_1m": 4.4,
-          "cache_per_1m": 0.26,
+          "input_per_1m": 0.43,
+          "output_per_1m": 0.87,
+          "cache_per_1m": 0.0036,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gmicloud/mimo-v2.5-pro",
+      "vendor": "MiMo",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.43,
+          "output_per_1m": 0.87,
+          "cache_per_1m": 0.004,
           "cache_write_per_1m": null
         }
       ],
@@ -124,16 +157,49 @@
       ]
     },
     {
-      "name": "stepfun/step-3.7-flash",
-      "vendor": "Stepfun",
+      "name": "openai/gpt-5.4-nano",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
           "input_per_1m": 0.2,
-          "output_per_1m": 1.15,
-          "cache_per_1m": 0.04,
+          "output_per_1m": 1.25,
+          "cache_per_1m": 0.02,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "nvidia/step-3.7-flash",
+      "vendor": "Stepfun",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.001
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepinfra/mimo-v2.5-pro",
+      "vendor": "MiMo",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.2,
           "cache_write_per_1m": null
         }
       ],
@@ -160,164 +226,17 @@
       ]
     },
     {
-      "name": "gpt-5.6-luna",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "nvidia/step-3.7-flash",
-      "vendor": "Stepfun",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.001
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Claude",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "兜底",
-          "label": "兜底上游",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
+      "name": "claude-sonnet-5",
       "vendor": "Claude",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
+          "input_per_1m": 2,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.2,
           "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "nvidia/gpt-oss-120b",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.001
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "venice/glm-5.2",
-      "vendor": "GLM",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.4,
-          "output_per_1m": 4.4,
-          "cache_per_1m": 0.26,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash",
-      "vendor": "Gemini",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-5",
-      "vendor": "Claude",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
         }
       ],
       "supported_endpoints": [
@@ -379,16 +298,16 @@
       ]
     },
     {
-      "name": "deepinfra/mimo-v2.5-pro",
-      "vendor": "MiMo",
+      "name": "glm-5.2",
+      "vendor": "GLM",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 1,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.2,
+          "input_per_1m": 1.4,
+          "output_per_1m": 4.4,
+          "cache_per_1m": 0.26,
           "cache_write_per_1m": null
         }
       ],
@@ -397,16 +316,34 @@
       ]
     },
     {
-      "name": "gpt-5.6-sol",
+      "name": "openai/gpt-5.4-mini",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.5,
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.07,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
           "cache_write_per_1m": null
         }
       ],
@@ -434,15 +371,70 @@
       ]
     },
     {
-      "name": "gemini-3.5-flash-lite",
+      "name": "gemini-3.7-flash",
       "vendor": "Gemini",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 2.5,
+          "input_per_1m": 0.75,
+          "output_per_1m": 3.75,
+          "cache_per_1m": 0.075,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5",
+      "vendor": "Claude",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "venice/glm-5.2",
+      "vendor": "GLM",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.4,
+          "output_per_1m": 4.4,
+          "cache_per_1m": 0.26,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash",
+      "vendor": "Gemini",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -472,16 +464,16 @@
       ]
     },
     {
-      "name": "xiaomi/mimo-v2.5-pro",
-      "vendor": "MiMo",
+      "name": "stepfun/step-3.7-flash",
+      "vendor": "Stepfun",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.43,
-          "output_per_1m": 0.87,
-          "cache_per_1m": 0.0036,
+          "input_per_1m": 0.2,
+          "output_per_1m": 1.15,
+          "cache_per_1m": 0.04,
           "cache_write_per_1m": null
         }
       ],
@@ -490,13 +482,21 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
+      "name": "claude-opus-4-6",
       "vendor": "Claude",
       "quota_type": "token",
       "groups": [
         {
           "name": "兜底",
           "label": "兜底上游",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
           "input_per_1m": 5,
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
@@ -508,16 +508,16 @@
       ]
     },
     {
-      "name": "openai/gpt-5.4-mini",
+      "name": "gpt-5.6-sol",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.07,
+          "input_per_1m": 5,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.5,
           "cache_write_per_1m": null
         }
       ],
@@ -526,17 +526,17 @@
       ]
     },
     {
-      "name": "openai/gpt-5.4-nano",
-      "vendor": "OpenAI",
+      "name": "claude-opus-4-5",
+      "vendor": "Claude",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.2,
-          "output_per_1m": 1.25,
-          "cache_per_1m": 0.02,
-          "cache_write_per_1m": null
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
         }
       ],
       "supported_endpoints": [
@@ -544,16 +544,16 @@
       ]
     },
     {
-      "name": "gmicloud/mimo-v2.5-pro",
-      "vendor": "MiMo",
+      "name": "gpt-5.6-luna",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 0.43,
-          "output_per_1m": 0.87,
-          "cache_per_1m": 0.004,
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
           "cache_write_per_1m": null
         }
       ],
@@ -562,5 +562,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-08-20T19:30:13.482Z"
+  "fetched_at": "2026-08-21T19:25:27.951Z"
 }
