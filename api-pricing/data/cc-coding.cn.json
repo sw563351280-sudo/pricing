@@ -15,29 +15,74 @@
   },
   "models": [
     {
-      "name": "claude-opus-4-6-thinking",
+      "name": "claude-haiku-4-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "vip",
-          "label": "官号",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
         "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 5,
+          "output_per_1m": 40,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
         "openai"
       ]
     },
@@ -88,25 +133,25 @@
       ]
     },
     {
-      "name": "claude-haiku-4-5",
+      "name": "claude-haiku-4-5-20251001",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1,
-          "output_per_1m": 5,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        },
-        {
           "name": "vip",
           "label": "官号",
-          "input_per_1m": 1,
-          "output_per_1m": 5,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.7,
+          "cache_per_1m": 0.014,
+          "cache_write_per_1m": 0.175
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.7,
+          "cache_per_1m": 0.014,
+          "cache_write_per_1m": 0.175
         }
       ],
       "supported_endpoints": [
@@ -142,25 +187,43 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 3,
+          "input_per_1m": 2.5,
           "output_per_1m": 15,
-          "cache_per_1m": 0.3,
+          "cache_per_1m": 0.25,
           "cache_write_per_1m": null
-        },
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
         {
           "name": "vip",
           "label": "官号",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
         }
       ],
       "supported_endpoints": [
@@ -233,6 +296,33 @@
       ]
     },
     {
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "官号",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
       "name": "claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -265,16 +355,16 @@
       "quota_type": "token",
       "groups": [
         {
-          "name": "vip",
-          "label": "官号",
+          "name": "default",
+          "label": "默认分组",
           "input_per_1m": 2,
           "output_per_1m": 10,
           "cache_per_1m": 0.2,
           "cache_write_per_1m": null
         },
         {
-          "name": "default",
-          "label": "默认分组",
+          "name": "vip",
+          "label": "官号",
           "input_per_1m": 2,
           "output_per_1m": 10,
           "cache_per_1m": 0.2,
@@ -283,24 +373,6 @@
       ],
       "supported_endpoints": [
         "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
         "openai"
       ]
     },
@@ -351,60 +423,6 @@
       ]
     },
     {
-      "name": "claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.14,
-          "output_per_1m": 0.7,
-          "cache_per_1m": 0.014,
-          "cache_write_per_1m": 0.175
-        },
-        {
-          "name": "vip",
-          "label": "官号",
-          "input_per_1m": 0.14,
-          "output_per_1m": 0.7,
-          "cache_per_1m": 0.014,
-          "cache_write_per_1m": 0.175
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "官号",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
       "name": "gpt-5.5",
       "vendor": "OpenAI",
       "quota_type": "token",
@@ -421,25 +439,7 @@
       "supported_endpoints": [
         "openai"
       ]
-    },
-    {
-      "name": "gpt-5.6",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 40,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
     }
   ],
-  "fetched_at": "2026-08-30T21:50:33.277Z"
+  "fetched_at": "2026-08-31T23:06:47.119Z"
 }
