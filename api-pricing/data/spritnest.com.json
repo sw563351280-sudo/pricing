@@ -31,17 +31,14 @@
   },
   "models": [
     {
-      "name": "claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
+      "name": "claude-sonnet-4-6-c",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "cc_stable",
-          "label": "claudecode稳定分组，2倍计价",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
+          "name": "次数模型分组",
+          "label": "次数模型分组，支持次数调用",
+          "price_per_request": 0.72
         }
       ],
       "supported_endpoints": [
@@ -156,7 +153,7 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-6-c",
+      "name": "claude-opus-4-6-c",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
@@ -193,14 +190,6 @@
       "quota_type": "token",
       "groups": [
         {
-          "name": "cc_stable",
-          "label": "claudecode稳定分组，2倍计价",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
-        },
-        {
           "name": "cursor",
           "label": "cursorClaude",
           "input_per_1m": 6,
@@ -215,6 +204,33 @@
           "output_per_1m": 32.5,
           "cache_per_1m": 0.65,
           "cache_write_per_1m": 8.125
+        },
+        {
+          "name": "cc_stable",
+          "label": "claudecode稳定分组，2倍计价",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc_stable",
+          "label": "claudecode稳定分组，2倍计价",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
         }
       ],
       "supported_endpoints": [
@@ -240,23 +256,7 @@
         "gemini",
         "openai"
       ]
-    },
-    {
-      "name": "claude-opus-4-6-c",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次数模型分组",
-          "label": "次数模型分组，支持次数调用",
-          "price_per_request": 0.72
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
     }
   ],
-  "fetched_at": "2026-09-01T21:36:40.531Z"
+  "fetched_at": "2026-09-02T21:36:44.964Z"
 }

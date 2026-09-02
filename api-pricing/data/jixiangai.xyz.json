@@ -67,1229 +67,24 @@
   },
   "models": [
     {
-      "name": "[E]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[B]claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]gemini-3.1-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.5-flash-lite",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-vex",
-          "label": "按量Google Vertex直连满血Gemini",
-          "input_per_1m": 0.36,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.036,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[A]gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[B]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-sonnet-4-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[F]glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.025
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[P]claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash-high",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-anti",
-          "label": "按量反重力渠道低缓存甲厚",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.25,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-vex",
-          "label": "按量Google Vertex直连满血99%缓",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
-        },
-        {
-          "name": "claude-anti",
-          "label": "按量反重力企业级稳定低缓",
-          "input_per_1m": 2.25,
-          "output_per_1m": 11.25,
-          "cache_per_1m": 0.225,
-          "cache_write_per_1m": 2.8125
-        },
-        {
-          "name": "claude-ccmax",
-          "label": "按量claudemax订阅满血98%缓",
-          "input_per_1m": 6.5,
-          "output_per_1m": 32.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": 8.125
-        },
-        {
-          "name": "claude-openpouter",
-          "label": "按量OpenRouter直连满血99%缓",
-          "input_per_1m": 15,
-          "output_per_1m": 75,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 18.75
-        },
-        {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 12.5,
-          "output_per_1m": 62.5,
-          "cache_per_1m": 1.25,
-          "cache_write_per_1m": 15.625
-        },
-        {
-          "name": "claude-ccpro",
-          "label": "按量claudePro订阅满血90%缓",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "claude-official",
-          "label": "按量Claude官方API直连满血99%缓",
-          "input_per_1m": 17.5,
-          "output_per_1m": 87.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 21.875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[A]gemini-3.7-flash-RF",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4-7-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-opus-4.8-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-opus-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "GPT-pro",
-          "label": "按量codex渠道Pro兜底98%缓",
-          "input_per_1m": 1,
-          "output_per_1m": 8,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": 1.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-sonnet-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-vex",
-          "label": "按量Google Vertex直连满血Gemini",
-          "input_per_1m": 1.5,
-          "output_per_1m": 12,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-ccmax",
-          "label": "按量claudemax订阅满血98%缓",
-          "input_per_1m": 3.9,
-          "output_per_1m": 19.5,
-          "cache_per_1m": 0.39,
-          "cache_write_per_1m": 4.875
-        },
-        {
-          "name": "claude-ccpro",
-          "label": "按量claudePro订阅满血90%缓",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        },
-        {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        },
-        {
-          "name": "claude-official",
-          "label": "按量Claude官方API直连满血99%缓",
-          "input_per_1m": 10.5,
-          "output_per_1m": 52.5,
-          "cache_per_1m": 1.05,
-          "cache_write_per_1m": 13.125
-        },
-        {
-          "name": "claude-openpouter",
-          "label": "按量OpenRouter直连满血99%缓",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "claude-vex",
-          "label": "按量Google Vertex直连满血99%缓",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[A]gemini-3.6-flash-RF",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[B]claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[K]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[K]claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[P]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[B]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[X]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.6
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.6
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-vex",
-          "label": "按量Google Vertex直连满血Gemini",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.8,
-          "cache_per_1m": 0.03,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "GPT-pro",
-          "label": "按量codex渠道Pro兜底98%缓",
-          "input_per_1m": 1,
-          "output_per_1m": 4,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": 0.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[N]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[A]gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[N]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[X]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.6
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.6
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.7-flash-high",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-anti",
-          "label": "按量反重力渠道低缓存甲厚",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.125,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-official",
-          "label": "按量Claude官方API直连满血99%缓",
-          "input_per_1m": 17.5,
-          "output_per_1m": 87.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 17.5
-        },
-        {
-          "name": "claude-vex",
-          "label": "按量Google Vertex直连满血99%缓",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 10
-        },
-        {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 12.5,
-          "output_per_1m": 62.5,
-          "cache_per_1m": 1.25,
-          "cache_write_per_1m": 12.5
-        },
-        {
-          "name": "claude-ccpro",
-          "label": "按量claudePro订阅满血90%缓",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 5
-        },
-        {
-          "name": "claude-openpouter",
-          "label": "按量OpenRouter直连满血99%缓",
-          "input_per_1m": 15,
-          "output_per_1m": 75,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 15
-        },
-        {
-          "name": "claude-ccmax",
-          "label": "按量claudemax订阅满血98%缓",
-          "input_per_1m": 6.5,
-          "output_per_1m": 32.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": 6.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-opus-4-7-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-opus-4.8-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[X]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.36
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.36
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[K]claude-opus-4.8-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[X]claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.6
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.6
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[N]claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "NanoBanana 2",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gpt-img",
-          "label": "gpt-img2生图专用分组，可稳定输出1k/2k/4k图片",
-          "price_per_request": 0.05
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-vex",
-          "label": "按量Google Vertex直连满血99%缓",
-          "input_per_1m": 2,
-          "output_per_1m": 10,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 2.5
-        },
-        {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "claude-ccpro",
-          "label": "按量claudePro订阅满血90%缓",
-          "input_per_1m": 1,
-          "output_per_1m": 5,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": 1.25
-        },
-        {
-          "name": "claude-official",
-          "label": "按量Claude官方API直连满血99%缓",
-          "input_per_1m": 3.5,
-          "output_per_1m": 17.5,
-          "cache_per_1m": 0.35,
-          "cache_write_per_1m": 4.375
-        },
-        {
-          "name": "claude-openpouter",
-          "label": "按量OpenRouter直连满血99%缓",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[P]glm-5",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2",
+      "name": "gpt-image-2-low",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.09
+          "price_per_request": 0.03
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.09
+          "price_per_request": 0.03
         },
         {
           "name": "gpt-img",
           "label": "gpt-img2生图专用分组，可稳定输出1k/2k/4k图片",
-          "price_per_request": 0.09
+          "price_per_request": 0.03
         }
       ],
       "supported_endpoints": [
@@ -1297,17 +92,19 @@
       ]
     },
     {
-      "name": "gemini-3.1-pro",
-      "vendor": "Google",
-      "quota_type": "token",
+      "name": "[A]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "gemini-anti",
-          "label": "按量反重力渠道低缓存甲厚",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.25
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.25
         }
       ],
       "supported_endpoints": [
@@ -1315,19 +112,19 @@
       ]
     },
     {
-      "name": "[C1]claude-opus-4-5-thinking",
+      "name": "[B]claude-opus-4-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -1335,19 +132,19 @@
       ]
     },
     {
-      "name": "[N]claude-opus-4-7",
+      "name": "[C]claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -1355,105 +152,19 @@
       ]
     },
     {
-      "name": "[N]claude-opus-4.8",
+      "name": "[C]claude-sonnet-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.108
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[P]claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[X]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.6
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.6
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2-med",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.06
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.06
-        },
-        {
-          "name": "gpt-img",
-          "label": "gpt-img2生图专用分组，可稳定输出1k/2k/4k图片",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-sonnet-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -1481,19 +192,19 @@
       ]
     },
     {
-      "name": "[C1]claude-sonnet-4-6-thinking",
+      "name": "[C1]claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.033
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -1501,19 +212,19 @@
       ]
     },
     {
-      "name": "[CX]claude-opus-4-6",
+      "name": "[P]claude-opus-4-7",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.1
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.1
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -1521,39 +232,40 @@
       ]
     },
     {
-      "name": "[E]claude-opus-4-5",
+      "name": "[X]claude-opus-4-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.6
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.6
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "[K]claude-opus-5-thinking",
+      "name": "[C]claude-opus-4.8-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.01
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -1561,61 +273,19 @@
       ]
     },
     {
-      "name": "[FREE]deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "free",
-          "label": "此分组所有模型免费",
-          "price_per_request": 0
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-anti",
-          "label": "按量反重力渠道低缓存甲厚",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.7,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-vex",
-          "label": "按量Google Vertex直连满血Gemini",
-          "input_per_1m": 1.8,
-          "output_per_1m": 10.8,
-          "cache_per_1m": 0.18,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "[A]claude-hybrid",
+      "name": "[C1]claude-opus-4.8",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.015
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.015
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -1623,104 +293,19 @@
       ]
     },
     {
-      "name": "[B]claude-opus-4-5",
+      "name": "[E]claude-sonnet-4-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2-low",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "gpt-img",
-          "label": "gpt-img2生图专用分组，可稳定输出1k/2k/4k图片",
-          "price_per_request": 0.03
+          "price_per_request": 0.108
         },
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[A]gemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.03
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -1748,226 +333,6 @@
       ]
     },
     {
-      "name": "[N]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[P]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[PX]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.1
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-opus-4-7-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[X]claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.36
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.36
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-vex",
-          "label": "按量Google Vertex直连满血Gemini",
-          "input_per_1m": 0.36,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.036,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-sonnet-4-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[F]glm-5.1",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "[K]claude-opus-4-7-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
@@ -1981,6 +346,46 @@
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
           "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[K]claude-opus-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[N]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -2007,19 +412,19 @@
       ]
     },
     {
-      "name": "[A]gemini-3.1-pro-RF",
-      "vendor": "Google",
+      "name": "[C]claude-sonnet-5-thinking",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.03
-        },
-        {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.03
+          "price_per_request": 0.108
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -2027,19 +432,19 @@
       ]
     },
     {
-      "name": "[C1]claude-sonnet-5-thinking",
+      "name": "[E]claude-sonnet-5-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.033
+          "price_per_request": 0.108
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -2047,56 +452,16 @@
       ]
     },
     {
-      "name": "[C1]claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-low",
+      "name": "gemini-3-flash",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "gemini-anti",
           "label": "按量反重力渠道低缓存甲厚",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
           "cache_write_per_1m": null
         }
       ],
@@ -2105,79 +470,38 @@
       ]
     },
     {
-      "name": "[C1]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[A]gemini-3.1-pro",
+      "name": "gemini-3.8-flash",
       "vendor": "Google",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.03
+          "name": "gemini-vex",
+          "label": "按量Google Vertex直连满血Gemini",
+          "input_per_1m": 0.9,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.09,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "[C]gemini-3-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-opus-4-7",
+      "name": "[B]claude-opus-4.8",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -2185,39 +509,19 @@
       ]
     },
     {
-      "name": "[E]claude-opus-4.8",
+      "name": "[C]claude-sonnet-4-5-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.108
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[K]claude-opus-4-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -2245,41 +549,96 @@
       ]
     },
     {
-      "name": "claude-fable-5",
+      "name": "[C1]claude-sonnet-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-vex",
+          "label": "按量Google Vertex直连满血Gemini",
+          "input_per_1m": 0.36,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.036,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-5-20250929",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 25,
-          "output_per_1m": 125,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
-        },
-        {
           "name": "claude-ccmax",
           "label": "按量claudemax订阅满血98%缓",
-          "input_per_1m": 13,
-          "output_per_1m": 65,
-          "cache_per_1m": 1.3,
-          "cache_write_per_1m": 16.25
+          "input_per_1m": 3.9,
+          "output_per_1m": 19.5,
+          "cache_per_1m": 0.39,
+          "cache_write_per_1m": 4.875
+        },
+        {
+          "name": "claude-ccpro",
+          "label": "按量claudePro订阅满血90%缓",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
         },
         {
           "name": "claude-official",
           "label": "按量Claude官方API直连满血99%缓",
-          "input_per_1m": 35,
-          "output_per_1m": 175,
-          "cache_per_1m": 3.5,
-          "cache_write_per_1m": 43.75
+          "input_per_1m": 10.5,
+          "output_per_1m": 52.5,
+          "cache_per_1m": 1.05,
+          "cache_write_per_1m": 13.125
         },
         {
           "name": "claude-openpouter",
           "label": "按量OpenRouter直连满血99%缓",
-          "input_per_1m": 30,
-          "output_per_1m": 150,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 37.5
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
+        },
+        {
+          "name": "claude-vex",
+          "label": "按量Google Vertex直连满血99%缓",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
+        },
+        {
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
         }
       ],
       "supported_endpoints": [
@@ -2288,19 +647,19 @@
       ]
     },
     {
-      "name": "[C]claude-sonnet-4-6",
+      "name": "[C]claude-opus-5-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.033
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -2308,8 +667,28 @@
       ]
     },
     {
-      "name": "[C]gemini-3.1-pro-search",
-      "vendor": "Google",
+      "name": "[C1]claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[F]glm-5.2",
+      "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
@@ -2321,211 +700,6 @@
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
           "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-opus-4-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[K]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.01
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[N]claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[P]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C1]claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[E]claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.033
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[P]claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[Z]deepseek-v3.2",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "free",
-          "label": "此分组所有模型免费",
-          "price_per_request": 0
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.015
-        },
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.015
         }
       ],
       "supported_endpoints": [
@@ -2558,19 +732,19 @@
       ]
     },
     {
-      "name": "[C]claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
+      "name": "[A]gemini-3.1-flash-lite",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.033
+          "price_per_request": 0.01
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.01
         }
       ],
       "supported_endpoints": [
@@ -2578,22 +752,448 @@
       ]
     },
     {
-      "name": "[B]claude-opus-4.8",
+      "name": "[C]gemini-3.1-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.04
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[R]claude-opus-4.6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.1
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[B]claude-sonnet-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-opus-4-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[K]claude-opus-4.8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[A]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.15
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[B]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]gemini-3.1-pro-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.04
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[P]claude-sonnet-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[X]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.6
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.6
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-anti",
+          "label": "按量反重力渠道低缓存甲厚",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.7,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-vex",
+          "label": "按量Google Vertex直连满血Gemini",
+          "input_per_1m": 1.8,
+          "output_per_1m": 10.8,
+          "cache_per_1m": 0.18,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude-ccpro",
+          "label": "按量claudePro订阅满血90%缓",
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": 1.25
+        },
+        {
+          "name": "claude-official",
+          "label": "按量Claude官方API直连满血99%缓",
+          "input_per_1m": 3.5,
+          "output_per_1m": 17.5,
+          "cache_per_1m": 0.35,
+          "cache_write_per_1m": 4.375
+        },
+        {
+          "name": "claude-openpouter",
+          "label": "按量OpenRouter直连满血99%缓",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "claude-vex",
+          "label": "按量Google Vertex直连满血99%缓",
+          "input_per_1m": 2,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2.5
+        },
+        {
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude-ccmax",
+          "label": "按量claudemax订阅满血98%缓",
+          "input_per_1m": 6.5,
+          "output_per_1m": 32.5,
+          "cache_per_1m": 0.65,
+          "cache_write_per_1m": 8.125
+        },
+        {
+          "name": "claude-ccpro",
+          "label": "按量claudePro订阅满血90%缓",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "claude-official",
+          "label": "按量Claude官方API直连满血99%缓",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 21.875
+        },
+        {
+          "name": "claude-openpouter",
+          "label": "按量OpenRouter直连满血99%缓",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 18.75
+        },
+        {
+          "name": "claude-vex",
+          "label": "按量Google Vertex直连满血99%缓",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        },
+        {
+          "name": "claude-anti",
+          "label": "按量反重力企业级稳定低缓",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        },
+        {
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
@@ -2605,12 +1205,12 @@
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -2618,39 +1218,307 @@
       ]
     },
     {
-      "name": "[F]glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.04
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[N]claude-sonnet-5",
+      "name": "[C1]claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.033
+          "price_per_request": 0.108
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-4-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[P]claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[PX]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.1
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude-ccpro",
+          "label": "按量claudePro订阅满血90%缓",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "claude-official",
+          "label": "按量Claude官方API直连满血99%缓",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 21.875
+        },
+        {
+          "name": "claude-openpouter",
+          "label": "按量OpenRouter直连满血99%缓",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 18.75
+        },
+        {
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "claude-ccmax",
+          "label": "按量claudemax订阅满血98%缓",
+          "input_per_1m": 6.5,
+          "output_per_1m": 32.5,
+          "cache_per_1m": 0.65,
+          "cache_write_per_1m": 8.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[P]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[X]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.6
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.6
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-vex",
+          "label": "按量Google Vertex直连满血Gemini",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "GPT-pro",
+          "label": "按量codex渠道Pro兜底98%缓",
+          "input_per_1m": 1,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": 1.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude-anti",
+          "label": "按量反重力企业级稳定低缓",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": 2.8125
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[B]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -2695,19 +1563,39 @@
       ]
     },
     {
-      "name": "[C]claude-sonnet-4-5-thinking",
+      "name": "[A]gemini-3.5-flash-RF",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.033
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -2715,19 +1603,39 @@
       ]
     },
     {
-      "name": "[E]claude-opus-5",
+      "name": "[F]glm-5.1",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.04
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[N]claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.108
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -2735,19 +1643,19 @@
       ]
     },
     {
-      "name": "[P]deepseek-3.2",
-      "vendor": "DeepSeek",
+      "name": "[P]claude-opus-4.8",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.005
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.005
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -2755,16 +1663,61 @@
       ]
     },
     {
-      "name": "gemini-3-flash",
+      "name": "[N]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2-med",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "gpt-img",
+          "label": "gpt-img2生图专用分组，可稳定输出1k/2k/4k图片",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.7-flash-high",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "gemini-anti",
           "label": "按量反重力渠道低缓存甲厚",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.125,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -2773,19 +1726,37 @@
       ]
     },
     {
-      "name": "[A]gemini-3.1-flash-lite",
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "GPT-pro",
+          "label": "按量codex渠道Pro兜底98%缓",
+          "input_per_1m": 1,
+          "output_per_1m": 4,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": 0.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[A]gemini-3.6-flash-RF",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.01
-        },
-        {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
+          "price_per_request": 0.02
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -2793,137 +1764,19 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-vex",
-          "label": "按量Google Vertex直连满血99%缓",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "claude-ccmax",
-          "label": "按量claudemax订阅满血98%缓",
-          "input_per_1m": 6.5,
-          "output_per_1m": 32.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "claude-ccpro",
-          "label": "按量claudePro订阅满血90%缓",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "claude-official",
-          "label": "按量Claude官方API直连满血99%缓",
-          "input_per_1m": 17.5,
-          "output_per_1m": 87.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 12.5,
-          "output_per_1m": 62.5,
-          "cache_per_1m": 1.25,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "claude-openpouter",
-          "label": "按量OpenRouter直连满血99%缓",
-          "input_per_1m": 15,
-          "output_per_1m": 75,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 12.5,
-          "output_per_1m": 62.5,
-          "cache_per_1m": 1.25,
-          "cache_write_per_1m": 15.625
-        },
-        {
-          "name": "claude-ccmax",
-          "label": "按量claudemax订阅满血98%缓",
-          "input_per_1m": 6.5,
-          "output_per_1m": 32.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": 8.125
-        },
-        {
-          "name": "claude-ccpro",
-          "label": "按量claudePro订阅满血90%缓",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "claude-official",
-          "label": "按量Claude官方API直连满血99%缓",
-          "input_per_1m": 17.5,
-          "output_per_1m": 87.5,
-          "cache_per_1m": 1.75,
-          "cache_write_per_1m": 21.875
-        },
-        {
-          "name": "claude-openpouter",
-          "label": "按量OpenRouter直连满血99%缓",
-          "input_per_1m": 15,
-          "output_per_1m": 75,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 18.75
-        },
-        {
-          "name": "claude-vex",
-          "label": "按量Google Vertex直连满血99%缓",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4.8-thinking",
+      "name": "[P]claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        },
-        {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -2950,33 +1803,116 @@
       ]
     },
     {
-      "name": "claude-opus-4-5-20251101",
+      "name": "[A]claude-opus-4-6-thinking",
       "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.25
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[K]claude-opus-4-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash-lite",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "claude-awsb",
-          "label": "按量AWS Bedrock直连满血99%缓",
-          "input_per_1m": 12.5,
-          "output_per_1m": 62.5,
-          "cache_per_1m": 1.25,
-          "cache_write_per_1m": 15.625
-        },
-        {
-          "name": "claude-ccmax",
-          "label": "按量claudemax订阅满血98%缓",
-          "input_per_1m": 6.5,
-          "output_per_1m": 32.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": 8.125
-        },
+          "name": "gemini-vex",
+          "label": "按量Google Vertex直连满血Gemini",
+          "input_per_1m": 0.36,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.036,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
         {
           "name": "claude-ccpro",
           "label": "按量claudePro订阅满血90%缓",
           "input_per_1m": 5,
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
+          "cache_write_per_1m": null
         },
         {
           "name": "claude-official",
@@ -2984,7 +1920,7 @@
           "input_per_1m": 17.5,
           "output_per_1m": 87.5,
           "cache_per_1m": 1.75,
-          "cache_write_per_1m": 21.875
+          "cache_write_per_1m": null
         },
         {
           "name": "claude-openpouter",
@@ -2992,7 +1928,31 @@
           "input_per_1m": 15,
           "output_per_1m": 75,
           "cache_per_1m": 1.5,
-          "cache_write_per_1m": 18.75
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "claude-vex",
+          "label": "按量Google Vertex直连满血99%缓",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "claude-ccmax",
+          "label": "按量claudemax订阅满血98%缓",
+          "input_per_1m": 6.5,
+          "output_per_1m": 32.5,
+          "cache_per_1m": 0.65,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -3001,100 +1961,188 @@
       ]
     },
     {
-      "name": "claude-opus-4-6-thinking",
+      "name": "[B]claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-sonnet-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-sonnet-4-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[X]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.6
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.6
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[X]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.36
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.36
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.09
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.09
+        },
+        {
+          "name": "gpt-img",
+          "label": "gpt-img2生图专用分组，可稳定输出1k/2k/4k图片",
+          "price_per_request": 0.09
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "claude-anti",
-          "label": "按量反重力企业级稳定低缓",
-          "input_per_1m": 2.25,
-          "output_per_1m": 11.25,
-          "cache_per_1m": 0.225,
-          "cache_write_per_1m": 2.8125
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "name": "claude-ccmax",
+          "label": "按量claudemax订阅满血98%缓",
+          "input_per_1m": 6.5,
+          "output_per_1m": 32.5,
+          "cache_per_1m": 0.65,
+          "cache_write_per_1m": 6.5
         },
         {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[C]claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "name": "claude-ccpro",
+          "label": "按量claudePro订阅满血90%缓",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 5
         },
         {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[CX]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.1
+          "name": "claude-official",
+          "label": "按量Claude官方API直连满血99%缓",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 17.5
         },
         {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
+          "name": "claude-openpouter",
+          "label": "按量OpenRouter直连满血99%缓",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 15
+        },
         {
-          "name": "gemini-vex",
-          "label": "按量Google Vertex直连满血Gemini",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 12.5
+        },
+        {
+          "name": "claude-vex",
+          "label": "按量Google Vertex直连满血99%缓",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 10
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "anthropic",
         "openai"
       ]
     },
@@ -3166,19 +2214,39 @@
       ]
     },
     {
-      "name": "[B]claude-opus-4-6",
+      "name": "[A]gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-opus-4.8",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -3186,19 +2254,19 @@
       ]
     },
     {
-      "name": "[F]glm-5.3",
-      "vendor": "智谱",
+      "name": "[C]claude-sonnet-4-6",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.04
+          "price_per_request": 0.108
         },
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.04
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -3206,19 +2274,19 @@
       ]
     },
     {
-      "name": "[P]claude-sonnet-5",
+      "name": "[CX]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.033
+          "price_per_request": 0.1
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.033
+          "price_per_request": 0.1
         }
       ],
       "supported_endpoints": [
@@ -3226,7 +2294,106 @@
       ]
     },
     {
-      "name": "[C]gemini-2.5-pro-search",
+      "name": "[E]claude-sonnet-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[P]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude-ccpro",
+          "label": "按量claudePro订阅满血90%缓",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "claude-official",
+          "label": "按量Claude官方API直连满血99%缓",
+          "input_per_1m": 17.5,
+          "output_per_1m": 87.5,
+          "cache_per_1m": 1.75,
+          "cache_write_per_1m": 21.875
+        },
+        {
+          "name": "claude-openpouter",
+          "label": "按量OpenRouter直连满血99%缓",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 18.75
+        },
+        {
+          "name": "claude-vex",
+          "label": "按量Google Vertex直连满血99%缓",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        },
+        {
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 12.5,
+          "output_per_1m": 62.5,
+          "cache_per_1m": 1.25,
+          "cache_write_per_1m": 15.625
+        },
+        {
+          "name": "claude-ccmax",
+          "label": "按量claudemax订阅满血98%缓",
+          "input_per_1m": 6.5,
+          "output_per_1m": 32.5,
+          "cache_per_1m": 0.65,
+          "cache_write_per_1m": 8.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]gemini-3-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -3239,6 +2406,463 @@
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
           "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[F]glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.04
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[F]glm-5.3-flash",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.025
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[K]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[N]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[N]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[A]gemini-3.7-flash-RF",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[X]claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.36
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.36
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-anti",
+          "label": "按量反重力渠道低缓存甲厚",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-high",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-anti",
+          "label": "按量反重力渠道低缓存甲厚",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.25,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[A]gemini-3.1-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[A]gemini-3.1-pro-RF",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-opus-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-4.8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-sonnet-4-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[K]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[N]claude-sonnet-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[B]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[P]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[X]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.6
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.6
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-vex",
+          "label": "按量Google Vertex直连满血Gemini",
+          "input_per_1m": 1.5,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -3266,19 +2890,19 @@
       ]
     },
     {
-      "name": "[R]claude-opus-4.6",
+      "name": "[N]claude-opus-4-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.1
-        },
-        {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.1
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
         }
       ],
       "supported_endpoints": [
@@ -3286,19 +2910,159 @@
       ]
     },
     {
-      "name": "[A]gemini-3.5-flash-RF",
+      "name": "[A]gemini-3-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-opus-4-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[K]claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[N]claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[Z]deepseek-v3.2",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.015
+        },
+        {
+          "name": "free",
+          "label": "此分组所有模型免费",
+          "price_per_request": 0
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.015
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[FREE]deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "free",
+          "label": "此分组所有模型免费",
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C]gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.02
+          "price_per_request": 0.04
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.02
+          "price_per_request": 0.04
         }
       ],
       "supported_endpoints": [
@@ -3306,19 +3070,19 @@
       ]
     },
     {
-      "name": "[C1]claude-opus-4-7",
-      "vendor": "Anthropic",
+      "name": "[C]gemini-2.5-pro-search",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.04
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.04
         }
       ],
       "supported_endpoints": [
@@ -3326,39 +3090,60 @@
       ]
     },
     {
-      "name": "[P]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "name": "gemini-3.1-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.055
-        },
-        {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "name": "gemini-vex",
+          "label": "按量Google Vertex直连满血Gemini",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.8,
+          "cache_per_1m": 0.03,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "[X]claude-opus-4-5",
+      "name": "claude-fable-5",
       "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组按次齐全",
-          "price_per_request": 0.6
+          "name": "claude-openpouter",
+          "label": "按量OpenRouter直连满血99%缓",
+          "input_per_1m": 30,
+          "output_per_1m": 150,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 37.5
         },
         {
-          "name": "frequency",
-          "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.6
+          "name": "claude-awsb",
+          "label": "按量AWS Bedrock直连满血99%缓",
+          "input_per_1m": 25,
+          "output_per_1m": 125,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        },
+        {
+          "name": "claude-ccmax",
+          "label": "按量claudemax订阅满血98%缓",
+          "input_per_1m": 13,
+          "output_per_1m": 65,
+          "cache_per_1m": 1.3,
+          "cache_write_per_1m": 16.25
+        },
+        {
+          "name": "claude-official",
+          "label": "按量Claude官方API直连满血99%缓",
+          "input_per_1m": 35,
+          "output_per_1m": 175,
+          "cache_per_1m": 3.5,
+          "cache_write_per_1m": 43.75
         }
       ],
       "supported_endpoints": [
@@ -3367,7 +3152,67 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-5-20250929",
+      "name": "[A]gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-sonnet-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -3388,20 +3233,20 @@
           "cache_write_per_1m": 4.875
         },
         {
-          "name": "claude-ccpro",
-          "label": "按量claudePro订阅满血90%缓",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        },
-        {
           "name": "claude-official",
           "label": "按量Claude官方API直连满血99%缓",
           "input_per_1m": 10.5,
           "output_per_1m": 52.5,
           "cache_per_1m": 1.05,
           "cache_write_per_1m": 13.125
+        },
+        {
+          "name": "claude-ccpro",
+          "label": "按量claudePro订阅满血90%缓",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
         },
         {
           "name": "claude-openpouter",
@@ -3426,19 +3271,19 @@
       ]
     },
     {
-      "name": "[A]gemini-3-flash",
-      "vendor": "Google",
+      "name": "[C1]claude-sonnet-4-6-thinking",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.01
+          "price_per_request": 0.108
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.01
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -3446,19 +3291,213 @@
       ]
     },
     {
-      "name": "[C1]claude-opus-5-thinking",
+      "name": "[E]claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组按次齐全",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
         },
         {
           "name": "frequency",
           "label": "按次分组具体查看模型广场",
-          "price_per_request": 0.055
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "NanoBanana 2",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt-img",
+          "label": "gpt-img2生图专用分组，可稳定输出1k/2k/4k图片",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[A]claude-hybrid",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.015
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.015
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[C1]claude-opus-4.8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[CX]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.1
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-anti",
+          "label": "按量反重力渠道低缓存甲厚",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[A]gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.18
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[E]claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组按次齐全",
+          "price_per_request": 0.108
+        },
+        {
+          "name": "frequency",
+          "label": "按次分组具体查看模型广场",
+          "price_per_request": 0.108
         }
       ],
       "supported_endpoints": [
@@ -3466,5 +3505,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-09-01T21:36:32.766Z"
+  "fetched_at": "2026-09-02T21:36:34.378Z"
 }
