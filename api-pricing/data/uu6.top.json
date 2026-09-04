@@ -5,7 +5,7 @@
   "pricing_version": "a42d372ccf0b5dd13ecf71203521f9d2",
   "group_meta": {
     "ChatGPT-Pro兜底": {
-      "ratio": 1.5,
+      "ratio": 1.2,
       "label": "充值倍率0.1 * 分组倍率 = 实际倍率"
     },
     "ChatGPT-急用（外部渠道缓存稍低）": {
@@ -25,7 +25,7 @@
       "label": "充值倍率0.1 * 分组倍率 = 实际倍率"
     },
     "default": {
-      "ratio": 1.5,
+      "ratio": 1.2,
       "label": "旧分组，别选，后面要删"
     },
     "反重力Claude按次": {
@@ -34,6 +34,150 @@
     }
   },
   "models": [
+    {
+      "name": "codex-auto-review",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 0.9,
+          "output_per_1m": 5.4,
+          "cache_per_1m": 0.09,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 0.9,
+          "output_per_1m": 5.4,
+          "cache_per_1m": 0.09,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 6,
+          "output_per_1m": 36,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 6
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 6,
+          "output_per_1m": 36,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 2.4,
+          "output_per_1m": 14.4,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 2.4,
+          "output_per_1m": 14.4,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "grok-4.6",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "price_per_request": 0.12
+        },
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
     {
       "name": "gemini-3.1-pro-low",
       "vendor": "Google",
@@ -80,56 +224,25 @@
       ]
     },
     {
-      "name": "gpt-5.4",
+      "name": "gpt-5.3-codex-spark",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 3.75,
-          "output_per_1m": 22.5,
-          "cache_per_1m": 0.375,
-          "cache_write_per_1m": 3.75
-        },
-        {
           "name": "default",
           "label": "旧分组，别选，后面要删",
-          "input_per_1m": 3.75,
-          "output_per_1m": 22.5,
-          "cache_per_1m": 0.375,
-          "cache_write_per_1m": 3.75
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
+          "input_per_1m": 2.1,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 0.21,
+          "cache_write_per_1m": null
+        },
         {
           "name": "ChatGPT-Pro兜底",
           "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 7.5,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 7.5
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 7.5,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 7.5
+          "input_per_1m": 2.1,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 0.21,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -149,18 +262,18 @@
         {
           "name": "ChatGPT-Pro兜底",
           "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 7.5,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 7.5
+          "input_per_1m": 6,
+          "output_per_1m": 36,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 6
         },
         {
           "name": "default",
           "label": "旧分组，别选，后面要删",
-          "input_per_1m": 7.5,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 7.5
+          "input_per_1m": 6,
+          "output_per_1m": 36,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 6
         }
       ],
       "supported_endpoints": [
@@ -170,26 +283,6 @@
         "anthropic",
         "gemini",
         "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "price_per_request": 0.15
-        },
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
       ]
     },
     {
@@ -208,98 +301,43 @@
       ]
     },
     {
-      "name": "codex-auto-review",
-      "vendor": "OpenAI",
+      "name": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 1.125,
-          "output_per_1m": 6.75,
-          "cache_per_1m": 0.1125,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 1.125,
-          "output_per_1m": 6.75,
-          "cache_per_1m": 0.1125,
-          "cache_write_per_1m": null
+          "name": "反重力Claude按次",
+          "label": "每次请求收2毛钱（充值倍率0.1 * 分组倍率 2 = 0.2元）",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
         "anthropic",
-        "gemini",
-        "openai-alpha-search"
+        "openai"
       ]
     },
     {
-      "name": "gpt-5.3-codex-spark",
-      "vendor": "讯飞",
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 2.625,
-          "output_per_1m": 21,
-          "cache_per_1m": 0.2625,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 2.625,
-          "output_per_1m": 21,
-          "cache_per_1m": 0.2625,
-          "cache_write_per_1m": null
+          "name": "反重力Claude按次",
+          "label": "每次请求收2毛钱（充值倍率0.1 * 分组倍率 2 = 0.2元）",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 6
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
         "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.375,
-          "cache_write_per_1m": 3.75
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.375,
-          "cache_write_per_1m": 3.75
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
+        "openai"
       ]
     }
   ],
-  "fetched_at": "2026-09-03T21:35:10.115Z"
+  "fetched_at": "2026-09-04T21:15:07.566Z"
 }
