@@ -41,7 +41,7 @@
       "label": "Moonshot官渠"
     },
     "OpenAI": {
-      "ratio": 0.1,
+      "ratio": 0.15,
       "label": "OpenAI分组"
     },
     "OpenAI官Key": {
@@ -71,598 +71,6 @@
   },
   "models": [
     {
-      "name": "deepseek-v3.2-think",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 0.24,
-          "output_per_1m": 0.95,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 0.144,
-          "output_per_1m": 0.57,
-          "cache_per_1m": 0.03,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-4.1",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 2,
-          "output_per_1m": 8,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "Pro/zai-org/GLM-5.1",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "SiliconFlow",
-          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-luna",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI",
-          "label": "OpenAI分组",
-          "input_per_1m": 7.5,
-          "output_per_1m": 45,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 75,
-          "output_per_1m": 450,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3125,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude（官渠无限制）",
-          "label": "官渠无限制 不限制客户端",
-          "input_per_1m": 12,
-          "output_per_1m": 60,
-          "cache_per_1m": 1.2,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Claude（特价）",
-          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
-          "input_per_1m": 4,
-          "output_per_1m": 20,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "doubao-seed-2-0-code-preview-260215",
-      "vendor": "字节跳动",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude（官渠无限制）",
-          "label": "官渠无限制 不限制客户端",
-          "input_per_1m": 90,
-          "output_per_1m": 90,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Claude（特价）",
-          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.6-plus:free",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "MiniMax-M2.5:free",
-      "vendor": "MiniMax",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "DeepSeek",
-          "label": "DeepSeek官渠",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k2.6",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Moonshot",
-          "label": "Moonshot官渠",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 30,
-          "output_per_1m": 60,
-          "cache_per_1m": 15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "Pro/deepseek-ai/DeepSeek-V3.2",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "SiliconFlow",
-          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 0.29,
-          "output_per_1m": 0.84,
-          "cache_per_1m": 0.064444,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 60,
-          "output_per_1m": 240,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 1.2,
-          "output_per_1m": 7.2,
-          "cache_per_1m": 0.12,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini（特价）",
-          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.7,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k2.5",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Moonshot",
-          "label": "Moonshot官渠",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "doubao-seed-2-0-mini-260428",
-      "vendor": "字节跳动",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "MiniMax-M2.5",
-      "vendor": "MiniMax",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Minimax",
-          "label": "Minimax官渠 ",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "MiniMax-M3",
-      "vendor": "MiniMax",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Minimax",
-          "label": "Minimax官渠 ",
-          "input_per_1m": 0.09,
-          "output_per_1m": 0.36,
-          "cache_per_1m": 0.018,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI",
-          "label": "OpenAI分组",
-          "input_per_1m": 0.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 5,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v3.2",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 0.29,
-          "output_per_1m": 0.84,
-          "cache_per_1m": 0.064444,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 0.174,
-          "output_per_1m": 0.504,
-          "cache_per_1m": 0.038667,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5:free",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "deepseek-v3.2:free",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash-lite",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 60,
-          "output_per_1m": 240,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.7-max",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "qwen3.7-plus:free",
       "vendor": "阿里巴巴",
       "quota_type": "token",
@@ -682,24 +90,44 @@
       ]
     },
     {
-      "name": "gemini-2.5-pro",
+      "name": "glm-5.3-flash",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Zhipu",
+          "label": "智谱官渠（有外审 🈲nsfw）",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 1,
-          "output_per_1m": 8,
-          "cache_per_1m": 0.1,
+          "name": "Gemini（特价）",
+          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
+          "input_per_1m": 22.5,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         },
         {
-          "name": "Gemini（特价）",
-          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
-          "input_per_1m": 0.375,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.0375,
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 60,
+          "output_per_1m": 240,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -708,24 +136,24 @@
       ]
     },
     {
-      "name": "gemini-3.1-pro-preview",
+      "name": "gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 1.6,
-          "output_per_1m": 9.6,
-          "cache_per_1m": 0.16,
+          "name": "Gemini（特价）",
+          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
+          "input_per_1m": 22.5,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         },
         {
-          "name": "Gemini（特价）",
-          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 60,
+          "output_per_1m": 240,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -734,7 +162,27 @@
       ]
     },
     {
-      "name": "gemini-3.1-flash-lite",
+      "name": "doubao-seed-2-0-mini-260428:free",
+      "vendor": "字节跳动",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -745,14 +193,6 @@
           "output_per_1m": 240,
           "cache_per_1m": null,
           "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini（特价）",
-          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
-          "input_per_1m": 22.5,
-          "output_per_1m": 90,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -760,15 +200,23 @@
       ]
     },
     {
-      "name": "kimi-k2.7-code",
-      "vendor": "Moonshot",
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Moonshot",
-          "label": "Moonshot官渠",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
+          "name": "DeepSeek",
+          "label": "DeepSeek官渠",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         },
@@ -786,63 +234,7 @@
       ]
     },
     {
-      "name": "o3",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 2,
-          "output_per_1m": 8,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-ai/DeepSeek-V4-Pro",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "SiliconFlow",
-          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash-260425",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash",
+      "name": "gemini-3.1-flash-lite",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -906,8 +298,62 @@
       ]
     },
     {
-      "name": "doubao-seed-evolving",
-      "vendor": "字节跳动",
+      "name": "zai-org/GLM-5.2",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "SiliconFlow",
+          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 0.7,
+          "output_per_1m": 2.2,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.7-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "MiniMax-M2.7",
+      "vendor": "MiniMax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Minimax",
+          "label": "Minimax官渠 ",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-pro-0813",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
@@ -917,12 +363,106 @@
           "output_per_1m": 30,
           "cache_per_1m": null,
           "cache_write_per_1m": null
+        },
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "DeepSeek",
+          "label": "DeepSeek官渠",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
         "openai",
         "openai-response",
         "anthropic"
+      ]
+    },
+    {
+      "name": "qwen3.6-plus",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI",
+          "label": "OpenAI分组",
+          "input_per_1m": 0.375,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 75,
+          "output_per_1m": 450,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "OpenAI",
+          "label": "OpenAI分组",
+          "input_per_1m": 11.25,
+          "output_per_1m": 67.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
       ]
     },
     {
@@ -948,6 +488,908 @@
         }
       ],
       "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude（官渠无限制）",
+          "label": "官渠无限制 不限制客户端",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 12
+        },
+        {
+          "name": "Claude（特价）",
+          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
+          "input_per_1m": 2,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 4
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k2.5:free",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-V4-Flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "SiliconFlow",
+          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Pro/deepseek-ai/DeepSeek-V3.2",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "SiliconFlow",
+          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 0.29,
+          "output_per_1m": 0.84,
+          "cache_per_1m": 0.064444,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.6-max-preview",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "doubao-seed-evolving",
+      "vendor": "字节跳动",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-r1",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "doubao-seed-2-0-lite-260428:free",
+      "vendor": "字节跳动",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "Pro/moonshotai/Kimi-K2.6",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "SiliconFlow",
+          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.7-max-preview",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 0.24,
+          "output_per_1m": 0.95,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 0.144,
+          "output_per_1m": 0.57,
+          "cache_per_1m": 0.03,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 60,
+          "output_per_1m": 240,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini（特价）",
+          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
+          "input_per_1m": 22.5,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k2.7-code",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Moonshot",
+          "label": "Moonshot官渠",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-pro-260425",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "glm-4.7",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5:free",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "deepseek-v3.2:free",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "doubao-seed-2-0-mini-260215:free",
+      "vendor": "字节跳动",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "ernie-5.0",
+      "vendor": "百度",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI",
+          "label": "OpenAI分组",
+          "input_per_1m": 11.25,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude（官渠无限制）",
+          "label": "官渠无限制 不限制客户端",
+          "input_per_1m": 1.2,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": 0,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Claude（特价）",
+          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
+          "input_per_1m": 0.4,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.6-plus:free",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "MiniMax-M2.5:free",
+      "vendor": "MiniMax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "deepseek-r1:free",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Zhipu",
+          "label": "智谱官渠（有外审 🈲nsfw）",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash-vision-exp",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "DeepSeek",
+          "label": "DeepSeek官渠",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-4-7-251222",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gpt-5.6-luna",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 75,
+          "output_per_1m": 450,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "OpenAI",
+          "label": "OpenAI分组",
+          "input_per_1m": 11.25,
+          "output_per_1m": 67.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "o1",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 15,
+          "output_per_1m": 60,
+          "cache_per_1m": 7.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude（官渠无限制）",
+          "label": "官渠无限制 不限制客户端",
+          "input_per_1m": 12,
+          "output_per_1m": 60,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Claude（特价）",
+          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 1,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini（特价）",
+          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
+          "input_per_1m": 0.375,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini（特价）",
+          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.7,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 1.2,
+          "output_per_1m": 7.2,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k2.5",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Moonshot",
+          "label": "Moonshot官渠",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "zai-org/GLM-5.3",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "SiliconFlow",
+          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "MiniMax-M2.5",
+      "vendor": "MiniMax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Minimax",
+          "label": "Minimax官渠 ",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "speech-2.8-turbo",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Minimax",
+          "label": "Minimax官渠 ",
+          "input_per_1m": 42,
+          "output_per_1m": 42,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-4.7:free",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic",
+        "openai-response"
+      ]
+    },
+    {
+      "name": "gpt-4.1",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 2,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "moonshotai/Kimi-K2.7-Code",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "SiliconFlow",
+          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 0.475,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.08,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.7-plus",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "MiniMax-M3",
+      "vendor": "MiniMax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Minimax",
+          "label": "Minimax官渠 ",
+          "input_per_1m": 0.09,
+          "output_per_1m": 0.36,
+          "cache_per_1m": 0.018,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude（官渠无限制）",
+          "label": "官渠无限制 不限制客户端",
+          "input_per_1m": 2.4,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.24,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
@@ -997,13 +1439,87 @@
       ]
     },
     {
-      "name": "deepseek-v4-flash-vision-exp",
-      "vendor": "DeepSeek",
+      "name": "doubao-seed-2-1-turbo-260628",
+      "vendor": "字节跳动",
       "quota_type": "token",
       "groups": [
         {
-          "name": "DeepSeek",
-          "label": "DeepSeek官渠",
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI",
+          "label": "OpenAI分组",
+          "input_per_1m": 11.25,
+          "output_per_1m": 67.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 0.33804,
+          "output_per_1m": 1.18314,
+          "cache_per_1m": 0.08451,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 0.45072,
+          "output_per_1m": 1.57752,
+          "cache_per_1m": 0.11268,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 0.5634,
+          "output_per_1m": 1.9719,
+          "cache_per_1m": 0.14085,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "ernie-5.1",
+      "vendor": "百度",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
           "input_per_1m": 37.5,
           "output_per_1m": 37.5,
           "cache_per_1m": null,
@@ -1015,28 +1531,80 @@
       ]
     },
     {
-      "name": "zai-org/GLM-5.2",
-      "vendor": "智谱",
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "SiliconFlow",
-          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 0.7,
-          "output_per_1m": 2.2,
-          "cache_per_1m": 0.15,
+          "name": "Claude（官渠无限制）",
+          "label": "官渠无限制 不限制客户端",
+          "input_per_1m": 90,
+          "output_per_1m": 450,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Claude（特价）",
+          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
+          "input_per_1m": 30,
+          "output_per_1m": 150,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "qwen3.6-plus",
-      "vendor": "阿里巴巴",
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
+        {
+          "name": "Claude（官渠无限制）",
+          "label": "官渠无限制 不限制客户端",
+          "input_per_1m": 90,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Claude（特价）",
+          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k2.6",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Moonshot",
+          "label": "Moonshot官渠",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
         {
           "name": "百炼",
           "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
@@ -1051,15 +1619,33 @@
       ]
     },
     {
-      "name": "MiniMax-M2.7:free",
-      "vendor": "MiniMax",
+      "name": "o3",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 2,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Pro/zai-org/GLM-5.1",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "SiliconFlow",
+          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -1069,7 +1655,73 @@
       ]
     },
     {
-      "name": "claude-opus-4-7",
+      "name": "doubao-seed-2-0-code-preview-260215",
+      "vendor": "字节跳动",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "doubao-seed-2-0-pro-260215",
+      "vendor": "字节跳动",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 5,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "OpenAI",
+          "label": "OpenAI分组",
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.075,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -1096,217 +1748,15 @@
       ]
     },
     {
-      "name": "glm-5.3",
-      "vendor": "智谱",
+      "name": "speech-2.8-hd",
+      "vendor": "Unknown",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Zhipu",
-          "label": "智谱官渠（有外审 🈲nsfw）",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "deepseek-v4-pro-0813",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "DeepSeek",
-          "label": "DeepSeek官渠",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "doubao-seed-2-0-mini-260428:free",
-      "vendor": "字节跳动",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "doubao-seed-2-0-mini-260215:free",
-      "vendor": "字节跳动",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "kimi-k3",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Moonshot",
-          "label": "Moonshot官渠",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4-mini",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI",
-          "label": "OpenAI分组",
-          "input_per_1m": 7.5,
-          "output_per_1m": 45,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash-260731",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 60,
-          "output_per_1m": 240,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini（特价）",
-          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
-          "input_per_1m": 22.5,
-          "output_per_1m": 90,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini（特价）",
-          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
-          "input_per_1m": 22.5,
-          "output_per_1m": 90,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 60,
-          "output_per_1m": 240,
+          "name": "Minimax",
+          "label": "Minimax官渠 ",
+          "input_per_1m": 73.5,
+          "output_per_1m": 73.5,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -1319,40 +1769,13 @@
       "name": "gemini-3-pro-preview",
       "vendor": "Google",
       "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini（特价）",
-          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
+      "groups": [],
       "supported_endpoints": [
         "openai"
       ]
     },
     {
-      "name": "Pro/moonshotai/Kimi-K2.6",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "SiliconFlow",
-          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "Pro/deepseek-ai/DeepSeek-R1",
+      "name": "deepseek-ai/DeepSeek-V4-Pro",
       "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
@@ -1370,13 +1793,51 @@
       ]
     },
     {
-      "name": "MiniMax-M2.7",
+      "name": "deepseek-v4-flash-260425",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "MiniMax-M2.7:free",
       "vendor": "MiniMax",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Minimax",
-          "label": "Minimax官渠 ",
+          "name": "Free",
+          "label": "Free分组",
+          "input_per_1m": 0,
+          "output_per_1m": 0,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mimo-v2.5",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "小米 MIMO",
+          "label": "小米 MIMO ",
           "input_per_1m": 22.5,
           "output_per_1m": 22.5,
           "cache_per_1m": null,
@@ -1384,7 +1845,9 @@
         }
       ],
       "supported_endpoints": [
-        "openai"
+        "openai",
+        "openai-response",
+        "anthropic"
       ]
     },
     {
@@ -1408,236 +1871,7 @@
       ]
     },
     {
-      "name": "glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 0.45072,
-          "output_per_1m": 1.57752,
-          "cache_per_1m": 0.11268,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 0.5634,
-          "output_per_1m": 1.9719,
-          "cache_per_1m": 0.14085,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 0.33804,
-          "output_per_1m": 1.18314,
-          "cache_per_1m": 0.08451,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "speech-2.8-hd",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Minimax",
-          "label": "Minimax官渠 ",
-          "input_per_1m": 73.5,
-          "output_per_1m": 73.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-4o",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 75,
-          "output_per_1m": 300,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "o1",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 15,
-          "output_per_1m": 60,
-          "cache_per_1m": 7.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.7-plus",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI",
-          "label": "OpenAI分组",
-          "input_per_1m": 0.25,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 0.025,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ernie-5.0",
-      "vendor": "百度",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude（官渠无限制）",
-          "label": "官渠无限制 不限制客户端",
-          "input_per_1m": 2.4,
-          "output_per_1m": 12,
-          "cache_per_1m": 0.24,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "speech-2.8-turbo",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Minimax",
-          "label": "Minimax官渠 ",
-          "input_per_1m": 42,
-          "output_per_1m": 42,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Zhipu",
-          "label": "智谱官渠（有外审 🈲nsfw）",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "glm-4-7-251222",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "doubao-seed-2-1-turbo-260628",
+      "name": "doubao-seed-2-0-mini-260428",
       "vendor": "字节跳动",
       "quota_type": "token",
       "groups": [
@@ -1654,144 +1888,6 @@
         "openai",
         "openai-response",
         "anthropic"
-      ]
-    },
-    {
-      "name": "moonshotai/Kimi-K2.7-Code",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "SiliconFlow",
-          "label": "硅基流动  glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 0.475,
-          "output_per_1m": 2,
-          "cache_per_1m": 0.08,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.6-max-preview",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.7-max-preview",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude（特价）",
-          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
-          "input_per_1m": 2,
-          "output_per_1m": 10,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 2.5
-        },
-        {
-          "name": "Claude（官渠无限制）",
-          "label": "官渠无限制 不限制客户端",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k2.5:free",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "doubao-seed-2-0-lite-260428:free",
-      "vendor": "字节跳动",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini（Vertex AI）",
-          "label": "Gemini（企业CLI/官转/Vertex）",
-          "input_per_1m": 60,
-          "output_per_1m": 240,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
       ]
     },
     {
@@ -1813,62 +1909,10 @@
       ]
     },
     {
-      "name": "gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "OpenAI官Key",
-          "label": "OpenAI官Key",
-          "input_per_1m": 75,
-          "output_per_1m": 450,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "glm-5.1",
       "vendor": "智谱",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.075,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        },
         {
           "name": "百炼",
           "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
@@ -1876,139 +1920,13 @@
           "output_per_1m": 0.645,
           "cache_per_1m": 0.024,
           "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude（特价）",
-          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
-          "input_per_1m": 30,
-          "output_per_1m": 150,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
         },
         {
-          "name": "Claude（官渠无限制）",
-          "label": "官渠无限制 不限制客户端",
-          "input_per_1m": 90,
-          "output_per_1m": 450,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude（特价）",
-          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
-          "input_per_1m": 0.4,
-          "output_per_1m": 2,
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.075,
           "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Claude（官渠无限制）",
-          "label": "官渠无限制 不限制客户端",
-          "input_per_1m": 1.2,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.12,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": 0,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "ernie-5.1",
-      "vendor": "百度",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ernie-5.0-thinking-preview",
-      "vendor": "百度",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百度千帆",
-          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
-          "input_per_1m": 0.55,
-          "output_per_1m": 1,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-4.7",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-r1",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "百炼",
-          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -2062,92 +1980,6 @@
       ]
     },
     {
-      "name": "claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude（官渠无限制）",
-          "label": "官渠无限制 不限制客户端",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 12
-        },
-        {
-          "name": "Claude（特价）",
-          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
-          "input_per_1m": 2,
-          "output_per_1m": 10,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 4
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-4.7:free",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic",
-        "openai-response"
-      ]
-    },
-    {
-      "name": "deepseek-r1:free",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Free",
-          "label": "Free分组",
-          "input_per_1m": 0,
-          "output_per_1m": 0,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "doubao-seed-2-0-pro-260215",
-      "vendor": "字节跳动",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
-      ]
-    },
-    {
       "name": "claude-sonnet-4-5",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -2175,7 +2007,59 @@
       ]
     },
     {
-      "name": "deepseek-ai/DeepSeek-V4-Flash",
+      "name": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 1.6,
+          "output_per_1m": 9.6,
+          "cache_per_1m": 0.16,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini（特价）",
+          "label": "特价分组（企业CLI/官转/反重力/Vertex）",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k3",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Moonshot",
+          "label": "Moonshot官渠",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 22.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Pro/deepseek-ai/DeepSeek-R1",
       "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
@@ -2193,43 +2077,101 @@
       ]
     },
     {
-      "name": "deepseek-v4-pro-260425",
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3125,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v3.2",
       "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Doubao",
-          "label": "火山引擎 doubao/glm/deepseek",
-          "input_per_1m": 30,
-          "output_per_1m": 30,
-          "cache_per_1m": null,
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 0.29,
+          "output_per_1m": 0.84,
+          "cache_per_1m": 0.064444,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "百炼",
+          "label": "阿里云百炼（有外审 🈲nsfw）qwen/ glm/ deepseek/ MiniMax/ kimi",
+          "input_per_1m": 0.174,
+          "output_per_1m": 0.504,
+          "cache_per_1m": 0.038667,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
+        "openai"
       ]
     },
     {
-      "name": "mimo-v2.5",
-      "vendor": "Unknown",
+      "name": "deepseek-v3.2-think",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
-          "name": "小米 MIMO",
-          "label": "小米 MIMO ",
-          "input_per_1m": 22.5,
-          "output_per_1m": 22.5,
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.225,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "anthropic"
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 60,
+          "output_per_1m": 240,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 75,
+          "output_per_1m": 300,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
       ]
     },
     {
@@ -2251,7 +2193,108 @@
         "openai-response",
         "anthropic"
       ]
+    },
+    {
+      "name": "deepseek-v4-flash-260731",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Doubao",
+          "label": "火山引擎 doubao/glm/deepseek",
+          "input_per_1m": 30,
+          "output_per_1m": 30,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "ernie-5.0-thinking-preview",
+      "vendor": "百度",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "百度千帆",
+          "label": "百度千帆  glm/ deepseek/ ernie/ kimi",
+          "input_per_1m": 0.55,
+          "output_per_1m": 1,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "OpenAI官Key",
+          "label": "OpenAI官Key",
+          "input_per_1m": 30,
+          "output_per_1m": 60,
+          "cache_per_1m": 15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini（Vertex AI）",
+          "label": "Gemini（企业CLI/官转/Vertex）",
+          "input_per_1m": 60,
+          "output_per_1m": 240,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude（官渠无限制）",
+          "label": "官渠无限制 不限制客户端",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
+        },
+        {
+          "name": "Claude（特价）",
+          "label": "特价分组(awsq/kiro/官转/反重力/Vertex/逆向  )",
+          "input_per_1m": 2,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 2.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
     }
   ],
-  "fetched_at": "2026-09-04T21:15:04.450Z"
+  "fetched_at": "2026-09-05T20:56:56.771Z"
 }

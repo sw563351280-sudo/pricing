@@ -13,7 +13,7 @@
       "label": "缓存命中可能低一些"
     },
     "Claude按次": {
-      "ratio": 0.1,
+      "ratio": 0.7,
       "label": "充值倍率0.1 * 分组倍率 = 实际倍率"
     },
     "Gemini按次": {
@@ -21,7 +21,7 @@
       "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）"
     },
     "claude高缓存": {
-      "ratio": 3,
+      "ratio": 7,
       "label": "充值倍率0.1 * 分组倍率 = 实际倍率"
     },
     "default": {
@@ -34,226 +34,6 @@
     }
   },
   "models": [
-    {
-      "name": "codex-auto-review",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 0.9,
-          "output_per_1m": 5.4,
-          "cache_per_1m": 0.09,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 0.9,
-          "output_per_1m": 5.4,
-          "cache_per_1m": 0.09,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 6,
-          "output_per_1m": 36,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 6
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 6,
-          "output_per_1m": 36,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 6
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 2.4,
-          "output_per_1m": 14.4,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 2.4,
-          "output_per_1m": 14.4,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "price_per_request": 0.12
-        },
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.3-codex-spark",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 2.1,
-          "output_per_1m": 16.8,
-          "cache_per_1m": 0.21,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "ChatGPT-Pro兜底",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 2.1,
-          "output_per_1m": 16.8,
-          "cache_per_1m": 0.21,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
     {
       "name": "gpt-5.6-sol",
       "vendor": "OpenAI",
@@ -337,7 +117,227 @@
         "anthropic",
         "openai"
       ]
+    },
+    {
+      "name": "codex-auto-review",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 0.9,
+          "output_per_1m": 5.4,
+          "cache_per_1m": 0.09,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 0.9,
+          "output_per_1m": 5.4,
+          "cache_per_1m": 0.09,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 2.1,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 0.21,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 2.1,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 0.21,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 2.4,
+          "output_per_1m": 14.4,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 2.4,
+          "output_per_1m": 14.4,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 12,
+          "output_per_1m": 60,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 12,
+          "output_per_1m": 60,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "grok-4.6",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "price_per_request": 0.12
+        },
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收1分钱（充值倍率0.1 * 分组倍率 0.1 = 0.01元）",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "ChatGPT-Pro兜底",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 6,
+          "output_per_1m": 36,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 6
+        },
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 6,
+          "output_per_1m": 36,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
     }
   ],
-  "fetched_at": "2026-09-04T21:15:07.566Z"
+  "fetched_at": "2026-09-05T20:56:59.818Z"
 }
