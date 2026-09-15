@@ -40,10 +40,6 @@
       "ratio": 1,
       "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向"
     },
-    "gemini次卡特价": {
-      "ratio": 1,
-      "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini"
-    },
     "gpt": {
       "ratio": 0.6,
       "label": "azure gpt，可用image2"
@@ -63,46 +59,48 @@
   },
   "models": [
     {
-      "name": "gemini-3.5-flash-c2",
+      "name": "gemini-2.5-pro-c3",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "gemini次卡特价",
-          "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini",
-          "price_per_request": 0.025
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.042
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "gemini-3.6-flash-c2",
+      "name": "gemini-3-flash-preview-c3",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "gemini次卡特价",
-          "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini",
-          "price_per_request": 0.025
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.032
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "gpt-4o-mini",
+      "name": "gpt-4o-2024-11-20",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "gpt",
           "label": "azure gpt，可用image2",
-          "input_per_1m": 0.09,
-          "output_per_1m": 0.36,
-          "cache_per_1m": 0.045,
+          "input_per_1m": 1.5,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.75,
           "cache_write_per_1m": null
         }
       ],
@@ -111,7 +109,7 @@
       ]
     },
     {
-      "name": "claude-opus-4-6",
+      "name": "claude-opus-4-5-20251101",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -122,22 +120,6 @@
           "output_per_1m": 12.5,
           "cache_per_1m": 0.25,
           "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 7,
-          "output_per_1m": 35,
-          "cache_per_1m": 0.7,
-          "cache_write_per_1m": 8.75
         }
       ],
       "supported_endpoints": [
@@ -146,58 +128,67 @@
       ]
     },
     {
-      "name": "kiro-claude-opus-5",
-      "vendor": "Anthropic",
+      "name": "gemini-3-pro-preview-c3",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.042
         }
       ],
       "supported_endpoints": [
-        "anthropic",
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "满血kiro-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "name": "gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
+          "name": "gemini-ant",
+          "label": "谷歌反重力的gemini，稳定",
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.125,
+          "cache_per_1m": 0.0225,
+          "cache_write_per_1m": null
         },
         {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
+          "name": "gemini-vip",
+          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
+          "input_per_1m": 1.95,
+          "output_per_1m": 9.75,
+          "cache_per_1m": 0.195,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 1.2,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "anthropic",
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "glm-5",
-      "vendor": "智谱",
+      "name": "deepseek-v4-pro",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
           "name": "国模通用",
           "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 3.6,
-          "output_per_1m": 13.2,
-          "cache_per_1m": 0.9,
+          "input_per_1m": 5.4,
+          "output_per_1m": 16.2,
+          "cache_per_1m": 0.18,
           "cache_write_per_1m": null
         }
       ],
@@ -206,17 +197,104 @@
       ]
     },
     {
-      "name": "glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "token",
+      "name": "gemini-3.1-pro-preview-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[anti]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[anti]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-c3",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.032
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash-c3",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.032
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "c/deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "国模通用",
           "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 0.48,
-          "output_per_1m": 1.68,
-          "cache_per_1m": 0.138,
-          "cache_write_per_1m": null
+          "price_per_request": 0.0225
         }
       ],
       "supported_endpoints": [
@@ -224,44 +302,60 @@
       ]
     },
     {
-      "name": "满血kiro-claude-opus-4-5",
-      "vendor": "Anthropic",
+      "name": "gemini-3-pro-preview-think-c3",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.042
         }
       ],
       "supported_endpoints": [
-        "anthropic",
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "满血kiro-claude-sonnet-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "name": "gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
         },
         {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
+          "name": "codex",
+          "label": "Gpt Pro Codex，接近24小时稳定",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
         }
       ],
       "supported_endpoints": [
-        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-think-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -284,32 +378,17 @@
       ]
     },
     {
-      "name": "kimi-k2.6",
-      "vendor": "Moonshot",
+      "name": "gemini-3.1-flash-image",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 3.9,
-          "output_per_1m": 16.2,
-          "cache_per_1m": 0.66,
+          "name": "短剧",
+          "label": "谷歌生图模型，相对稳定",
+          "input_per_1m": 0.8,
+          "output_per_1m": 96,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.032
         }
       ],
       "supported_endpoints": [
@@ -339,15 +418,293 @@
       ]
     },
     {
-      "name": "gemini-3.1-flash-image",
+      "name": "glm-5.3-flash",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 0.48,
+          "output_per_1m": 1.68,
+          "cache_per_1m": 0.138,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "text-embedding-ada-002",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.06,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.07
+        },
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "满血kiro-claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
+        },
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "Gpt Pro Codex，接近24小时稳定",
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k3",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 12,
+          "output_per_1m": 60,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "满血kiro-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "o4-mini",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 45,
+          "output_per_1m": 45,
+          "cache_per_1m": 11.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-fable-5-1",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 14,
+          "output_per_1m": 70,
+          "cache_per_1m": 0.35,
+          "cache_write_per_1m": 17.5
+        },
+        {
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": 22.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "满血kiro-claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        },
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-ant",
+          "label": "谷歌反重力的gemini，稳定",
+          "input_per_1m": 0.375,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-vip",
+          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
+          "input_per_1m": 3.25,
+          "output_per_1m": 26,
+          "cache_per_1m": 0.325,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 2,
+          "output_per_1m": 16,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.032
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 4.8,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite-image",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "短剧",
           "label": "谷歌生图模型，相对稳定",
-          "input_per_1m": 0.8,
-          "output_per_1m": 96,
+          "input_per_1m": 0.4,
+          "output_per_1m": 48,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -358,33 +715,106 @@
       ]
     },
     {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
+      "name": "gemini-3.6-flash",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 7,
-          "output_per_1m": 35,
-          "cache_per_1m": 0.7,
-          "cache_write_per_1m": 8.75
+          "name": "gemini-ant",
+          "label": "谷歌反重力的gemini，稳定",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
         },
         {
-          "name": "claude",
-          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
+          "name": "gemini-vip",
+          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
+          "input_per_1m": 3.9,
+          "output_per_1m": 19.5,
+          "cache_per_1m": 0.39,
+          "cache_write_per_1m": null
         },
         {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 2.4,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.24,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 1.5,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 3.6,
+          "output_per_1m": 13.2,
           "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro-think-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "满血kiro-claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
         }
       ],
       "supported_endpoints": [
@@ -393,7 +823,231 @@
       ]
     },
     {
-      "name": "kiro-claude-opus-4-8",
+      "name": "gemini-2.5-pro-think-c3",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.042
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "Gpt Pro Codex，接近24小时稳定",
+          "input_per_1m": 22.5,
+          "output_per_1m": 135,
+          "cache_per_1m": 2.25,
+          "cache_write_per_1m": 22.5
+        },
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 45,
+          "output_per_1m": 270,
+          "cache_per_1m": 4.5,
+          "cache_write_per_1m": 45
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-opus-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-vip",
+          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
+          "input_per_1m": 3.9,
+          "output_per_1m": 23.4,
+          "cache_per_1m": 0.39,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 2.4,
+          "output_per_1m": 14.4,
+          "cache_per_1m": 0.24,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "gpt-5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 0.75,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.075,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-image",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "短剧",
+          "label": "谷歌生图模型，相对稳定",
+          "input_per_1m": 0.48,
+          "output_per_1m": 48,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "o3-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 45,
+          "output_per_1m": 180,
+          "cache_per_1m": 22.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 14,
+          "output_per_1m": 70,
+          "cache_per_1m": 1.4,
+          "cache_write_per_1m": 17.5
+        },
+        {
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 18,
+          "output_per_1m": 90,
+          "cache_per_1m": 1.8,
+          "cache_write_per_1m": 22.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -435,269 +1089,7 @@
       ]
     },
     {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 45,
-          "output_per_1m": 270,
-          "cache_per_1m": 4.5,
-          "cache_write_per_1m": 45
-        },
-        {
-          "name": "codex",
-          "label": "Gpt Pro Codex，接近24小时稳定",
-          "input_per_1m": 22.5,
-          "output_per_1m": 135,
-          "cache_per_1m": 2.25,
-          "cache_write_per_1m": 22.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-4o",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 1.5,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kiro-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 0.8,
-          "output_per_1m": 4.8,
-          "cache_per_1m": 0.08,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-ant",
-          "label": "谷歌反重力的gemini，稳定",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-vip",
-          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
-          "input_per_1m": 1.3,
-          "output_per_1m": 7.8,
-          "cache_per_1m": 0.13,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "o1",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 45,
-          "output_per_1m": 180,
-          "cache_per_1m": 22.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[anti]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "kiro-claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.07
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.07
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "满血kiro-claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
-        },
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 0.082192,
-          "output_per_1m": 0.328767,
-          "cache_per_1m": 0.001644,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-pro-preview-think-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.052
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview-think-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.042
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "c/deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "price_per_request": 0.0225
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "c/gemini-3-pro-image",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "短剧",
-          "label": "谷歌生图模型，相对稳定",
-          "price_per_request": 0.32
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview-c1",
+      "name": "gemini-3.5-flash-c3",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -713,51 +1105,36 @@
       ]
     },
     {
-      "name": "gemini-3-pro-preview-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.042
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "text-embedding-ada-002",
-      "vendor": "Unknown",
+      "name": "claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 0.06,
-          "output_per_1m": 0.06,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 1.8,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.18,
+          "cache_write_per_1m": 2.25
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "kiro-claude-opus-4-8-thinking",
+      "name": "kiro-claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "claude次卡特价",
+          "name": "claude次卡",
           "label": "kiro的claude次卡，适合文本创作",
           "price_per_request": 0.08
         },
         {
-          "name": "claude次卡",
+          "name": "claude次卡特价",
           "label": "kiro的claude次卡，适合文本创作",
           "price_per_request": 0.08
         }
@@ -768,488 +1145,7 @@
       ]
     },
     {
-      "name": "满血kiro-claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.1",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 0.75,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k2.7-code",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 3.9,
-          "output_per_1m": 16.2,
-          "cache_per_1m": 0.78,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-vip",
-          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
-          "input_per_1m": 0.78,
-          "output_per_1m": 6.5,
-          "cache_per_1m": 0.078,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 0.48,
-          "output_per_1m": 4,
-          "cache_per_1m": 0.048,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-ant",
-          "label": "谷歌反重力的gemini，稳定",
-          "input_per_1m": 0.09,
-          "output_per_1m": 0.75,
-          "cache_per_1m": 0.009,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "gpt-5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 0.75,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5-mini",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 0.15,
-          "output_per_1m": 1.2,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-embedding-2-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 0.48,
-          "output_per_1m": 1.44,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash-image",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "短剧",
-          "label": "谷歌生图模型，相对稳定",
-          "input_per_1m": 0.48,
-          "output_per_1m": 48,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-fable-5-1",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 14,
-          "output_per_1m": 70,
-          "cache_per_1m": 0.35,
-          "cache_write_per_1m": 17.5
-        },
-        {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 0.45,
-          "cache_write_per_1m": 22.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "kiro-claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.07
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.07
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-6-astra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "Gpt Pro Codex，接近24小时稳定",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        },
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-ant",
-          "label": "谷歌反重力的gemini，稳定",
-          "input_per_1m": 0.375,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.0375,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-vip",
-          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
-          "input_per_1m": 3.25,
-          "output_per_1m": 26,
-          "cache_per_1m": 0.325,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 2,
-          "output_per_1m": 16,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.7-flash-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.032
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-1.5",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "price_per_request": 0.0498
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.1",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 4.8,
-          "output_per_1m": 16.8,
-          "cache_per_1m": 1.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 4.2,
-          "output_per_1m": 21,
-          "cache_per_1m": 0.42,
-          "cache_write_per_1m": 5.25
-        },
-        {
-          "name": "claude",
-          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        },
-        {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 5.4,
-          "output_per_1m": 27,
-          "cache_per_1m": 0.54,
-          "cache_write_per_1m": 6.75
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro-think-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.052
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "满血kiro-claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "o3-mini",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 45,
-          "output_per_1m": 180,
-          "cache_per_1m": 22.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.7-max",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 7.2,
-          "output_per_1m": 21.6,
-          "cache_per_1m": 1.44,
-          "cache_write_per_1m": 9
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.042
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro-think-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.042
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-pro-preview-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.052
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "满血kiro-claude-opus-5",
+      "name": "满血kiro-claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -1305,312 +1201,6 @@
       ]
     },
     {
-      "name": "deepseek-v4-flash-vision-exp",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 45,
-          "output_per_1m": 45,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 7,
-          "output_per_1m": 35,
-          "cache_per_1m": 0.7,
-          "cache_write_per_1m": 8.75
-        },
-        {
-          "name": "claude",
-          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "c/deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "price_per_request": 0.045
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kiro-claude-opus-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "Gpt Pro Codex，接近24小时稳定",
-          "input_per_1m": 0.75,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2-vip",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "price_per_request": 0.204
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 4.8,
-          "output_per_1m": 16.8,
-          "cache_per_1m": 1.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kimi-k3",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 12,
-          "output_per_1m": 60,
-          "cache_per_1m": 1.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 1.2,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.12,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-ant",
-          "label": "谷歌反重力的gemini，稳定",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.125,
-          "cache_per_1m": 0.0225,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gemini-vip",
-          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
-          "input_per_1m": 1.95,
-          "output_per_1m": 9.75,
-          "cache_per_1m": 0.195,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.032
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.032
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "text-embedding-3-large",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 0.078,
-          "output_per_1m": 0.111,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "kiro-claude-opus-4-7-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "kiro-claude-opus-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "满血kiro-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
       "name": "gemini-3.1-flash-lite",
       "vendor": "Google",
       "quota_type": "token",
@@ -1638,7 +1228,65 @@
       ]
     },
     {
-      "name": "gemini-3.7-flash-c3",
+      "name": "gemini-3.1-pro-preview-c3",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.042
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "满血kiro-claude-sonnet-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.7-flash-c1",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1654,114 +1302,16 @@
       ]
     },
     {
-      "name": "gemini-3.7-flash-c2",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡特价",
-          "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[anti]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[anti]claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "codex-auto-review",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "Gpt Pro Codex，接近24小时稳定",
-          "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview-c2",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡特价",
-          "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "vendor": "DeepSeek",
+      "name": "kimi-k2.6",
+      "vendor": "Moonshot",
       "quota_type": "token",
       "groups": [
         {
           "name": "国模通用",
           "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 45,
-          "output_per_1m": 45,
-          "cache_per_1m": 2.25,
+          "input_per_1m": 3.9,
+          "output_per_1m": 16.2,
+          "cache_per_1m": 0.66,
           "cache_write_per_1m": null
         }
       ],
@@ -1770,23 +1320,36 @@
       ]
     },
     {
-      "name": "满血kiro-claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "name": "qwen3.7-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
-        },
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.15
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 7.2,
+          "output_per_1m": 21.6,
+          "cache_per_1m": 1.44,
+          "cache_write_per_1m": 9
         }
       ],
       "supported_endpoints": [
-        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -1818,82 +1381,17 @@
       ]
     },
     {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
-          "input_per_1m": 1,
-          "output_per_1m": 5,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": 1.25
-        },
-        {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 3.6,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.36,
-          "cache_write_per_1m": 4.5
-        },
-        {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 2.8,
-          "output_per_1m": 14,
-          "cache_per_1m": 0.28,
-          "cache_write_per_1m": 3.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite-c2",
+      "name": "gemini-embedding-2-preview",
       "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡特价",
-          "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini",
-          "price_per_request": 0.015
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-pro",
-      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
-          "name": "国模通用",
-          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
-          "input_per_1m": 5.4,
-          "output_per_1m": 16.2,
-          "cache_per_1m": 0.18,
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 0.48,
+          "output_per_1m": 1.44,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.042
         }
       ],
       "supported_endpoints": [
@@ -1902,111 +1400,51 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude",
-          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 9,
-          "output_per_1m": 45,
-          "cache_per_1m": 0.9,
-          "cache_write_per_1m": 11.25
-        },
-        {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 7,
-          "output_per_1m": 35,
-          "cache_per_1m": 0.7,
-          "cache_write_per_1m": 8.75
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[anti]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "claude次卡特价",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        },
-        {
-          "name": "claude次卡",
-          "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.24
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview-c2",
+      "name": "c/gemini-3-pro-image",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "gemini次卡特价",
-          "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini",
-          "price_per_request": 0.025
+          "name": "短剧",
+          "label": "谷歌生图模型，相对稳定",
+          "price_per_request": 0.32
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "gpt-image-2",
-      "vendor": "OpenAI",
+      "name": "gemini-3-flash-preview-c1",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "price_per_request": 0.06
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.032
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "claude-fable-5",
+      "name": "[anti]claude-sonnet-4-6-thinking",
       "vendor": "Anthropic",
-      "quota_type": "token",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "cc2",
-          "label": "cc max普通分组，稳定，不限客户端",
-          "input_per_1m": 14,
-          "output_per_1m": 70,
-          "cache_per_1m": 1.4,
-          "cache_write_per_1m": 17.5
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
         },
         {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 18,
-          "output_per_1m": 90,
-          "cache_per_1m": 1.8,
-          "cache_write_per_1m": 22.5
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
         }
       ],
       "supported_endpoints": [
@@ -2036,24 +1474,52 @@
       ]
     },
     {
-      "name": "gpt-5.5",
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "满血kiro-claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "codex",
           "label": "Gpt Pro Codex，接近24小时稳定",
-          "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
+          "input_per_1m": 0.75,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.075,
           "cache_write_per_1m": null
         }
       ],
@@ -2097,140 +1563,199 @@
       ]
     },
     {
-      "name": "gemini-3.6-flash",
-      "vendor": "Google",
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "gemini-ant",
-          "label": "谷歌反重力的gemini，稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 7,
+          "output_per_1m": 35,
+          "cache_per_1m": 0.7,
+          "cache_write_per_1m": 8.75
         },
         {
-          "name": "gemini-vip",
-          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
-          "input_per_1m": 3.9,
-          "output_per_1m": 19.5,
-          "cache_per_1m": 0.39,
-          "cache_write_per_1m": null
+          "name": "claude",
+          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
         },
         {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 2.4,
-          "output_per_1m": 12,
-          "cache_per_1m": 0.24,
-          "cache_write_per_1m": null
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "gemini-3-pro-preview-think-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.042
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "kiro-claude-opus-4-7",
+      "name": "kiro-claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "claude次卡",
           "label": "kiro的claude次卡，适合文本创作",
-          "price_per_request": 0.08
+          "price_per_request": 0.07
         },
         {
           "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-vip",
+          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
+          "input_per_1m": 0.78,
+          "output_per_1m": 6.5,
+          "cache_per_1m": 0.078,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 0.48,
+          "output_per_1m": 4,
+          "cache_per_1m": 0.048,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-ant",
+          "label": "谷歌反重力的gemini，稳定",
+          "input_per_1m": 0.09,
+          "output_per_1m": 0.75,
+          "cache_per_1m": 0.009,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini-ant",
+          "label": "谷歌反重力的gemini，稳定",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gemini-vip",
+          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
+          "input_per_1m": 1.3,
+          "output_per_1m": 7.8,
+          "cache_per_1m": 0.13,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 0.8,
+          "output_per_1m": 4.8,
+          "cache_per_1m": 0.08,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.032
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-embedding-001",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "t3-vertex-企业",
+          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
+          "input_per_1m": 0.24,
+          "output_per_1m": 0.96,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "c/deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-opus-4-8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "claude次卡",
           "label": "kiro的claude次卡，适合文本创作",
           "price_per_request": 0.08
         }
       ],
       "supported_endpoints": [
         "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.052
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.052
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude正向",
-          "label": "cc max，稳定，不限客户端",
-          "input_per_1m": 1.8,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.18,
-          "cache_write_per_1m": 2.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gpt",
-          "label": "azure gpt，可用image2",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
         "openai"
       ]
     },
@@ -2248,6 +1773,277 @@
           "name": "claude次卡特价",
           "label": "kiro的claude次卡，适合文本创作",
           "price_per_request": 0.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "text-embedding-3-large",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 0.078,
+          "output_per_1m": 0.111,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 45,
+          "output_per_1m": 45,
+          "cache_per_1m": 2.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 7,
+          "output_per_1m": 35,
+          "cache_per_1m": 0.7,
+          "cache_write_per_1m": 8.75
+        },
+        {
+          "name": "claude",
+          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "codex-auto-review",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "Gpt Pro Codex，接近24小时稳定",
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.7-flash-c3",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.032
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.1",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 4.8,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 7,
+          "output_per_1m": 35,
+          "cache_per_1m": 0.7,
+          "cache_write_per_1m": 8.75
+        },
+        {
+          "name": "claude",
+          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-think-c3",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.042
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "c/deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "price_per_request": 0.045
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash-vision-exp",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 45,
+          "output_per_1m": 45,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 7,
+          "output_per_1m": 35,
+          "cache_per_1m": 0.7,
+          "cache_write_per_1m": 8.75
+        },
+        {
+          "name": "claude",
+          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 9,
+          "output_per_1m": 45,
+          "cache_per_1m": 0.9,
+          "cache_write_per_1m": 11.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
         }
       ],
       "supported_endpoints": [
@@ -2282,99 +2078,16 @@
       ]
     },
     {
-      "name": "gemini-3.5-flash-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.032
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.032
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite-image",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "短剧",
-          "label": "谷歌生图模型，相对稳定",
-          "input_per_1m": 0.4,
-          "output_per_1m": 48,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview-think-c1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.052
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-c3",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gemini次卡",
-          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
-          "price_per_request": 0.032
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-4o-2024-11-20",
+      "name": "gpt-4o-mini",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "gpt",
           "label": "azure gpt，可用image2",
-          "input_per_1m": 1.5,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.75,
+          "input_per_1m": 0.09,
+          "output_per_1m": 0.36,
+          "cache_per_1m": 0.045,
           "cache_write_per_1m": null
         }
       ],
@@ -2383,17 +2096,71 @@
       ]
     },
     {
-      "name": "o4-mini",
-      "vendor": "Unknown",
+      "name": "gpt-5.1",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "gpt",
           "label": "azure gpt，可用image2",
-          "input_per_1m": 45,
-          "output_per_1m": 45,
-          "cache_per_1m": 11.25,
+          "input_per_1m": 0.75,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.075,
           "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 0.082192,
+          "output_per_1m": 0.328767,
+          "cache_per_1m": 0.001644,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "满血kiro-claude-sonnet-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2-vip",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "price_per_request": 0.204
         }
       ],
       "supported_endpoints": [
@@ -2420,17 +2187,33 @@
       ]
     },
     {
-      "name": "claude-opus-4-5-20251101",
+      "name": "claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 3.6,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.36,
+          "cache_write_per_1m": 4.5
+        },
+        {
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 2.8,
+          "output_per_1m": 14,
+          "cache_per_1m": 0.28,
+          "cache_write_per_1m": 3.5
+        },
+        {
           "name": "claude",
           "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": 1.25
         }
       ],
       "supported_endpoints": [
@@ -2439,7 +2222,7 @@
       ]
     },
     {
-      "name": "kiro-claude-opus-4-6",
+      "name": "kiro-claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -2460,48 +2243,42 @@
       ]
     },
     {
-      "name": "gpt-5.4-mini",
-      "vendor": "OpenAI",
+      "name": "满血kiro-claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
+        },
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "kimi-k2.7-code",
+      "vendor": "Moonshot",
       "quota_type": "token",
       "groups": [
         {
-          "name": "codex",
-          "label": "Gpt Pro Codex，接近24小时稳定",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.35,
-          "cache_per_1m": 0.0225,
+          "name": "国模通用",
+          "label": "满血直连，非逆向，满血稳定，体验与官方接口一致",
+          "input_per_1m": 3.9,
+          "output_per_1m": 16.2,
+          "cache_per_1m": 0.78,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
         "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini-vip",
-          "label": "Google vertex官方直连gemini，适合复杂任务和文本创作",
-          "input_per_1m": 3.9,
-          "output_per_1m": 23.4,
-          "cache_per_1m": 0.39,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 2.4,
-          "output_per_1m": 14.4,
-          "cache_per_1m": 0.24,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
       ]
     },
     {
@@ -2524,7 +2301,44 @@
       ]
     },
     {
-      "name": "gemini-3.5-flash-c1",
+      "name": "gemini-3-pro-preview-think-c1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gemini次卡",
+          "label": "长期稳定的gemini次卡，c1为企业cli渠道，c3是vertex逆向",
+          "price_per_request": 0.052
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[anti]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash-c1",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -2540,14 +2354,17 @@
       ]
     },
     {
-      "name": "gemini-3.8-flash-c2",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "gpt-5-mini",
+      "vendor": "OpenAI",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "gemini次卡特价",
-          "label": "近期很不稳定不推荐使用！易报错，反重力按次的gemini",
-          "price_per_request": 0.032
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 0.15,
+          "output_per_1m": 1.2,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -2555,24 +2372,95 @@
       ]
     },
     {
-      "name": "gemini-embedding-001",
-      "vendor": "Google",
+      "name": "o1",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "t3-vertex-企业",
-          "label": "Google ai studio和vertex混合gemini，兼具性价比和稳定性，适合复杂任务和文本创作",
-          "input_per_1m": 0.24,
-          "output_per_1m": 0.96,
-          "cache_per_1m": null,
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "input_per_1m": 45,
+          "output_per_1m": 180,
+          "cache_per_1m": 22.5,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc2",
+          "label": "cc max普通分组，稳定，不限客户端",
+          "input_per_1m": 4.2,
+          "output_per_1m": 21,
+          "cache_per_1m": 0.42,
+          "cache_write_per_1m": 5.25
+        },
+        {
+          "name": "claude",
+          "label": "按量的kiro claude稳定聪明，适合跑代码和文本创作，长期渠道",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        },
+        {
+          "name": "claude正向",
+          "label": "cc max，稳定，不限客户端",
+          "input_per_1m": 5.4,
+          "output_per_1m": 27,
+          "cache_per_1m": 0.54,
+          "cache_write_per_1m": 6.75
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "kiro-claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "claude次卡",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        },
+        {
+          "name": "claude次卡特价",
+          "label": "kiro的claude次卡，适合文本创作",
+          "price_per_request": 0.08
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-1.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gpt",
+          "label": "azure gpt，可用image2",
+          "price_per_request": 0.0498
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
         "openai"
       ]
     }
   ],
-  "fetched_at": "2026-09-14T22:16:00.689Z"
+  "fetched_at": "2026-09-15T21:56:02.725Z"
 }
