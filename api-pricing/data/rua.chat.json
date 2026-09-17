@@ -54,7 +54,7 @@
     },
     "满血小克": {
       "ratio": 1.5,
-      "label": "绝对满血不掺，随便测"
+      "label": "绝对满血���掺，随便测"
     },
     "生图": {
       "ratio": 1,
@@ -71,7 +71,580 @@
   },
   "models": [
     {
-      "name": "[高级]nai-diffusion-4-5-full",
+      "name": "gemini-3.8-flash-high",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.225,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.0225,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "text-embedding-ada-002",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.1,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen-image-3-pro",
+      "vendor": "阿里巴巴",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "深夜福利",
+          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "低价小克",
+          "label": null,
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "Vertex-Claude",
+          "label": "Vertex渠道claude和满血没区别",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "AWS",
+          "label": "AWS渠道claude",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "满血小克",
+          "label": "绝对满血���掺，随便测",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image-2026-03-02",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gpt-oss-20b",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[24k]gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-3-mini",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.1,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-non-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.25,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]deepseek-v4-flash-0731",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 1.5,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]mimo-v2.5-pro",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 1.5,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.0125,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-2.5-pro-maxthinking-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3.1-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[高级]nai-diffusion-5-full",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]kimi-k2.6",
+      "vendor": "Moonshot",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "wan2-7-image-pro",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.09
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.25,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 4,
+          "output_per_1m": 14,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[正常]nai-diffusion-3",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "[旧按次]deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.7-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.125,
+          "cache_per_1m": 0.0225,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "agnes-image-2.1-flash",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-3-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image-2.0",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.45,
+          "cache_per_1m": 0.0075,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-composer",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.2,
+          "output_per_1m": 0.4,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3.1-pro-preview-maxthinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[高级]nai-diffusion-4-full",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
@@ -79,6 +652,435 @@
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
           "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-4o",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "GPT",
+          "label": "没有luna了",
+          "input_per_1m": 0.5,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 1.5,
+          "output_per_1m": 4.5,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[正常]nai-diffusion-4-curated-preview",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "[按次]glm-5.1",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Qwen/Qwen3-Embedding-0.6B",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "神奇分组-里面啥都有",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 1.2,
+          "output_per_1m": 7.2,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.7,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen-image-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.09
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "juggernaut-xl",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "openart-photorealistic",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[正常]nai-diffusion-4-full",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3.7-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]mimo-v2.5-pro",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-tiered",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.375,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.0375,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[高级]nai-diffusion-furry-3",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[高级]nai-diffusion-4-curated-preview",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.3,
+          "output_per_1m": 0.75,
+          "cache_per_1m": 0.009,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3.1-pro-preview-maxthinking-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-multi-agent-0309",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.25,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-build",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.2,
+          "output_per_1m": 0.4,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-3.1-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.45,
+          "cache_per_1m": 0.0135,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -105,164 +1107,6 @@
           "output_per_1m": 2.4,
           "cache_per_1m": 0.04,
           "cache_write_per_1m": 0.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 0.4,
-          "output_per_1m": 2.4,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5-sunburst",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        },
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "agnes-image-2.1-flash",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "juggernaut-flux-pro",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli]gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]glm-5.3",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 4,
-          "output_per_1m": 14,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.07
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen-image-plus",
-      "vendor": "阿里巴巴",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.05
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "wai-ani-nsfw-ponyxl",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.06
         }
       ],
       "supported_endpoints": [
@@ -306,6 +1150,70 @@
       ]
     },
     {
+      "name": "[按次]gemini-3-pro-preview-maxthinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.6",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.4,
+          "output_per_1m": 1.2,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-tts",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "price_per_request": 0.32
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "[按量]glm-5.3-flash",
       "vendor": "智谱",
       "quota_type": "token",
@@ -324,350 +1232,16 @@
       ]
     },
     {
-      "name": "[正常]nai-diffusion-4-5-full",
+      "name": "[按量]hy3",
       "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "[旧按次]deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3.1-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-stt",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 2.8,
-          "output_per_1m": 16.8,
-          "cache_per_1m": 0.28,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Claude",
-          "label": "Vertex渠道claude和满血没区别",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "AWS",
-          "label": "AWS渠道claude",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        },
-        {
-          "name": "深夜福利",
-          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
-          "input_per_1m": 4,
-          "output_per_1m": 20,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 5
-        },
-        {
-          "name": "低价小克",
-          "label": null,
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "「反重力按量」claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "低价小克",
-          "label": null,
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]deepseek-v4-pro",
-      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
           "name": "国模",
           "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 4.5,
-          "output_per_1m": 13.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-quality-latest",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]kimi-k2.7-code-highspeed",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 6.5,
-          "output_per_1m": 27,
-          "cache_per_1m": 1.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-fable-5-1",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
-          "input_per_1m": 15,
-          "output_per_1m": 75,
-          "cache_per_1m": 0.375,
-          "cache_write_per_1m": 18.75
-        },
-        {
-          "name": "深夜福利",
-          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
-          "input_per_1m": 8,
-          "output_per_1m": 40,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": 10
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-6-astra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "GPT-官key",
-          "label": "超高缓-不卡不降智-(卡了是官方问题，已经是尊贵的官key了允许向openai官方哈气)-不许破限-检测到破限封号不退款！！",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "GPT",
-          "label": "没有luna了",
-          "input_per_1m": 2,
-          "output_per_1m": 10,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 1.6,
-          "output_per_1m": 9.6,
-          "cache_per_1m": 0.16,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[正常]nai-diffusion-4-curated-preview",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "grok-imagine-image",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]deepseek-v4-flash-vision-exp",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash-low",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.3,
+          "input_per_1m": 0.5,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.125,
           "cache_write_per_1m": null
         }
       ],
@@ -702,74 +1276,67 @@
       ]
     },
     {
-      "name": "text-embedding-3-small",
-      "vendor": "Unknown",
+      "name": "grok-3-mini-fast",
+      "vendor": "xAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "神奇分组-里面啥都有",
-          "label": null,
-          "input_per_1m": 0.02,
-          "output_per_1m": 0.02,
-          "cache_per_1m": 0.001,
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.14,
+          "cache_per_1m": 0.015,
           "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "低价小克",
+          "label": null,
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
         },
         {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 0.02,
-          "output_per_1m": 0.02,
-          "cache_per_1m": 0.001,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-stt",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
+          "name": "Vertex-Claude",
+          "label": "Vertex渠道claude和满血没区别",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
         {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 8.4,
-          "output_per_1m": 42,
-          "cache_per_1m": 0.84,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen-image-3-pro",
-      "vendor": "阿里巴巴",
-      "quota_type": "per_request",
-      "groups": [
+          "name": "AWS",
+          "label": "AWS渠道claude",
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": 1.875
+        },
         {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.15
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
+          "name": "满血小克",
+          "label": "绝对满血���掺，随便测",
+          "input_per_1m": 4.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": 5.625
+        },
         {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
+          "name": "深夜福利",
+          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
+          "input_per_1m": 2.4,
+          "output_per_1m": 12,
+          "cache_per_1m": 0.24,
+          "cache_write_per_1m": 3
         }
       ],
       "supported_endpoints": [
@@ -778,102 +1345,13 @@
       ]
     },
     {
-      "name": "[cli-按次]gemini-3.1-pro-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3-pro-preview-maxthinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.20-reasoning",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.25,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 1,
-          "output_per_1m": 8,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.375,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.0375,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen-image-max",
-      "vendor": "阿里巴巴",
+      "name": "wai-ani-nsfw-ponyxl",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.09
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
           "price_per_request": 0.06
         }
       ],
@@ -882,58 +1360,7 @@
       ]
     },
     {
-      "name": "[按量]deepseek-v4-flash-0731",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 1.5,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]deepseek-v4-pro-0813",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 4.5,
-          "output_per_1m": 13.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3.1-flash-lite-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-high",
+      "name": "[cli]gemini-3-pro-preview",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -951,13 +1378,13 @@
       ]
     },
     {
-      "name": "wan2-7-image",
-      "vendor": "Unknown",
+      "name": "[cli-按次]gemini-3.1-flash-lite",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
           "price_per_request": 0.06
         }
       ],
@@ -966,16 +1393,34 @@
       ]
     },
     {
-      "name": "[cli]gemini-3.1-flash-lite-preview",
+      "name": "[按量]deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 1,
+          "output_per_1m": 1,
+          "cache_per_1m": 0.02,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-low",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "Gemini-按量",
           "label": "24小时稳定",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.45,
-          "cache_per_1m": 0.0075,
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.3,
           "cache_write_per_1m": null
         }
       ],
@@ -984,140 +1429,17 @@
       ]
     },
     {
-      "name": "「反重力按量」claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "低价小克",
-          "label": null,
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[24k]gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-3-mini",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.06,
-          "output_per_1m": 0.1,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.20-0309-non-reasoning",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.5,
-          "output_per_1m": 6.25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-2.5-pro",
+      "name": "gemini-2.5-flash-lite",
       "vendor": "Google",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen-image-2",
-      "vendor": "阿里巴巴",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.05
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.12,
+          "cache_per_1m": 0.03,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1151,6 +1473,114 @@
       ]
     },
     {
+      "name": "gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 0.4,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "juggernaut-flux-pro",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen-image-2",
+      "vendor": "阿里巴巴",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "[高级]nai-diffusion-4-5-curated",
       "vendor": "Unknown",
       "quota_type": "per_request",
@@ -1166,13 +1596,13 @@
       ]
     },
     {
-      "name": "[高级]nai-diffusion-4-full",
-      "vendor": "Unknown",
+      "name": "[按次]MiniMax-M3",
+      "vendor": "MiniMax",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
           "price_per_request": 0.02
         }
       ],
@@ -1181,16 +1611,16 @@
       ]
     },
     {
-      "name": "[cli]gemini-2.5-flash",
-      "vendor": "Google",
+      "name": "[按量]kimi-k3",
+      "vendor": "Moonshot",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.3,
-          "output_per_1m": 0.75,
-          "cache_per_1m": 0.009,
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
           "cache_write_per_1m": null
         }
       ],
@@ -1199,147 +1629,14 @@
       ]
     },
     {
-      "name": "gpt-4o",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "GPT",
-          "label": "没有luna了",
-          "input_per_1m": 0.5,
-          "output_per_1m": 2,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli]gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.7,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[正常]nai-diffusion-4-5-curated",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "[正常]nai-diffusion-5-full",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.45,
-          "cache_per_1m": 0.0075,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.4,
-          "output_per_1m": 1.2,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 1.2,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-sonnet-4-6",
+      "name": "[按次]claude-fable-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "限时活动",
-          "label": "群员福利",
-          "price_per_request": 0.0204
-        },
-        {
           "name": "按次大分组-注意embedding模型不是按次",
           "label": null,
-          "price_per_request": 0.06
+          "price_per_request": 0.1
         }
       ],
       "supported_endpoints": [
@@ -1348,37 +1645,14 @@
       ]
     },
     {
-      "name": "[cli]gemini-3-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-2.0",
-      "vendor": "xAI",
+      "name": "anime",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
+          "name": "测试分组不要选",
+          "label": "不要选不要选不要选",
+          "price_per_request": 10
         }
       ],
       "supported_endpoints": [
@@ -1386,37 +1660,7 @@
       ]
     },
     {
-      "name": "[cli-按次]gemini-3.1-flash-lite",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]glm-5.2",
+      "name": "[按次]glm-5.3-flash",
       "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
@@ -1446,25 +1690,26 @@
       ]
     },
     {
-      "name": "gpt-5.6-sol",
-      "vendor": "OpenAI",
+      "name": "[按次]kimi-k2.7-code-highspeed",
+      "vendor": "Moonshot",
+      "quota_type": "per_request",
+      "groups": [],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.3",
+      "vendor": "xAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "GPT-官key",
-          "label": "超高缓-不卡不降智-(卡了是官方问题，已经是尊贵的官key了允许向openai官方哈气)-不许破限-检测到破限封号不退款！！",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        },
-        {
-          "name": "GPT",
-          "label": "没有luna了",
-          "input_per_1m": 1,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": 1.25
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.25,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1487,7 +1732,117 @@
       ]
     },
     {
-      "name": "dynavision-xl",
+      "name": "claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "低价小克",
+          "label": null,
+          "input_per_1m": 0.5,
+          "output_per_1m": 2.5,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": 0.625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "z-image",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.45,
+          "cache_per_1m": 0.0075,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        },
+        {
+          "name": "限时活动",
+          "label": "群员福利",
+          "price_per_request": 0.0204
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-stt",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 2.8,
+          "output_per_1m": 16.8,
+          "cache_per_1m": 0.28,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "flux-pro-v1.1",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
@@ -1498,18 +1853,19 @@
         }
       ],
       "supported_endpoints": [
+        "image-generation",
         "openai"
       ]
     },
     {
-      "name": "byte-plus-seedream-4-5",
+      "name": "byte-plus-seedream-5-lite",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.07
+          "price_per_request": 0.04
         }
       ],
       "supported_endpoints": [
@@ -1517,7 +1873,7 @@
       ]
     },
     {
-      "name": "[cli]gemini-3.7-flash",
+      "name": "gemini-3.7-flash-low",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
@@ -1528,6 +1884,110 @@
           "output_per_1m": 1.125,
           "cache_per_1m": 0.0225,
           "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-0309-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.25,
+          "output_per_1m": 0.5,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "「反重力按量」claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "低价小克",
+          "label": null,
+          "input_per_1m": 1.5,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]deepseek-v4-pro-0813",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 4.5,
+          "output_per_1m": 13.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.125,
+          "cache_per_1m": 0.0225,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
         }
       ],
       "supported_endpoints": [
@@ -1550,16 +2010,24 @@
       ]
     },
     {
-      "name": "gemini-3.8-flash-low",
-      "vendor": "Google",
+      "name": "cf/qwen-embedding-0.6b",
+      "vendor": "阿里巴巴",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.125,
-          "cache_per_1m": 0.0225,
+          "name": "神奇分组-里面啥都有",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -1568,14 +2036,73 @@
       ]
     },
     {
-      "name": "[按次]gemini-3.1-pro-preview-maxthinking",
+      "name": "grok-build-latest",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.2,
+          "output_per_1m": 0.4,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "GPT-官key",
+          "label": "超高缓-不卡不降智-(卡了是官方问题，已经是尊贵的官key了允许向openai官方哈气)-不许破限-检测到破限封号不退款！！",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "GPT",
+          "label": "没有luna了",
+          "input_per_1m": 2,
+          "output_per_1m": 10,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[正常]nai-diffusion-4-5-curated",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "[按次]gemini-2.5-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "按次大分组-注意embedding模型不是按次",
           "label": null,
-          "price_per_request": 0.07
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -1583,19 +2110,17 @@
       ]
     },
     {
-      "name": "[按次]kimi-k3",
-      "vendor": "Moonshot",
-      "quota_type": "per_request",
+      "name": "[按次]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
-        {
-          "name": "限时活动",
-          "label": "群员福利",
-          "price_per_request": 0.0544
-        },
         {
           "name": "按次大分组-注意embedding模型不是按次",
           "label": null,
-          "price_per_request": 0.16
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1603,43 +2128,143 @@
       ]
     },
     {
-      "name": "claude-fable-5",
+      "name": "[按次]deepseek-v4-flash-vision-exp",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-high",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]claude-fable-5-1",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-stt",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 1.68,
+          "output_per_1m": 14,
+          "cache_per_1m": 0.168,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "AWS",
-          "label": "AWS渠道claude",
+          "name": "Vertex-Claude",
+          "label": "Vertex渠道claude和满血没区别",
           "input_per_1m": 5,
           "output_per_1m": 25,
           "cache_per_1m": 0.5,
           "cache_write_per_1m": 6.25
         },
         {
+          "name": "AWS",
+          "label": "AWS渠道claude",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
           "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
-          "input_per_1m": 15,
-          "output_per_1m": 75,
-          "cache_per_1m": 1.5,
-          "cache_write_per_1m": 18.75
+          "label": "绝对满血���掺，随便测",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
         },
         {
           "name": "深夜福利",
           "label": "今日是逆向ccmax，这个价格想测纯就测吧",
-          "input_per_1m": 8,
-          "output_per_1m": 40,
-          "cache_per_1m": 0.8,
-          "cache_write_per_1m": 10
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "低价小克",
+          "label": null,
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "anthropic"
+        "anthropic",
+        "openai"
       ]
     },
     {
-      "name": "gpt-image-2.5-flare",
-      "vendor": "OpenAI",
+      "name": "[按次]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image-quality-20260403",
+      "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
@@ -1658,7 +2283,55 @@
       ]
     },
     {
-      "name": "[按次]gemini-3.5-flash",
+      "name": "gemini-3.1-flash-lite",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.45,
+          "cache_per_1m": 0.0135,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-2.5-flash-lite",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1691,55 +2364,14 @@
       ]
     },
     {
-      "name": "Qwen/Qwen3-Reranker-8B",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "神奇分组-里面啥都有",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3.1-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[高级]nai-diffusion-4-curated-preview",
+      "name": "[高级]nai-diffusion-5-curated",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
+          "price_per_request": 0.2
         }
       ],
       "supported_endpoints": [
@@ -1747,444 +2379,19 @@
       ]
     },
     {
-      "name": "gemini-3-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 0.4,
-          "output_per_1m": 2.4,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.15,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[正常]nai-diffusion-5-curated",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.09
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]hy3",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "Qwen/Qwen3-Embedding-0.6B",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "神奇分组-里面啥都有",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-composer",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.2,
-          "output_per_1m": 0.4,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 0.8,
-          "output_per_1m": 2,
-          "cache_per_1m": 0.024,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.3,
-          "output_per_1m": 0.75,
-          "cache_per_1m": 0.009,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "z-image",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.4,
-          "output_per_1m": 1.2,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-build",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.2,
-          "output_per_1m": 0.4,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli]gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "text-embedding-ada-002",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "神奇分组-里面啥都有",
-          "label": null,
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.1,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.1,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]kimi-k2.7-code-highspeed",
+      "name": "[按次]kimi-k3",
       "vendor": "Moonshot",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[高级]nai-diffusion-furry-3",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3-pro-preview-maxthinking-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[高级]nai-diffusion-3",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.20-multi-agent-0309",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.25,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.125,
-          "cache_per_1m": 0.0225,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-lite",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
+          "name": "限时活动",
+          "label": "群员福利",
+          "price_per_request": 0.0544
         },
         {
           "name": "按次大分组-注意embedding模型不是按次",
           "label": null,
-          "price_per_request": 0.02
+          "price_per_request": 0.16
         }
       ],
       "supported_endpoints": [
@@ -2192,386 +2399,13 @@
       ]
     },
     {
-      "name": "claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "低价小克",
-          "label": null,
-          "input_per_1m": 0.5,
-          "output_per_1m": 2.5,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": 0.625
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gpt-oss-20b",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-lite",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.45,
-          "cache_per_1m": 0.0135,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-2.5-pro-maxthinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 1.5,
-          "output_per_1m": 4.5,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.375,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.0375,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]mimo-v2.5-pro",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-fable-5-1",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "GPT-官key",
-          "label": "超高缓-不卡不降智-(卡了是官方问题，已经是尊贵的官key了允许向openai官方哈气)-不许破限-检测到破限封号不退款！！",
-          "input_per_1m": 3,
-          "output_per_1m": 18,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]deepseek-v4-flash-vision-exp",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 0.05,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 4.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "Qwen/Qwen3-Reranker-4B",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "神奇分组-里面啥都有",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "byte-plus-seedream-5-lite",
+      "name": "byte-plus-seedream-4",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli]gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[正常]nai-diffusion-4-full",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
           "price_per_request": 0.06
         }
       ],
@@ -2580,7 +2414,7 @@
       ]
     },
     {
-      "name": "[按量]glm-5.2",
+      "name": "[按量]glm-5.3",
       "vendor": "智谱",
       "quota_type": "token",
       "groups": [
@@ -2598,32 +2432,16 @@
       ]
     },
     {
-      "name": "[按次]claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.1
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
+      "name": "[按量]kimi-k2.6",
+      "vendor": "Moonshot",
       "quota_type": "token",
       "groups": [
         {
           "name": "国模",
           "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 1,
-          "output_per_1m": 1,
-          "cache_per_1m": 0.02,
+          "input_per_1m": 3.25,
+          "output_per_1m": 13.5,
+          "cache_per_1m": 0.65,
           "cache_write_per_1m": null
         }
       ],
@@ -2632,14 +2450,17 @@
       ]
     },
     {
-      "name": "[按次]grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "per_request",
+      "name": "gemini-3.8-flash-low",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.05
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.125,
+          "cache_per_1m": 0.0225,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -2673,305 +2494,6 @@
       ]
     },
     {
-      "name": "gemini-2.5-stt",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 1.68,
-          "output_per_1m": 14,
-          "cache_per_1m": 0.168,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "AWS",
-          "label": "AWS渠道claude",
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        },
-        {
-          "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
-          "input_per_1m": 4.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": 0.45,
-          "cache_write_per_1m": 5.625
-        },
-        {
-          "name": "低价小克",
-          "label": null,
-          "input_per_1m": 1.5,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": 1.875
-        },
-        {
-          "name": "Vertex-Claude",
-          "label": "Vertex渠道claude和满血没区别",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "低价小克",
-          "label": null,
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "Vertex-Claude",
-          "label": "Vertex渠道claude和满血没区别",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "AWS",
-          "label": "AWS渠道claude",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        },
-        {
-          "name": "深夜福利",
-          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
-          "input_per_1m": 4,
-          "output_per_1m": 20,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "juggernaut-xl",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[高级]nai-diffusion-5-full",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-3-mini-fast",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.06,
-          "output_per_1m": 0.14,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-composer-2.5-fast",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.2,
-          "output_per_1m": 0.4,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.20-non-reasoning",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.25,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "flux-pro-v1.1",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3.1-flash-lite-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-quality-20260403",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash-lite",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.03,
-          "output_per_1m": 0.12,
-          "cache_per_1m": 0.03,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-2.5-pro-maxthinking-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-high",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.225,
-          "output_per_1m": 0.9,
-          "cache_per_1m": 0.0225,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "[按次]kimi-k2.7-code",
       "vendor": "Moonshot",
       "quota_type": "per_request",
@@ -2987,24 +2509,39 @@
       ]
     },
     {
-      "name": "gemini-3.7-flash",
+      "name": "[cli-按次]gemini-3.1-pro-high",
       "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "Qwen/Qwen3-Embedding-8B",
+      "vendor": "阿里巴巴",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.06,
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         },
         {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.125,
-          "cache_per_1m": 0.0225,
+          "name": "神奇分组-里面啥都有",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -3013,39 +2550,88 @@
       ]
     },
     {
-      "name": "[cli]gemini-2.5-flash-lite",
-      "vendor": "Google",
+      "name": "claude-fable-5",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.03,
-          "output_per_1m": 0.12,
-          "cache_per_1m": 0.03,
-          "cache_write_per_1m": null
+          "name": "AWS",
+          "label": "AWS渠道claude",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
+        },
+        {
+          "name": "满血小克",
+          "label": "绝对满血���掺，随便测",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 1.5,
+          "cache_write_per_1m": 18.75
+        },
+        {
+          "name": "深夜福利",
+          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
+          "input_per_1m": 8,
+          "output_per_1m": 40,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": 10
         }
       ],
       "supported_endpoints": [
-        "openai"
+        "openai",
+        "anthropic"
       ]
     },
     {
-      "name": "gemini-3.5-stt",
-      "vendor": "Google",
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 8.4,
-          "output_per_1m": 50.4,
-          "cache_per_1m": 0.84,
-          "cache_write_per_1m": null
+          "name": "AWS",
+          "label": "AWS渠道claude",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "满血小克",
+          "label": "绝对满血���掺，随便测",
+          "input_per_1m": 7.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": 0.75,
+          "cache_write_per_1m": 9.375
+        },
+        {
+          "name": "深夜福利",
+          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
+          "input_per_1m": 4,
+          "output_per_1m": 20,
+          "cache_per_1m": 0.4,
+          "cache_write_per_1m": 5
+        },
+        {
+          "name": "低价小克",
+          "label": null,
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "Vertex-Claude",
+          "label": "Vertex渠道claude和满血没区别",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": 6.25
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "anthropic",
         "openai"
       ]
     },
@@ -3056,7 +2642,7 @@
       "groups": [
         {
           "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
+          "label": "绝对满血���掺，随便测",
           "input_per_1m": 7.5,
           "output_per_1m": 37.5,
           "cache_per_1m": 7.5,
@@ -3101,37 +2687,7 @@
       ]
     },
     {
-      "name": "openart-photorealistic",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli-按次]gemini-2.5-flash-lite",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3.7-flash",
+      "name": "[cli-按次]gemini-3-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -3146,31 +2702,16 @@
       ]
     },
     {
-      "name": "[按次]glm-5.3",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]kimi-k3",
-      "vendor": "Moonshot",
+      "name": "[cli]gemini-3.7-flash",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.225,
+          "output_per_1m": 1.125,
+          "cache_per_1m": 0.0225,
           "cache_write_per_1m": null
         }
       ],
@@ -3179,7 +2720,148 @@
       ]
     },
     {
-      "name": "cf/qwen-embedding-0.6b",
+      "name": "[正常]nai-diffusion-furry-3",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "[按量]kimi-k2.7-code-highspeed",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 6.5,
+          "output_per_1m": 27,
+          "cache_per_1m": 1.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-3.1-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.20-0309-non-reasoning",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.5,
+          "output_per_1m": 6.25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 1.2,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.8,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[正常]nai-diffusion-4-5-full",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "[按次]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "Qwen/Qwen3-Reranker-4B",
       "vendor": "阿里巴巴",
       "quota_type": "token",
       "groups": [
@@ -3205,14 +2887,92 @@
       ]
     },
     {
-      "name": "[高级]nai-diffusion-5-curated",
+      "name": "Qwen/Qwen3-Reranker-8B",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "神奇分组-里面啥都有",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "input_per_1m": 0.01,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "BAAI/bge-m3",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "input_per_1m": 0.05,
+          "output_per_1m": 0.05,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "神奇分组-里面啥都有",
+          "label": null,
+          "input_per_1m": 0.05,
+          "output_per_1m": 0.05,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "text-embedding-3-small",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "神奇分组-里面啥都有",
+          "label": null,
+          "input_per_1m": 0.02,
+          "output_per_1m": 0.02,
+          "cache_per_1m": 0.001,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "input_per_1m": 0.02,
+          "output_per_1m": 0.02,
+          "cache_per_1m": 0.001,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[高级]nai-diffusion-3",
       "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.2
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -3220,24 +2980,16 @@
       ]
     },
     {
-      "name": "gemini-3.5-flash",
+      "name": "[cli]gemini-2.5-flash-lite",
       "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "Gemini-按量",
           "label": "24小时稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.7,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "Vertex-Gemini",
-          "label": "只有外审算是甲最薄的Gemini了",
-          "input_per_1m": 1.2,
-          "output_per_1m": 7.2,
-          "cache_per_1m": 0.12,
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.12,
+          "cache_per_1m": 0.03,
           "cache_write_per_1m": null
         }
       ],
@@ -3246,14 +2998,55 @@
       ]
     },
     {
-      "name": "[cli-按次]gemini-3.6-flash",
-      "vendor": "Google",
+      "name": "gpt-image-2.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]claude-sonnet-4-6",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "按次大分组-注意embedding模型不是按次",
           "label": null,
           "price_per_request": 0.06
+        },
+        {
+          "name": "限时活动",
+          "label": "群员福利",
+          "price_per_request": 0.0204
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[旧按次]deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -3261,17 +3054,14 @@
       ]
     },
     {
-      "name": "gemini-3.6-flash-tiered",
-      "vendor": "Google",
-      "quota_type": "token",
+      "name": "[按次]hy3",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.01
         }
       ],
       "supported_endpoints": [
@@ -3297,14 +3087,14 @@
       ]
     },
     {
-      "name": "[按次]gemini-3.1-pro-preview-maxthinking-search",
-      "vendor": "Google",
+      "name": "[高级]nai-diffusion-4-5-full",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.07
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -3312,24 +3102,42 @@
       ]
     },
     {
-      "name": "BAAI/bge-m3",
-      "vendor": "Unknown",
+      "name": "grok-4.5",
+      "vendor": "xAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "神奇分组-里面啥都有",
-          "label": null,
-          "input_per_1m": 0.05,
-          "output_per_1m": 0.05,
-          "cache_per_1m": null,
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.4,
+          "output_per_1m": 1.2,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 1,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.1,
           "cache_write_per_1m": null
         },
         {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 0.05,
-          "output_per_1m": 0.05,
-          "cache_per_1m": null,
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.375,
+          "output_per_1m": 3,
+          "cache_per_1m": 0.0375,
           "cache_write_per_1m": null
         }
       ],
@@ -3338,34 +3146,17 @@
       ]
     },
     {
-      "name": "[旧按次]deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]claude-sonnet-5",
+      "name": "「反重力按量」claude-opus-4-6",
       "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "按次大分组-注意embedding模型不是按次",
+          "name": "低价小克",
           "label": null,
-          "price_per_request": 0.06
-        },
-        {
-          "name": "限时活动",
-          "label": "群员福利",
-          "price_per_request": 0.0204
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -3374,68 +3165,14 @@
       ]
     },
     {
-      "name": "[cli]gemini-3.1-flash-lite",
+      "name": "[cli-按次]gemini-3.1-pro-preview",
       "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.45,
-          "cache_per_1m": 0.0135,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]hy3",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 0.5,
-          "output_per_1m": 2,
-          "cache_per_1m": 0.125,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash-high",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.45,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]deepseek-v4-pro",
-      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "按次大分组-注意embedding模型不是按次",
           "label": null,
-          "price_per_request": 0.03
+          "price_per_request": 0.06
         }
       ],
       "supported_endpoints": [
@@ -3443,40 +3180,91 @@
       ]
     },
     {
-      "name": "Qwen/Qwen3-Embedding-8B",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "神奇分组-里面啥都有",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 0.01,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "wan2-7-image-pro",
-      "vendor": "Unknown",
+      "name": "grok-imagine-image-quality-latest",
+      "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.09
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-composer-2.5-fast",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Grok-按量",
+          "label": "Grok Heavy满血版",
+          "input_per_1m": 0.2,
+          "output_per_1m": 0.4,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.5-stt",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 8.4,
+          "output_per_1m": 50.4,
+          "cache_per_1m": 0.84,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -3492,6 +3280,84 @@
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
           "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "byte-plus-seedream-4-5",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.07
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-2.5-pro-maxthinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-high",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -3517,46 +3383,16 @@
       ]
     },
     {
-      "name": "[按次]glm-5.1",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]MiniMax-M3",
-      "vendor": "MiniMax",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.3",
-      "vendor": "xAI",
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.25,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.04,
+          "name": "GPT-官key",
+          "label": "超高缓-不卡不降智-(卡了是官方问题，已经是尊贵的官key了允许向openai官方哈气)-不许破限-检测到破限封号不退款！！",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
           "cache_write_per_1m": null
         }
       ],
@@ -3565,51 +3401,24 @@
       ]
     },
     {
-      "name": "byte-plus-seedream-4",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
+      "name": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-2026-03-02",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "price_per_request": 0.02
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.6,
+          "output_per_1m": 3.6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
         },
         {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]mimo-v2.5-pro",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 1.5,
-          "output_per_1m": 3,
-          "cache_per_1m": 0.0125,
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 1.6,
+          "output_per_1m": 9.6,
+          "cache_per_1m": 0.16,
           "cache_write_per_1m": null
         }
       ],
@@ -3618,32 +3427,14 @@
       ]
     },
     {
-      "name": "[正常]nai-diffusion-3",
-      "vendor": "Unknown",
+      "name": "qwen-image-plus",
+      "vendor": "阿里巴巴",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "生图",
           "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "grok-4.20-0309-reasoning",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.25,
-          "output_per_1m": 0.5,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
+          "price_per_request": 0.05
         }
       ],
       "supported_endpoints": [
@@ -3651,44 +3442,10 @@
       ]
     },
     {
-      "name": "grok-build-latest",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Grok-按量",
-          "label": "Grok Heavy满血版",
-          "input_per_1m": 0.2,
-          "output_per_1m": 0.4,
-          "cache_per_1m": 0.04,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
+      "name": "claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
-          "input_per_1m": 4.5,
-          "output_per_1m": 22.5,
-          "cache_per_1m": 0.45,
-          "cache_write_per_1m": 5.625
-        },
-        {
-          "name": "深夜福利",
-          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
-          "input_per_1m": 2.4,
-          "output_per_1m": 12,
-          "cache_per_1m": 0.24,
-          "cache_write_per_1m": 3
-        },
         {
           "name": "低价小克",
           "label": null,
@@ -3712,6 +3469,14 @@
           "output_per_1m": 7.5,
           "cache_per_1m": 0.15,
           "cache_write_per_1m": 1.875
+        },
+        {
+          "name": "满血小克",
+          "label": "绝对满血���掺，随便测",
+          "input_per_1m": 4.5,
+          "output_per_1m": 22.5,
+          "cache_per_1m": 0.45,
+          "cache_write_per_1m": 5.625
         }
       ],
       "supported_endpoints": [
@@ -3720,25 +3485,22 @@
       ]
     },
     {
-      "name": "[cli]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
+      "name": "[正常]nai-diffusion-5-curated",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.6,
-          "output_per_1m": 3.6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.09
         }
       ],
       "supported_endpoints": [
-        "openai"
+        "image-generation"
       ]
     },
     {
-      "name": "[按次]gemini-3.6-flash",
+      "name": "[按次]gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -3753,65 +3515,14 @@
       ]
     },
     {
-      "name": "[正常]nai-diffusion-furry-3",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "生图",
-          "label": "有nai，image2,24k非原生介意勿用",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation"
-      ]
-    },
-    {
-      "name": "[按次]gemini-3.8-flash",
+      "name": "[cli-按次]gemini-3-pro-preview",
       "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "按次大分组-注意embedding模型不是按次",
-          "label": null,
-          "input_per_1m": 75,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]kimi-k2.6",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模",
-          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
-          "input_per_1m": 3.25,
-          "output_per_1m": 13.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]kimi-k2.6",
-      "vendor": "Moonshot",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "按次大分组-注意embedding模型不是按次",
           "label": null,
-          "price_per_request": 0.04
+          "price_per_request": 0.06
         }
       ],
       "supported_endpoints": [
@@ -3819,69 +3530,54 @@
       ]
     },
     {
-      "name": "gemini-3.1-tts",
+      "name": "gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "GPT-官key",
+          "label": "超高缓-不卡不降智-(卡了是官方问题，已经是尊贵的官key了允许向openai官方哈气)-不许破限-检测到破限封号不退款！！",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "GPT",
+          "label": "没有luna了",
+          "input_per_1m": 1,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": 1.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash",
       "vendor": "Google",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
           "name": "Vertex-Gemini",
           "label": "只有外审算是甲最薄的Gemini了",
-          "price_per_request": 0.32
+          "input_per_1m": 0.4,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.04,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "满血小克",
-          "label": "绝对满血不掺，随便测",
-          "input_per_1m": 7.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": 0.75,
-          "cache_write_per_1m": 9.375
-        },
-        {
-          "name": "深夜福利",
-          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
-          "input_per_1m": 4,
-          "output_per_1m": 20,
-          "cache_per_1m": 0.4,
-          "cache_write_per_1m": 5
-        },
-        {
-          "name": "低价小克",
-          "label": null,
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "Vertex-Claude",
-          "label": "Vertex渠道claude和满血没区别",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": 6.25
-        },
-        {
-          "name": "AWS",
-          "label": "AWS渠道claude",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -3901,14 +3597,17 @@
       ]
     },
     {
-      "name": "anime",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
+      "name": "[cli]gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "测试分组不要选",
-          "label": "不要选不要选不要选",
-          "price_per_request": 10
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.9,
+          "cache_per_1m": 0.015,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -3916,23 +3615,322 @@
       ]
     },
     {
-      "name": "gemini-3.7-flash-low",
-      "vendor": "Google",
+      "name": "[按量]deepseek-v4-flash-vision-exp",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Gemini-按量",
-          "label": "24小时稳定",
-          "input_per_1m": 0.225,
-          "output_per_1m": 1.125,
-          "cache_per_1m": 0.0225,
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 0.05,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 4.5,
           "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
         "openai"
       ]
+    },
+    {
+      "name": "[按次]gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.45,
+          "output_per_1m": 2.7,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-stt",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 8.4,
+          "output_per_1m": 42,
+          "cache_per_1m": 0.84,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli-按次]gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image-lite",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "wan2-7-image",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gemini-3-pro-preview-maxthinking-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-按量",
+          "label": "24小时稳定",
+          "input_per_1m": 0.3,
+          "output_per_1m": 0.75,
+          "cache_per_1m": 0.009,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "Vertex-Gemini",
+          "label": "只有外审算是甲最薄的Gemini了",
+          "input_per_1m": 0.8,
+          "output_per_1m": 2,
+          "cache_per_1m": 0.024,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-sunburst",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "按次大分组-注意embedding模型不是按次",
+          "label": null,
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "dynavision-xl",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模",
+          "label": "自部署-仅有模型自带甲没有官方甲-flash 60t/s pro 40t/s 全量部署",
+          "input_per_1m": 4.5,
+          "output_per_1m": 13.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[正常]nai-diffusion-5-full",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "生图",
+          "label": "有nai，image2,24k非原生介意勿用",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation"
+      ]
+    },
+    {
+      "name": "claude-fable-5-1",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "满血小克",
+          "label": "绝对满血���掺，随便测",
+          "input_per_1m": 15,
+          "output_per_1m": 75,
+          "cache_per_1m": 0.375,
+          "cache_write_per_1m": 18.75
+        },
+        {
+          "name": "深夜福利",
+          "label": "今日是逆向ccmax，这个价格想测纯就测吧",
+          "input_per_1m": 8,
+          "output_per_1m": 40,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": 10
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
     }
   ],
-  "fetched_at": "2026-09-16T21:53:36.903Z"
+  "fetched_at": "2026-09-17T21:55:59.999Z"
 }
