@@ -31,21 +31,21 @@
   },
   "models": [
     {
-      "name": "gemini-3.1-pro-preview",
-      "vendor": "Google",
+      "name": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "cc_stable",
           "label": "claudecode稳定分组，2倍计价",
-          "input_per_1m": 8,
-          "output_per_1m": 24,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": null
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "anthropic",
         "openai"
       ]
     },
@@ -69,21 +69,6 @@
       ]
     },
     {
-      "name": "gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组，支持大部分模型",
-          "price_per_request": 0.91
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "claude-opus-4-6-c",
       "vendor": "Unknown",
       "quota_type": "per_request",
@@ -100,50 +85,10 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-6-c",
-      "vendor": "Unknown",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次数模型分组",
-          "label": "次数模型分组，支持次数调用",
-          "price_per_request": 0.72
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-flash-c",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次数模型分组",
-          "label": "次数模型分组，支持次数调用",
-          "price_per_request": 0.042
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
       "name": "claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "default",
-          "label": "默认分组，支持大部分模型",
-          "input_per_1m": 6.5,
-          "output_per_1m": 32.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": 8.125
-        },
         {
           "name": "cc_stable",
           "label": "claudecode稳定分组，2倍计价",
@@ -159,6 +104,14 @@
           "output_per_1m": 30,
           "cache_per_1m": 0.6,
           "cache_write_per_1m": 7.5
+        },
+        {
+          "name": "default",
+          "label": "默认分组，支持大部分模型",
+          "input_per_1m": 6.5,
+          "output_per_1m": 32.5,
+          "cache_per_1m": 0.65,
+          "cache_write_per_1m": 8.125
         }
       ],
       "supported_endpoints": [
@@ -239,17 +192,64 @@
       ]
     },
     {
-      "name": "claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
+      "name": "gemini-3.1-pro-preview",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
           "name": "cc_stable",
           "label": "claudecode稳定分组，2倍计价",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
+          "input_per_1m": 8,
+          "output_per_1m": 24,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组，支持大部分模型",
+          "price_per_request": 0.91
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6-c",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "次数模型分组",
+          "label": "次数模型分组，支持次数调用",
+          "price_per_request": 0.72
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-flash-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "次数模型分组",
+          "label": "次数模型分组，支持次数调用",
+          "price_per_request": 0.042
         }
       ],
       "supported_endpoints": [
@@ -258,5 +258,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-09-17T21:56:01.275Z"
+  "fetched_at": "2026-09-18T21:26:21.175Z"
 }
