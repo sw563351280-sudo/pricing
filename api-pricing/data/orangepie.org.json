@@ -4,29 +4,77 @@
   "base_currency": "USD",
   "models": [
     {
-      "name": "[风车酥]claude-sonnet-4-6",
+      "name": "[拿破仑酥]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "拿破仑酥",
+          "label": "Claude💗按量✨正向满血AWS直连",
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[巴斯克]claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 15.61686,
-          "output_per_1m": 78.0843,
-          "cache_per_1m": 1.561686,
-          "cache_write_per_1m": 19.521075
+          "input_per_1m": 41.097,
+          "output_per_1m": 205.485,
+          "cache_per_1m": 4.1097,
+          "cache_write_per_1m": 51.37125
         },
         {
-          "name": "风车酥",
-          "label": "Claude💗按量✨kiro，缓存命中高",
-          "input_per_1m": 15.61686,
-          "output_per_1m": 78.0843,
-          "cache_per_1m": 1.561686,
-          "cache_write_per_1m": 19.521075
+          "name": "巴斯克",
+          "label": "Claude💗反重力按量，量少不太稳定",
+          "input_per_1m": 41.097,
+          "output_per_1m": 205.485,
+          "cache_per_1m": 4.1097,
+          "cache_write_per_1m": 51.37125
         }
       ],
       "supported_endpoints": [
         "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-2.5-pro-128-nothinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.753445
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.753445
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -52,25 +100,56 @@
       ]
     },
     {
-      "name": "[特价]claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
+      "name": "[国王饼]gemini-3.7-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国王饼",
+          "label": "Gemeni💗按次✨vertex满血 支持tools",
+          "price_per_request": 0.68495
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.68495
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[曲奇]gemini-3.7-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 41.097,
-          "output_per_1m": 205.485,
-          "cache_per_1m": 4.1097,
-          "cache_write_per_1m": 51.37125
+          "price_per_request": 0.41097
         },
         {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 41.097,
-          "output_per_1m": 205.485,
-          "cache_per_1m": 4.1097,
-          "cache_write_per_1m": 51.37125
+          "name": "曲奇",
+          "label": null,
+          "price_per_request": 0.41097
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "「按次」gpt-5.6-luna",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.41097
         }
       ],
       "supported_endpoints": [
@@ -78,23 +157,262 @@
       ]
     },
     {
-      "name": "[松饼]gemini-3-flash-preview-128",
+      "name": "「按次」gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 2.7398
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[特价]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 49.3164,
+          "output_per_1m": 246.582,
+          "cache_per_1m": 4.93164,
+          "cache_write_per_1m": 61.6455
+        },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 49.3164,
+          "output_per_1m": 246.582,
+          "cache_per_1m": 4.93164,
+          "cache_write_per_1m": 61.6455
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "松饼",
           "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.205485
+          "price_per_request": 0.753445
         },
         {
           "name": "default",
           "label": null,
-          "price_per_request": 0.205485
+          "price_per_request": 0.753445
         }
       ],
       "supported_endpoints": [
         "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[奶油可颂]claude-haiku-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "奶油可颂",
+          "label": "Claude💗按量✨CC混合，稳推代码",
+          "input_per_1m": 27.398,
+          "output_per_1m": 136.99,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 27.398,
+          "output_per_1m": 136.99,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[布朗尼]gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "布朗尼",
+          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
+          "input_per_1m": 41.097,
+          "output_per_1m": 164.388,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 41.097,
+          "output_per_1m": 164.388,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[国王饼]gemini-2.5-pro-think",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国王饼",
+          "label": "Gemeni💗按次✨vertex满血 支持tools",
+          "price_per_request": 1.3699
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 1.3699
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[国王饼]gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国王饼",
+          "label": "Gemeni💗按次✨vertex满血 支持tools",
+          "price_per_request": 0.68495
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.68495
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[曲奇]gemini-3.7-flash-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.41097
+        },
+        {
+          "name": "曲奇",
+          "label": null,
+          "price_per_request": 0.41097
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[拿破仑酥]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "拿破仑酥",
+          "label": "Claude💗按量✨正向满血AWS直连",
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[拿破仑酥]claude-sonnet-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "拿破仑酥",
+          "label": "Claude💗按量✨正向满血AWS直连",
+          "input_per_1m": 205.485,
+          "output_per_1m": 1027.425,
+          "cache_per_1m": 20.5485,
+          "cache_write_per_1m": 256.85625
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 205.485,
+          "output_per_1m": 1027.425,
+          "cache_per_1m": 20.5485,
+          "cache_write_per_1m": 256.85625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[风车酥]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "风车酥",
+          "label": "Claude💗按量✨kiro，缓存命中高",
+          "input_per_1m": 26.0281,
+          "output_per_1m": 130.1405,
+          "cache_per_1m": 2.60281,
+          "cache_write_per_1m": 32.535125
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 26.0281,
+          "output_per_1m": 130.1405,
+          "cache_per_1m": 2.60281,
+          "cache_write_per_1m": 32.535125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
@@ -126,40 +444,25 @@
       ]
     },
     {
-      "name": "gpt-image-2.5-flare",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 1.09592
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[拿破仑酥]claude-opus-4-5",
+      "name": "[拿破仑酥]claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "拿破仑酥",
           "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
+          "input_per_1m": 205.485,
+          "output_per_1m": 1027.425,
+          "cache_per_1m": 20.5485,
+          "cache_write_per_1m": 256.85625
         },
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
+          "input_per_1m": 205.485,
+          "output_per_1m": 1027.425,
+          "cache_per_1m": 20.5485,
+          "cache_write_per_1m": 256.85625
         }
       ],
       "supported_endpoints": [
@@ -168,7 +471,34 @@
       ]
     },
     {
-      "name": "[特价]claude-opus-5",
+      "name": "[树莓费南雪]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 130.1405,
+          "output_per_1m": 650.7025,
+          "cache_per_1m": 13.01405,
+          "cache_write_per_1m": 162.675625
+        },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 130.1405,
+          "output_per_1m": 650.7025,
+          "cache_per_1m": 13.01405,
+          "cache_write_per_1m": 162.675625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[特价]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -194,74 +524,6 @@
       ]
     },
     {
-      "name": "[风车酥]claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 26.0281,
-          "output_per_1m": 130.1405,
-          "cache_per_1m": 2.60281,
-          "cache_write_per_1m": 32.535125
-        },
-        {
-          "name": "风车酥",
-          "label": "Claude💗按量✨kiro，缓存命中高",
-          "input_per_1m": 26.0281,
-          "output_per_1m": 130.1405,
-          "cache_per_1m": 2.60281,
-          "cache_write_per_1m": 32.535125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.41097
-        },
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.41097
-        },
-        {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 0.41097
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.68495
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "[按次]gpt-5.5",
       "vendor": "OpenAI",
       "quota_type": "per_request",
@@ -277,14 +539,25 @@
       ]
     },
     {
-      "name": "「按次」gpt-5.6-luna",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
+      "name": "[特价]claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": null,
-          "price_per_request": 0.41097
+          "input_per_1m": 205.485,
+          "output_per_1m": 1027.425,
+          "cache_per_1m": 20.5485,
+          "cache_write_per_1m": 256.85625
+        },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 205.485,
+          "output_per_1m": 1027.425,
+          "cache_per_1m": 20.5485,
+          "cache_write_per_1m": 256.85625
         }
       ],
       "supported_endpoints": [
@@ -319,231 +592,7 @@
       ]
     },
     {
-      "name": "[松饼]gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.205485
-        },
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.205485
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-3-flash-preview-128-nothinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.205485
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.205485
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[布朗尼]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "布朗尼",
-          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
-          "input_per_1m": 68.495,
-          "output_per_1m": 342.475,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 68.495,
-          "output_per_1m": 342.475,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[奶油可颂]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "奶油可颂",
-          "label": "Claude💗按量✨CC混合，稳推代码",
-          "input_per_1m": 95.893,
-          "output_per_1m": 479.465,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 95.893,
-          "output_per_1m": 479.465,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[奶油可颂]claude-haiku-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "奶油可颂",
-          "label": "Claude💗按量✨CC混合，稳推代码",
-          "input_per_1m": 27.398,
-          "output_per_1m": 136.99,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 27.398,
-          "output_per_1m": 136.99,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[拿破仑酥]claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "拿破仑酥",
-          "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 136.99,
-          "output_per_1m": 684.95,
-          "cache_per_1m": 13.699,
-          "cache_write_per_1m": 171.2375
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 136.99,
-          "output_per_1m": 684.95,
-          "cache_per_1m": 13.699,
-          "cache_write_per_1m": 171.2375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[特价]claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 205.485,
-          "output_per_1m": 1027.425,
-          "cache_per_1m": 20.5485,
-          "cache_write_per_1m": 256.85625
-        },
-        {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 205.485,
-          "output_per_1m": 1027.425,
-          "cache_per_1m": 20.5485,
-          "cache_write_per_1m": 256.85625
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[风车酥]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 26.0281,
-          "output_per_1m": 130.1405,
-          "cache_per_1m": 2.60281,
-          "cache_write_per_1m": 32.535125
-        },
-        {
-          "name": "风车酥",
-          "label": "Claude💗按量✨kiro，缓存命中高",
-          "input_per_1m": 26.0281,
-          "output_per_1m": 130.1405,
-          "cache_per_1m": 2.60281,
-          "cache_write_per_1m": 32.535125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[国王饼]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 1.3699
-        },
-        {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 1.3699
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[国王饼]gemini-3.7-flash",
+      "name": "[国王饼]gemini-3.8-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -556,410 +605,6 @@
           "name": "default",
           "label": null,
           "price_per_request": 0.68495
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[布朗尼]gemini-3.1-flash-lite-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "布朗尼",
-          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
-          "input_per_1m": 20.5485,
-          "output_per_1m": 54.796,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 20.5485,
-          "output_per_1m": 54.796,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-3.1-pro-preview-think",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.753445
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.753445
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[树莓费南雪]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 130.1405,
-          "output_per_1m": 650.7025,
-          "cache_per_1m": 13.01405,
-          "cache_write_per_1m": 162.675625
-        },
-        {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 130.1405,
-          "output_per_1m": 650.7025,
-          "cache_per_1m": 13.01405,
-          "cache_write_per_1m": 162.675625
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.41097
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.41097
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[布朗尼]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "布朗尼",
-          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
-          "input_per_1m": 68.495,
-          "output_per_1m": 369.873,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 68.495,
-          "output_per_1m": 369.873,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[曲奇]gemini-3.1-pro-preview-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.82194
-        },
-        {
-          "name": "曲奇",
-          "label": null,
-          "price_per_request": 0.82194
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按次]gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 1.09592
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[巴斯克]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 41.097,
-          "output_per_1m": 205.485,
-          "cache_per_1m": 4.1097,
-          "cache_write_per_1m": 51.37125
-        },
-        {
-          "name": "巴斯克",
-          "label": "Claude💗反重力按量，量少不太稳定",
-          "input_per_1m": 41.097,
-          "output_per_1m": 205.485,
-          "cache_per_1m": 4.1097,
-          "cache_write_per_1m": 51.37125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.41097
-        },
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.41097
-        },
-        {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 0.41097
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[树莓费南雪]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 130.1405,
-          "output_per_1m": 650.7025,
-          "cache_per_1m": 13.01405,
-          "cache_write_per_1m": 162.675625
-        },
-        {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 130.1405,
-          "output_per_1m": 650.7025,
-          "cache_per_1m": 13.01405,
-          "cache_write_per_1m": 162.675625
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[拿破仑酥]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "拿破仑酥",
-          "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[拿破仑酥]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "拿破仑酥",
-          "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 205.485,
-          "output_per_1m": 1027.425,
-          "cache_per_1m": 20.5485,
-          "cache_write_per_1m": 256.85625
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 205.485,
-          "output_per_1m": 1027.425,
-          "cache_per_1m": 20.5485,
-          "cache_write_per_1m": 256.85625
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[风车酥]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 26.0281,
-          "output_per_1m": 130.1405,
-          "cache_per_1m": 2.60281,
-          "cache_write_per_1m": 32.535125
-        },
-        {
-          "name": "风车酥",
-          "label": "Claude💗按量✨kiro，缓存命中高",
-          "input_per_1m": 26.0281,
-          "output_per_1m": 130.1405,
-          "cache_per_1m": 2.60281,
-          "cache_write_per_1m": 32.535125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-2.5-pro-128",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.753445
-        },
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.753445
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-2.5-pro-128-nothinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.753445
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.753445
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-2.5-pro-nothinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.753445
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.753445
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[国王饼]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 1.3699
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 1.3699
         }
       ],
       "supported_endpoints": [
@@ -1016,19 +661,131 @@
       ]
     },
     {
-      "name": "[国王饼]gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "[奶油可颂]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 0.68495
+          "name": "奶油可颂",
+          "label": "Claude💗按量✨CC混合，稳推代码",
+          "input_per_1m": 61.6455,
+          "output_per_1m": 308.2275,
+          "cache_per_1m": 6.16455,
+          "cache_write_per_1m": 77.056875
         },
         {
           "name": "default",
           "label": null,
-          "price_per_request": 0.68495
+          "input_per_1m": 61.6455,
+          "output_per_1m": 308.2275,
+          "cache_per_1m": 6.16455,
+          "cache_write_per_1m": 77.056875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[特价]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 102.7425,
+          "output_per_1m": 513.7125,
+          "cache_per_1m": 10.27425,
+          "cache_write_per_1m": 128.428125
+        },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 102.7425,
+          "output_per_1m": 513.7125,
+          "cache_per_1m": 10.27425,
+          "cache_write_per_1m": 128.428125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[特价]claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 41.097,
+          "output_per_1m": 205.485,
+          "cache_per_1m": 4.1097,
+          "cache_write_per_1m": 51.37125
+        },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 41.097,
+          "output_per_1m": 205.485,
+          "cache_per_1m": 4.1097,
+          "cache_write_per_1m": 51.37125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[风车酥]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 26.0281,
+          "output_per_1m": 130.1405,
+          "cache_per_1m": 2.60281,
+          "cache_write_per_1m": 32.535125
+        },
+        {
+          "name": "风车酥",
+          "label": "Claude💗按量✨kiro，缓存命中高",
+          "input_per_1m": 26.0281,
+          "output_per_1m": 130.1405,
+          "cache_per_1m": 2.60281,
+          "cache_write_per_1m": 32.535125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[布朗尼]gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "布朗尼",
+          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
+          "input_per_1m": 68.495,
+          "output_per_1m": 342.475,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 68.495,
+          "output_per_1m": 342.475,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1037,17 +794,29 @@
       ]
     },
     {
-      "name": "「按次」gpt-5.6-terra",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
+      "name": "[布朗尼]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": null,
-          "price_per_request": 0.68495
+          "input_per_1m": 41.097,
+          "output_per_1m": 164.388,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "布朗尼",
+          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
+          "input_per_1m": 41.097,
+          "output_per_1m": 164.388,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -1079,6 +848,105 @@
       ]
     },
     {
+      "name": "[松饼]gemini-2.5-pro-nothinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.753445
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.753445
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3.7-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.41097
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.41097
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[国王饼]gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国王饼",
+          "label": "Gemeni💗按次✨vertex满血 支持tools",
+          "price_per_request": 1.3699
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 1.3699
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[国王饼]gemini-3.1-pro-preview-think",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 1.3699
+        },
+        {
+          "name": "国王饼",
+          "label": "Gemeni💗按次✨vertex满血 支持tools",
+          "price_per_request": 1.3699
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-sunburst",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 1.09592
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "[拿破仑酥]claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -1106,50 +974,29 @@
       ]
     },
     {
-      "name": "[国王饼]gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.68495
-        },
-        {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 0.68495
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[布朗尼]gemini-3.8-flash",
-      "vendor": "Google",
+      "name": "[风车酥]claude-opus-4-7",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "布朗尼",
-          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
-          "input_per_1m": 41.097,
-          "output_per_1m": 164.388,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
           "name": "default",
           "label": null,
-          "input_per_1m": 41.097,
-          "output_per_1m": 164.388,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "input_per_1m": 26.0281,
+          "output_per_1m": 130.1405,
+          "cache_per_1m": 2.60281,
+          "cache_write_per_1m": 32.535125
+        },
+        {
+          "name": "风车酥",
+          "label": "Claude💗按量✨kiro，缓存命中高",
+          "input_per_1m": 26.0281,
+          "output_per_1m": 130.1405,
+          "cache_per_1m": 2.60281,
+          "cache_write_per_1m": 32.535125
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "anthropic",
         "openai"
       ]
     },
@@ -1175,25 +1022,25 @@
       ]
     },
     {
-      "name": "[拿破仑酥]claude-sonnet-4-5",
+      "name": "[奶油可颂]claude-opus-4-7",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "拿破仑酥",
-          "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 205.485,
-          "output_per_1m": 1027.425,
-          "cache_per_1m": 20.5485,
-          "cache_write_per_1m": 256.85625
+          "name": "奶油可颂",
+          "label": "Claude💗按量✨CC混合，稳推代码",
+          "input_per_1m": 95.893,
+          "output_per_1m": 479.465,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         },
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 205.485,
-          "output_per_1m": 1027.425,
-          "cache_per_1m": 20.5485,
-          "cache_write_per_1m": 256.85625
+          "input_per_1m": 95.893,
+          "output_per_1m": 479.465,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1202,39 +1049,64 @@
       ]
     },
     {
-      "name": "[松饼]gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "[拿破仑酥]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.41097
+          "name": "拿破仑酥",
+          "label": "Claude💗按量✨正向满血AWS直连",
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
         },
         {
           "name": "default",
           "label": null,
-          "price_per_request": 0.41097
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "[特价]claude-opus-4-7",
+      "name": "[树莓费南雪]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 102.7425,
-          "output_per_1m": 513.7125,
-          "cache_per_1m": 10.27425,
-          "cache_write_per_1m": 128.428125
+          "input_per_1m": 130.1405,
+          "output_per_1m": 650.7025,
+          "cache_per_1m": 13.01405,
+          "cache_write_per_1m": 162.675625
         },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 130.1405,
+          "output_per_1m": 650.7025,
+          "cache_per_1m": 13.01405,
+          "cache_write_per_1m": 162.675625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[特价]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
         {
           "name": "树莓费南雪",
           "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
@@ -1242,6 +1114,14 @@
           "output_per_1m": 513.7125,
           "cache_per_1m": 10.27425,
           "cache_write_per_1m": 128.428125
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 102.7425,
+          "output_per_1m": 513.7125,
+          "cache_per_1m": 10.27425,
+          "cache_write_per_1m": 128.428125
         }
       ],
       "supported_endpoints": [
@@ -1249,19 +1129,46 @@
       ]
     },
     {
-      "name": "[国王饼]gemini-3.1-pro-preview-think",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "[风车酥]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 1.3699
+          "name": "风车酥",
+          "label": "Claude💗按量✨kiro，缓存命中高",
+          "input_per_1m": 15.61686,
+          "output_per_1m": 78.0843,
+          "cache_per_1m": 1.561686,
+          "cache_write_per_1m": 19.521075
         },
         {
           "name": "default",
           "label": null,
-          "price_per_request": 1.3699
+          "input_per_1m": 15.61686,
+          "output_per_1m": 78.0843,
+          "cache_per_1m": 1.561686,
+          "cache_write_per_1m": 19.521075
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-2.5-pro-128",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.753445
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.753445
         }
       ],
       "supported_endpoints": [
@@ -1297,17 +1204,56 @@
       ]
     },
     {
-      "name": "gpt-image-2.5-sunburst",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
+      "name": "[布朗尼]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
       "groups": [
+        {
+          "name": "布朗尼",
+          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
+          "input_per_1m": 68.495,
+          "output_per_1m": 369.873,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
         {
           "name": "default",
           "label": null,
-          "price_per_request": 1.09592
+          "input_per_1m": 68.495,
+          "output_per_1m": 369.873,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[布朗尼]gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "布朗尼",
+          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
+          "input_per_1m": 20.5485,
+          "output_per_1m": 54.796,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 20.5485,
+          "output_per_1m": 54.796,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
@@ -1339,25 +1285,25 @@
       ]
     },
     {
-      "name": "[拿破仑酥]claude-opus-4-1",
+      "name": "[拿破仑酥]claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "拿破仑酥",
           "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 1027.425,
-          "output_per_1m": 5137.125,
-          "cache_per_1m": 102.7425,
-          "cache_write_per_1m": 1284.28125
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
         },
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 1027.425,
-          "output_per_1m": 5137.125,
-          "cache_per_1m": 102.7425,
-          "cache_write_per_1m": 1284.28125
+          "input_per_1m": 342.475,
+          "output_per_1m": 1712.375,
+          "cache_per_1m": 34.2475,
+          "cache_write_per_1m": 428.09375
         }
       ],
       "supported_endpoints": [
@@ -1366,17 +1312,64 @@
       ]
     },
     {
-      "name": "[曲奇]gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "[特价]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": null,
+          "input_per_1m": 102.7425,
+          "output_per_1m": 513.7125,
+          "cache_per_1m": 10.27425,
+          "cache_write_per_1m": 128.428125
+        },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 102.7425,
+          "output_per_1m": 513.7125,
+          "cache_per_1m": 10.27425,
+          "cache_write_per_1m": 128.428125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.205485
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.205485
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
           "price_per_request": 0.41097
         },
         {
-          "name": "曲奇",
+          "name": "default",
           "label": null,
           "price_per_request": 0.41097
         }
@@ -1387,22 +1380,214 @@
       ]
     },
     {
-      "name": "「按次」gpt-6-astra",
-      "vendor": "OpenAI",
+      "name": "[曲奇]gemini-3.1-pro-preview-search",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": null,
-          "price_per_request": 2.7398
+          "price_per_request": 0.82194
+        },
+        {
+          "name": "曲奇",
+          "label": null,
+          "price_per_request": 0.82194
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "[国王饼]gemini-2.5-pro-think",
+      "name": "[树莓费南雪]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 130.1405,
+          "output_per_1m": 650.7025,
+          "cache_per_1m": 13.01405,
+          "cache_write_per_1m": 162.675625
+        },
+        {
+          "name": "树莓费南雪",
+          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
+          "input_per_1m": 130.1405,
+          "output_per_1m": 650.7025,
+          "cache_per_1m": 13.01405,
+          "cache_write_per_1m": 162.675625
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[拿破仑酥]claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "拿破仑酥",
+          "label": "Claude💗按量✨正向满血AWS直连",
+          "input_per_1m": 136.99,
+          "output_per_1m": 684.95,
+          "cache_per_1m": 13.699,
+          "cache_write_per_1m": 171.2375
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 136.99,
+          "output_per_1m": 684.95,
+          "cache_per_1m": 13.699,
+          "cache_write_per_1m": 171.2375
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[巴斯克]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 41.097,
+          "output_per_1m": 205.485,
+          "cache_per_1m": 4.1097,
+          "cache_write_per_1m": 51.37125
+        },
+        {
+          "name": "巴斯克",
+          "label": "Claude💗反重力按量，量少不太稳定",
+          "input_per_1m": 41.097,
+          "output_per_1m": 205.485,
+          "cache_per_1m": 4.1097,
+          "cache_write_per_1m": 51.37125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3-flash-preview-128",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.205485
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.205485
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3-flash-preview-128-nothinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.205485
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.205485
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3.1-pro-preview-think",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.753445
+        },
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.753445
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.41097
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.41097
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[国王饼]gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "国王饼",
+          "label": "Gemeni💗按次✨vertex满血 支持tools",
+          "price_per_request": 0.68495
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.68495
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[国王饼]gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1444,100 +1629,14 @@
       ]
     },
     {
-      "name": "[树莓费南雪]claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 260.281,
-          "output_per_1m": 1301.405,
-          "cache_per_1m": 26.0281,
-          "cache_write_per_1m": 325.35125
-        },
-        {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 260.281,
-          "output_per_1m": 1301.405,
-          "cache_per_1m": 26.0281,
-          "cache_write_per_1m": 325.35125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-3.1-pro-preview",
-      "vendor": "Google",
+      "name": "[按次]gpt-image-2",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.753445
-        },
-        {
           "name": "default",
           "label": null,
-          "price_per_request": 0.753445
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[树莓费南雪]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 130.1405,
-          "output_per_1m": 650.7025,
-          "cache_per_1m": 13.01405,
-          "cache_write_per_1m": 162.675625
-        },
-        {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 130.1405,
-          "output_per_1m": 650.7025,
-          "cache_per_1m": 13.01405,
-          "cache_write_per_1m": 162.675625
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[特价]claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 102.7425,
-          "output_per_1m": 513.7125,
-          "cache_per_1m": 10.27425,
-          "cache_write_per_1m": 128.428125
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 102.7425,
-          "output_per_1m": 513.7125,
-          "cache_per_1m": 10.27425,
-          "cache_write_per_1m": 128.428125
+          "price_per_request": 1.09592
         }
       ],
       "supported_endpoints": [
@@ -1545,249 +1644,25 @@
       ]
     },
     {
-      "name": "[巴斯克]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 41.097,
-          "output_per_1m": 205.485,
-          "cache_per_1m": 4.1097,
-          "cache_write_per_1m": 51.37125
-        },
-        {
-          "name": "巴斯克",
-          "label": "Claude💗反重力按量，量少不太稳定",
-          "input_per_1m": 41.097,
-          "output_per_1m": 205.485,
-          "cache_per_1m": 4.1097,
-          "cache_write_per_1m": 51.37125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[松饼]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "松饼",
-          "label": "Gemeni💗按次✨逆向",
-          "price_per_request": 0.753445
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.753445
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[国王饼]gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "国王饼",
-          "label": "Gemeni💗按次✨vertex满血 支持tools",
-          "price_per_request": 0.68495
-        },
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.68495
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[布朗尼]gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "布朗尼",
-          "label": "Gemeni💗按量✨超优质T3，渠道质量最好，聪明又稳定",
-          "input_per_1m": 41.097,
-          "output_per_1m": 164.388,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 41.097,
-          "output_per_1m": 164.388,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[奶油可颂]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "奶油可颂",
-          "label": "Claude💗按量✨CC混合，稳推代码",
-          "input_per_1m": 61.6455,
-          "output_per_1m": 308.2275,
-          "cache_per_1m": 6.16455,
-          "cache_write_per_1m": 77.056875
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 61.6455,
-          "output_per_1m": 308.2275,
-          "cache_per_1m": 6.16455,
-          "cache_write_per_1m": 77.056875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[拿破仑酥]claude-haiku-4-5",
+      "name": "[拿破仑酥]claude-opus-4-1",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "拿破仑酥",
           "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 68.495,
-          "output_per_1m": 342.475,
-          "cache_per_1m": 6.8495,
-          "cache_write_per_1m": 85.61875
+          "input_per_1m": 1027.425,
+          "output_per_1m": 5137.125,
+          "cache_per_1m": 102.7425,
+          "cache_write_per_1m": 1284.28125
         },
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 68.495,
-          "output_per_1m": 342.475,
-          "cache_per_1m": 6.8495,
-          "cache_write_per_1m": 85.61875
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[拿破仑酥]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "拿破仑酥",
-          "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
-        },
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[特价]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 49.3164,
-          "output_per_1m": 246.582,
-          "cache_per_1m": 4.93164,
-          "cache_write_per_1m": 61.6455
-        },
-        {
-          "name": "树莓费南雪",
-          "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 49.3164,
-          "output_per_1m": 246.582,
-          "cache_per_1m": 4.93164,
-          "cache_write_per_1m": 61.6455
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[曲奇]gemini-3.7-flash-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "price_per_request": 0.41097
-        },
-        {
-          "name": "曲奇",
-          "label": null,
-          "price_per_request": 0.41097
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[拿破仑酥]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": null,
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
-        },
-        {
-          "name": "拿破仑酥",
-          "label": "Claude💗按量✨正向满血AWS直连",
-          "input_per_1m": 342.475,
-          "output_per_1m": 1712.375,
-          "cache_per_1m": 34.2475,
-          "cache_write_per_1m": 428.09375
+          "input_per_1m": 1027.425,
+          "output_per_1m": 5137.125,
+          "cache_per_1m": 102.7425,
+          "cache_write_per_1m": 1284.28125
         }
       ],
       "supported_endpoints": [
@@ -1823,21 +1698,105 @@
       ]
     },
     {
-      "name": "[拿破仑酥]claude-opus-5",
+      "name": "[松饼]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.753445
+        },
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.753445
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[松饼]gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "松饼",
+          "label": "Gemeni💗按次✨逆向",
+          "price_per_request": 0.41097
+        },
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.41097
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按次]gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.68495
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[拿破仑酥]claude-haiku-4-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "拿破仑酥",
           "label": "Claude💗按量✨正向满血AWS直连",
+          "input_per_1m": 68.495,
+          "output_per_1m": 342.475,
+          "cache_per_1m": 6.8495,
+          "cache_write_per_1m": 85.61875
+        },
+        {
+          "name": "default",
+          "label": null,
+          "input_per_1m": 68.495,
+          "output_per_1m": 342.475,
+          "cache_per_1m": 6.8495,
+          "cache_write_per_1m": 85.61875
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[拿破仑酥]claude-opus-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
           "input_per_1m": 342.475,
           "output_per_1m": 1712.375,
           "cache_per_1m": 34.2475,
           "cache_write_per_1m": 428.09375
         },
         {
-          "name": "default",
-          "label": null,
+          "name": "拿破仑酥",
+          "label": "Claude💗按量✨正向满血AWS直连",
           "input_per_1m": 342.475,
           "output_per_1m": 1712.375,
           "cache_per_1m": 34.2475,
@@ -1850,25 +1809,56 @@
       ]
     },
     {
-      "name": "[特��]claude-opus-4-6",
+      "name": "[树莓费南雪]claude-fable-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": null,
-          "input_per_1m": 102.7425,
-          "output_per_1m": 513.7125,
-          "cache_per_1m": 10.27425,
-          "cache_write_per_1m": 128.428125
+          "input_per_1m": 260.281,
+          "output_per_1m": 1301.405,
+          "cache_per_1m": 26.0281,
+          "cache_write_per_1m": 325.35125
         },
         {
           "name": "树莓费南雪",
           "label": "Claude💗按量✨CCMAX，自有号池，会有限额",
-          "input_per_1m": 102.7425,
-          "output_per_1m": 513.7125,
-          "cache_per_1m": 10.27425,
-          "cache_write_per_1m": 128.428125
+          "input_per_1m": 260.281,
+          "output_per_1m": 1301.405,
+          "cache_per_1m": 26.0281,
+          "cache_write_per_1m": 325.35125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "「按次」gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 0.68495
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": null,
+          "price_per_request": 1.09592
         }
       ],
       "supported_endpoints": [
@@ -1876,5 +1866,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-09-19T21:19:02.849Z"
+  "fetched_at": "2026-09-20T21:10:38.692Z"
 }
