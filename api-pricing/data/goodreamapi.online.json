@@ -28,6 +28,10 @@
       "ratio": 0.15,
       "label": "Codex GPT-plus+team号池混合"
     },
+    "Gemini-T3-官key": {
+      "ratio": 1.8,
+      "label": "官方key渠道，稳！"
+    },
     "Gemini-自营反重力": {
       "ratio": 0.2,
       "label": "官方反重力自营渠道"
@@ -47,14 +51,17 @@
   },
   "models": [
     {
-      "name": "guan-0.04-gemini-3.8-flash-",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "官混-量-稳-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
+          "name": "Claude-官混",
+          "label": "官混渠，稳定，请开流",
+          "input_per_1m": 700,
+          "output_per_1m": 3500,
+          "cache_per_1m": 70,
+          "cache_write_per_1m": 10
         }
       ],
       "supported_endpoints": [
@@ -62,37 +69,7 @@
       ]
     },
     {
-      "name": "优化-anti-0.04-gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "次-0.03-grok-4.3",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "满血-纯-0.5-claude-opus-4.6",
+      "name": "满血-纯-0.5-claude-opus-4.6-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -107,14 +84,14 @@
       ]
     },
     {
-      "name": "自研-0.18-claude-opus-4.8",
+      "name": "第3方-0.24-claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 18
+          "price_per_request": 24
         }
       ],
       "supported_endpoints": [
@@ -122,29 +99,14 @@
       ]
     },
     {
-      "name": "正价kiro-0.15-claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 15
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ver-ant-0.05-gemini-3.1-pro-preview",
+      "name": "自营-0.035-gemini-3.1-pro-preview-search",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 5
+          "price_per_request": 3.5
         }
       ],
       "supported_endpoints": [
@@ -152,59 +114,14 @@
       ]
     },
     {
-      "name": "mmq-备用渠道-anti-0.25-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "满血-纯-0.5-claude-opus-4.5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 50
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "0.05-claude-1-meng",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "备用-0.02-gemini-3.7-flash-thinking",
+      "name": "ais-0.04-gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 2
+          "price_per_request": 4
         }
       ],
       "supported_endpoints": [
@@ -212,144 +129,17 @@
       ]
     },
     {
-      "name": "速刷-anti-0.25-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "官混-0.06-gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 6
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "anti自营-量-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Cluade-反重力自营anti",
-          "label": "官方反重力自营渠道",
-          "input_per_1m": 225,
-          "output_per_1m": 1125,
-          "cache_per_1m": 22.5,
-          "cache_write_per_1m": 281.25
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "生图-4K-0.2-gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 20
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "mmq-备用渠道-anti-0.25-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "官逆-0.3-claude-opus-4.6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 30
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "自研-0.18-claude-opus-4.6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 18
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-fable-5",
+      "name": "claude-haiku-4.5-20251001",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "Claude-DR量",
           "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 300,
-          "output_per_1m": 1500,
-          "cache_per_1m": 30,
-          "cache_write_per_1m": 375
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 150,
-          "output_per_1m": 750,
-          "cache_per_1m": 15,
-          "cache_write_per_1m": 187.5
+          "input_per_1m": 30,
+          "output_per_1m": 150,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 37.5
         }
       ],
       "supported_endpoints": [
@@ -372,32 +162,14 @@
       ]
     },
     {
-      "name": "官混-量-稳-claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-官混",
-          "label": "官混渠，稳定，请开流",
-          "input_per_1m": 700,
-          "output_per_1m": 3500,
-          "cache_per_1m": 70,
-          "cache_write_per_1m": 10
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "正价kiro-0.15-claude-opus-4.6",
-      "vendor": "Anthropic",
+      "name": "生图-2K-0.14-gpt-image-2",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 15
+          "price_per_request": 14
         }
       ],
       "supported_endpoints": [
@@ -405,52 +177,7 @@
       ]
     },
     {
-      "name": "薄甲-0.4-claude-opus-4-5-20251101",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 40
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "薄甲-0.4-claude-opus-4-6-20260203",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 40
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "vertex-q-0.045-gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "vertex-0.04-gemini-3.8-flash",
+      "name": "guan-0.04-gemini-3.8-flash-search-high",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -483,17 +210,14 @@
       ]
     },
     {
-      "name": "官混-量-稳-claude-opus-4-7",
+      "name": "aws-0.6-claude-opus-4-7",
       "vendor": "Anthropic",
-      "quota_type": "token",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "Claude-官混",
-          "label": "官混渠，稳定，请开流",
-          "input_per_1m": 700,
-          "output_per_1m": 3500,
-          "cache_per_1m": 70,
-          "cache_write_per_1m": 10
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 60
         }
       ],
       "supported_endpoints": [
@@ -501,14 +225,14 @@
       ]
     },
     {
-      "name": "guan-0.05-gemini-3.1-pro-preview-search",
-      "vendor": "Google",
+      "name": "官-0.06-deepseek-v4-pro-0813",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 5
+          "price_per_request": 6
         }
       ],
       "supported_endpoints": [
@@ -516,44 +240,14 @@
       ]
     },
     {
-      "name": "guan-0.05-gemini-3.1-pro-preview-search-high",
-      "vendor": "Google",
+      "name": "生图-4K-0.2-gpt-image-2",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3-flash-preview-纯文",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "anti-0.02-gemini-3.8-flash-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
+          "price_per_request": 20
         }
       ],
       "supported_endpoints": [
@@ -576,47 +270,14 @@
       ]
     },
     {
-      "name": "官混-量-稳-claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-官混",
-          "label": "官混渠，稳定，请开流",
-          "input_per_1m": 700,
-          "output_per_1m": 3500,
-          "cache_per_1m": 70,
-          "cache_write_per_1m": 10
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "官逆-0.3-claude-opus-4.6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 30
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价-0.06-glm-5.2",
+      "name": "1m-0.15-glm-5.2",
       "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 6
+          "price_per_request": 15
         }
       ],
       "supported_endpoints": [
@@ -624,107 +285,17 @@
       ]
     },
     {
-      "name": "多渠道-号池轮转-较稳-甲薄-0.06-gemini-3.1-pro-preview-纯文",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 6
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ais-0.04-gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "anti-0.02-gemini-3.5-flash-抗截断",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3.7-flash-纯文",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "anti-0.04-gemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3.6-flash-纯文",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-20250514",
+      "name": "ccmax-claude-opus-4-5-20251101",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Claude-DR量",
-          "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 450,
-          "output_per_1m": 2250,
-          "cache_per_1m": 45,
-          "cache_write_per_1m": 562.5
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 800,
+          "output_per_1m": 4000,
+          "cache_per_1m": 80,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -732,22 +303,7 @@
       ]
     },
     {
-      "name": "ver-ant-0.02-gemini-3.5-flash-nothinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "copilot-0.35-claude-opus-4-7-thinking",
+      "name": "copilot-0.35-claude-opus-4-7",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -777,59 +333,14 @@
       ]
     },
     {
-      "name": "官逆-0.3-claude-opus-4.5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 30
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "薄甲-0.4-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 40
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "自部署-0.04-glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "限时特价-anti-0.016-gemini-3.6-flash",
+      "name": "官混-0.06-gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 1.6
+          "price_per_request": 6
         }
       ],
       "supported_endpoints": [
@@ -837,14 +348,14 @@
       ]
     },
     {
-      "name": "1m-0.15-glm-5.3",
-      "vendor": "智谱",
+      "name": "aws-0.6-claude-opus-4-8",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 15
+          "price_per_request": 60
         }
       ],
       "supported_endpoints": [
@@ -852,14 +363,14 @@
       ]
     },
     {
-      "name": "vertex-q-0.045-gemini-3.7-flash",
-      "vendor": "Google",
+      "name": "自研-0.18-claude-opus-4.8",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 4.5
+          "price_per_request": 18
         }
       ],
       "supported_endpoints": [
@@ -885,22 +396,45 @@
       ]
     },
     {
-      "name": "ver-ant-0.018-gemini-3-flash-preview",
+      "name": "anti自营-gemini-3.1-pro",
       "vendor": "Google",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.8
+          "name": "Gemini-自营反重力",
+          "label": "官方反重力自营渠道",
+          "input_per_1m": 40,
+          "output_per_1m": 240,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
+        "gemini",
         "openai"
       ]
     },
     {
-      "name": "次-0.03-grok-4.2",
+      "name": "anti自营-量-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Cluade-反重力自营anti",
+          "label": "官方反重力自营渠道",
+          "input_per_1m": 225,
+          "output_per_1m": 1125,
+          "cache_per_1m": 22.5,
+          "cache_write_per_1m": 281.25
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "次-0.03-grok-4.1-fast",
       "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
@@ -915,14 +449,17 @@
       ]
     },
     {
-      "name": "次-0.03-grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "per_request",
+      "name": "ccmax-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 3
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 800,
+          "output_per_1m": 4000,
+          "cache_per_1m": 80,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -930,14 +467,14 @@
       ]
     },
     {
-      "name": "限时特价-anti-0.02-gemini-3.1-pro",
+      "name": "guan-0.04-gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 2
+          "price_per_request": 4
         }
       ],
       "supported_endpoints": [
@@ -960,14 +497,401 @@
       ]
     },
     {
-      "name": "ais-0.06-gemini-2.5-pro",
+      "name": "anti-0.02-gemini-3.7-flash-抗截断",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "aws-0.6-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 60
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "次-0.03-grok-4.2",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "正价kiro-0.15-claude-opus-4.7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "薄甲-0.4-claude-opus-4-6-20260203",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 40
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3.6-flash-纯文",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ccmax-claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 800,
+          "output_per_1m": 4000,
+          "cache_per_1m": 80,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "guan-0.05-gemini-3.1-pro-preview-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "速刷-anti-0.25-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-20250514",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS+CC渠道2折，满血支持高缓存",
+          "input_per_1m": 90,
+          "output_per_1m": 450,
+          "cache_per_1m": 9,
+          "cache_write_per_1m": 112.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mq-anti-0.3-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 30
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "copilot-0.35-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 35
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "官逆-0.3-claude-opus-4.6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 30
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "企业cli-0.035-gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "自营-0.02-gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ais-0.04-gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ver-ant-0.05-gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "guan-0.05-gemini-3.1-pro-preview-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS+CC渠道2折，满血支持高缓存",
+          "input_per_1m": 300,
+          "output_per_1m": 1500,
+          "cache_per_1m": 30,
+          "cache_write_per_1m": 375
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "anti-0.02-gemini-3.8-flash-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ccmax-claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 320,
+          "output_per_1m": 1600,
+          "cache_per_1m": 32,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "薄甲-0.1-claude-sonnet-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 10
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "正价kiro-0.15-claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ver-ant-0.05-gemini-3.1-pro-preview-nothinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价-0.06-glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
           "price_per_request": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "自营-0.02-gemini-3.7-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
         }
       ],
       "supported_endpoints": [
@@ -990,14 +914,14 @@
       ]
     },
     {
-      "name": "anti-0.04-gemini-3.1-pro-preview-抗截断",
+      "name": "绘图-0.25-gemini-3-pro-image-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 4
+          "price_per_request": 25
         }
       ],
       "supported_endpoints": [
@@ -1005,14 +929,14 @@
       ]
     },
     {
-      "name": "ver-ant-0.025-gemini-3.6-flash",
+      "name": "ver-ant-0.018-gemini-3-flash-preview-nothinking",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 2.5
+          "price_per_request": 1.8
         }
       ],
       "supported_endpoints": [
@@ -1020,14 +944,14 @@
       ]
     },
     {
-      "name": "生图-2K-0.14-gpt-image-2",
-      "vendor": "OpenAI",
+      "name": "薄甲-0.1-claude-sonnet-4-6",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 14
+          "price_per_request": 10
         }
       ],
       "supported_endpoints": [
@@ -1035,14 +959,14 @@
       ]
     },
     {
-      "name": "次-0.03-grok-4",
-      "vendor": "xAI",
+      "name": "guan-0.05-gemini-3.1-pro-preview",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 3
+          "price_per_request": 5
         }
       ],
       "supported_endpoints": [
@@ -1050,7 +974,7 @@
       ]
     },
     {
-      "name": "备用-0.02-gemini-3.7-flash",
+      "name": "限时特价-anti-0.02-gemini-3.1-pro-low",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1083,61 +1007,16 @@
       ]
     },
     {
-      "name": "copilot-0.35-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 35
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ais-0.04-gemini-3.6-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "官混-0.06-gemini-3.1-pro-preview-nothinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 6
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ccmax-claude-sonnet-5",
+      "name": "ccmax-claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "满血ccmax",
           "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 320,
-          "output_per_1m": 1600,
-          "cache_per_1m": 32,
+          "input_per_1m": 800,
+          "output_per_1m": 4000,
+          "cache_per_1m": 80,
           "cache_write_per_1m": null
         }
       ],
@@ -1146,22 +1025,7 @@
       ]
     },
     {
-      "name": "速刷-anti-0.25-claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "0.05-claude-2-meng",
+      "name": "0.05-claude-1-meng",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -1169,69 +1033,6 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "自营-0.02-gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ais-0.04-gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-20250514",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 90,
-          "output_per_1m": 450,
-          "cache_per_1m": 9,
-          "cache_write_per_1m": 112.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "awsb-cc-0.25-claude-opus-4.6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -1258,14 +1059,14 @@
       ]
     },
     {
-      "name": "aws-0.6-claude-opus-4-6",
-      "vendor": "Anthropic",
+      "name": "自部署-0.04-glm-5.2",
+      "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 60
+          "price_per_request": 4
         }
       ],
       "supported_endpoints": [
@@ -1273,32 +1074,14 @@
       ]
     },
     {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 60,
-          "output_per_1m": 300,
-          "cache_per_1m": 6,
-          "cache_write_per_1m": 75
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ver-ant-0.05-gemini-2.5-pro",
+      "name": "限时特价-anti-0.02-gemini-3.1-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 5
+          "price_per_request": 2
         }
       ],
       "supported_endpoints": [
@@ -1306,7 +1089,346 @@
       ]
     },
     {
-      "name": "限时特价-anti-0.02-gemini-3.1-pro-high",
+      "name": "ccmax-claude-sonnet-4-5-20250929",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 480,
+          "output_per_1m": 2400,
+          "cache_per_1m": 48,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "官逆-0.3-claude-opus-4.5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 30
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "满血-纯-0.5-claude-opus-4.5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 50
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS+CC渠道2折，满血支持高缓存",
+          "input_per_1m": 150,
+          "output_per_1m": 750,
+          "cache_per_1m": 15,
+          "cache_write_per_1m": 187.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "绘图-0.18-gemini-3.1-flash-image-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "次-0.03-grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ccmax-claude-haiku-4-5-20251001",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 160,
+          "output_per_1m": 800,
+          "cache_per_1m": 16,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "满血-纯-0.5-claude-opus-4.6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 50
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "薄甲-0.4-claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 40
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "企业cli-0.035-gemini-3.1-pro-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ais-0.04-gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-20250514",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS+CC渠道2折，满血支持高缓存",
+          "input_per_1m": 450,
+          "output_per_1m": 2250,
+          "cache_per_1m": 45,
+          "cache_write_per_1m": 562.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "次-0.03-grok-4",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "自研-0.18-claude-opus-4.7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "t3-gemini-3-pro-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-T3-官key",
+          "label": "官方key渠道，稳！",
+          "input_per_1m": 360,
+          "output_per_1m": 2160,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ccmax-claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 480,
+          "output_per_1m": 2400,
+          "cache_per_1m": 48,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ais-0.06-gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS+CC渠道2折，满血支持高缓存",
+          "input_per_1m": 150,
+          "output_per_1m": 750,
+          "cache_per_1m": 15,
+          "cache_write_per_1m": 187.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ccmax-claude-fable-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "满血ccmax",
+          "label": "纯CCMax，正规代码可用",
+          "input_per_1m": 1600,
+          "output_per_1m": 8000,
+          "cache_per_1m": 160,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "企业cli-0.035-gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "anti-0.02-gemini-3.5-flash-抗截断",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "anti-0.02-gemini-3.6-flash-抗截断",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1339,74 +1461,14 @@
       ]
     },
     {
-      "name": "官-0.04-deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "官-0.06-deepseek-v4-pro-0813",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 6
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "guan-0.05-gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ais-0.04-gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "aws-0.6-claude-opus-4-8",
+      "name": "正价kiro-0.15-claude-opus-4.6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 60
+          "price_per_request": 15
         }
       ],
       "supported_endpoints": [
@@ -1414,16 +1476,31 @@
       ]
     },
     {
-      "name": "ccmax-claude-sonnet-4-5-20250929",
-      "vendor": "Anthropic",
+      "name": "vertex-q-0.045-gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "t3-gemini-3.7-flash",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 480,
-          "output_per_1m": 2400,
-          "cache_per_1m": 48,
+          "name": "Gemini-T3-官key",
+          "label": "官方key渠道，稳！",
+          "input_per_1m": 270,
+          "output_per_1m": 1620,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -1432,62 +1509,14 @@
       ]
     },
     {
-      "name": "guan-0.04-gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4.1-20250805",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 450,
-          "output_per_1m": 2250,
-          "cache_per_1m": 45,
-          "cache_write_per_1m": 562.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ver-ant-0.02-gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "正价kiro-0.15-claude-opus-4.7",
+      "name": "awsb-cc-0.25-claude-opus-4.6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 15
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -1495,74 +1524,14 @@
       ]
     },
     {
-      "name": "薄甲-0.1-claude-sonnet-4-6",
+      "name": "copilot-0.35-claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 10
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "1m-0.15-glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 15
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "特价-0.06-glm-5.3",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 6
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "guan-0.04-gemini-3.8-flash-search-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "mmq-anti-0.25-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
+          "price_per_request": 35
         }
       ],
       "supported_endpoints": [
@@ -1588,29 +1557,14 @@
       ]
     },
     {
-      "name": "anti-0.02-gemini-3.7-flash-抗截断",
+      "name": "ais-0.04-gemini-3.5-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "绘图-0.25-gemini-3-pro-image-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 25
+          "price_per_request": 4
         }
       ],
       "supported_endpoints": [
@@ -1633,62 +1587,14 @@
       ]
     },
     {
-      "name": "ccmax-claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 480,
-          "output_per_1m": 2400,
-          "cache_per_1m": 48,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "满血-纯-0.5-claude-opus-4.6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 50
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "正价kiro-0.15-claude-opus-4.8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 15
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "自营-0.035gemini-3.1-pro-preview-c",
+      "name": "限时特价-anti-0.016-gemini-3.6-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 3.5
+          "price_per_request": 1.6
         }
       ],
       "supported_endpoints": [
@@ -1696,26 +1602,22 @@
       ]
     },
     {
-      "name": "anti自营-量-claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
+      "name": "限时特价-anti-0.016-gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "Cluade-反重力自营anti",
-          "label": "官方反重力自营渠道",
-          "input_per_1m": 135,
-          "output_per_1m": 675,
-          "cache_per_1m": 168.75,
-          "cache_write_per_1m": null
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 1.6
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "anti-0.02-gemini-3.6-flash-抗截断",
+      "name": "限时特价-anti-0.02-gemini-3.1-pro-high",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1730,14 +1632,14 @@
       ]
     },
     {
-      "name": "多渠道-号池轮转-较稳-甲薄-0.06-gemini-3-pro-preview-纯文",
-      "vendor": "Google",
+      "name": "官-0.04-deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 6
+          "price_per_request": 4
         }
       ],
       "supported_endpoints": [
@@ -1745,14 +1647,14 @@
       ]
     },
     {
-      "name": "mmq-anti-0.25-claude-opus-4-6-thinking",
+      "name": "copilot-0.35-claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 25
+          "price_per_request": 35
         }
       ],
       "supported_endpoints": [
@@ -1760,55 +1662,7 @@
       ]
     },
     {
-      "name": "aws-0.6-claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 60
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "限时特价-anti-0.02-gemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ccmax-claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 800,
-          "output_per_1m": 4000,
-          "cache_per_1m": 80,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "官混-量-稳-claude-opus-4-6",
+      "name": "官混-量-稳-claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -1826,7 +1680,22 @@
       ]
     },
     {
-      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3.8-flash-纯文",
+      "name": "自研-0.18-claude-opus-4.6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 18
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "guan-0.05-gemini-3.1-pro-preview-search-high",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1834,6 +1703,21 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "速刷-anti-0.25-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
         }
       ],
       "supported_endpoints": [
@@ -1856,7 +1740,22 @@
       ]
     },
     {
-      "name": "自营-0.02-gemini-3.8-flash",
+      "name": "ver-ant-0.05-gemini-2.5-pro-nothinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "备用-0.02-gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -1871,16 +1770,166 @@
       ]
     },
     {
-      "name": "ccmax-claude-opus-5",
+      "name": "备用-0.02-gemini-3.7-flash-thinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mmq-备用渠道-anti-0.25-claude-opus-4-6",
       "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "逆-0.15-claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "逆-0.15-claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "guan-0.04-gemini-3.8-flash-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ver-ant-0.018-gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 1.8
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ver-ant-0.05-gemini-2.5-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "次-0.03-grok-4.1",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "第3方-0.24-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 24
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "优化-anti-0.04-gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "t3-gemini-3.1-pro-preview",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 800,
-          "output_per_1m": 4000,
-          "cache_per_1m": 80,
+          "name": "Gemini-T3-官key",
+          "label": "官方key渠道，稳！",
+          "input_per_1m": 360,
+          "output_per_1m": 2160,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -1889,14 +1938,17 @@
       ]
     },
     {
-      "name": "vertex-q-0.045-gemini-3.1-pro-preview-c",
+      "name": "t3-gemini-3.5-flash",
       "vendor": "Google",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 4.5
+          "name": "Gemini-T3-官key",
+          "label": "官方key渠道，稳！",
+          "input_per_1m": 270,
+          "output_per_1m": 1620,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1937,7 +1989,25 @@
       ]
     },
     {
-      "name": "mq-anti-0.3-claude-opus-4-6",
+      "name": "官混-量-稳-claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-官混",
+          "label": "官混渠，稳定，请开流",
+          "input_per_1m": 700,
+          "output_per_1m": 3500,
+          "cache_per_1m": 70,
+          "cache_write_per_1m": 10
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "官逆-0.3-claude-opus-4.6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -1945,6 +2015,102 @@
           "name": "default",
           "label": "默认分组",
           "price_per_request": 30
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "0.05-claude-2-meng",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "t3-gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Gemini-T3-官key",
+          "label": "官方key渠道，稳！",
+          "input_per_1m": 270,
+          "output_per_1m": 1620,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "vertex-0.04-gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mq-anti-0.3-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 30
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "anti-0.04-gemini-3.1-pro-preview-抗截断",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "官混-量-稳-claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-官混",
+          "label": "官混渠，稳定，请开流",
+          "input_per_1m": 700,
+          "output_per_1m": 3500,
+          "cache_per_1m": 70,
+          "cache_write_per_1m": 10
         }
       ],
       "supported_endpoints": [
@@ -1967,104 +2133,7 @@
       ]
     },
     {
-      "name": "自研-0.18-claude-opus-4.7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 18
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "anti自营-gemini-3.1-pro",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Gemini-自营反重力",
-          "label": "官方反重力自营渠道",
-          "input_per_1m": 40,
-          "output_per_1m": 240,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "ccmax-claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 1600,
-          "output_per_1m": 8000,
-          "cache_per_1m": 160,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "copilot-0.35-claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 35
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "第3方-0.24-claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 24
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "薄甲-0.1-claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 10
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "guan-0.04-gemini-3.8-flash-search",
+      "name": "guan-0.04-gemini-3.8-flash-",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -2079,7 +2148,7 @@
       ]
     },
     {
-      "name": "ver-ant-0.05-gemini-3.1-pro-preview-nothinking",
+      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3.8-flash-纯文",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -2094,64 +2163,16 @@
       ]
     },
     {
-      "name": "claude-opus-4.7",
-      "vendor": "Anthropic",
+      "name": "t3-gemini-3.8-flash",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "Claude-DR量",
-          "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 150,
-          "output_per_1m": 750,
-          "cache_per_1m": 15,
-          "cache_write_per_1m": 187.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "次-0.03-grok-4.1",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "次-0.03-grok-4.1-fast",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ccmax-claude-haiku-4-5-20251001",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 160,
-          "output_per_1m": 800,
-          "cache_per_1m": 16,
+          "name": "Gemini-T3-官key",
+          "label": "官方key渠道，稳！",
+          "input_per_1m": 270,
+          "output_per_1m": 1620,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -2160,17 +2181,33 @@
       ]
     },
     {
-      "name": "ccmax-claude-opus-4-6",
+      "name": "anti自营-量-claude-sonnet-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 800,
-          "output_per_1m": 4000,
-          "cache_per_1m": 80,
+          "name": "Cluade-反重力自营anti",
+          "label": "官方反重力自营渠道",
+          "input_per_1m": 135,
+          "output_per_1m": 675,
+          "cache_per_1m": 168.75,
           "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "ver-ant-0.025-gemini-3.6-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2.5
         }
       ],
       "supported_endpoints": [
@@ -2178,7 +2215,97 @@
       ]
     },
     {
-      "name": "copilot-0.35-claude-opus-4-8",
+      "name": "1m-0.15-glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "特价-0.06-glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3-flash-preview-纯文",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "多渠道-号池轮转-较稳-甲薄-0.05-gemini-3.7-flash-纯文",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mmq-anti-0.25-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mmq-备用渠道-anti-0.25-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "copilot-0.35-claude-opus-4-7-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -2193,47 +2320,14 @@
       ]
     },
     {
-      "name": "第3方-0.24-claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 24
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Claude-DR量",
-          "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 150,
-          "output_per_1m": 750,
-          "cache_per_1m": 15,
-          "cache_write_per_1m": 187.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "ver-ant-0.018-gemini-3-flash-preview-nothinking",
+      "name": "多渠道-号池轮转-较稳-甲薄-0.06-gemini-3.1-pro-preview-纯文",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 1.8
+          "price_per_request": 6
         }
       ],
       "supported_endpoints": [
@@ -2241,14 +2335,14 @@
       ]
     },
     {
-      "name": "ver-ant-0.05-gemini-2.5-pro-nothinking",
+      "name": "官混-0.06-gemini-3.1-pro-preview-nothinking",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 5
+          "price_per_request": 6
         }
       ],
       "supported_endpoints": [
@@ -2256,47 +2350,17 @@
       ]
     },
     {
-      "name": "限时特价-anti-0.016-gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 1.6
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "guan-0.05-gemini-3.1-pro-preview-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-haiku-4.5-20251001",
+      "name": "claude-opus-4.1-20250805",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "Claude-DR量",
           "label": "AWS+CC渠道2折，满血支持高缓存",
-          "input_per_1m": 30,
-          "output_per_1m": 150,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 37.5
+          "input_per_1m": 450,
+          "output_per_1m": 2250,
+          "cache_per_1m": 45,
+          "cache_write_per_1m": 562.5
         }
       ],
       "supported_endpoints": [
@@ -2304,17 +2368,17 @@
       ]
     },
     {
-      "name": "ccmax-claude-opus-4-5-20251101",
+      "name": "claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "满血ccmax",
-          "label": "纯CCMax，正规代码可用",
-          "input_per_1m": 800,
-          "output_per_1m": 4000,
-          "cache_per_1m": 80,
-          "cache_write_per_1m": null
+          "name": "Claude-DR量",
+          "label": "AWS+CC渠道2折，满血支持高缓存",
+          "input_per_1m": 60,
+          "output_per_1m": 300,
+          "cache_per_1m": 6,
+          "cache_write_per_1m": 75
         }
       ],
       "supported_endpoints": [
@@ -2322,7 +2386,67 @@
       ]
     },
     {
-      "name": "copilot-0.35-claude-opus-4-6-thinking",
+      "name": "ver-ant-0.02-gemini-3.5-flash-nothinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "薄甲-0.4-claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 40
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "vertex-q-0.045-gemini-3.7-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "ver-ant-0.02-gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "copilot-0.35-claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -2352,7 +2476,7 @@
       ]
     },
     {
-      "name": "自营-0.035-gemini-3.1-pro-preview-search",
+      "name": "自营-0.035gemini-3.1-pro-preview-c",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -2367,14 +2491,14 @@
       ]
     },
     {
-      "name": "mq-anti-0.3-claude-opus-4-6-thinking",
+      "name": "逆-0.15-claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 30
+          "price_per_request": 15
         }
       ],
       "supported_endpoints": [
@@ -2382,14 +2506,14 @@
       ]
     },
     {
-      "name": "绘图-0.18-gemini-3.1-flash-image-preview",
+      "name": "vertex-q-0.045-gemini-3.1-pro-preview-c",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 18
+          "price_per_request": 4.5
         }
       ],
       "supported_endpoints": [
@@ -2397,14 +2521,107 @@
       ]
     },
     {
-      "name": "copilot-0.35-claude-opus-5",
+      "name": "多渠道-号池轮转-较稳-甲薄-0.06-gemini-3-pro-preview-纯文",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4.7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Claude-DR量",
+          "label": "AWS+CC渠道2折，满血支持高缓存",
+          "input_per_1m": 150,
+          "output_per_1m": 750,
+          "cache_per_1m": 15,
+          "cache_write_per_1m": 187.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "次-0.03-grok-4.3",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "逆-0.15-claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 35
+          "price_per_request": 15
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "mmq-anti-0.25-claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "anti-0.04-gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "正价kiro-0.15-claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 15
         }
       ],
       "supported_endpoints": [
@@ -2412,5 +2629,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-09-20T21:10:31.482Z"
+  "fetched_at": "2026-09-21T22:27:35.384Z"
 }
