@@ -31,15 +31,23 @@
   },
   "models": [
     {
-      "name": "deepseek-ai/deepseek-v4-pro-0813",
-      "vendor": "DeepSeek",
+      "name": "grok-4.5",
+      "vendor": "xAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "限时公益",
-          "label": "羊毛渠道，不定时限量供应",
-          "input_per_1m": 0.005,
-          "output_per_1m": 0.005,
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "grok-heavy",
+          "label": "gork-heavy订阅",
+          "input_per_1m": 15,
+          "output_per_1m": 15,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -49,24 +57,42 @@
       ]
     },
     {
-      "name": "codex-auto-review",
-      "vendor": "Unknown",
+      "name": "grok-4.6",
+      "vendor": "xAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 5,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.5,
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         },
         {
-          "name": "OpenAI",
-          "label": "GPT分组",
-          "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.15,
+          "name": "grok-heavy",
+          "label": "gork-heavy订阅",
+          "input_per_1m": 15,
+          "output_per_1m": 15,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "moonshotai/kimi-k3",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "限时公益",
+          "label": "羊毛渠道，不定时限量供应",
+          "input_per_1m": 0.055,
+          "output_per_1m": 0.055,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -95,19 +121,65 @@
       ]
     },
     {
-      "name": "deepseek-ai-v4-pro-c",
-      "vendor": "DeepSeek",
+      "name": "gemini-3.1-pro-preview-c",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.03
+          "price_per_request": 0.02
         },
         {
           "name": "次卡模型",
           "label": "按次计费分组",
-          "price_per_request": 0.03
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.7-flash-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "国产模型",
+          "label": "低价国模",
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -116,17 +188,9 @@
     },
     {
       "name": "MiniMax-M3",
-      "vendor": "MiniMax",
+      "vendor": "Minimax",
       "quota_type": "token",
       "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 75,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
         {
           "name": "国产模型",
           "label": "低价国模",
@@ -134,28 +198,10 @@
           "output_per_1m": 75,
           "cache_per_1m": null,
           "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.8-max",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
+        },
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 75,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "国产模型",
-          "label": "低价国模",
           "input_per_1m": 75,
           "output_per_1m": 75,
           "cache_per_1m": null,
@@ -208,17 +254,19 @@
       ]
     },
     {
-      "name": "openai/gpt-oss-120b",
-      "vendor": "OpenAI",
-      "quota_type": "token",
+      "name": "特价/gemini-3.7-flash-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "限时公益",
-          "label": "羊毛渠道，不定时限量供应",
-          "input_per_1m": 0.005,
-          "output_per_1m": 0.005,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.004
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.004
         }
       ],
       "supported_endpoints": [
@@ -226,19 +274,19 @@
       ]
     },
     {
-      "name": "claude-opus-4-6-c",
+      "name": "claude-opus-5-c",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.1
+          "price_per_request": 0.07
         },
         {
           "name": "次卡模型",
           "label": "按次计费分组",
-          "price_per_request": 0.1
+          "price_per_request": 0.07
         }
       ],
       "supported_endpoints": [
@@ -247,45 +295,19 @@
       ]
     },
     {
-      "name": "deepseek-v4-pro-0813",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 75,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "国产模型",
-          "label": "低价国模",
-          "input_per_1m": 75,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-c",
-      "vendor": "Google",
+      "name": "glm-5.2-c",
+      "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.008
+          "price_per_request": 0.02
         },
         {
           "name": "次卡模型",
           "label": "按次计费分组",
-          "price_per_request": 0.008
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
@@ -333,69 +355,45 @@
       ]
     },
     {
-      "name": "qwen3.8-max-c",
+      "name": "gpt-5.6-terra-c",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.015
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.015
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.8-max",
       "vendor": "阿里巴巴",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.03
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.03
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-ai/deepseek-v4-flash-0731",
-      "vendor": "DeepSeek",
       "quota_type": "token",
-      "groups": [],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-8-c",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.06
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         },
         {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.6-flash-c",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.008
+          "name": "国产模型",
+          "label": "低价国模",
+          "input_per_1m": 75,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -444,155 +442,8 @@
       ]
     },
     {
-      "name": "gemini-3.1-pro-preview-c",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.7-flash-c",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.008
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.008
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.2-c",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 75,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "grok-heavy",
-          "label": "gork-heavy订阅",
-          "input_per_1m": 15,
-          "output_per_1m": 15,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.5-c",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.6-c",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.02
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7-c",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.06
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3",
-      "vendor": "智谱",
+      "name": "deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
@@ -617,43 +468,22 @@
       ]
     },
     {
-      "name": "glm-5.3-c",
+      "name": "glm-5.3-flash-c",
       "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.02
-        },
-        {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[kiro]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.06
+          "price_per_request": 0.005
         },
         {
           "name": "次卡模型",
           "label": "按次计费分组",
-          "price_per_request": 0.06
+          "price_per_request": 0.005
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
@@ -684,46 +514,8 @@
       ]
     },
     {
-      "name": "kimi-k3-c",
-      "vendor": "Moonshot",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.025
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "minimaxai/minimax-m3",
-      "vendor": "Minimax",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "限时公益",
-          "label": "羊毛渠道，不定时限量供应",
-          "input_per_1m": 0.005,
-          "output_per_1m": 0.01,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "moonshotai/kimi-k3",
-      "vendor": "Moonshot",
+      "name": "deepseek-ai/deepseek-v4-flash-0731",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
@@ -740,24 +532,377 @@
       ]
     },
     {
-      "name": "gpt-5.6-terra",
-      "vendor": "OpenAI",
+      "name": "codex-auto-review",
+      "vendor": "Unknown",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 2.5,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.25,
+          "input_per_1m": 5,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.5,
           "cache_write_per_1m": null
         },
+        {
+          "name": "OpenAI",
+          "label": "GPT分组",
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro]claude-opus-4.8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-ai/deepseek-v4-pro-0813",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "限时公益",
+          "label": "羊毛渠道，不定时限量供应",
+          "input_per_1m": 0.005,
+          "output_per_1m": 0.005,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4.1-flash-c",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.005
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.005
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.3-c",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.5-c",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6-c",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.1
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8-c",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash-c",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.008
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.008
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "vendor": "讯飞",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.75,
+          "output_per_1m": 14,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "OpenAI",
+          "label": "GPT分组",
+          "input_per_1m": 0.525,
+          "output_per_1m": 4.2,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.6-c",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.02
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "MiniMax-M3-c",
+      "vendor": "MiniMax",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.01
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "qwen3.8-max-c",
+      "vendor": "阿里巴巴",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.03
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "minimaxai/minimax-m3",
+      "vendor": "MiniMax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "限时公益",
+          "label": "羊毛渠道，不定时限量供应",
+          "input_per_1m": 0.005,
+          "output_per_1m": 0.01,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7-c",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.06
+        },
+        {
+          "name": "次卡模型",
+          "label": "按次计费分组",
+          "price_per_request": 0.06
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
         {
           "name": "OpenAI",
           "label": "GPT分组",
           "input_per_1m": 0.75,
           "output_per_1m": 4.5,
           "cache_per_1m": 0.075,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
           "cache_write_per_1m": null
         }
       ],
@@ -792,7 +937,7 @@
       ]
     },
     {
-      "name": "grok-4.6",
+      "name": "grok-4.7",
       "vendor": "xAI",
       "quota_type": "token",
       "groups": [
@@ -823,20 +968,20 @@
       "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 20,
-          "output_per_1m": 100,
-          "cache_per_1m": 2,
-          "cache_write_per_1m": null
-        },
-        {
           "name": "国产模型",
           "label": "低价国模",
           "input_per_1m": 20,
           "output_per_1m": 100,
           "cache_per_1m": 2,
           "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 20,
+          "output_per_1m": 100,
+          "cache_per_1m": 2,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -844,19 +989,19 @@
       ]
     },
     {
-      "name": "MiniMax-M3-c",
-      "vendor": "MiniMax",
+      "name": "kimi-k3-c",
+      "vendor": "Moonshot",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.01
+          "price_per_request": 0.025
         },
         {
           "name": "次卡模型",
           "label": "按次计费分组",
-          "price_per_request": 0.01
+          "price_per_request": 0.025
         }
       ],
       "supported_endpoints": [
@@ -864,40 +1009,37 @@
       ]
     },
     {
-      "name": "[kiro]claude-opus-4.8",
-      "vendor": "Anthropic",
+      "name": "openai/gpt-oss-120b",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "限时公益",
+          "label": "羊毛渠道，不定时限量供应",
+          "input_per_1m": 0.005,
+          "output_per_1m": 0.005,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-ai-v4-pro-c",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.06
+          "price_per_request": 0.03
         },
         {
           "name": "次卡模型",
           "label": "按次计费分组",
-          "price_per_request": 0.06
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "特价/gemini-3.7-flash-c",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.004
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.004
+          "price_per_request": 0.03
         }
       ],
       "supported_endpoints": [
@@ -905,28 +1047,7 @@
       ]
     },
     {
-      "name": "claude-opus-5-c",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.07
-        },
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.07
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4.1-flash",
+      "name": "deepseek-v4-pro-0813",
       "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
@@ -944,72 +1065,6 @@
           "input_per_1m": 75,
           "output_per_1m": 75,
           "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4.1-flash-c",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.005
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.005
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3-flash-c",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.005
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.005
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.3-codex-spark",
-      "vendor": "讯飞",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.75,
-          "output_per_1m": 14,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "OpenAI",
-          "label": "GPT分组",
-          "input_per_1m": 0.525,
-          "output_per_1m": 4.2,
-          "cache_per_1m": 0.15,
           "cache_write_per_1m": null
         }
       ],
@@ -1036,27 +1091,7 @@
       "supported_endpoints": [
         "openai"
       ]
-    },
-    {
-      "name": "gpt-5.6-terra-c",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.015
-        },
-        {
-          "name": "次卡模型",
-          "label": "按次计费分组",
-          "price_per_request": 0.015
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
     }
   ],
-  "fetched_at": "2026-09-27T21:50:48.490Z"
+  "fetched_at": "2026-09-28T23:43:23.482Z"
 }
