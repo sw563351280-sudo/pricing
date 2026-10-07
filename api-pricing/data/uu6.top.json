@@ -35,7 +35,52 @@
   },
   "models": [
     {
-      "name": "gpt-5.6-terra",
+      "name": "gemini-3.7-flash-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5-5-high",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "反重力Claude按次",
+          "label": "每次请求收2毛钱（充值倍率0.1 * 分组倍率 2 = 0.2元）",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
@@ -69,23 +114,84 @@
       ]
     },
     {
-      "name": "gpt-6.1-sol",
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 40,
+          "output_per_1m": 200,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": 50
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 24,
+          "output_per_1m": 120,
+          "cache_per_1m": 2.4,
+          "cache_write_per_1m": 24
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.7",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "ChatGPT-纯Pro自有池",
-          "label": "不降智！超高缓存！充值倍率0.1 * 分组倍率 = 实际倍率",
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
           "input_per_1m": 90,
-          "output_per_1m": 180,
+          "output_per_1m": 540,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         },
         {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
+          "name": "ChatGPT-不降智（朋友渠道）",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 187.5,
+          "output_per_1m": 1125,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "ChatGPT-纯Pro自有池",
+          "label": "不降智！超高缓存！充值倍率0.1 * 分组倍率 = 实际倍率",
           "input_per_1m": 90,
-          "output_per_1m": 180,
+          "output_per_1m": 540,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -114,7 +220,7 @@
       ]
     },
     {
-      "name": "claude-opus-4-6-thinking",
+      "name": "claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -125,14 +231,6 @@
           "output_per_1m": 200,
           "cache_per_1m": 4,
           "cache_write_per_1m": 50
-        },
-        {
-          "name": "反重力Claude按次",
-          "label": "每次请求收2毛钱（充值倍率0.1 * 分组倍率 2 = 0.2元）",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
         }
       ],
       "supported_endpoints": [
@@ -141,7 +239,128 @@
       ]
     },
     {
-      "name": "claude-opus-4-8-thinking",
+      "name": "claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 40,
+          "output_per_1m": 200,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": 50
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 90,
+          "output_per_1m": 540,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "ChatGPT-不降智（朋友渠道）",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 187.5,
+          "output_per_1m": 1125,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "ChatGPT-纯Pro自有池",
+          "label": "不降智！超高缓存！充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 90,
+          "output_per_1m": 540,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-6.1-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 90,
+          "output_per_1m": 180,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "ChatGPT-不降智（朋友渠道）",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 187.5,
+          "output_per_1m": 375,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "ChatGPT-纯Pro自有池",
+          "label": "不降智！超高缓存！充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 90,
+          "output_per_1m": 180,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 40,
+          "output_per_1m": 200,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": 50
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-low",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -206,17 +425,51 @@
       ]
     },
     {
-      "name": "claude-sonnet-4-6-thinking",
+      "name": "claude-sonnet-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
           "name": "claude高缓存",
           "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 24,
-          "output_per_1m": 120,
-          "cache_per_1m": 2.4,
-          "cache_write_per_1m": 24
+          "input_per_1m": 16,
+          "output_per_1m": 80,
+          "cache_per_1m": 1.6,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.6-flash-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Gemini按次",
+          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
+          "price_per_request": 0.2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "claude高缓存",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 40,
+          "output_per_1m": 200,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": 50
         }
       ],
       "supported_endpoints": [
@@ -259,87 +512,11 @@
       ]
     },
     {
-      "name": "gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-不降智（朋友渠道）",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 187.5,
-          "output_per_1m": 1125,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "ChatGPT-纯Pro自有池",
-          "label": "不降智！超高缓存！充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 90,
-          "output_per_1m": 540,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 90,
-          "output_per_1m": 540,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-6-astra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "ChatGPT-不降智（朋友渠道）",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 187.5,
-          "output_per_1m": 375,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "ChatGPT-纯Pro自有池",
-          "label": "不降智！超高缓存！充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 90,
-          "output_per_1m": 180,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 90,
-          "output_per_1m": 180,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "gpt-6-sol",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "default",
-          "label": "旧分组，别选，后面要删",
-          "input_per_1m": 90,
-          "output_per_1m": 180,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
           "name": "ChatGPT-不降智（朋友渠道）",
           "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
           "input_per_1m": 187.5,
@@ -354,33 +531,22 @@
           "output_per_1m": 180,
           "cache_per_1m": null,
           "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
+        },
         {
-          "name": "claude高缓存",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 40,
-          "output_per_1m": 200,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": 50
+          "name": "default",
+          "label": "旧分组，别选，后面要删",
+          "input_per_1m": 90,
+          "output_per_1m": 180,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "claude-opus-4-7",
+      "name": "claude-opus-4-5-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -418,42 +584,15 @@
       ]
     },
     {
-      "name": "claude-sonnet-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 24,
-          "output_per_1m": 120,
-          "cache_per_1m": 2.4,
-          "cache_write_per_1m": 24
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
+      "name": "gpt-6-astra",
       "vendor": "OpenAI",
       "quota_type": "token",
       "groups": [
         {
-          "name": "ChatGPT-不降智（朋友渠道）",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 187.5,
-          "output_per_1m": 1125,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
           "name": "ChatGPT-纯Pro自有池",
           "label": "不降智！超高缓存！充值倍率0.1 * 分组倍率 = 实际倍率",
           "input_per_1m": 90,
-          "output_per_1m": 540,
+          "output_per_1m": 180,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         },
@@ -461,7 +600,15 @@
           "name": "default",
           "label": "旧分组，别选，后面要删",
           "input_per_1m": 90,
-          "output_per_1m": 540,
+          "output_per_1m": 180,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "ChatGPT-不降智（朋友渠道）",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 187.5,
+          "output_per_1m": 375,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -471,7 +618,7 @@
       ]
     },
     {
-      "name": "claude-opus-4-8",
+      "name": "claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -482,97 +629,14 @@
           "output_per_1m": 200,
           "cache_per_1m": 4,
           "cache_write_per_1m": 50
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
+        },
         {
-          "name": "claude高缓存",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 16,
-          "output_per_1m": 80,
-          "cache_per_1m": 1.6,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-pro-low",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-5-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 40,
-          "output_per_1m": 200,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": 50
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 40,
-          "output_per_1m": 200,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": 50
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "claude高缓存",
-          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
-          "input_per_1m": 40,
-          "output_per_1m": 200,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": 50
+          "name": "反重力Claude按次",
+          "label": "每次请求收2毛钱（充值倍率0.1 * 分组倍率 2 = 0.2元）",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
         }
       ],
       "supported_endpoints": [
@@ -600,65 +664,24 @@
       ]
     },
     {
-      "name": "gemini-3.6-flash-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.7-flash-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Gemini按次",
-          "label": "每次请求收2分钱（充值倍率0.1 * 分组倍率 0.2 = 0.02元）",
-          "price_per_request": 0.2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-5-5-high",
+      "name": "claude-sonnet-4-6-thinking",
       "vendor": "Anthropic",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
-          "name": "反重力Claude按次",
-          "label": "每次请求收2毛钱（充值倍率0.1 * 分组倍率 2 = 0.2元）",
-          "price_per_request": 2
+          "name": "claude高缓存",
+          "label": "充值倍率0.1 * 分组倍率 = 实际倍率",
+          "input_per_1m": 24,
+          "output_per_1m": 120,
+          "cache_per_1m": 2.4,
+          "cache_write_per_1m": 24
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     }
   ],
-  "fetched_at": "2026-10-06T22:53:47.213Z"
+  "fetched_at": "2026-10-07T23:27:25.470Z"
 }
