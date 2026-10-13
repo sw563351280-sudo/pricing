@@ -31,19 +31,45 @@
   },
   "models": [
     {
-      "name": "[ais假流]gemini-3.8-flash",
+      "name": "[按量]gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 35,
+          "output_per_1m": 210,
+          "cache_per_1m": 3.5,
+          "cache_write_per_1m": 43.75
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 35,
+          "output_per_1m": 210,
+          "cache_per_1m": 3.5,
+          "cache_write_per_1m": 43.75
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[逆]gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 0.75
+          "price_per_request": 0.5
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 0.75
+          "price_per_request": 0.5
         }
       ],
       "supported_endpoints": [
@@ -52,42 +78,173 @@
       ]
     },
     {
-      "name": "[max按量]claude-fable-5-1",
-      "vendor": "Anthropic",
+      "name": "grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[生图/1点]grok-image",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]deepseek-v4-flash",
+      "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "input_per_1m": 400,
-          "output_per_1m": 2000,
-          "cache_per_1m": 40,
-          "cache_write_per_1m": 500
-        },
-        {
-          "name": "max测试",
-          "label": "-",
-          "input_per_1m": 400,
-          "output_per_1m": 2000,
-          "cache_per_1m": 40,
-          "cache_write_per_1m": 500
+          "input_per_1m": 25,
+          "output_per_1m": 100,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "input_per_1m": 400,
-          "output_per_1m": 2000,
-          "cache_per_1m": 40,
-          "cache_write_per_1m": 500
+          "input_per_1m": 25,
+          "output_per_1m": 100,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
         "openai",
-        "anthropic"
+        "openai-response"
       ]
     },
     {
-      "name": "[备用]nai-diffusion-4-5-full",
+      "name": "[按量]gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 50,
+          "output_per_1m": 300,
+          "cache_per_1m": 5,
+          "cache_write_per_1m": 62.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 50,
+          "output_per_1m": 300,
+          "cache_per_1m": 5,
+          "cache_write_per_1m": 62.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]gpt-6.1-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]grok-4.6",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]qwen-3.7-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 100,
+          "output_per_1m": 300,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 100,
+          "output_per_1m": 300,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[生图/1点]nai-diffusion-4-5-full",
       "vendor": "NovelAI",
       "quota_type": "per_request",
       "groups": [
@@ -112,64 +269,18 @@
       ]
     },
     {
-      "name": "[按量]glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 12.5,
-          "output_per_1m": 43.75,
-          "cache_per_1m": 3.58,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 12.5,
-          "output_per_1m": 43.75,
-          "cache_per_1m": 3.58,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "doubao-seedream-5-0-4k",
       "vendor": "字节跳动",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
+          "name": "image",
+          "label": "绘画分组",
           "price_per_request": 3
         },
         {
-          "name": "image",
-          "label": "绘画分组",
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
           "price_per_request": 3
         }
       ],
@@ -178,65 +289,50 @@
       ]
     },
     {
-      "name": "qwen-image-max",
-      "vendor": "阿里巴巴",
+      "name": "gpt-image-2-4k",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.5
-        },
-        {
           "name": "image",
           "label": "绘画分组",
-          "price_per_request": 1.5
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "image"
+      ]
+    },
+    {
+      "name": "[按量]gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
         }
       ],
       "supported_endpoints": [
         "openai"
-      ]
-    },
-    {
-      "name": "[ant]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 10.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 10.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[kiro]claude-opus-4-7",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 6.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 6.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
       ]
     },
     {
@@ -261,7 +357,68 @@
       ]
     },
     {
-      "name": "[ais]gemini-3.7-flash",
+      "name": "deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.4",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "image"
+      ]
+    },
+    {
+      "name": "[ais假流]gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -279,6 +436,114 @@
       "supported_endpoints": [
         "gemini",
         "openai"
+      ]
+    },
+    {
+      "name": "[ant按量]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 150,
+          "output_per_1m": 750,
+          "cache_per_1m": 15,
+          "cache_write_per_1m": 187.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 150,
+          "output_per_1m": 750,
+          "cache_per_1m": 15,
+          "cache_write_per_1m": 187.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro]claude-opus-4-7",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 6.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 6.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[4K]gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "image"
+      ]
+    },
+    {
+      "name": "qwen-image-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[max按量]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "Azure测试",
+          "label": "-",
+          "input_per_1m": 125,
+          "output_per_1m": 625,
+          "cache_per_1m": 12.5,
+          "cache_write_per_1m": 156.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
       ]
     },
     {
@@ -309,6 +574,139 @@
       ]
     },
     {
+      "name": "[按量]grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-4.6",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "nai-diffusion-5-full",
+      "vendor": "NovelAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[4K]gpt-image-2.5-sunburst",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "image"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-image",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 6
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 6
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ais假流]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 0.75
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 0.75
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
       "name": "deepseek-v4-pro",
       "vendor": "DeepSeek",
       "quota_type": "per_request",
@@ -329,8 +727,8 @@
       ]
     },
     {
-      "name": "qwen-image-3.0-pro",
-      "vendor": "阿里巴巴",
+      "name": "grok-imagine-image",
+      "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
@@ -349,27 +747,34 @@
       ]
     },
     {
-      "name": "[cli]gemini-3-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "[ant按量]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 3
+          "input_per_1m": 90,
+          "output_per_1m": 450,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
+          "input_per_1m": 90,
+          "output_per_1m": 450,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
-        "openai"
+        "openai",
+        "anthropic"
       ]
     },
     {
-      "name": "[kiro]claude-opus-4-6",
+      "name": "[kiro]claude-opus-5",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -416,15 +821,76 @@
       ]
     },
     {
-      "name": "[生图/1点]nai-diffusion-4-5-full",
-      "vendor": "NovelAI",
+      "name": "[按量]gpt-6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 2.5
+        },
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 2.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 1
+          "price_per_request": 3
         },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[备用]nai-diffusion-4-5-full",
+      "vendor": "NovelAI",
+      "quota_type": "per_request",
+      "groups": [
         {
           "name": "image",
           "label": "绘画分组",
@@ -434,6 +900,11 @@
           "name": "vip",
           "label": "default分组和绘画分组的集合",
           "price_per_request": 1
+        },
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1
         }
       ],
       "supported_endpoints": [
@@ -441,7 +912,42 @@
       ]
     },
     {
-      "name": "[逆]gemini-3.5-flash",
+      "name": "[max按量]claude-fable-5-1",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "input_per_1m": 400,
+          "output_per_1m": 2000,
+          "cache_per_1m": 40,
+          "cache_write_per_1m": 500
+        },
+        {
+          "name": "max测试",
+          "label": "-",
+          "input_per_1m": 400,
+          "output_per_1m": 2000,
+          "cache_per_1m": 40,
+          "cache_write_per_1m": 500
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 400,
+          "output_per_1m": 2000,
+          "cache_per_1m": 40,
+          "cache_write_per_1m": 500
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[ais]gemini-3.7-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -462,38 +968,18 @@
       ]
     },
     {
-      "name": "kimi-k3",
-      "vendor": "Moonshot",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 4
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "[ant]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
+          "name": "default",
+          "label": "用户分组",
           "price_per_request": 10.5
         },
         {
-          "name": "default",
-          "label": "用户分组",
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
           "price_per_request": 10.5
         }
       ],
@@ -503,51 +989,24 @@
       ]
     },
     {
-      "name": "[ant按量]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 90,
-          "output_per_1m": 450,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 90,
-          "output_per_1m": 450,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]grok-4.5",
+      "name": "[按量]grok-4.7",
       "vendor": "xAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
+          "input_per_1m": 15,
+          "output_per_1m": 45,
+          "cache_per_1m": 3.5,
           "cache_write_per_1m": null
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
+          "input_per_1m": 15,
+          "output_per_1m": 45,
+          "cache_per_1m": 3.5,
           "cache_write_per_1m": null
         }
       ],
@@ -556,19 +1015,19 @@
       ]
     },
     {
-      "name": "grok-4.5",
-      "vendor": "xAI",
+      "name": "BAAI/bge-m3",
+      "vendor": "BAAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 1
+          "price_per_request": 0
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 1
+          "price_per_request": 0
         }
       ],
       "supported_endpoints": [
@@ -576,81 +1035,19 @@
       ]
     },
     {
-      "name": "[4K]gpt-image-2.5-sunburst",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "image"
-      ]
-    },
-    {
-      "name": "gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "image"
-      ]
-    },
-    {
-      "name": "grok-imagine-image",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 2
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]claude-opus-4-6",
+      "name": "[ant]claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 10
+          "price_per_request": 10.5
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 10
+          "price_per_request": 10.5
         }
       ],
       "supported_endpoints": [
@@ -659,7 +1056,7 @@
       ]
     },
     {
-      "name": "[kiro]claude-opus-5",
+      "name": "[kiro]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -701,182 +1098,6 @@
       ]
     },
     {
-      "name": "[按量]grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[逆]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[逆]gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 0.75
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 0.75
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "nai-diffusion-5-full",
-      "vendor": "NovelAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1
-        },
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 1
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ais假流]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 2
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 25,
-          "output_per_1m": 100,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 25,
-          "output_per_1m": 100,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response"
-      ]
-    },
-    {
-      "name": "glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 2.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 2.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[生图/1点]grok-image",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "gemini-3-pro-image-preview",
       "vendor": "Google",
       "quota_type": "per_request",
@@ -897,49 +1118,23 @@
       ]
     },
     {
-      "name": ".按量的空回也会扣费",
-      "vendor": "Unknown",
+      "name": "grok-imagine-image-quality",
+      "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "用户分组",
+          "name": "image",
+          "label": "绘画分组",
           "price_per_request": 2
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 2
-        },
-        {
-          "name": "ztest",
-          "label": "测试分组",
           "price_per_request": 2
         }
       ],
       "supported_endpoints": [
         "openai"
-      ]
-    },
-    {
-      "name": "[ant]claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 5
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
       ]
     },
     {
@@ -975,6 +1170,26 @@
       "supported_endpoints": [
         "openai",
         "anthropic"
+      ]
+    },
+    {
+      "name": "qwen-image-3.0-pro",
+      "vendor": "阿里巴巴",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
       ]
     },
     {
@@ -1021,264 +1236,8 @@
       ]
     },
     {
-      "name": "[max按量]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "Azure测试",
-          "label": "-",
-          "input_per_1m": 125,
-          "output_per_1m": 625,
-          "cache_per_1m": 12.5,
-          "cache_write_per_1m": 156.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[cli]gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "image"
-      ]
-    },
-    {
-      "name": "[ant按量]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 150,
-          "output_per_1m": 750,
-          "cache_per_1m": 15,
-          "cache_write_per_1m": 187.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 150,
-          "output_per_1m": 750,
-          "cache_per_1m": 15,
-          "cache_write_per_1m": 187.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[按量]gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 35,
-          "output_per_1m": 210,
-          "cache_per_1m": 3.5,
-          "cache_write_per_1m": 43.75
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 35,
-          "output_per_1m": 210,
-          "cache_per_1m": 3.5,
-          "cache_write_per_1m": 43.75
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "doubao-seedream-5-0",
-      "vendor": "字节跳动",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5-flare",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "image"
-      ]
-    },
-    {
-      "name": "[ais假流]gemini-3.7-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 0.75
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 0.75
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[4K]gpt-image-2.5-flare",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "image"
-      ]
-    },
-    {
-      "name": "gemini-3-pro-image",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 6
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 6
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.1-flash-image-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
-          "price_per_request": 4
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 4
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-quality",
-      "vendor": "xAI",
+      "name": ".按量的空回也会扣费",
+      "vendor": "Unknown",
       "quota_type": "per_request",
       "groups": [
         {
@@ -1287,8 +1246,13 @@
           "price_per_request": 2
         },
         {
-          "name": "image",
-          "label": "绘画分组",
+          "name": "ztest",
+          "label": "测试分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "default",
+          "label": "用户分组",
           "price_per_request": 2
         }
       ],
@@ -1297,7 +1261,27 @@
       ]
     },
     {
-      "name": "[按量]deepseek-v4-flash",
+      "name": "[ant]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1.25
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]deepseek-v4.1-flash",
       "vendor": "DeepSeek",
       "quota_type": "token",
       "groups": [
@@ -1324,157 +1308,19 @@
       ]
     },
     {
-      "name": "[按量]gpt-6-astra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]gpt-6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]grok-4.7",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 15,
-          "output_per_1m": 45,
-          "cache_per_1m": 3.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 15,
-          "output_per_1m": 45,
-          "cache_per_1m": 3.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 2.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 2.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[逆]gemini-3.7-flash",
+      "name": "[逆]gemini-3.5-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 0.5
+          "price_per_request": 0.75
         },
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 0.5
+          "price_per_request": 0.75
         }
       ],
       "supported_endpoints": [
@@ -1483,19 +1329,19 @@
       ]
     },
     {
-      "name": "deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
+      "name": "kimi-k3",
+      "vendor": "Moonshot",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 1
+          "price_per_request": 4
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 1
+          "price_per_request": 4
         }
       ],
       "supported_endpoints": [
@@ -1503,116 +1349,18 @@
       ]
     },
     {
-      "name": "[ais]gemini-3.1-pro-preview",
+      "name": "[cli]gemini-3.5-flash",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 2
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli]gemini-2.5-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]gpt-5.6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 50,
-          "output_per_1m": 300,
-          "cache_per_1m": 5,
-          "cache_write_per_1m": 62.5
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 50,
-          "output_per_1m": 300,
-          "cache_per_1m": 5,
-          "cache_write_per_1m": 62.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]qwen-3.7-plus",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 20,
-          "output_per_1m": 60,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "input_per_1m": 20,
-          "output_per_1m": 60,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "nai-diffusion-4-5-full",
-      "vendor": "NovelAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "绘画分组",
           "price_per_request": 1
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 1
-        },
-        {
-          "name": "default",
-          "label": "用户分组",
           "price_per_request": 1
         }
       ],
@@ -1642,19 +1390,25 @@
       ]
     },
     {
-      "name": "[cli]gemini-3.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
+      "name": "[按量]glm-5.3-flash",
+      "vendor": "智谱",
+      "quota_type": "token",
       "groups": [
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1
-        },
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 1
+          "input_per_1m": 12.5,
+          "output_per_1m": 43.75,
+          "cache_per_1m": 3.58,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "input_per_1m": 12.5,
+          "output_per_1m": 43.75,
+          "cache_per_1m": 3.58,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1662,24 +1416,148 @@
       ]
     },
     {
-      "name": "[按量]qwen-3.7-max",
+      "name": "[逆]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 0.75
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 0.75
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.3-flash",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-flash-image-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 4
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 4
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "image"
+      ]
+    },
+    {
+      "name": "[ais]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 2
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 10
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 10
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[按量]qwen-3.7-plus",
       "vendor": "阿里巴巴",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "input_per_1m": 100,
-          "output_per_1m": 300,
-          "cache_per_1m": 10,
+          "input_per_1m": 20,
+          "output_per_1m": 60,
+          "cache_per_1m": 4,
           "cache_write_per_1m": null
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "input_per_1m": 100,
-          "output_per_1m": 300,
-          "cache_per_1m": 10,
+          "input_per_1m": 20,
+          "output_per_1m": 60,
+          "cache_per_1m": 4,
           "cache_write_per_1m": null
         }
       ],
@@ -1688,109 +1566,45 @@
       ]
     },
     {
-      "name": "[ant]gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1.25
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[cli]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]gpt-6.1-sol",
+      "name": "gpt-image-2.5",
       "vendor": "OpenAI",
-      "quota_type": "token",
+      "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "用户分组",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 1.5
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
+          "price_per_request": 1.5
         }
       ],
       "supported_endpoints": [
-        "openai"
+        "openai",
+        "image"
       ]
     },
     {
-      "name": "BAAI/bge-m3",
-      "vendor": "BAAI",
+      "name": "[ant]claude-sonnet-4-6",
+      "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 0
+          "price_per_request": 5
         },
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 0
+          "price_per_request": 5
         }
       ],
       "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ant]gemini-3.1-pro-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "用户分组",
-          "price_per_request": 1.25
-        },
-        {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
+        "openai",
+        "anthropic"
       ]
     },
     {
@@ -1799,13 +1613,13 @@
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "vip",
-          "label": "default分组和绘画分组的集合",
+          "name": "default",
+          "label": "用户分组",
           "price_per_request": 6.5
         },
         {
-          "name": "default",
-          "label": "用户分组",
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
           "price_per_request": 6.5
         }
       ],
@@ -1815,19 +1629,45 @@
       ]
     },
     {
-      "name": "gpt-5.4",
-      "vendor": "OpenAI",
+      "name": "[逆]gemini-3.1-pro-preview",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 3
+          "price_per_request": 1.5
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 3
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "nai-diffusion-4-5-full",
+      "vendor": "NovelAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "image",
+          "label": "绘画分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1
         }
       ],
       "supported_endpoints": [
@@ -1835,8 +1675,8 @@
       ]
     },
     {
-      "name": "gpt-image-2-4k",
-      "vendor": "OpenAI",
+      "name": "doubao-seedream-5-0",
+      "vendor": "字节跳动",
       "quota_type": "per_request",
       "groups": [
         {
@@ -1851,8 +1691,7 @@
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "image"
+        "openai"
       ]
     },
     {
@@ -1877,19 +1716,80 @@
       ]
     },
     {
-      "name": "[ant]gemini-3.7-flash",
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 2.5
+        },
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 2.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ais假流]gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "用户分组",
-          "price_per_request": 1.25
+          "price_per_request": 2
         },
         {
           "name": "vip",
           "label": "default分组和绘画分组的集合",
-          "price_per_request": 1.25
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[cli]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "用户分组",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "default分组和绘画分组的集合",
+          "price_per_request": 1
         }
       ],
       "supported_endpoints": [
@@ -1897,5 +1797,5 @@
       ]
     }
   ],
-  "fetched_at": "2026-10-13T01:07:22.430Z"
+  "fetched_at": "2026-10-13T23:12:15.857Z"
 }
