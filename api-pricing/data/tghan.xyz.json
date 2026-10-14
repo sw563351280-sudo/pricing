@@ -15,6 +15,21 @@
   },
   "models": [
     {
+      "name": "qwen3.8-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.025
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "[企业]gemini-3-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
@@ -28,56 +43,6 @@
       "supported_endpoints": [
         "openai",
         "gemini"
-      ]
-    },
-    {
-      "name": "[企业]gemini-3.1-pro-high",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.036
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "[按量]gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.3,
-          "output_per_1m": 1.5,
-          "cache_per_1m": 0.03,
-          "cache_write_per_1m": 0.35
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.04
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
       ]
     },
     {
@@ -100,14 +65,14 @@
       ]
     },
     {
-      "name": "破限/gemini-3.1-pro-preview-thinking",
-      "vendor": "Google",
+      "name": "deepseek-v3.2",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "破限",
-          "label": "破限分组",
-          "price_per_request": 0.036
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.007
         }
       ],
       "supported_endpoints": [
@@ -115,14 +80,14 @@
       ]
     },
     {
-      "name": "破限/gemini-3.8-flash-high",
-      "vendor": "Google",
+      "name": "deepseek-v4-pro",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "破限",
-          "label": "破限分组",
-          "price_per_request": 0.024
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.01
         }
       ],
       "supported_endpoints": [
@@ -130,7 +95,161 @@
       ]
     },
     {
-      "name": "gemini-3.1-pro",
+      "name": "gemini-2.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.005
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3-pro-preview-thinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "[反重力克F-按次]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.1
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力克F-按量]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.6,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.35,
+          "cache_write_per_1m": 2.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]gemini-3-flash-preview",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.6,
+          "cache_per_1m": 0.01,
+          "cache_write_per_1m": 0.01
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 0.3,
+          "output_per_1m": 1.5,
+          "cache_per_1m": 0.03,
+          "cache_write_per_1m": 0.35
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.03
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力克F-按量]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "input_per_1m": 1.6,
+          "output_per_1m": 8,
+          "cache_per_1m": 0.35,
+          "cache_write_per_1m": 2.5
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力克T-按次]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.13
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro-preview-thinking",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -178,87 +297,6 @@
       ]
     },
     {
-      "name": "[反重力克E]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.13
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "qwen3.7-MAX",
-      "vendor": "阿里巴巴",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.022
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-pro-thinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
-      ]
-    },
-    {
-      "name": "gpt-6-luna",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力克F-按量]claude-opus-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.6,
-          "output_per_1m": 8,
-          "cache_per_1m": 0.35,
-          "cache_write_per_1m": 2.5
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
       "name": "gemini-3.8-flash-high",
       "vendor": "Google",
       "quota_type": "per_request",
@@ -275,47 +313,14 @@
       ]
     },
     {
-      "name": "minimax-m2.7-thinking",
-      "vendor": "Minimax",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.005
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "qwen3.8-max",
+      "name": "qwen3.7-MAX",
       "vendor": "阿里巴巴",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.025
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[kiro]claude-opus-5-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 1.25,
-          "output_per_1m": 6.25,
-          "cache_per_1m": 0.125,
-          "cache_write_per_1m": 2
+          "price_per_request": 0.022
         }
       ],
       "supported_endpoints": [
@@ -339,21 +344,6 @@
       ]
     },
     {
-      "name": "glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.015
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
       "name": "[反重力克F-按次]claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "per_request",
@@ -370,42 +360,84 @@
       ]
     },
     {
-      "name": "[反重力克F-按次]claude-sonnet-4-6",
-      "vendor": "Anthropic",
+      "name": "deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.1
+          "price_per_request": 0.014
         }
       ],
       "supported_endpoints": [
-        "anthropic",
         "openai"
       ]
     },
     {
-      "name": "[反重力克F-按量]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
+      "name": "gemini-2.5-pro-thinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "input_per_1m": 1.6,
-          "output_per_1m": 8,
-          "cache_per_1m": 0.35,
-          "cache_write_per_1m": 2.5
+          "price_per_request": 0.02
         }
       ],
       "supported_endpoints": [
-        "anthropic",
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "gemini-3.1-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "gemini-4-argon",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.09
+        }
+      ],
+      "supported_endpoints": [
         "openai"
       ]
     },
     {
-      "name": "[反重力克T-按次]claude-opus-4-6",
+      "name": "gpt-6-luna",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.02
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[反重力克E-claude协议]claude-opus-4-6",
       "vendor": "Anthropic",
       "quota_type": "per_request",
       "groups": [
@@ -416,7 +448,24 @@
         }
       ],
       "supported_endpoints": [
+        "anthropic",
         "openai"
+      ]
+    },
+    {
+      "name": "[反重力克E]claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.13
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
       ]
     },
     {
@@ -439,33 +488,14 @@
       ]
     },
     {
-      "name": "[按量]gemini-3-flash-preview",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "input_per_1m": 0.1,
-          "output_per_1m": 0.6,
-          "cache_per_1m": 0.01,
-          "cache_write_per_1m": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-low",
+      "name": "gemini-3-flash-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.015
+          "price_per_request": 0.005
         }
       ],
       "supported_endpoints": [
@@ -474,7 +504,54 @@
       ]
     },
     {
+      "name": "gemini-3.5-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.007
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.04
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
       "name": "[企业]gemini-2.5-pro-thinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.036
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "gemini"
+      ]
+    },
+    {
+      "name": "[企业]gemini-3.1-pro-high",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -506,7 +583,38 @@
       ]
     },
     {
-      "name": "deepseek-v3.2",
+      "name": "[反重力克E]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "默认分组",
+          "price_per_request": 0.13
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "破限/gemini-3.1-pro-preview-thinking",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "破限",
+          "label": "破限分组",
+          "price_per_request": 0.036
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash",
       "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
@@ -521,14 +629,14 @@
       ]
     },
     {
-      "name": "gemini-3-flash-preview",
+      "name": "gemini-3.8-flash-low",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.005
+          "price_per_request": 0.015
         }
       ],
       "supported_endpoints": [
@@ -537,34 +645,50 @@
       ]
     },
     {
-      "name": "gemini-3.1-pro-preview-thinking",
-      "vendor": "Google",
+      "name": "glm-5.2",
+      "vendor": "智谱",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.02
+          "price_per_request": 0.015
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "gemini"
+        "openai"
       ]
     },
     {
-      "name": "gemini-3.5-flash",
+      "name": "[按量]gemini-4-argon",
       "vendor": "Google",
-      "quota_type": "per_request",
+      "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.007
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": 2
         }
       ],
       "supported_endpoints": [
-        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "破限/gemini-3.8-flash-high",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "破限",
+          "label": "破限分组",
+          "price_per_request": 0.024
+        }
+      ],
+      "supported_endpoints": [
         "openai"
       ]
     },
@@ -584,129 +708,20 @@
       ]
     },
     {
-      "name": "minimax-m3",
-      "vendor": "Minimax",
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "默认分组",
-          "price_per_request": 0.003
+          "price_per_request": 0.03
         }
       ],
       "supported_endpoints": [
         "openai"
-      ]
-    },
-    {
-      "name": "[反重力克E-claude协议]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.13
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[反重力克E]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.13
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.007
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.01
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.014
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-2.5-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.005
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-pro-preview-thinking",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "默认分组",
-          "price_per_request": 0.02
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "gemini"
       ]
     }
   ],
-  "fetched_at": "2026-10-13T23:12:13.775Z"
+  "fetched_at": "2026-10-14T22:03:30.516Z"
 }
