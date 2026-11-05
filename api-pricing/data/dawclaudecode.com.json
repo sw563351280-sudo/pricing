@@ -26,7 +26,7 @@
     },
     "codex": {
       "ratio": 0.5,
-      "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】"
+      "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】"
     },
     "codex-b": {
       "ratio": 0.6,
@@ -67,18 +67,685 @@
   },
   "models": [
     {
-      "name": "gpt-image-2.5-flare-eco",
+      "name": "gpt-image-2-n",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "gen-image",
           "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.3
+          "price_per_request": 0.076
         }
       ],
       "supported_endpoints": [
         "image-generation",
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.1,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 1.3,
+          "output_per_1m": 6.5,
+          "cache_per_1m": 0.13,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 5,
+          "output_per_1m": 25,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "grok-imagine-image-2.0",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gen-image",
+          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
+          "price_per_request": 0.28
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "grok-4.6",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "grok",
+          "label": "Grok Hav",
+          "input_per_1m": 0.8,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "kimi-k2.7-code",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-标准",
+          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
+          "input_per_1m": 0.55,
+          "output_per_1m": 2.25,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 1125,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 48.75,
+          "output_per_1m": 243.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-fable-5-1",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 30,
+          "output_per_1m": 150,
+          "cache_per_1m": 3,
+          "cache_write_per_1m": 37.5
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 25,
+          "output_per_1m": 125,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 25,
+          "output_per_1m": 125,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "grok-imagine-image",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gen-image",
+          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
+          "price_per_request": 0.084
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gen-image",
+          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
+          "price_per_request": 0.076
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-sonnet-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 48.75,
+          "output_per_1m": 48.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-opus-5-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 48.75,
+          "output_per_1m": 48.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "grok",
+          "label": "Grok Hav",
+          "input_per_1m": 0.8,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 7,
+          "output_per_1m": 42,
+          "cache_per_1m": 0.7,
+          "cache_write_per_1m": 8.75
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 8.4,
+          "output_per_1m": 50.4,
+          "cache_per_1m": 0.84,
+          "cache_write_per_1m": 10.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "codex-auto-review",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 1.25,
+          "output_per_1m": 7.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 0.25
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 1.5,
+          "output_per_1m": 9,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-5.6-luna",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 0.7,
+          "output_per_1m": 4.2,
+          "cache_per_1m": 0.07,
+          "cache_write_per_1m": 0.875
+        },
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 0.84,
+          "output_per_1m": 5.04,
+          "cache_per_1m": 0.084,
+          "cache_write_per_1m": 1.05
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 45,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "qwen3.7-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-进阶",
+          "label": "国产【Kimi K3、MiniMax M3、Qwen3.7 Max、Kimi K2.7 Code 高速版】【自部署满血 + 大厂合作兜底】【官方价 1.26 倍】",
+          "input_per_1m": 5.25,
+          "output_per_1m": 15.75,
+          "cache_per_1m": 0.525,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "qwen3.7-plus",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-千问",
+          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
+          "input_per_1m": 0.45,
+          "output_per_1m": 1.8,
+          "cache_per_1m": 0.045,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-6.1-terra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 45,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-haiku-5-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-特惠",
+          "label": "国产【DeepSeek V4.1 Flash 系列】【自部署满血 + 大厂合作兜底】【官方价 0.76 倍】",
+          "input_per_1m": 57,
+          "output_per_1m": 57,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "glm-5.3",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-标准",
+          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
+          "input_per_1m": 1.521739,
+          "output_per_1m": 4.782609,
+          "cache_per_1m": 0.282609,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
         "openai",
         "openai-response",
         "openai-response-compact",
@@ -109,7 +776,7 @@
       ]
     },
     {
-      "name": "gpt-image-2-eco",
+      "name": "gpt-image-2.5-sunburst-eco",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
@@ -150,195 +817,16 @@
       ]
     },
     {
-      "name": "kimi-k3",
-      "vendor": "Moonshot",
+      "name": "gemini-3.8-flash-tts",
+      "vendor": "Google",
       "quota_type": "token",
       "groups": [
         {
-          "name": "国模-进阶",
-          "label": "国产【Kimi K3、MiniMax M3、Qwen3.7 Max、Kimi K2.7 Code 高速版】【自部署满血 + 大厂合作兜底】【官方价 1.26 倍】",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.6-terra",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
-          "input_per_1m": 7,
-          "output_per_1m": 42,
-          "cache_per_1m": 0.7,
-          "cache_write_per_1m": 8.75
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
-          "input_per_1m": 8.4,
-          "output_per_1m": 50.4,
-          "cache_per_1m": 0.84,
-          "cache_write_per_1m": 10.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-6.1-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
-          "input_per_1m": 1.2,
-          "output_per_1m": 6,
-          "cache_per_1m": 0.06,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
-          "input_per_1m": 1,
-          "output_per_1m": 5,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-6-astra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
-          "input_per_1m": 45,
-          "output_per_1m": 90,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "codex-auto-review",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
-          "input_per_1m": 1.25,
-          "output_per_1m": 7.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 0.25
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "name": "gemini",
+          "label": "gemini【Gemini Ultra】【開放三方調度】",
           "input_per_1m": 1.5,
-          "output_per_1m": 9,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 0.3
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 5,
-          "output_per_1m": 25,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 1,
-          "output_per_1m": 5,
-          "cache_per_1m": 0.1,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 1.3,
-          "output_per_1m": 6.5,
-          "cache_per_1m": 0.13,
+          "output_per_1m": 27,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -372,14 +860,14 @@
       ]
     },
     {
-      "name": "gpt-image-2-n",
+      "name": "gpt-image-2.5-flare-eco",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "gen-image",
           "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.076
+          "price_per_request": 0.3
         }
       ],
       "supported_endpoints": [
@@ -393,14 +881,146 @@
       ]
     },
     {
-      "name": "gpt-image-2-native",
+      "name": "claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 37.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 48.75,
+          "output_per_1m": 48.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 225,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "deepseek-v4-pro-0813",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-标准",
+          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
+          "input_per_1m": 4.5,
+          "output_per_1m": 13.5,
+          "cache_per_1m": 0.15,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-标准",
+          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
+          "input_per_1m": 0.1575,
+          "output_per_1m": 0.63,
+          "cache_per_1m": 0.00315,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-6-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 45,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "gen-image",
           "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.3
+          "price_per_request": 0.076
         }
       ],
       "supported_endpoints": [
@@ -435,7 +1055,293 @@
       ]
     },
     {
-      "name": "claude-fable-5-1",
+      "name": "gemini-nano-banana-2.1",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "Nano Banana",
+          "label": "大香蕉生图系列",
+          "price_per_request": 0.24
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "kimi-k3",
+      "vendor": "Moonshot",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-进阶",
+          "label": "国产【Kimi K3、MiniMax M3、Qwen3.7 Max、Kimi K2.7 Code 高速版】【自部署满血 + 大厂合作兜底】【官方价 1.26 倍】",
+          "input_per_1m": 3,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "minimax-m3",
+      "vendor": "MiniMax",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-进阶",
+          "label": "国产【Kimi K3、MiniMax M3、Qwen3.7 Max、Kimi K2.7 Code 高速版】【自部署满血 + 大厂合作兜底】【官方价 1.26 倍】",
+          "input_per_1m": 0.6,
+          "output_per_1m": 2.4,
+          "cache_per_1m": 0.12,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-6.1-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 1.2,
+          "output_per_1m": 6,
+          "cache_per_1m": 0.06,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 1,
+          "output_per_1m": 5,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "deepseek-v4.1-flash-1017",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-特惠",
+          "label": "国产【DeepSeek V4.1 Flash 系列】【自部署满血 + 大厂合作兜底】【官方价 0.76 倍】",
+          "input_per_1m": 57,
+          "output_per_1m": 57,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-image-2-native",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gen-image",
+          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
+          "price_per_request": 0.3
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gemini-4-argon",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "gemini【Gemini Ultra】【開放三方調度】",
+          "input_per_1m": 12,
+          "output_per_1m": 60,
+          "cache_per_1m": 1.2,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "gemini",
+          "label": "gemini【Gemini Ultra】【開放三方調度】",
+          "input_per_1m": 2.25,
+          "output_per_1m": 11.25,
+          "cache_per_1m": 0.225,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "qwen3.6-plus",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "国模-千问",
+          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
+          "input_per_1m": 0.5625,
+          "output_per_1m": 3.375,
+          "cache_per_1m": 0.05625,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-image-2-auto",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gen-image",
+          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
+          "price_per_request": 0.19
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 48.75,
+          "output_per_1m": 243.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 1125,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-fable-5",
       "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
@@ -474,227 +1380,7 @@
       ]
     },
     {
-      "name": "claude-opus-5-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 48.75,
-          "output_per_1m": 48.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash-tts",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "gemini【Gemini Ultra】【開放三方調度】",
-          "input_per_1m": 1.5,
-          "output_per_1m": 27,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "qwen3.6-plus",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-千问",
-          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
-          "input_per_1m": 0.5625,
-          "output_per_1m": 3.375,
-          "cache_per_1m": 0.05625,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5-auto",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gen-image",
-          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.19
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-sonnet-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 48.75,
-          "output_per_1m": 243.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 1125,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-2.0",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gen-image",
-          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.28
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "qwen3.7-plus",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-千问",
-          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
-          "input_per_1m": 0.45,
-          "output_per_1m": 1.8,
-          "cache_per_1m": 0.045,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5-flare",
+      "name": "gpt-image-2",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
@@ -706,139 +1392,6 @@
       ],
       "supported_endpoints": [
         "image-generation",
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-haiku-4-5-20251001",
-      "vendor": "Helicone",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 2.5,
-          "output_per_1m": 12.5,
-          "cache_per_1m": 0.25,
-          "cache_write_per_1m": 3.125
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 0.5,
-          "output_per_1m": 2.5,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": 0.625
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 0.65,
-          "output_per_1m": 3.25,
-          "cache_per_1m": 0.065,
-          "cache_write_per_1m": 0.8125
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 3,
-          "output_per_1m": 15,
-          "cache_per_1m": 0.3,
-          "cache_write_per_1m": 3.75
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-sonnet-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 48.75,
-          "output_per_1m": 48.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-标准",
-          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
-          "input_per_1m": 0.075,
-          "output_per_1m": 0.25,
-          "cache_per_1m": 0.015,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
         "openai",
         "openai-response",
         "openai-response-compact",
@@ -871,7 +1424,38 @@
       ]
     },
     {
-      "name": "gpt-image-2.5-sunburst-eco",
+      "name": "gpt-6-luna",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 45,
+          "output_per_1m": 90,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-image-2-eco",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
@@ -892,36 +1476,16 @@
       ]
     },
     {
-      "name": "gemini-nano-banana-2.1",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "Nano Banana",
-          "label": "大香蕉生图系列",
-          "price_per_request": 0.24
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "grok-4.5",
-      "vendor": "xAI",
+      "name": "qwen3.6-flash",
+      "vendor": "阿里巴巴",
       "quota_type": "token",
       "groups": [
         {
-          "name": "grok",
-          "label": "Grok Hav",
-          "input_per_1m": 0.8,
-          "output_per_1m": 2.4,
-          "cache_per_1m": 0.12,
+          "name": "国模-千问",
+          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
+          "input_per_1m": 0.210938,
+          "output_per_1m": 1.265625,
+          "cache_per_1m": 0.02097,
           "cache_write_per_1m": null
         }
       ],
@@ -935,16 +1499,16 @@
       ]
     },
     {
-      "name": "minimax-m3",
-      "vendor": "MiniMax",
+      "name": "qwen3.8-max",
+      "vendor": "阿里巴巴",
       "quota_type": "token",
       "groups": [
         {
-          "name": "国模-进阶",
-          "label": "国产【Kimi K3、MiniMax M3、Qwen3.7 Max、Kimi K2.7 Code 高速版】【自部署满血 + 大厂合作兜底】【官方价 1.26 倍】",
-          "input_per_1m": 0.6,
-          "output_per_1m": 2.4,
-          "cache_per_1m": 0.12,
+          "name": "国模-千问",
+          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
+          "input_per_1m": 135,
+          "output_per_1m": 135,
+          "cache_per_1m": null,
           "cache_write_per_1m": null
         }
       ],
@@ -981,15 +1545,68 @@
       ]
     },
     {
-      "name": "gpt-6.1-terra",
+      "name": "gpt-image-2.5-auto",
       "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "gen-image",
+          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
+          "price_per_request": 0.19
+        }
+      ],
+      "supported_endpoints": [
+        "image-generation",
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-opus-4-7",
+      "vendor": "Anthropic",
       "quota_type": "token",
       "groups": [
         {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
-          "input_per_1m": 45,
-          "output_per_1m": 90,
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 48.75,
+          "output_per_1m": 243.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 1125,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 187.5,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -1004,7 +1621,93 @@
       ]
     },
     {
-      "name": "gpt-image-2-auto",
+      "name": "gpt-5.6-sol",
+      "vendor": "Unknown",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "codex-b",
+          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "input_per_1m": 3,
+          "output_per_1m": 18,
+          "cache_per_1m": 0.3,
+          "cache_write_per_1m": 3.75
+        },
+        {
+          "name": "codex",
+          "label": "codex【99%不降智】【优先codex 20x，兜底codex team】【開放三方調度】",
+          "input_per_1m": 2.5,
+          "output_per_1m": 15,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
+          "input_per_1m": 225,
+          "output_per_1m": 1125,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 37.5,
+          "output_per_1m": 187.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 48.75,
+          "output_per_1m": 243.75,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "default",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 187.5,
+          "output_per_1m": 937.5,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response",
+        "openai-response-compact",
+        "anthropic",
+        "gemini",
+        "openai-alpha-search"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-sunburst-auto",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
@@ -1045,116 +1748,16 @@
       ]
     },
     {
-      "name": "deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-特惠",
-          "label": "国产【DeepSeek V4.1 Flash 系列】【自部署满血 + 大厂合作兜底】【官方价 0.76 倍】",
-          "input_per_1m": 57,
-          "output_per_1m": 57,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-6-luna",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
-          "input_per_1m": 45,
-          "output_per_1m": 90,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "grok",
-          "label": "Grok Hav",
-          "input_per_1m": 0.8,
-          "output_per_1m": 2.4,
-          "cache_per_1m": 0.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gemini-4-argon",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "gemini【Gemini Ultra】【開放三方調度】",
-          "input_per_1m": 12,
-          "output_per_1m": 60,
-          "cache_per_1m": 1.2,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "vendor": "DeepSeek",
+      "name": "glm-5.3-flash",
+      "vendor": "智谱",
       "quota_type": "token",
       "groups": [
         {
           "name": "国模-标准",
           "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
-          "input_per_1m": 0.1575,
-          "output_per_1m": 0.63,
-          "cache_per_1m": 0.00315,
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.25,
+          "cache_per_1m": 0.015,
           "cache_write_per_1m": null
         }
       ],
@@ -1168,311 +1771,47 @@
       ]
     },
     {
-      "name": "gpt-image-2",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gen-image",
-          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.076
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-opus-4-7",
-      "vendor": "Anthropic",
+      "name": "claude-haiku-4-5-20251001",
+      "vendor": "Helicone",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 48.75,
-          "output_per_1m": 243.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 1125,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5-sunburst-auto",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gen-image",
-          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.19
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "grok-imagine-image",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gen-image",
-          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.084
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "deepseek-v4.1-flash-1017",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-特惠",
-          "label": "国产【DeepSeek V4.1 Flash 系列】【自部署满血 + 大厂合作兜底】【官方价 0.76 倍】",
-          "input_per_1m": 57,
-          "output_per_1m": 57,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "qwen3.6-flash",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-千问",
-          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
-          "input_per_1m": 0.210938,
-          "output_per_1m": 1.265625,
-          "cache_per_1m": 0.02097,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-fable-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 30,
-          "output_per_1m": 150,
-          "cache_per_1m": 3,
-          "cache_write_per_1m": 37.5
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 25,
-          "output_per_1m": 125,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 25,
-          "output_per_1m": 125,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 37.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 48.75,
-          "output_per_1m": 48.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.6-luna",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
-          "input_per_1m": 0.7,
-          "output_per_1m": 4.2,
-          "cache_per_1m": 0.07,
-          "cache_write_per_1m": 0.875
-        },
-        {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
-          "input_per_1m": 0.84,
-          "output_per_1m": 5.04,
-          "cache_per_1m": 0.084,
-          "cache_write_per_1m": 1.05
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-5.6-sol",
-      "vendor": "Unknown",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
           "input_per_1m": 2.5,
-          "output_per_1m": 15,
+          "output_per_1m": 12.5,
           "cache_per_1m": 0.25,
           "cache_write_per_1m": 3.125
         },
         {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
+          "name": "cc-tehui",
+          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
+          "input_per_1m": 0.5,
+          "output_per_1m": 2.5,
+          "cache_per_1m": 0.05,
+          "cache_write_per_1m": 0.625
+        },
+        {
+          "name": "cc-tehui-pro-max",
+          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
+          "input_per_1m": 0.65,
+          "output_per_1m": 3.25,
+          "cache_per_1m": 0.065,
+          "cache_write_per_1m": 0.8125
+        },
+        {
+          "name": "cc",
+          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
+          "input_per_1m": 2.5,
+          "output_per_1m": 12.5,
+          "cache_per_1m": 0.25,
+          "cache_write_per_1m": 3.125
+        },
+        {
+          "name": "cc-office",
+          "label": "cc【ClaudeMax 20x】【開放三方調度】",
           "input_per_1m": 3,
-          "output_per_1m": 18,
+          "output_per_1m": 15,
           "cache_per_1m": 0.3,
           "cache_write_per_1m": 3.75
         }
@@ -1485,346 +1824,7 @@
         "gemini",
         "openai-alpha-search"
       ]
-    },
-    {
-      "name": "gpt-6-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "codex-b",
-          "label": "codex【不降智】【优先codex 5x 、codex 20x】【開放三方調度】",
-          "input_per_1m": 45,
-          "output_per_1m": 90,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "codex",
-          "label": "codex【概率降智】【优先codex 20x，兜底codex team】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "gemini",
-          "label": "gemini【Gemini Ultra】【開放三方調度】",
-          "input_per_1m": 2.25,
-          "output_per_1m": 11.25,
-          "cache_per_1m": 0.225,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "qwen3.8-max",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-千问",
-          "label": "国产【通义千问 Qwen3.6 / 3.7 / 3.8 全系】【自部署满血 + 大厂合作兜底】【官方价 1.8 倍】",
-          "input_per_1m": 135,
-          "output_per_1m": 135,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 1125,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 48.75,
-          "output_per_1m": 243.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "qwen3.7-max",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-进阶",
-          "label": "国产【Kimi K3、MiniMax M3、Qwen3.7 Max、Kimi K2.7 Code 高速版】【自部署满血 + 大厂合作兜底】【官方价 1.26 倍】",
-          "input_per_1m": 5.25,
-          "output_per_1m": 15.75,
-          "cache_per_1m": 0.525,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "glm-5.3",
-      "vendor": "智谱",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-标准",
-          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
-          "input_per_1m": 1.521739,
-          "output_per_1m": 4.782609,
-          "cache_per_1m": 0.282609,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "deepseek-v4-pro-0813",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-标准",
-          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
-          "input_per_1m": 4.5,
-          "output_per_1m": 13.5,
-          "cache_per_1m": 0.15,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "kimi-k2.7-code",
-      "vendor": "Moonshot",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "国模-标准",
-          "label": "国产【GLM-5.3、DeepSeek V4 Flash / Pro、Kimi K2.7 Code】【自部署满血 + 大厂合作兜底】【官方价 1.05 倍】",
-          "input_per_1m": 0.55,
-          "output_per_1m": 2.25,
-          "cache_per_1m": 0.05,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "gen-image",
-          "label": "生图/生视频分组【OpenAI gpt-image、Gemini、Grok Imagine、SeedVR 超分】",
-          "price_per_request": 0.076
-        }
-      ],
-      "supported_endpoints": [
-        "image-generation",
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 1125,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 937.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui",
-          "label": "cc【KiroPower混合線、Kiro Pro】【開放三方調度】",
-          "input_per_1m": 37.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-tehui-pro-max",
-          "label": "cc【Azure、Windsurf、KiroPower】【開放三方調度】",
-          "input_per_1m": 48.75,
-          "output_per_1m": 243.75,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
-    },
-    {
-      "name": "claude-haiku-5-5",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "cc【ClaudeMax 20x、Claude Team】【禁止三方調度】",
-          "input_per_1m": 187.5,
-          "output_per_1m": 187.5,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "cc-office",
-          "label": "cc【ClaudeMax 20x】【開放三方調度】",
-          "input_per_1m": 225,
-          "output_per_1m": 225,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "openai-response",
-        "openai-response-compact",
-        "anthropic",
-        "gemini",
-        "openai-alpha-search"
-      ]
     }
   ],
-  "fetched_at": "2026-11-03T23:51:58.491Z"
+  "fetched_at": "2026-11-05T00:09:53.971Z"
 }
