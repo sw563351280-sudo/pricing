@@ -31,60 +31,6 @@
   },
   "models": [
     {
-      "name": "gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc_stable",
-          "label": "claudecode稳定分组，2倍计价",
-          "input_per_1m": 5,
-          "output_per_1m": 10,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "gemini",
-        "openai"
-      ]
-    },
-    {
-      "name": "claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "cc_stable",
-          "label": "claudecode稳定分组，2倍计价",
-          "input_per_1m": 10,
-          "output_per_1m": 50,
-          "cache_per_1m": 1,
-          "cache_write_per_1m": 12.5
-        },
-        {
-          "name": "cursor",
-          "label": "cursorClaude",
-          "input_per_1m": 6,
-          "output_per_1m": 30,
-          "cache_per_1m": 0.6,
-          "cache_write_per_1m": 7.5
-        },
-        {
-          "name": "default",
-          "label": "默认分组，支持大部分模型",
-          "input_per_1m": 6.5,
-          "output_per_1m": 32.5,
-          "cache_per_1m": 0.65,
-          "cache_write_per_1m": 8.125
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
       "name": "claude-opus-4-6-thinking",
       "vendor": "Anthropic",
       "quota_type": "token",
@@ -109,6 +55,14 @@
       "quota_type": "token",
       "groups": [
         {
+          "name": "default",
+          "label": "默认分组，支持大部分模型",
+          "input_per_1m": 13,
+          "output_per_1m": 26,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        },
+        {
           "name": "cc_stable",
           "label": "claudecode稳定分组，2倍计价",
           "input_per_1m": 20,
@@ -121,14 +75,6 @@
           "label": "cursorClaude",
           "input_per_1m": 12,
           "output_per_1m": 24,
-          "cache_per_1m": null,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "default",
-          "label": "默认分组，支持大部分模型",
-          "input_per_1m": 13,
-          "output_per_1m": 26,
           "cache_per_1m": null,
           "cache_write_per_1m": null
         }
@@ -210,7 +156,61 @@
         "gemini",
         "openai"
       ]
+    },
+    {
+      "name": "gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc_stable",
+          "label": "claudecode稳定分组，2倍计价",
+          "input_per_1m": 5,
+          "output_per_1m": 10,
+          "cache_per_1m": null,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "gemini",
+        "openai"
+      ]
+    },
+    {
+      "name": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "cc_stable",
+          "label": "claudecode稳定分组，2倍计价",
+          "input_per_1m": 10,
+          "output_per_1m": 50,
+          "cache_per_1m": 1,
+          "cache_write_per_1m": 12.5
+        },
+        {
+          "name": "cursor",
+          "label": "cursorClaude",
+          "input_per_1m": 6,
+          "output_per_1m": 30,
+          "cache_per_1m": 0.6,
+          "cache_write_per_1m": 7.5
+        },
+        {
+          "name": "default",
+          "label": "默认分组，支持大部分模型",
+          "input_per_1m": 6.5,
+          "output_per_1m": 32.5,
+          "cache_per_1m": 0.65,
+          "cache_write_per_1m": 8.125
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
     }
   ],
-  "fetched_at": "2026-11-20T01:03:43.009Z"
+  "fetched_at": "2026-11-21T00:38:00.328Z"
 }
