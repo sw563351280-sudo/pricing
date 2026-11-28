@@ -31,45 +31,19 @@
   },
   "models": [
     {
-      "name": "[按量]qwen-3.7-plus",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "input_per_1m": 20,
-          "output_per_1m": 60,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "input_per_1m": 20,
-          "output_per_1m": 60,
-          "cache_per_1m": 4,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[逆]gemini-3.8-flash",
+      "name": "[ent]gemini-4-carbon",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "price_per_request": 0.5
+          "price_per_request": 4.5
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 0.5
+          "price_per_request": 4.5
         }
       ],
       "supported_endpoints": [
@@ -77,24 +51,63 @@
       ]
     },
     {
-      "name": "[kiro]claude-opus-5-5",
-      "vendor": "Anthropic",
+      "name": "deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 8
-        },
-        {
           "name": "default",
           "label": "只包含文本模型",
-          "price_per_request": 8
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "anthropic"
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ent]gemini-4-neon",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 3.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
       ]
     },
     {
@@ -128,287 +141,7 @@
         }
       ],
       "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[按量]grok-4.7",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "input_per_1m": 15,
-          "output_per_1m": 45,
-          "cache_per_1m": 3.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "input_per_1m": 15,
-          "output_per_1m": 45,
-          "cache_per_1m": 3.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "BAAI/bge-m3",
-      "vendor": "BAAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 0
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 0
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "nai-diffusion-4-5-full",
-      "vendor": "NovelAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 1
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1
-        },
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gemini-3-pro-image-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ant]claude-sonnet-4-6-thinking",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 5
-        },
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[ant]gemini-4-hydrogen",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 2
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ent]gemini-4-neon",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 3.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[kiro]claude-opus-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 8
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 8
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[按量]gpt-6-astra",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "input_per_1m": 100,
-          "output_per_1m": 500,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": 125
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ent]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[kiro]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 8
-        },
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 8
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[逆]gemini-3-pro",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[逆]gemini-3.1-pro-preview",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
+        "anthropic",
         "openai"
       ]
     },
@@ -448,21 +181,210 @@
       ]
     },
     {
-      "name": "[按量]deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
+      "name": "glm-5.3-flash",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image-quality",
+      "vendor": "xAI",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "vip",
           "label": "包含文本和生图模型",
+          "price_per_request": 2
+        },
+        {
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ant]claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[kiro]claude-opus-4-8",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 8
+        },
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 8
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[按量]qwen-3.7-max",
+      "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 100,
+          "output_per_1m": 300,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 100,
+          "output_per_1m": 300,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[逆]gemini-4-hydrogen",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 0.75
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 0.75
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "BAAI/bge-m3",
+      "vendor": "BAAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 0
+        },
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 0
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[aws]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 10
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 10
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro]claude-opus-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 8
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 8
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[按量]deepseek-v4.1-flash-1017",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
           "input_per_1m": 25,
           "output_per_1m": 100,
           "cache_per_1m": 0.5,
           "cache_write_per_1m": null
         },
         {
-          "name": "default",
-          "label": "只包含文本模型",
+          "name": "vip",
+          "label": "包含文本和生图模型",
           "input_per_1m": 25,
           "output_per_1m": 100,
           "cache_per_1m": 0.5,
@@ -475,25 +397,19 @@
       ]
     },
     {
-      "name": "[按量]grok-4.5",
-      "vendor": "xAI",
-      "quota_type": "token",
+      "name": "[逆]gemini-3-pro",
+      "vendor": "Google",
+      "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
-          "cache_write_per_1m": null
+          "price_per_request": 1.5
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
-          "cache_write_per_1m": null
+          "price_per_request": 1.5
         }
       ],
       "supported_endpoints": [
@@ -501,7 +417,7 @@
       ]
     },
     {
-      "name": "[逆]gemini-4-neon",
+      "name": "[逆]gemini-4-argon",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
@@ -541,147 +457,19 @@
       ]
     },
     {
-      "name": "deepseek-v4-pro",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "doubao-seedream-5-0-4k",
-      "vendor": "字节跳动",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]deepseek-v4.1-flash-1017",
-      "vendor": "DeepSeek",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "input_per_1m": 25,
-          "output_per_1m": 100,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "input_per_1m": 25,
-          "output_per_1m": 100,
-          "cache_per_1m": 0.5,
-          "cache_write_per_1m": null
-        }
-      ],
-      "supported_endpoints": [
-        "openai-response",
-        "openai"
-      ]
-    },
-    {
-      "name": "[4K]gpt-image-2.5-sunburst",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3
-        },
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "image"
-      ]
-    },
-    {
-      "name": "grok-imagine-image",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 2
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[kiro]claude-sonnet-4-5",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 0.75
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 0.75
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[play]gemini-4-hydrogen",
+      "name": "[ent]gemini-4-carbon-search",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "price_per_request": 3
+          "price_per_request": 4.5
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 3
+          "price_per_request": 4.5
         }
       ],
       "supported_endpoints": [
@@ -689,24 +477,24 @@
       ]
     },
     {
-      "name": "[按量]glm-5.3-flash",
-      "vendor": "智谱",
+      "name": "[按量]grok-4.6",
+      "vendor": "xAI",
       "quota_type": "token",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "input_per_1m": 12.5,
-          "output_per_1m": 43.75,
-          "cache_per_1m": 3.58,
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
           "cache_write_per_1m": null
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "input_per_1m": 12.5,
-          "output_per_1m": 43.75,
-          "cache_per_1m": 3.58,
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
           "cache_write_per_1m": null
         }
       ],
@@ -715,27 +503,7 @@
       ]
     },
     {
-      "name": "grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[4K]gpt-image-2.5-flare",
+      "name": "[4K]gpt-image-2.6-sunburst",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
@@ -755,19 +523,19 @@
       ]
     },
     {
-      "name": "grok-4.5",
-      "vendor": "xAI",
+      "name": "[ent]gemini-4-hydrogen",
+      "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "price_per_request": 1
+          "price_per_request": 3.5
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 1
+          "price_per_request": 3.5
         }
       ],
       "supported_endpoints": [
@@ -775,24 +543,19 @@
       ]
     },
     {
-      "name": ".按量的空回也会扣费",
-      "vendor": "Unknown",
+      "name": "qwen-image-max",
+      "vendor": "阿里巴巴",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 2
-        },
-        {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 2
+          "price_per_request": 1.5
         },
         {
-          "name": "ztest",
-          "label": "测试分组",
-          "price_per_request": 2
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 1.5
         }
       ],
       "supported_endpoints": [
@@ -821,40 +584,19 @@
       ]
     },
     {
-      "name": "[ant]claude-sonnet-4-6",
-      "vendor": "Anthropic",
+      "name": "grok-4.5",
+      "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "price_per_request": 5
+          "price_per_request": 1
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[ent]gemini-4-argon-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 3.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3.5
+          "price_per_request": 1
         }
       ],
       "supported_endpoints": [
@@ -862,8 +604,8 @@
       ]
     },
     {
-      "name": "[逆}gemini-3.1-pro-preview",
-      "vendor": "Google",
+      "name": "grok-4.6",
+      "vendor": "xAI",
       "quota_type": "per_request",
       "groups": [
         {
@@ -882,19 +624,44 @@
       ]
     },
     {
-      "name": "[4K]gpt-image-2.6-flare",
+      "name": "nai-diffusion-4-5-full",
+      "vendor": "NovelAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 1
+        },
+        {
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.6-sunburst",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "image",
           "label": "只包含生图模型",
-          "price_per_request": 3
+          "price_per_request": 1.5
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 3
+          "price_per_request": 1.5
         }
       ],
       "supported_endpoints": [
@@ -902,8 +669,142 @@
       ]
     },
     {
-      "name": "qwen-image-max",
+      "name": "[kiro]claude-opus-5-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 8
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 8
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro]deepseek-3.2",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 0.75
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 0.75
+        }
+      ],
+      "supported_endpoints": [
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]gpt-6-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]qwen-3.7-plus",
       "vendor": "阿里巴巴",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 20,
+          "output_per_1m": 60,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 20,
+          "output_per_1m": 60,
+          "cache_per_1m": 4,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[逆]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.5-sunburst",
+      "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
         {
@@ -918,38 +819,23 @@
         }
       ],
       "supported_endpoints": [
-        "openai"
+        "image"
       ]
     },
     {
-      "name": "glm-5.2",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 2.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ais]gemini-3.8-flash",
+      "name": "[ant]gemini-3.1-flash-lite",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "price_per_request": 1
+          "price_per_request": 0.05
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 1
+          "price_per_request": 0.05
         }
       ],
       "supported_endpoints": [
@@ -957,23 +843,44 @@
       ]
     },
     {
-      "name": "[ent]gemini-4-carbon",
+      "name": "[ant]gemini-4-hydrogen",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
-          "price_per_request": 4.5
+          "price_per_request": 2
         },
         {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 4.5
+          "price_per_request": 2
         }
       ],
       "supported_endpoints": [
         "openai"
+      ]
+    },
+    {
+      "name": "[kiro]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 8
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 8
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
       ]
     },
     {
@@ -1003,266 +910,19 @@
       ]
     },
     {
-      "name": "[逆]gemini-4-argon",
+      "name": "[逆}gemini-3.1-pro-preview",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 2
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2.6-flare",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 1.5
-        },
-        {
           "name": "vip",
           "label": "包含文本和生图模型",
           "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "image"
-      ]
-    },
-    {
-      "name": "[ent]gemini-4-carbon-search",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 4.5
         },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 4.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "doubao-seedream-5-0",
-      "vendor": "字节跳动",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2-4k",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "image"
-      ]
-    },
-    {
-      "name": "[kiro]claude-opus-4-8",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 8
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 8
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "deepseek-v4.1-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "glm-5.3-flash",
-      "vendor": "智谱",
-      "quota_type": "per_request",
-      "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
           "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[4K]gpt-image-2.6-sunburst",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3
-        },
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "image"
-      ]
-    },
-    {
-      "name": "gpt-image-2.6-sunburst",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "image"
-      ]
-    },
-    {
-      "name": "[ant]gemini-3.8-flash",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1.25
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[aws]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 10
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 10
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]qwen-3.7-max",
-      "vendor": "阿里巴巴",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "input_per_1m": 100,
-          "output_per_1m": 300,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "input_per_1m": 100,
-          "output_per_1m": 300,
-          "cache_per_1m": 10,
-          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1290,19 +950,224 @@
       ]
     },
     {
-      "name": "gemini-3.1-flash-image",
+      "name": "[4K]gpt-image-2.6-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "image"
+      ]
+    },
+    {
+      "name": "[ant]claude-opus-4-6",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 10.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 10.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[ent]gemini-2.5-pro",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 3
+        },
+        {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 1.5
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]gpt-6.2-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
         },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "grok-imagine-image",
+      "vendor": "xAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 2
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ant]claude-sonnet-4-6-thinking",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 5
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[按量]grok-4.5",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 30,
+          "output_per_1m": 90,
+          "cache_per_1m": 7.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "gpt-image-2.6-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
         {
           "name": "image",
           "label": "只包含生图模型",
           "price_per_request": 1.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1.5
+        }
+      ],
+      "supported_endpoints": [
+        "image"
+      ]
+    },
+    {
+      "name": ".按量的空回也会扣费",
+      "vendor": "Unknown",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 2
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 2
+        },
+        {
+          "name": "ztest",
+          "label": "测试分组",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]grok-4.7",
+      "vendor": "xAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 15,
+          "output_per_1m": 45,
+          "cache_per_1m": 3.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 15,
+          "output_per_1m": 45,
+          "cache_per_1m": 3.5,
+          "cache_write_per_1m": null
         }
       ],
       "supported_endpoints": [
@@ -1350,13 +1215,266 @@
       ]
     },
     {
-      "name": "[ent]gemini-2.5-pro",
+      "name": "[play]gemini-4-hydrogen",
       "vendor": "Google",
       "quota_type": "per_request",
       "groups": [
         {
           "name": "default",
           "label": "只包含文本模型",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ais]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ent]gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ent]gemini-4-argon-search",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 3.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[kiro]claude-sonnet-4-5",
+      "vendor": "Anthropic",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 0.75
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 0.75
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "anthropic"
+      ]
+    },
+    {
+      "name": "[按量]gpt-6.1-sol",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 25,
+          "output_per_1m": 150,
+          "cache_per_1m": 2.5,
+          "cache_write_per_1m": 31.25
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[逆]gemini-4-neon",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 2
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 2
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[ant]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 1
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 1
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[按量]gpt-6.2-astra",
+      "vendor": "OpenAI",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 100,
+          "output_per_1m": 500,
+          "cache_per_1m": 10,
+          "cache_write_per_1m": 125
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[逆]gemini-3.8-flash",
+      "vendor": "Google",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 0.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 0.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "[4K]gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "image"
+      ]
+    },
+    {
+      "name": "[4K]gpt-image-2.5-sunburst",
+      "vendor": "OpenAI",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "image"
+      ]
+    },
+    {
+      "name": "doubao-seedream-5-0",
+      "vendor": "字节跳动",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "只包含生图模型",
           "price_per_request": 3
         },
         {
@@ -1396,128 +1514,19 @@
       ]
     },
     {
-      "name": "[生图/1点]grok-image",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-image-2.5-sunburst",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1.5
-        },
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 1.5
-        }
-      ],
-      "supported_endpoints": [
-        "image"
-      ]
-    },
-    {
-      "name": "[ant]claude-opus-4-6",
-      "vendor": "Anthropic",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 10.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 10.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai",
-        "anthropic"
-      ]
-    },
-    {
-      "name": "[kiro]deepseek-3.2",
+      "name": "deepseek-v4-pro",
       "vendor": "DeepSeek",
       "quota_type": "per_request",
       "groups": [
         {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 0.75
-        },
-        {
           "name": "vip",
           "label": "包含文本和生图模型",
-          "price_per_request": 0.75
-        }
-      ],
-      "supported_endpoints": [
-        "anthropic",
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]gpt-6.1-sol",
-      "vendor": "OpenAI",
-      "quota_type": "token",
-      "groups": [
+          "price_per_request": 1.5
+        },
         {
           "name": "default",
           "label": "只包含文本模型",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "input_per_1m": 25,
-          "output_per_1m": 150,
-          "cache_per_1m": 2.5,
-          "cache_write_per_1m": 31.25
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[按量]grok-4.6",
-      "vendor": "xAI",
-      "quota_type": "token",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
-          "cache_write_per_1m": null
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "input_per_1m": 30,
-          "output_per_1m": 90,
-          "cache_per_1m": 7.5,
-          "cache_write_per_1m": null
+          "price_per_request": 1.5
         }
       ],
       "supported_endpoints": [
@@ -1526,106 +1535,6 @@
     },
     {
       "name": "gpt-5.4",
-      "vendor": "OpenAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 3
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[ent]gemini-4-hydrogen",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 3.5
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 3.5
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "[逆]gemini-4-hydrogen",
-      "vendor": "Google",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 0.75
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 0.75
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "grok-imagine-image-quality",
-      "vendor": "xAI",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "image",
-          "label": "只包含生图模型",
-          "price_per_request": 2
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 2
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "vendor": "DeepSeek",
-      "quota_type": "per_request",
-      "groups": [
-        {
-          "name": "default",
-          "label": "只包含文本模型",
-          "price_per_request": 1
-        },
-        {
-          "name": "vip",
-          "label": "包含文本和生图模型",
-          "price_per_request": 1
-        }
-      ],
-      "supported_endpoints": [
-        "openai"
-      ]
-    },
-    {
-      "name": "gpt-5.5",
       "vendor": "OpenAI",
       "quota_type": "per_request",
       "groups": [
@@ -1663,7 +1572,100 @@
       "supported_endpoints": [
         "openai"
       ]
+    },
+    {
+      "name": "[按量]deepseek-v4.1-flash",
+      "vendor": "DeepSeek",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 25,
+          "output_per_1m": 100,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 25,
+          "output_per_1m": 100,
+          "cache_per_1m": 0.5,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai",
+        "openai-response"
+      ]
+    },
+    {
+      "name": "[按量]glm-5.3-flash",
+      "vendor": "智谱",
+      "quota_type": "token",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "input_per_1m": 12.5,
+          "output_per_1m": 43.75,
+          "cache_per_1m": 3.58,
+          "cache_write_per_1m": null
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "input_per_1m": 12.5,
+          "output_per_1m": 43.75,
+          "cache_per_1m": 3.58,
+          "cache_write_per_1m": null
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "glm-5.2",
+      "vendor": "智谱",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "default",
+          "label": "只包含文本模型",
+          "price_per_request": 2.5
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 2.5
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
+    },
+    {
+      "name": "doubao-seedream-5-0-4k",
+      "vendor": "字节跳动",
+      "quota_type": "per_request",
+      "groups": [
+        {
+          "name": "image",
+          "label": "只包含生图模型",
+          "price_per_request": 3
+        },
+        {
+          "name": "vip",
+          "label": "包含文本和生图模型",
+          "price_per_request": 3
+        }
+      ],
+      "supported_endpoints": [
+        "openai"
+      ]
     }
   ],
-  "fetched_at": "2026-11-27T02:02:58.309Z"
+  "fetched_at": "2026-11-28T01:47:18.184Z"
 }
